@@ -1,0 +1,20 @@
+﻿namespace = sts_liang_guard_reform
+
+# 梁《整编禁军》决议的叙事事件：决议的扣款与永久禁军增益已结算，
+# 事件只负责展开洗汰京营的过程，不再重复发放奖励。
+sts_liang_guard_reform.1 = {
+	type = country_event
+	category = situation_event
+	title = sts_liang_guard_reform.1.title
+	desc = sts_liang_guard_reform.1.desc
+	outcome = neutral
+	image = "gfx/interface/illustrations/event/backgrounds/special/sts_liang_guard_reform.dds"
+	hide_portraits = yes
+
+	trigger = { tag = KFE }
+
+	option = {
+		name = sts_liang_guard_reform.1.a
+		ai_chance = { base = 1 }
+	}
+}

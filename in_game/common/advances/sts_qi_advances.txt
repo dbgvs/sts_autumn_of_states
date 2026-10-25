@@ -1,0 +1,29 @@
+﻿# 万邦之秋：齐·三项革新（海岱藩屏 / 忠烈遗勇 / 忠烈宿勋）
+# 三项均在第一时代，开局即已研究。
+
+sts_qi_haidai_advance = {
+	potential = { has_or_had_tag = JIN }
+	age = age_1_traditions
+	icon = sts_qi_haidai
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	global_build_buildings_efficiency = 0.20
+}
+
+sts_qi_yiyong_advance = {
+	potential = { has_or_had_tag = JIN }
+	age = age_1_traditions
+	icon = sts_qi_yiyong
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	land_morale = 0.20
+}
+
+sts_qi_suxun_advance = {
+	potential = { has_or_had_tag = JIN }
+	age = age_1_traditions
+	icon = sts_qi_suxun
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	nobles_estate_levy_size = 0.30
+}

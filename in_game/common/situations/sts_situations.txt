@@ -127,7 +127,36 @@ sts_consolidation = {
 				NOT = { has_variable = sts_consolidation_intro_seen }
 			}
 			set_variable = { name = sts_consolidation_intro_seen value = yes }
-			trigger_event_non_silently = sts_consolidation.1
+			# 依局势开场时的实际丞相府领袖分发，两个视角互斥。
+			if = {
+				limit = {
+					is_leader_of_international_organization = international_organization:sts_chancellery
+				}
+				trigger_event_non_silently = sts_consolidation.2
+			}
+			else = {
+				trigger_event_non_silently = sts_consolidation.1
+			}
+		}
+		# 记录开局原始独立成员池，供诸夏覆灭按比例判定。
+		clear_global_variable_list = sts_consolidation_original_list
+		every_country = {
+			limit = {
+				sts_is_consolidation_member = yes
+				country_type = location
+				is_subject = no
+			}
+			add_to_global_variable_list = { name = sts_consolidation_original_list target = this }
+		}
+		# 开局全部存活；on_monthly 再按实际存亡与被外部附庸情况重建。
+		clear_global_variable_list = sts_consolidation_survivor_list
+		every_country = {
+			limit = {
+				sts_is_consolidation_member = yes
+				country_type = location
+				is_subject = no
+			}
+			add_to_global_variable_list = { name = sts_consolidation_survivor_list target = this }
 		}
 		clear_global_variable_list = sts_consolidation_list
 		every_country = {
@@ -150,6 +179,19 @@ sts_consolidation = {
 			}
 			add_to_global_variable_list = { name = sts_consolidation_list target = this }
 		}
+		# 原始成员中仍存活、且未被外部势力附庸的名单；被相府成员附庸仍算存活。
+		clear_global_variable_list = sts_consolidation_survivor_list
+		every_in_global_list = {
+			variable = sts_consolidation_original_list
+			limit = {
+				country_exists = this
+				OR = {
+					is_subject = no
+					overlord ?= { sts_is_consolidation_member = yes }
+				}
+			}
+			add_to_global_variable_list = { name = sts_consolidation_survivor_list target = this }
+		}
 	}
 
 	# 霸主崛起：任一独立藩镇/藩王直接拥有至少 100 地点，可提前结束局势
@@ -165,21 +207,40 @@ sts_consolidation = {
 		}
 		immediate = {
 			# 第二阶段（区域主/全国次）由称王行动触发，这里不再加全国偏好
+			sts_send_consolidation_end_events = {
+				MEMBER_EVENT = sts_consolidation.3
+				CHANCELLOR_EVENT = sts_consolidation.4
+			}
 		}
 	}
 
-	# 诸夏覆灭：所有藩镇/藩王都已被吞并
+	# 诸夏覆灭：至少八成藩镇/藩王被毁灭、吞并或附庸
 	outcome = {
 		name = "sts_consolidation_annihilated"
 		desc = "sts_consolidation_annihilated_desc"
 		trigger = {
-			NOT = {
-				any_country = {
-					sts_is_consolidation_member = yes
+			# 原始成员池中仍存活且未被外部势力附庸的成员不足 41 名；
+			# 开局原始池约 209 名独立成员，即至少八成已被毁灭、吞并或附庸。
+			# 用中文自定义提示包住列表大小判定，避免界面显示 COMPARATORNUM 占位符。
+			custom_tooltip = {
+				text = sts_consolidation_annihilated_condition_tt
+				has_global_variable_list = sts_consolidation_survivor_list
+				global_variable_list_size = {
+					name = sts_consolidation_original_list
+					value > 0
+				}
+				global_variable_list_size = {
+					name = sts_consolidation_survivor_list
+					value < 41
 				}
 			}
 		}
-		immediate = {}
+		immediate = {
+			sts_send_consolidation_end_events = {
+				MEMBER_EVENT = sts_consolidation.5
+				CHANCELLOR_EVENT = sts_consolidation.6
+			}
+		}
 	}
 
 	# 争霸继续：从实际开始起满三年，前三名获得修正
@@ -209,6 +270,10 @@ sts_consolidation = {
 			}
 
 			# 第二阶段（区域主/全国次）由称王行动触发
+			sts_send_consolidation_end_events = {
+				MEMBER_EVENT = sts_consolidation.7
+				CHANCELLOR_EVENT = sts_consolidation.8
+			}
 		}
 	}
 

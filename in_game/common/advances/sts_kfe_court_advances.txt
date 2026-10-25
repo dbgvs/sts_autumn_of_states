@@ -1,0 +1,32 @@
+﻿# 万邦之秋：梁·相府政略革新（执掌天宪 / 怀柔四方 / 都督军政）
+
+sts_kfe_mandate_advance = {
+	potential = { has_or_had_tag = KFE }
+	age = age_1_traditions
+	icon = sts_kfe_mandate
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	monthly_prestige = 0.05
+	monthly_diplomats = 0.10
+}
+
+sts_kfe_huairou_advance = {
+	potential = { has_or_had_tag = KFE }
+	age = age_2_renaissance
+	icon = sts_kfe_huairou
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	requires = unlock_men_at_arms_advance
+	improve_relation_impact = 0.30
+}
+
+sts_kfe_dudu_advance = {
+	potential = { has_or_had_tag = KFE }
+	age = age_2_renaissance
+	icon = sts_kfe_dudu
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	requires = unlock_men_at_arms_advance
+	army_reinforce_efficiency = 0.20
+	regiment_reinforcement_speed = 0.10
+}

@@ -2,4 +2,31 @@ building_manager = {
 	sts_song_court = { tag = CSO level = 1 location = kaifeng }
 	sts_chancellery_palace = { tag = KFE level = 1 location = kaifeng }
 	sts_imperial_guard_camp = { tag = KFE level = 1 location = kaifeng }
+
+	# 开局一级城堡（用户指定 25 处）
+	castle = { tag = XIA level = 1 location = liangquan }
+	castle = { tag = XAB level = 1 location = daan }
+	castle = { tag = XAB level = 1 location = xunyang }
+	castle = { tag = XIA level = 1 location = pucheng }
+	castle = { tag = CAJ level = 1 location = jiangyou }
+	castle = { tag = XAF level = 1 location = yiling }
+	castle = { tag = XAF level = 1 location = shipai }
+	castle = { tag = LAK level = 1 location = lingshi }
+	castle = { tag = LAK level = 1 location = yushe }
+	castle = { tag = LAK level = 1 location = jincheng_zezhou }
+	castle = { tag = JIN level = 1 location = wudi }
+	castle = { tag = JIN level = 1 location = guantao }
+	castle = { tag = JIN level = 1 location = pingyuan_jinan }
+	castle = { tag = JIN level = 1 location = yanci }
+	castle = { tag = JIN level = 1 location = licheng }
+	castle = { tag = DAD level = 1 location = anqiu }
+	castle = { tag = DAD level = 1 location = wulian }
+	castle = { tag = YAF level = 1 location = jiangning }
+	castle = { tag = YAF level = 1 location = guangde }
+	castle = { tag = YAF level = 1 location = wujin }
+	castle = { tag = HAS level = 1 location = jiaxing }
+	castle = { tag = HAS level = 1 location = linan }
+	castle = { tag = QAB level = 1 location = zhangping }
+	castle = { tag = CAQ level = 1 location = wuling }
+	castle = { tag = CAQ level = 1 location = shaoyang }
 }

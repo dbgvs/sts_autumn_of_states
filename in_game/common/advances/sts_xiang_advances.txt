@@ -1,0 +1,30 @@
+﻿# 万邦之秋：湘·三项革新（武陵桃源 / 湘铁重步 / 榷茶通商）
+
+sts_xiang_taoyuan_advance = {
+	potential = { has_or_had_tag = CAQ }
+	age = age_1_traditions
+	icon = sts_xiang_taoyuan
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	global_migration_speed = 0.10
+	global_monthly_prosperity = 0.10
+}
+
+sts_xiang_tiebu_advance = {
+	potential = { has_or_had_tag = CAQ }
+	age = age_1_traditions
+	icon = sts_xiang_tiebu
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	army_heavy_infantry_power = 0.10
+}
+
+sts_xiang_quecha_advance = {
+	potential = { has_or_had_tag = CAQ }
+	age = age_2_renaissance
+	icon = sts_xiang_quecha
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	requires = unlock_men_at_arms_advance
+	tax_income_efficiency = 0.10
+}

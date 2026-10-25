@@ -1,0 +1,29 @@
+﻿# 万邦之秋：粤·三项革新（节制百粤 / 岭南宗盟 / 南岭武弁）
+
+sts_yue_jiezhi_advance = {
+	potential = { has_or_had_tag = GAI }
+	age = age_1_traditions
+	icon = sts_yue_jiezhi
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	subject_income_modifier = 0.10
+}
+
+sts_yue_zongmeng_advance = {
+	potential = { has_or_had_tag = GAI }
+	age = age_1_traditions
+	icon = sts_yue_zongmeng
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	diplomatic_capacity = 1
+}
+
+sts_yue_wubian_advance = {
+	potential = { has_or_had_tag = GAI }
+	age = age_2_renaissance
+	icon = sts_yue_wubian
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	requires = unlock_men_at_arms_advance
+	land_morale = 0.15
+}

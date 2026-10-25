@@ -1,0 +1,31 @@
+﻿# 万邦之秋：晋·三项革新（表里金汤 / 雪耻义从 / 三晋铁旅）
+
+sts_jin_jintang_advance = {
+	potential = { has_or_had_tag = LAK }
+	age = age_1_traditions
+	icon = sts_jin_jintang
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	discipline = 0.05
+	fort_limit = 1
+}
+
+sts_jin_yicong_advance = {
+	potential = { has_or_had_tag = LAK }
+	age = age_2_renaissance
+	icon = sts_jin_yicong
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	requires = unlock_men_at_arms_advance
+	peasants_estate_levy_size = 0.10
+}
+
+sts_jin_tielu_advance = {
+	potential = { has_or_had_tag = LAK }
+	age = age_2_renaissance
+	icon = sts_jin_tielu
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	requires = unlock_men_at_arms_advance
+	discipline = 0.05
+}

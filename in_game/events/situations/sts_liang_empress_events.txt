@@ -1,0 +1,68 @@
+﻿namespace = sts_liang_empress
+
+# 只由《进女配极》在真实配偶检查通过后发送；选项奖励逐国去重。
+sts_liang_empress.1 = {
+	type = country_event
+	title = sts_liang_empress.1.title
+	desc = sts_liang_empress.1.desc
+	outcome = positive
+	image = "gfx/interface/illustrations/event/backgrounds/special/sts_liang_empress.dds"
+	hide_portraits = yes
+
+	trigger = {
+		tag = KFE
+		has_variable = sts_liang_empress_installed
+		NOT = { has_variable = sts_liang_empress_rewarded }
+	}
+
+	option = {
+		name = sts_liang_empress.1.a
+		ai_chance = { base = 1 }
+		if = {
+			limit = {
+				tag = KFE
+				has_variable = sts_liang_empress_installed
+				NOT = { has_variable = sts_liang_empress_rewarded }
+			}
+			set_variable = { name = sts_liang_empress_rewarded value = yes }
+			add_legitimacy = 10
+			add_political_influence = 25
+			add_prestige = 20
+			add_country_modifier = {
+				modifier = sts_liang_inner_court
+				years = 1
+			}
+		}
+	}
+}
+
+# 每个领土型诸侯只收到一次；好感方向为收件国对梁，不是梁对收件国。
+sts_liang_empress.2 = {
+	type = country_event
+	title = sts_liang_empress.2.title
+	desc = sts_liang_empress.2.desc
+	outcome = negative
+
+	trigger = {
+		country_type = location
+		NOT = { tag = KFE }
+		has_variable = sts_liang_empress_news_seen
+		NOT = { has_variable = sts_liang_empress_news_answered }
+	}
+
+	option = {
+		name = sts_liang_empress.2.a
+		ai_chance = { base = 1 }
+		if = {
+			limit = {
+				has_variable = sts_liang_empress_news_seen
+				NOT = { has_variable = sts_liang_empress_news_answered }
+			}
+			set_variable = { name = sts_liang_empress_news_answered value = yes }
+			if = {
+				limit = { country_exists = c:KFE }
+				add_opinion = { modifier = sts_liang_empress_outrage target = c:KFE }
+			}
+		}
+	}
+}

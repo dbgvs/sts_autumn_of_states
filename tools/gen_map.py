@@ -737,7 +737,7 @@ def gen_characters(states, attrs, leader_cultures=None):
         son_name_key = f"sts_name_{tag.lower()}_son"
 
         if tag == "KFE":
-            # 开封势力＝梁，首任丞相张嵩：男，38 岁，80/70/70，妻李氏，二子。
+            # 开封势力＝梁，首任丞相张嵩：男，38 岁，80/70/70，妻李氏，二子一女。
             ruler_name_key = "sts_name_zhang_song"
             ruler_name = "张嵩"
             adm, dip, mil = 80, 70, 70
@@ -748,6 +748,7 @@ def gen_characters(states, attrs, leader_cultures=None):
             children = [
                 ("sts_kfe_son1", "sts_name_zhang_chengzong", "张承宗", False, "1318.5.1"),
                 ("sts_kfe_son2", "sts_name_zhang_chengsi", "张承嗣", False, "1322.8.1"),
+                ("sts_kfe_daughter1", "sts_name_zhang_lingyi", "令仪", True, "1319.4.1"),
             ]
         elif tag == "XIA":
             # 西安改秦：秦王岳恒，男，48 岁，70/60/85，妻王夫人，三子二女。
@@ -905,11 +906,16 @@ def gen_characters(states, attrs, leader_cultures=None):
                     f"\t\tmil = {38 + idx % 22}", f"\t\tfemale = {'yes' if c_female else 'no'}",
                     f"\t\tbirth_date = {c_birth}", f"\t\tbirth = {birth}", f"\t\ttag = {tag}",
                     f"\t\tfather = {ruler_key}", f"\t\tmother = {wife_key}", "\t}"]
+            if c_key == "sts_kfe_daughter1":
+                # 册后人物使用固定张氏宗族；本地化只写名，避免重复姓氏。
+                out.insert(len(out) - 1, "\t\tdynasty = sts_zhang_dynasty")
 
         loc += [f' {tag}: "{name}"', f' {tag}_ADJ: "{name}"', f' {ruler_name_key}: "{ruler_name}"',
                 f' {wife_name_key}: "{wife_name}"']
-        for _, c_name_key, c_name, _, _ in children:
-            loc.append(f' {c_name_key}: "{c_name}"')
+        for c_key, c_name_key, c_name, _, _ in children:
+            # 册后人物的名字由独立 sts_liang_empress 本地化维护，避免重复键。
+            if c_key != "sts_kfe_daughter1":
+                loc.append(f' {c_name_key}: "{c_name}"')
 
     for tag, key, name, culture, religion, birth in [
         (SONG, "song", "zhao_bing", "zhongyuan_culture", "sanjiao", "1315.6.1"),

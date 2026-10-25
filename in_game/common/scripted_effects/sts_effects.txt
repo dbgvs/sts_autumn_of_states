@@ -260,6 +260,83 @@ sts_update_warring_header = {
 # 开局初始化（幂等，钩子与局势 on_start 都会调）
 # ------------------------------------------------------------
 sts_game_init = {
+	# 秦开局默认掌握第一级岳家军革新；后续等级按时代研发。
+	c:XIA ?= {
+		if = {
+			limit = { NOT = { has_advance = sts_xia_yuejiajun_1_advance } }
+			research_advance = advance_type:sts_xia_yuejiajun_1_advance
+		}
+	}
+	# 梁开局掌握《执掌天宪》与第一级殿前禁卫；其余革新按时代研发。
+	c:KFE ?= {
+		if = {
+			limit = { NOT = { has_advance = sts_kfe_mandate_advance } }
+			research_advance = advance_type:sts_kfe_mandate_advance
+		}
+		if = {
+			limit = { NOT = { has_advance = sts_kfe_dianqian_1_advance } }
+			research_advance = advance_type:sts_kfe_dianqian_1_advance
+		}
+	}
+	# 蜀开局掌握《蜀道拓险》；元戎遗制与交子务仍需自行研发。
+	c:CAJ ?= {
+		if = {
+			limit = { NOT = { has_advance = sts_shu_shudao_advance } }
+			research_advance = advance_type:sts_shu_shudao_advance
+		}
+	}
+	# 晋开局掌握《表里金汤》；雪耻义从与三晋铁旅仍需自行研发。
+	c:LAK ?= {
+		if = {
+			limit = { NOT = { has_advance = sts_jin_jintang_advance } }
+			research_advance = advance_type:sts_jin_jintang_advance
+		}
+	}
+	# 齐开局掌握三项已解锁革新（海岱藩屏、忠烈遗勇、忠烈宿勋）。
+	c:JIN ?= {
+		if = {
+			limit = { NOT = { has_advance = sts_qi_haidai_advance } }
+			research_advance = advance_type:sts_qi_haidai_advance
+		}
+		if = {
+			limit = { NOT = { has_advance = sts_qi_yiyong_advance } }
+			research_advance = advance_type:sts_qi_yiyong_advance
+		}
+		if = {
+			limit = { NOT = { has_advance = sts_qi_suxun_advance } }
+			research_advance = advance_type:sts_qi_suxun_advance
+		}
+	}
+	# 湘（CAQ，长沙马氏）开局掌握《武陵桃源》；湘铁重步与榷茶通商需自行研发。
+	c:CAQ ?= {
+		if = {
+			limit = { NOT = { has_advance = sts_xiang_taoyuan_advance } }
+			research_advance = advance_type:sts_xiang_taoyuan_advance
+		}
+	}
+	# 闽开局掌握《梯航万国》与《闽道通衢》。
+	c:QAB ?= {
+		if = {
+			limit = { NOT = { has_advance = sts_min_tihang_advance } }
+			research_advance = advance_type:sts_min_tihang_advance
+		}
+		if = {
+			limit = { NOT = { has_advance = sts_min_tongqu_advance } }
+			research_advance = advance_type:sts_min_tongqu_advance
+		}
+	}
+	# 粤开局掌握《节制百粤》与《岭南宗盟》。
+	c:GAI ?= {
+		if = {
+			limit = { NOT = { has_advance = sts_yue_jiezhi_advance } }
+			research_advance = advance_type:sts_yue_jiezhi_advance
+		}
+		if = {
+			limit = { NOT = { has_advance = sts_yue_zongmeng_advance } }
+			research_advance = advance_type:sts_yue_zongmeng_advance
+		}
+	}
+
 	# 给所有中华藩镇/藩王/宋天子补宗族：开局角色没有 dynasty 会显示“出身卑微”
 	every_country = {
 		limit = {
@@ -953,5 +1030,28 @@ sts_spread_emperor_hate = {
 		if = { limit = { scope:sts_emperor_host = { var:sts_emperor_tier >= 8 } }  add_opinion = { modifier = sts_emperor_hate_8  target = scope:sts_emperor_host } }
 		if = { limit = { scope:sts_emperor_host = { var:sts_emperor_tier >= 9 } }  add_opinion = { modifier = sts_emperor_hate_9  target = scope:sts_emperor_host } }
 		if = { limit = { scope:sts_emperor_host = { var:sts_emperor_tier >= 10 } } add_opinion = { modifier = sts_emperor_hate_10 target = scope:sts_emperor_host } }
+	}
+}
+
+# ------------------------------------------------------------
+# 海内整合结局事件：普通成员与丞相府领袖互斥分发，逐国一次
+# ------------------------------------------------------------
+sts_send_consolidation_end_events = {
+	every_country = {
+		limit = {
+			sts_is_consolidation_member = yes
+			country_type = location
+			NOT = { has_variable = sts_consolidation_end_seen }
+		}
+		set_variable = { name = sts_consolidation_end_seen value = yes }
+		if = {
+			limit = {
+				is_leader_of_international_organization = international_organization:sts_chancellery
+			}
+			trigger_event_non_silently = $CHANCELLOR_EVENT$
+		}
+		else = {
+			trigger_event_non_silently = $MEMBER_EVENT$
+		}
 	}
 }

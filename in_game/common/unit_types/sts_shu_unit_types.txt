@@ -1,0 +1,26 @@
+﻿# 万邦之秋：蜀·元戎劲弩手
+# 参照原版 a_catalan_crossbowmen：轻步兵底版 + 弩手标签 + 山地作战强化。
+# 无专属兵营与家族上限，由 sts_shu_yuanrong_advance 解锁招募。
+
+a_shu_yuanrong = {
+	copy_from = a_age_1_traditions_light_infantry
+	is_special = yes
+	buildable = yes
+
+	upgrades_to = a_crossbowmen
+	max_strength = 0.1
+	initiative = 1
+
+	combat = {
+		mountains = 0.20
+		hills = 0.15
+		plateau = 0.10
+	}
+
+	maintenance_demand = archer_infantry_maintenance
+	construction_demand = archer_infantry_construction
+
+	country_potential = { has_or_had_tag = CAJ }
+
+	gfx_tags = { crossbow_tag light_tag }
+}

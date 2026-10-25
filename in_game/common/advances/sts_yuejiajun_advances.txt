@@ -1,0 +1,61 @@
+﻿# 万邦之秋：秦·岳家军六时代革新
+# 仿原版 country_tur.txt：同代 requires 布置科技树，allow 检查上代研究。
+# unlock_unit 是唯一的兵种解锁入口；仅第一级由 sts_game_init 默认研究。
+
+sts_xia_yuejiajun_1_advance = {
+	potential = { has_or_had_tag = XIA }
+	age = age_1_traditions
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	unlock_unit = a_traditions_yuejiajun
+}
+
+sts_xia_yuejiajun_2_advance = {
+	potential = { has_or_had_tag = XIA }
+	age = age_2_renaissance
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	requires = unlock_men_at_arms_advance
+	allow = { has_advance = sts_xia_yuejiajun_1_advance }
+	unlock_unit = a_renaissance_yuejiajun
+}
+
+sts_xia_yuejiajun_3_advance = {
+	potential = { has_or_had_tag = XIA }
+	age = age_3_discovery
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	requires = unlock_early_arquebusiers_advance
+	allow = { has_advance = sts_xia_yuejiajun_2_advance }
+	unlock_unit = a_discovery_yuejiajun
+}
+
+sts_xia_yuejiajun_4_advance = {
+	potential = { has_or_had_tag = XIA }
+	age = age_4_reformation
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	requires = unlock_arquebusiers_advance
+	allow = { has_advance = sts_xia_yuejiajun_3_advance }
+	unlock_unit = a_reformation_yuejiajun
+}
+
+sts_xia_yuejiajun_5_advance = {
+	potential = { has_or_had_tag = XIA }
+	age = age_5_absolutism
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	requires = unlock_musketeers_advance
+	allow = { has_advance = sts_xia_yuejiajun_4_advance }
+	unlock_unit = a_absolutism_yuejiajun
+}
+
+sts_xia_yuejiajun_6_advance = {
+	potential = { has_or_had_tag = XIA }
+	age = age_6_revolutions
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	requires = unlock_fusiliers_advance
+	allow = { has_advance = sts_xia_yuejiajun_5_advance }
+	unlock_unit = a_revolutions_yuejiajun
+}

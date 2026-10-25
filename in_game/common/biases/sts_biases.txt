@@ -1,7 +1,7 @@
 ﻿# ============================================================
 # 万邦之秋 / Autumn of Ten Thousand States
 # 好感修正：挟天子招致的敌意
-# 路径：in_game/common/opinions/
+# 路径：in_game/common/biases/
 #
 # 十档，每档 -20，逐年叠加，满十年即 -200。
 # 用十个不同类型而不是同一条重复施加，否则会被覆盖而非叠加。
@@ -45,6 +45,11 @@ sts_song_traitor = {
 # 相府同袍出兵相救：受援者心怀感激
 sts_chancellery_support = {
 	value = 15
+}
+
+# 相女入主中宫：收到消息的诸侯对梁固定 -20。
+sts_liang_empress_outrage = {
+	value = -20
 }
 
 # 丞相迁走天子：相府诸镇认为其专擅

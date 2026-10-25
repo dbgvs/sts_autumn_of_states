@@ -1,0 +1,68 @@
+﻿# 万邦之秋：梁·殿前禁卫六时代特殊步兵
+# 同代重步兵模板与双减伤；unlock_unit 由对应革新负责。
+# 不设专属兵营与额外家族上限，沿用普通常备军招募约束。
+
+a_traditions_dianqian = {
+	copy_from = a_age_1_traditions_heavy_infantry
+	is_special = yes
+	buildable = yes
+	country_potential = { has_or_had_tag = KFE }
+	upgrades_to_only = a_renaissance_dianqian
+	strength_damage_taken = -0.10
+	morale_damage_taken = -0.10
+	gfx_tags = { heavy_tag }
+}
+
+a_renaissance_dianqian = {
+	copy_from = a_age_2_renaissance_heavy_infantry
+	is_special = yes
+	buildable = yes
+	country_potential = { has_or_had_tag = KFE }
+	upgrades_to_only = a_discovery_dianqian
+	strength_damage_taken = -0.10
+	morale_damage_taken = -0.10
+	gfx_tags = { heavy_tag }
+}
+
+a_discovery_dianqian = {
+	copy_from = a_age_3_discovery_heavy_infantry
+	is_special = yes
+	buildable = yes
+	country_potential = { has_or_had_tag = KFE }
+	upgrades_to_only = a_reformation_dianqian
+	strength_damage_taken = -0.10
+	morale_damage_taken = -0.10
+	gfx_tags = { heavy_tag musket_tag }
+}
+
+a_reformation_dianqian = {
+	copy_from = a_age_4_reformation_heavy_infantry
+	is_special = yes
+	buildable = yes
+	country_potential = { has_or_had_tag = KFE }
+	upgrades_to_only = a_absolutism_dianqian
+	strength_damage_taken = -0.10
+	morale_damage_taken = -0.10
+	gfx_tags = { heavy_tag musket_tag }
+}
+
+a_absolutism_dianqian = {
+	copy_from = a_age_5_absolutism_heavy_infantry
+	is_special = yes
+	buildable = yes
+	country_potential = { has_or_had_tag = KFE }
+	upgrades_to_only = a_revolutions_dianqian
+	strength_damage_taken = -0.10
+	morale_damage_taken = -0.10
+	gfx_tags = { heavy_tag musket_tag }
+}
+
+a_revolutions_dianqian = {
+	copy_from = a_age_6_revolutions_heavy_infantry
+	is_special = yes
+	buildable = yes
+	country_potential = { has_or_had_tag = KFE }
+	strength_damage_taken = -0.10
+	morale_damage_taken = -0.10
+	gfx_tags = { heavy_tag musket_tag }
+}

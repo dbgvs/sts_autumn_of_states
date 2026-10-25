@@ -535,6 +535,21 @@ character_db = {
 		father = sts_kfe_ruler
 		mother = sts_kfe_wife
 	}
+	sts_kfe_daughter1 = {
+		first_name = { name = sts_name_zhang_lingyi }
+		dynasty = sts_zhang_dynasty
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 52
+		dip = 52
+		mil = 50
+		female = yes
+		birth_date = 1319.4.1
+		birth = kaifeng
+		tag = KFE
+		father = sts_kfe_ruler
+		mother = sts_kfe_wife
+	}
 	sts_nan_ruler = {
 		first_name = { name = sts_name_nan }
 		culture = zhongyuan_culture

@@ -1,0 +1,23 @@
+﻿# 万邦之秋：闽·两项第一时代革新（梯航万国 / 闽道通衢）
+# 两项均在第一时代，开局即已研究。
+
+sts_min_tihang_advance = {
+	potential = { has_or_had_tag = QAB }
+	age = age_1_traditions
+	icon = sts_min_tihang
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	navy_galley_power = 0.15
+	export_efficiency = 0.02
+	max_tariff = 0.10
+}
+
+sts_min_tongqu_advance = {
+	potential = { has_or_had_tag = QAB }
+	age = age_1_traditions
+	icon = sts_min_tongqu
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	mountains_proximity_impact = -0.33
+	hills_proximity_impact = -0.33
+}

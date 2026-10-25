@@ -2666,6 +2666,12 @@ country_flavor_courtier_female = 	{ parent = country_flavor_courtier suffix = "_
 country_flavor_consort = {
 	type = country
 
+	# 宋廷配偶头衔，仅对 CSO 生效。
+	text = {
+		localization_key = country_flavor_consort_sts_song
+		trigger = { tag = CSO }
+	}
+
 	text = {
 		localization_key = country_flavor_consort_united_states
 		trigger = {

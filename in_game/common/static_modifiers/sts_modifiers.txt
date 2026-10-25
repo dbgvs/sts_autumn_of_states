@@ -20,6 +20,12 @@ sts_holding_emperor = {
 	diplomatic_reputation = -2
 }
 
+# 相女入主中宫：由册后事件授予一年，不随重复打开事件叠加。
+sts_liang_inner_court = {
+	game_data = { category = country }
+	monthly_political_influence = 1
+}
+
 # 迁移天子：十年阶级税收加成，与挟天子叠加
 sts_relocated_court = {
 	game_data = { category = country }

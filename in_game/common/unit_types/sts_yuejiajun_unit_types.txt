@@ -1,0 +1,69 @@
+﻿# 万邦之秋：秦·岳家军六时代特殊步兵
+# 同代重步兵模板与耶尼切里双减伤；unlock_unit 由对应革新负责。
+# country_potential 只限定国家，不反查解锁自己的革新，避免干扰革新潜在资格。
+# 不设专属兵营、额外家族上限，沿用普通常备军招募约束。
+
+a_traditions_yuejiajun = {
+	copy_from = a_age_1_traditions_heavy_infantry
+	is_special = yes
+	buildable = yes
+	country_potential = { has_or_had_tag = XIA }
+	upgrades_to_only = a_renaissance_yuejiajun
+	strength_damage_taken = -0.10
+	morale_damage_taken = -0.10
+	gfx_tags = { medium_tag }
+}
+
+a_renaissance_yuejiajun = {
+	copy_from = a_age_2_renaissance_heavy_infantry
+	is_special = yes
+	buildable = yes
+	country_potential = { has_or_had_tag = XIA }
+	upgrades_to_only = a_discovery_yuejiajun
+	strength_damage_taken = -0.10
+	morale_damage_taken = -0.10
+	gfx_tags = { medium_tag }
+}
+
+a_discovery_yuejiajun = {
+	copy_from = a_age_3_discovery_heavy_infantry
+	is_special = yes
+	buildable = yes
+	country_potential = { has_or_had_tag = XIA }
+	upgrades_to_only = a_reformation_yuejiajun
+	strength_damage_taken = -0.10
+	morale_damage_taken = -0.10
+	gfx_tags = { medium_tag musket_tag }
+}
+
+a_reformation_yuejiajun = {
+	copy_from = a_age_4_reformation_heavy_infantry
+	is_special = yes
+	buildable = yes
+	country_potential = { has_or_had_tag = XIA }
+	upgrades_to_only = a_absolutism_yuejiajun
+	strength_damage_taken = -0.10
+	morale_damage_taken = -0.10
+	gfx_tags = { medium_tag musket_tag }
+}
+
+a_absolutism_yuejiajun = {
+	copy_from = a_age_5_absolutism_heavy_infantry
+	is_special = yes
+	buildable = yes
+	country_potential = { has_or_had_tag = XIA }
+	upgrades_to_only = a_revolutions_yuejiajun
+	strength_damage_taken = -0.10
+	morale_damage_taken = -0.10
+	gfx_tags = { medium_tag musket_tag }
+}
+
+a_revolutions_yuejiajun = {
+	copy_from = a_age_6_revolutions_heavy_infantry
+	is_special = yes
+	buildable = yes
+	country_potential = { has_or_had_tag = XIA }
+	strength_damage_taken = -0.10
+	morale_damage_taken = -0.10
+	gfx_tags = { medium_tag musket_tag }
+}

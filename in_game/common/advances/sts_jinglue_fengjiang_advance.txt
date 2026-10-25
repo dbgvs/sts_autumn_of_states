@@ -1,0 +1,34 @@
+﻿# 万邦之秋：藩镇藩王通用革新·经略封疆
+# potential 只用静态国家名单，避免依赖开局效果才写入的变量与组织身份。
+# 既有189藩镇 + 贵州15国 + 晋王 LAK，共205国；不含宋廷。
+sts_jinglue_fengjiang_advance = {
+	age = age_1_traditions
+	icon = sts_jinglue_fengjiang
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	potential = {
+		OR = {
+			sts_is_chinese_warlord_tag = yes
+			has_or_had_tag = AAB
+			has_or_had_tag = AAE
+			has_or_had_tag = BAQ
+			has_or_had_tag = DUY
+			has_or_had_tag = GAQ
+			has_or_had_tag = LAJ
+			has_or_had_tag = LAK
+			has_or_had_tag = PAF
+			has_or_had_tag = PAG
+			has_or_had_tag = SBI
+			has_or_had_tag = SBJ
+			has_or_had_tag = SIN
+			has_or_had_tag = TAY
+			has_or_had_tag = WAC
+			has_or_had_tag = XAM
+			has_or_had_tag = ZAF
+		}
+		country_type = location
+		NOT = { tag = CSO }
+	}
+	global_integration_speed_modifier = 0.05
+	monthly_prestige = 0.05
+}

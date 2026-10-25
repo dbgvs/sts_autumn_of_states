@@ -31,6 +31,38 @@ sts_hosts_song_court = {
 	}
 }
 
+# 梁进女配极：只检查当前真实人物与宋廷，不生成替身、不拆散既有婚姻。
+sts_can_present_daughter = {
+	tag = KFE
+	NOT = { has_variable = sts_liang_empress_installed }
+	exists = character:sts_kfe_ruler
+	ruler = character:sts_kfe_ruler
+	is_leader_of_international_organization = international_organization:sts_chancellery
+	sts_hosts_song_court = yes
+	country_exists = c:CSO
+	exists = character:sts_kfe_daughter1
+	character:sts_kfe_daughter1 = {
+		owner = c:KFE
+		is_alive = yes
+		is_adult = yes
+		is_female = yes
+		is_married = no
+		is_eligible_for_marriage = yes
+	}
+	c:CSO = {
+		has_ruler = yes
+		has_consort = no
+		ruler = {
+			is_alive = yes
+			is_adult = yes
+			is_female = no
+			is_married = no
+			is_eligible_for_marriage = yes
+			can_marry_character = character:sts_kfe_daughter1
+		}
+	}
+}
+
 # 地点是否在天朝范围内：3 region + 华东 9 area（与 15_international_organizations 一致）
 sts_in_middle_kingdom_range = {
 	OR = {

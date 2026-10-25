@@ -1,0 +1,46 @@
+﻿# 万邦之秋：梁·殿前禁卫专属兵种插画
+# is_unit_type 为最高优先级（900000），只对指定兵种生效，不覆盖其他国家。
+# 插画本体 1080x440；遮罩为同色名纯黑图，表示不参与国家配色染色。
+
+sts_kfe_dianqian_1_art = {
+	texture = "gfx/interface/illustrations/units/sts_kfe_dianqian_1.dds"
+	priority = 900000
+	trigger = { is_unit_type = a_traditions_dianqian }
+}
+
+sts_kfe_dianqian_2_art = {
+	texture = "gfx/interface/illustrations/units/sts_kfe_dianqian_2.dds"
+	priority = 900000
+	trigger = { is_unit_type = a_renaissance_dianqian }
+}
+
+sts_kfe_dianqian_3_art = {
+	texture = "gfx/interface/illustrations/units/sts_kfe_dianqian_3.dds"
+	priority = 900000
+	trigger = { is_unit_type = a_discovery_dianqian }
+}
+
+sts_kfe_dianqian_4_art = {
+	texture = "gfx/interface/illustrations/units/sts_kfe_dianqian_4.dds"
+	priority = 900000
+	trigger = { is_unit_type = a_reformation_dianqian }
+}
+
+sts_kfe_dianqian_5_art = {
+	texture = "gfx/interface/illustrations/units/sts_kfe_dianqian_5.dds"
+	priority = 900000
+	trigger = { is_unit_type = a_absolutism_dianqian }
+}
+
+sts_kfe_dianqian_6_art = {
+	texture = "gfx/interface/illustrations/units/sts_kfe_dianqian_6.dds"
+	priority = 900000
+	trigger = { is_unit_type = a_revolutions_dianqian }
+}
+
+# 蜀·元戎劲弩手
+sts_shu_yuanrong_art = {
+	texture = "gfx/interface/illustrations/units/sts_shu_yuanrong.dds"
+	priority = 900000
+	trigger = { is_unit_type = a_shu_yuanrong }
+}

@@ -1,0 +1,31 @@
+﻿# 万邦之秋：蜀·两项革新（蜀道拓险 / 益州交子务）与元戎劲弩手
+
+sts_shu_shudao_advance = {
+	potential = { has_or_had_tag = CAJ }
+	age = age_1_traditions
+	icon = sts_shu_shudao
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	army_light_infantry_power = 0.10
+	siege_ability = 0.10
+}
+
+sts_shu_jiaozi_advance = {
+	potential = { has_or_had_tag = CAJ }
+	age = age_2_renaissance
+	icon = sts_shu_jiaozi
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	requires = unlock_men_at_arms_advance
+	tax_income_efficiency = 0.03
+	bank_interest = -0.01
+}
+
+sts_shu_yuanrong_advance = {
+	potential = { has_or_had_tag = CAJ }
+	age = age_1_traditions
+	content_priority = 1000
+	ai_weight = { add = 50 }
+	allow_children = no
+	unlock_unit = a_shu_yuanrong
+}

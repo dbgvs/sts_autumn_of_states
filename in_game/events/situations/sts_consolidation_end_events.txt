@@ -1,0 +1,103 @@
+﻿namespace = sts_consolidation
+
+# 海内整合三个结局的事件：由 outcome.immediate 通过脚本效果分发，逐国一次。
+# 普通成员与丞相府领袖互斥；纯叙事，不附加玩法奖励。
+
+# 结局一：霸主崛起（普通藩镇/藩王视角）
+sts_consolidation.3 = {
+	type = country_event
+	category = situation_event
+	title = sts_consolidation.3.title
+	desc = sts_consolidation.3.desc
+	outcome = neutral
+	trigger = { country_type = location }
+
+	option = {
+		name = sts_consolidation.3.a
+		ai_chance = { base = 1 }
+	}
+}
+
+# 结局一：霸主崛起（丞相府领袖视角）
+sts_consolidation.4 = {
+	type = country_event
+	category = situation_event
+	title = sts_consolidation.4.title
+	desc = sts_consolidation.4.desc
+	outcome = neutral
+	trigger = {
+		country_type = location
+		is_leader_of_international_organization = international_organization:sts_chancellery
+	}
+
+	option = {
+		name = sts_consolidation.4.a
+		ai_chance = { base = 1 }
+	}
+}
+
+# 结局二：诸夏覆灭（普通藩镇/残存遗老视角）
+sts_consolidation.5 = {
+	type = country_event
+	category = situation_event
+	title = sts_consolidation.5.title
+	desc = sts_consolidation.5.desc
+	outcome = neutral
+	trigger = { country_type = location }
+
+	option = {
+		name = sts_consolidation.5.a
+		ai_chance = { base = 1 }
+	}
+}
+
+# 结局二：诸夏覆灭（丞相府领袖视角）
+sts_consolidation.6 = {
+	type = country_event
+	category = situation_event
+	title = sts_consolidation.6.title
+	desc = sts_consolidation.6.desc
+	outcome = neutral
+	trigger = {
+		country_type = location
+		is_leader_of_international_organization = international_organization:sts_chancellery
+	}
+
+	option = {
+		name = sts_consolidation.6.a
+		ai_chance = { base = 1 }
+	}
+}
+
+# 结局三：争霸继续（普通藩镇/藩王视角）
+sts_consolidation.7 = {
+	type = country_event
+	category = situation_event
+	title = sts_consolidation.7.title
+	desc = sts_consolidation.7.desc
+	outcome = neutral
+	trigger = { country_type = location }
+
+	option = {
+		name = sts_consolidation.7.a
+		ai_chance = { base = 1 }
+	}
+}
+
+# 结局三：争霸继续（丞相府领袖视角）
+sts_consolidation.8 = {
+	type = country_event
+	category = situation_event
+	title = sts_consolidation.8.title
+	desc = sts_consolidation.8.desc
+	outcome = neutral
+	trigger = {
+		country_type = location
+		is_leader_of_international_organization = international_organization:sts_chancellery
+	}
+
+	option = {
+		name = sts_consolidation.8.a
+		ai_chance = { base = 1 }
+	}
+}
