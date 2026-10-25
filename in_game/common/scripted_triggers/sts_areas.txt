@@ -1,0 +1,43 @@
+﻿# 由 tools/gen_area_triggers.py 生成，请勿手改
+# 完整控制中华范围内任意一个地区（含附属国）即算达成
+
+sts_controls_any_whole_area = {
+	custom_tooltip = {
+		text = sts_controls_any_whole_area_tt
+		OR = {
+		sts_controls_entire_area = { AREA = area:beiping_area }
+		sts_controls_entire_area = { AREA = area:chuandong_area }
+		sts_controls_entire_area = { AREA = area:chuannan_area }
+		sts_controls_entire_area = { AREA = area:chuanxi_area }
+		sts_controls_entire_area = { AREA = area:dali_area }
+		sts_controls_entire_area = { AREA = area:datong_area }
+		sts_controls_entire_area = { AREA = area:fujian_area }
+		sts_controls_entire_area = { AREA = area:gansu_area }
+		sts_controls_entire_area = { AREA = area:guangdong_area }
+		sts_controls_entire_area = { AREA = area:guangxi_area }
+		sts_controls_entire_area = { AREA = area:guizhou_area }
+		sts_controls_entire_area = { AREA = area:haibei_hainan_area }
+		sts_controls_entire_area = { AREA = area:haiyou_area }
+		sts_controls_entire_area = { AREA = area:hebei_area }
+		sts_controls_entire_area = { AREA = area:henan_area }
+		sts_controls_entire_area = { AREA = area:hexi_area }
+		sts_controls_entire_area = { AREA = area:huaidong_area }
+		sts_controls_entire_area = { AREA = area:huaixi_area }
+		sts_controls_entire_area = { AREA = area:hubei_area }
+		sts_controls_entire_area = { AREA = area:hunan_area }
+		sts_controls_entire_area = { AREA = area:jiangnan_area }
+		sts_controls_entire_area = { AREA = area:jiangxi_area }
+		sts_controls_entire_area = { AREA = area:liangjiang_area }
+		sts_controls_entire_area = { AREA = area:longyou_area }
+		sts_controls_entire_area = { AREA = area:shaanxi_area }
+		sts_controls_entire_area = { AREA = area:shandong_area }
+		sts_controls_entire_area = { AREA = area:shanxi_area }
+		sts_controls_entire_area = { AREA = area:taiwan_area }
+		sts_controls_entire_area = { AREA = area:wuling_area }
+		sts_controls_entire_area = { AREA = area:yanbei_area }
+		sts_controls_entire_area = { AREA = area:yannan_area }
+		sts_controls_entire_area = { AREA = area:yunnan_area }
+		sts_controls_entire_area = { AREA = area:zhejiang_area }
+		}
+	}
+}

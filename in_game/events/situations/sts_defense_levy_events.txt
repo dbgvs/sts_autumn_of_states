@@ -1,0 +1,115 @@
+﻿namespace = sts_defense_levy
+
+# 藩王响应成员援助：依丞相府联防法律处理外部进攻，并非勤王。
+# AI 好感始终取响应国（事件国家）对受援国的好感。
+sts_defense_levy.1 = {
+	type = country_event
+	category = situation_event
+	title = sts_defense_levy.1.title
+	desc = sts_defense_levy.1.desc
+	outcome = neutral
+
+	immediate = {
+		global_var:sts_defense_attacked ?= { save_scope_as = sts_attacked_member }
+		global_var:sts_defense_war ?= { save_scope_as = sts_defensive_war }
+	}
+
+	option = {
+		name = sts_defense_levy.1.a
+		trigger = {
+			exists = scope:sts_attacked_member
+			exists = scope:sts_defensive_war
+			scope:sts_defensive_war = { can_join_as_defender = root }
+		}
+		join_war_as_defender = { war = scope:sts_defensive_war }
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2
+				opinion = { target = scope:sts_attacked_member value > 0 }
+			}
+			modifier = {
+				factor = 0.25
+				at_war = yes
+			}
+		}
+	}
+
+	option = {
+		name = sts_defense_levy.1.b
+		add_prestige = -20
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0.5
+				opinion = { target = scope:sts_attacked_member value > 0 }
+			}
+			modifier = {
+				factor = 2
+				at_war = yes
+			}
+		}
+	}
+}
+
+# 丞相响应成员援助：受援者可以是任何遭组织外势力进攻的相府国家。
+sts_defense_levy.2 = {
+	type = country_event
+	category = situation_event
+	title = sts_defense_levy.2.title
+	desc = sts_defense_levy.2.desc
+	outcome = neutral
+
+	immediate = {
+		global_var:sts_defense_attacked ?= { save_scope_as = sts_attacked_member }
+		global_var:sts_defense_war ?= { save_scope_as = sts_defensive_war }
+	}
+
+	option = {
+		name = sts_defense_levy.2.a
+		trigger = {
+			exists = scope:sts_attacked_member
+			exists = scope:sts_defensive_war
+			scope:sts_defensive_war = { can_join_as_defender = root }
+		}
+		join_war_as_defender = { war = scope:sts_defensive_war }
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2
+				opinion = { target = scope:sts_attacked_member value > 0 }
+			}
+			modifier = {
+				factor = 0.25
+				at_war = yes
+			}
+		}
+	}
+
+	option = {
+		name = sts_defense_levy.2.b
+		add_prestige = -20
+		add_legitimacy = -10
+		add_political_influence = -50
+		international_organization:sts_chancellery ?= {
+			every_international_organization_member = {
+				limit = { NOT = { this = root } }
+				add_opinion = {
+					modifier = sts_chancellery_abandoned
+					target = root
+				}
+			}
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0.5
+				opinion = { target = scope:sts_attacked_member value > 0 }
+			}
+			modifier = {
+				factor = 2
+				at_war = yes
+			}
+		}
+	}
+}

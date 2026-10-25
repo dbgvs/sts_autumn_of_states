@@ -1,0 +1,67 @@
+﻿# ============================================================
+# 万邦之秋 / 梁：专属建筑
+# 路径：in_game/common/building_types/
+# ============================================================
+
+# 丞相府：汴京中枢
+sts_chancellery_palace = {
+	audio_tier = 4
+	is_foreign = no
+	pop_type = nobles
+	max_levels = 1
+	category = government_category
+	employment_size = large_noble_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = soldier_building
+	expensive = yes
+
+	location_potential = { counts_as_capital = yes }
+	country_potential = { tag = KFE }
+
+	allow = { is_capital = yes }
+
+	capital_country_modifier = {
+		monthly_political_influence = 1
+		country_cabinet_efficiency = 0.02
+	}
+	modifier = {
+		gold_to_building_owner = 0.05
+	}
+
+	remove_if = { is_no_longer_capital = yes }
+
+	possible_production_methods = { estate_building_input }
+	construction_demand = early_soldier_building_construction
+}
+
+# 禁军大营：淮军与禁军的整编基地
+sts_imperial_guard_camp = {
+	audio_tier = 3
+	is_foreign = no
+	pop_type = nobles
+	max_levels = 1
+	category = military_category
+	employment_size = large_noble_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = soldier_building
+	expensive = yes
+
+	location_potential = { counts_as_capital = yes }
+	country_potential = { tag = KFE }
+
+	allow = { is_capital = yes }
+
+	modifier = {
+		manpower_to_building_owner = 0.001
+		can_recruit_regiment_in_this_location = yes
+	}
+
+	remove_if = { is_no_longer_capital = yes }
+
+	possible_production_methods = { estate_building_input }
+	construction_demand = early_soldier_building_construction
+}

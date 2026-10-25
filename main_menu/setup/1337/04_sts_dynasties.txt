@@ -1,0 +1,85 @@
+dynasty_manager = {
+
+	# 宋室：赵氏主系
+	sts_zhao_song_dynasty = {
+		name = { name = sts_dynasty_zhao_song }
+		home = kaifeng
+	}
+
+	# 赵氏宗室分支
+	sts_zhao_lai_dynasty = {
+		name = { name = sts_dynasty_zhao_lai }
+		home = penglai
+	}
+
+	sts_zhao_shu_dynasty = {
+		name = { name = sts_dynasty_zhao_shu }
+		home = chengdu
+	}
+
+	sts_zhao_jin_dynasty = {
+		name = { name = sts_dynasty_zhao_jin }
+		home = shangdang
+	}
+
+	sts_zhao_wu_dynasty = {
+		name = { name = sts_dynasty_zhao_wu }
+		home = jiangning
+	}
+
+	sts_zhao_chu_dynasty = {
+		name = { name = sts_dynasty_zhao_chu }
+		home = xiangyang
+	}
+
+	# 梁：张氏
+	sts_zhang_dynasty = {
+		name = { name = sts_dynasty_zhang }
+		home = kaifeng
+	}
+
+	# 秦：岳氏，岳飞直系
+	sts_yue_dynasty = {
+		name = { name = sts_dynasty_yue }
+		home = jingzhao
+	}
+
+	# 齐：韩氏，韩世忠直系
+	sts_han_dynasty = {
+		name = { name = sts_dynasty_han }
+		home = licheng
+	}
+
+	# 汉：吴氏，吴璘后裔
+	sts_wu_dynasty = {
+		name = { name = sts_dynasty_wu }
+		home = xicheng
+	}
+
+	# 越：宗氏，宗泽后裔
+	sts_zong_dynasty = {
+		name = { name = sts_dynasty_zong }
+		home = hangzhou
+	}
+
+
+	# 闽：王氏
+	sts_wang_dynasty = {
+		name = { name = sts_dynasty_wang }
+		home = jinjiang
+	}
+
+
+	# 粤：刘氏，南汉宗室之后
+	sts_liu_dynasty = {
+		name = { name = sts_dynasty_liu }
+		home = guangzhou
+	}
+
+
+	# 湘：马氏，南楚之后
+	sts_ma_dynasty = {
+		name = { name = sts_dynasty_ma }
+		home = changsha
+	}
+}

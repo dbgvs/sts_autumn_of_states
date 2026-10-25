@@ -1,0 +1,200 @@
+﻿# ============================================================
+# 万邦之秋：藩王固定旗帜
+# 路径：main_menu/common/coat_of_arms/coat_of_arms/
+# 仅给十个特殊藩王/梁写固定 COA，其他藩镇仍由原版随机纹章。
+# ============================================================
+
+# 梁：红底金边，中原龙纹
+KFE = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "black"
+
+	colored_emblem = {
+		texture = "ce_dragon_chasing_flaming_pearl.dds"
+		color1 = color2
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+# 秦：黑底红虎，西方白虎
+XIA = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "red"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_chinese_white_tiger.dds"
+		color1 = color2
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+# 齐：蓝底白鸟，东方朱鸟
+JIN = {
+	pattern = "pattern_solid.dds"
+	color1 = "blue_dark"
+	color2 = "white"
+	color3 = "red"
+
+	colored_emblem = {
+		texture = "ce_chinese_vermilion_bird.dds"
+		color1 = color2
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+# 莱：青底金麟，海滨麒麟
+DAD = {
+	pattern = "pattern_solid.dds"
+	color1 = "purple"
+	color2 = "yellow"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_chinese_qilin.dds"
+		color1 = color2
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+# 蜀：绿底金乌，日月光辉
+CAJ = {
+	pattern = "pattern_solid.dds"
+	color1 = "orange"
+	color2 = "yellow"
+	color3 = "red"
+
+	colored_emblem = {
+		texture = "ce_chinese_sun_moon.dds"
+		color1 = color2
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.78 0.78 } }
+	}
+}
+
+# 晋：紫底玄龟，北方玄武
+LAK = {
+	pattern = "pattern_solid.dds"
+	color1 = "indigo"
+	color2 = "yellow"
+	color3 = "black"
+
+	colored_emblem = {
+		texture = "ce_chinese_black_turtle.dds"
+		color1 = color2
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+# 吴：蓝底白龙，江左青龙
+YAF = {
+	pattern = "pattern_solid.dds"
+	color1 = "blue_sky"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_chinese_azure_dragon.dds"
+		color1 = color2
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+# 楚：紫底金凤，荆楚双凤
+XAF = {
+	pattern = "pattern_solid.dds"
+	color1 = "orange"
+	color2 = "yellow"
+	color3 = "red"
+
+	colored_emblem = {
+		texture = "ce_chinese_double_phoenix.dds"
+		color1 = color2
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.78 0.78 } }
+	}
+}
+
+# 汉：深红底黑字，汉家正朔
+XAB = {
+	pattern = "pattern_solid.dds"
+	color1 = "maroon"
+	color2 = "yellow"
+	color3 = "black"
+
+	colored_emblem = {
+		texture = "ce_chinese_han_character_semi_cursive.dds"
+		color1 = color2
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.62 0.62 } }
+	}
+}
+
+# 越：青底金贝，南海法螺
+HAS = {
+	pattern = "pattern_solid.dds"
+	color1 = "cyan"
+	color2 = "yellow"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_chinese_auspicious_conch_shell.dds"
+		color1 = color2
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.72 0.72 } }
+	}
+}
+
+# 闽：海蓝底金舟，刺桐海舶
+QAB = {
+	pattern = "pattern_solid.dds"
+	color1 = "blue_light"
+	color2 = "yellow"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_boat_shield.dds"
+		color1 = color2
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.78 0.78 } }
+	}
+}
+
+# 粤：深红底金云日，岭南王气
+GAI = {
+	pattern = "pattern_solid.dds"
+	color1 = "red_scarlet"
+	color2 = "yellow"
+	color3 = "black"
+
+	colored_emblem = {
+		texture = "ce_chinese_celestial_body_cloud_tail.dds"
+		color1 = color2
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.8 0.8 } }
+	}
+}
+
+# 湘：青绿底金莲，湘楚文脉
+CAQ = {
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "yellow"
+	color3 = "orange"
+
+	colored_emblem = {
+		texture = "ce_chinese_ming_lotus_ornament.dds"
+		color1 = color2
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.78 0.78 } }
+	}
+}

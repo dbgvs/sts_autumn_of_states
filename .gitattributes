@@ -1,0 +1,9 @@
+# Preserve script and localization bytes, line endings and BOM on checkout.
+* -text
+
+# Mark image assets as binary for diffs and merges.
+*.dds binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary

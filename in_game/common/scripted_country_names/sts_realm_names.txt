@@ -1,0 +1,201 @@
+﻿# ============================================================
+# 万邦之秋 / Autumn of Ten Thousand States
+# 国号（scripted_country_names）
+# 路径：in_game/common/scripted_country_names/
+#
+# 引擎会自动匹配 country_trigger 成立的定义，把命中的键写入国家的
+# name_key —— 这才是"真正的国名"。customizable_localization 只管渲染。
+# 所以这里每个国号都要同时满足「已择此号」+「王国级」。
+# ============================================================
+
+# 梁 —— 汴梁镇
+sts_realm_liang = {
+	country_trigger = {
+		has_variable = sts_realm_liang
+		country_rank = country_rank:rank_kingdom
+	}
+	capital_trigger = {
+	}
+	location_trigger = {
+	}
+}
+
+# 魏 —— 彰德镇
+sts_realm_wei = {
+	country_trigger = {
+		has_variable = sts_realm_wei
+		country_rank = country_rank:rank_kingdom
+	}
+	capital_trigger = {
+	}
+	location_trigger = {
+	}
+}
+
+# 吴 —— 淮南镇
+sts_realm_wu = {
+	country_trigger = {
+		has_variable = sts_realm_wu
+		country_rank = country_rank:rank_kingdom
+	}
+	capital_trigger = {
+	}
+	location_trigger = {
+	}
+}
+
+# 燕
+sts_realm_yan = {
+	country_trigger = {
+		has_variable = sts_realm_yan
+		country_rank = country_rank:rank_kingdom
+	}
+	capital_trigger = {
+	}
+	location_trigger = {
+	}
+}
+
+# 韩
+sts_realm_han = {
+	country_trigger = {
+		has_variable = sts_realm_han
+		country_rank = country_rank:rank_kingdom
+	}
+	capital_trigger = {
+	}
+	location_trigger = {
+	}
+}
+
+# 赵
+sts_realm_zhao = {
+	country_trigger = {
+		has_variable = sts_realm_zhao
+		country_rank = country_rank:rank_kingdom
+	}
+	capital_trigger = {
+	}
+	location_trigger = {
+	}
+}
+
+# 唐
+sts_realm_tang = {
+	country_trigger = {
+		has_variable = sts_realm_tang
+		country_rank = country_rank:rank_kingdom
+	}
+	capital_trigger = {
+	}
+	location_trigger = {
+	}
+}
+
+# 周
+sts_realm_zhou = {
+	country_trigger = {
+		has_variable = sts_realm_zhou
+		country_rank = country_rank:rank_kingdom
+	}
+	capital_trigger = {
+	}
+	location_trigger = {
+	}
+}
+
+# 陈
+sts_realm_chen = {
+	country_trigger = {
+		has_variable = sts_realm_chen
+		country_rank = country_rank:rank_kingdom
+	}
+	capital_trigger = {
+	}
+	location_trigger = {
+	}
+}
+
+# 郑
+sts_realm_zheng = {
+	country_trigger = {
+		has_variable = sts_realm_zheng
+		country_rank = country_rank:rank_kingdom
+	}
+	capital_trigger = {
+	}
+	location_trigger = {
+	}
+}
+
+# 鲁
+sts_realm_lu = {
+	country_trigger = {
+		has_variable = sts_realm_lu
+		country_rank = country_rank:rank_kingdom
+	}
+	capital_trigger = {
+	}
+	location_trigger = {
+	}
+}
+
+# 卫
+sts_realm_wei_gong = {
+	country_trigger = {
+		has_variable = sts_realm_wei_gong
+		country_rank = country_rank:rank_kingdom
+	}
+	capital_trigger = {
+	}
+	location_trigger = {
+	}
+}
+
+# 凉
+sts_realm_liangzhou = {
+	country_trigger = {
+		has_variable = sts_realm_liangzhou
+		country_rank = country_rank:rank_kingdom
+	}
+	capital_trigger = {
+	}
+	location_trigger = {
+	}
+}
+
+# 夏
+sts_realm_xia = {
+	country_trigger = {
+		has_variable = sts_realm_xia
+		country_rank = country_rank:rank_kingdom
+	}
+	capital_trigger = {
+	}
+	location_trigger = {
+	}
+}
+
+# 商
+sts_realm_shang = {
+	country_trigger = {
+		has_variable = sts_realm_shang
+		country_rank = country_rank:rank_kingdom
+	}
+	capital_trigger = {
+	}
+	location_trigger = {
+	}
+}
+
+# 邓
+sts_realm_deng = {
+	country_trigger = {
+		has_variable = sts_realm_deng
+		country_rank = country_rank:rank_kingdom
+	}
+	capital_trigger = {
+	}
+	location_trigger = {
+	}
+}

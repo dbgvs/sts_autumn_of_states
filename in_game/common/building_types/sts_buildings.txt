@@ -1,0 +1,79 @@
+﻿# ============================================================
+# 万邦之秋 / Autumn of Ten Thousand States
+# 宋廷：建筑国家的立足点
+# 路径：in_game/common/building_types/
+#
+# 完全对照原版「御所」(gosho) 编写 —— 天皇正是"无地、只靠京都一座御所"
+# 的建筑国家。此前自造的版本缺了 production_methods / modifier /
+# construction_demand，被引擎判定为无效建筑而每月清理。
+# ============================================================
+
+sts_song_court = {
+	audio_tier = 4
+	is_special = yes
+	is_foreign = yes
+	stronger_power_projection = no
+	# 照原版御所(gosho)：靠「与地主关系良好」立足。
+	# 不用 international_organization_link：实测挂到天朝后建筑会在第一个月被清掉。
+	need_good_relation = yes
+	# 宋靠这座建筑存在，不许拆除
+	is_indestructible = yes
+	can_close = no
+	can_destroy = { always = no }
+
+	pop_type = nobles
+	category = government_category
+
+	max_levels = 1
+	employment_size = large_noble_employment
+	pop_size_created = large_noble_employment
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	ai_foreign_ignore_naval_range = yes
+
+	location_potential = {
+		dominant_culture = { has_culture_group = culture_group:chinese_group }
+	}
+
+	country_potential = {
+		tag = CSO
+	}
+
+	build_time = soldier_building
+
+	allow = {
+		dominant_culture = { has_culture_group = culture_group:chinese_group }
+		OR = {
+			this = location:kaifeng
+			AND = {
+				scope:actor = { country_type = building }
+				any_foreign_building_countries_in_location = { this = scope:actor }
+			}
+		}
+	}
+
+	# 朝廷虽无地，仍能供养少量禁军与用度
+	modifier = {
+		manpower_to_building_owner = 0.001
+		can_recruit_regiment_in_this_location = yes
+		gold_to_building_owner = 0.05
+	}
+
+	# 内库岁入：归建筑所有者（宋）所有。
+	# 依据：2026-10-23 日志显示宋在首月破产并出现月度赤字，
+	# 随后宋廷被清除、宋国无建筑而消亡。
+	# 无地朝廷没有税基，必须由宫廷本身提供固定用度，否则必然破产。
+	foreign_country_modifier = {
+		monthly_gold_income = 20
+	}
+
+	possible_production_methods = {
+		estate_building_input
+	}
+
+	construction_demand = early_soldier_building_construction
+}

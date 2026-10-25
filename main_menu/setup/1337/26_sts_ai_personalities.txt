@@ -1,0 +1,20 @@
+countries = {
+	countries = {
+
+		# 万邦之秋：八国藩王与梁的 AI 国家性格
+		KFE = { ai_personality = ai_expansionist }  # 梁
+		XIA = { ai_personality = ai_aggressive }    # 秦
+		DAD = { ai_personality = ai_opportunistic } # 莱
+		XAB = { ai_personality = ai_defensive }     # 汉
+
+		LAK = { ai_personality = ai_expansionist }  # 晋
+		JIN = { ai_personality = ai_expansionist }  # 齐
+		CAJ = { ai_personality = ai_expansionist }  # 蜀
+		HAS = { ai_personality = ai_expansionist }  # 越
+		YAF = { ai_personality = ai_expansionist }  # 吴
+		QAB = { ai_personality = ai_isolationist }   # 闽
+		GAI = { ai_personality = ai_cautious }      # 粤
+		CAQ = { ai_personality = ai_opportunistic }  # 湘
+
+	}
+}

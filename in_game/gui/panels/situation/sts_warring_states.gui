@@ -1,0 +1,110 @@
+situation_panel = {
+
+	##################################### TOP HEADER #####################################
+
+	# 左：这是什么局势
+	blockoverride "situation_header_left" {
+		icon = {
+			size = { 32 32 }
+			texture = "gfx/interface/icons/map_subdivisons/location.dds"
+		}
+
+		vbox = {
+			layoutpolicy_horizontal = expanding
+
+			text_single = {
+				layoutpolicy_horizontal = expanding
+				text = "STS_HDR_WARLORDS"
+				default_format = "#subtle_name"
+			}
+
+			text_single = {
+				layoutpolicy_horizontal = expanding
+				fontsize = 13
+				text = "STS_HDR_WARLORDS_SUB"
+			}
+		}
+		expand = {}
+	}
+
+	# 双人物上方的角色标签
+	blockoverride "situation_top_subheader_content" {
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			margin = { 14 4 }
+			spacing = 10
+
+			text_single = {
+				raw_text = "当前丞相"
+				default_format = "#subtle_name"
+				align = left|nobaseline
+			}
+
+			expand = {}
+
+			text_single = {
+				raw_text = "最强藩镇"
+				default_format = "#subtle_name"
+				align = right|nobaseline
+			}
+		}
+	}
+
+	# 双人物头部：左丞相，右最强藩镇
+	blockoverride "situation_panel_image" {
+		background = {
+			texture = "gfx/interface/illustrations/situation/sts_warring_states.dds"
+			texture_density = 2
+			spriteType = stretched
+			spriteborder = { 0 0 }
+		}
+
+		two_characters_header = {
+			visible = "[Or(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('sts_chancellor_character').IsSet, SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('sts_strongest_fanwang_character').IsSet)]"
+
+			blockoverride "two_characters_header_background" {
+				texture = "gfx/interface/illustrations/situation/sts_warring_states.dds"
+				texture_density = 2
+				spriteType = stretched
+				spriteborder = { 0 0 }
+			}
+
+			blockoverride "FirstCharacterContext" {
+				datacontext = "[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('sts_chancellor_character').GetCharacter]"
+				visible = "[And(Character.IsValid, Character.IsAlive)]"
+			}
+
+			blockoverride "SecondCharacterContext" {
+				datacontext = "[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('sts_strongest_fanwang_character').GetCharacter]"
+				visible = "[And(Character.IsValid, Character.IsAlive)]"
+			}
+
+			blockoverride "SecondCharacterRole" {
+				country_character = {
+					blockoverride "country_header_orientation" {
+						righttoleft = yes
+					}
+					blockoverride "country_government_character_labels_align" {
+						align = right|nobaseline
+					}
+					blockoverride "character_name_maximumsize" {
+						maximumsize = { 250 -1 }
+					}
+					blockoverride "character_name_text" {
+						text = "[Character.GetShortNameWithNoTooltip]"
+					}
+				}
+			}
+
+			blockoverride "first_character_portrait_anchor" {
+				parentanchor = bottom|left
+			}
+			blockoverride "second_character_portrait_anchor" {
+				parentanchor = bottom|right
+			}
+			blockoverride "character_religion_visibility" {
+				visible = no
+			}
+		}
+	}
+}

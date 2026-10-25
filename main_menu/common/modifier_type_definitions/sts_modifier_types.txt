@@ -1,0 +1,25 @@
+﻿# 丞相府特殊身份的引擎配套类型；只注册类型，不赋予效果或数值。
+sts_son_of_heaven_can_participate_in_parliament = {
+	boolean = yes
+	game_data = { category = internationalorganization }
+}
+sts_son_of_heaven_agenda_impact = {
+	percent = yes
+	game_data = { category = internationalorganization }
+}
+sts_fanwang_state_can_participate_in_parliament = {
+	boolean = yes
+	game_data = { category = internationalorganization }
+}
+sts_fanwang_state_agenda_impact = {
+	percent = yes
+	game_data = { category = internationalorganization }
+}
+sts_warlord_state_can_participate_in_parliament = {
+	boolean = yes
+	game_data = { category = internationalorganization }
+}
+sts_warlord_state_agenda_impact = {
+	percent = yes
+	game_data = { category = internationalorganization }
+}

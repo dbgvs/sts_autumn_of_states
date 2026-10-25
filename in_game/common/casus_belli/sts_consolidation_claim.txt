@@ -1,0 +1,14 @@
+﻿# 海内整合“索取宣称”专用；与原版通用征服省份隔离。
+# 只由局势行动授予，不开放常规伪造。期限沿用原版征服省份。
+cb_sts_consolidation_claim = {
+	years = 15
+	create_visible = { always = no }
+	create_enabled = { always = no }
+
+	# root 为候选省份，actor 为使用宣战理由的国家。
+	province = {
+		area = scope:actor.capital.area
+	}
+
+	war_goal_type = sts_consolidation_claim_wargoal
+}

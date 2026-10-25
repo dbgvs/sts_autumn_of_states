@@ -1,0 +1,121 @@
+﻿# 万邦之秋：八国藩王国家增益（由 tools/gen_prince_content.py 生成）
+
+sts_kfe_chancellery_advance = {
+	age = age_1_traditions
+	icon = crown_power_advance_renaissance
+	content_priority = 1000
+	potential = { has_or_had_tag = KFE }
+	monthly_political_influence = 0.5
+	tax_income_efficiency = 0.05
+	global_supply_limit_modifier = 0.1
+	discipline = 0.03
+	diplomatic_reputation = -1
+}
+
+sts_xia_qin_armor_advance = {
+	age = age_1_traditions
+	icon = glorious_arms
+	content_priority = 1000
+	potential = { has_or_had_tag = XIA }
+	army_heavy_infantry_power = 0.05
+	army_heavy_cavalry_power = 0.05
+	global_manpower_modifier = 0.1
+	fort_maintenance_efficiency = 0.1
+	tax_income_efficiency = -0.05
+}
+
+sts_qi_maritime_advance = {
+	age = age_1_traditions
+	icon = ship_building_advance
+	content_priority = 1000
+	potential = { has_or_had_tag = JIN }
+	navy_galley_power = 0.1
+	global_navy_levy_size_modifier = 0.1
+	trade_sea_efficiency = 0.05
+	global_supply_limit_modifier = 0.05
+	discipline = -0.02
+}
+
+sts_lai_sea_trade_advance = {
+	age = age_1_traditions
+	icon = merchants_and_trade
+	content_priority = 1000
+	potential = { has_or_had_tag = DAD }
+	trade_income = 0.1
+	trade_sea_efficiency = 0.1
+	max_sailors = 5
+	navy_light_ship_power = 0.05
+	global_manpower_modifier = -0.05
+}
+
+sts_shu_salt_iron_advance = {
+	age = age_1_traditions
+	icon = efficient_mining
+	content_priority = 1000
+	potential = { has_or_had_tag = CAJ }
+	global_production_efficiency = 0.05
+	global_salt_output_modifier = 0.1
+	global_iron_output_modifier = 0.1
+	tax_income_efficiency = 0.05
+	discipline = -0.02
+}
+
+sts_jin_taihang_advance = {
+	age = age_1_traditions
+	icon = defensive_mentality
+	content_priority = 1000
+	potential = { has_or_had_tag = LAK }
+	global_defensive = 0.1
+	fort_maintenance_efficiency = 0.1
+	global_manpower_modifier = 0.05
+	army_movement_speed = 0.05
+	tax_income_efficiency = -0.05
+}
+
+sts_wu_jiangzuo_advance = {
+	age = age_1_traditions
+	icon = cultural_acceptance_advance
+	content_priority = 1000
+	potential = { has_or_had_tag = YAF }
+	monthly_legitimacy = 0.25
+	diplomatic_reputation = 1
+	navy_heavy_ship_power = 0.05
+	global_institution_growth_modifier = 0.05
+	tax_income_efficiency = -0.05
+}
+
+sts_chu_xianghan_advance = {
+	age = age_1_traditions
+	icon = offensive_army
+	content_priority = 1000
+	potential = { has_or_had_tag = XAF }
+	global_defensive = 0.1
+	fort_maintenance_efficiency = 0.15
+	land_morale = 0.05
+	monthly_war_exhaustion = -0.01
+	army_movement_speed = -0.05
+}
+
+sts_han_qinling_advance = {
+	age = age_1_traditions
+	icon = defensive_mentality
+	content_priority = 1000
+	potential = { has_or_had_tag = XAB }
+	global_defensive = 0.1
+	fort_maintenance_efficiency = 0.15
+	army_heavy_infantry_power = 0.05
+	global_manpower_modifier = 0.05
+	tax_income_efficiency = -0.05
+}
+
+sts_yue_maritime_advance = {
+	age = age_1_traditions
+	icon = merchants_and_trade
+	content_priority = 1000
+	potential = { has_or_had_tag = HAS }
+	trade_income = 0.1
+	trade_sea_efficiency = 0.1
+	navy_heavy_ship_power = 0.05
+	max_sailors = 5
+	global_manpower_modifier = -0.05
+}

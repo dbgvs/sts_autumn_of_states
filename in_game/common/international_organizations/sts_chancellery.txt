@@ -1,0 +1,86 @@
+﻿# ============================================================
+# 万邦之秋 / Autumn of Ten Thousand States
+# 丞相府：中华内部的藩镇政治组织
+# 路径：in_game/common/international_organizations/
+#
+# 对应日本的幕府：天子是独立国家（另有天朝 IO），
+# 丞相由最强藩镇出任，统领天下诸侯。
+# ============================================================
+
+sts_chancellery = {
+	situation_relevant = 100
+	has_target = no
+	unique = yes
+	show_on_diplomatic_map = yes
+	expel_members_who_are_targets_of_other_members = no
+
+	has_leader_country = yes
+
+	# 不声明的话，效果里的 add_special_status 会被引擎忽略
+	special_statuses_implemented = {
+		sts_son_of_heaven
+		sts_fanwang_state
+		sts_warlord_state
+	}
+	disband_if_no_leader = no
+
+	leader_color = define:NMapColors|INTERNATIONAL_ORGANIZATION_LEADER_COLOR
+
+	# 丞相
+	leader_title_key = "CHANCELLOR_CHINA"
+	title_is_suffix = no
+	override_ruler_title = yes
+
+	leader_type = character
+	leader = {
+		leader_country ?= {
+			ruler ?= {
+				add_to_list = leaders
+			}
+		}
+	}
+
+	create_visible_trigger = {
+		always = no
+	}
+
+	invite_visible_trigger = {
+		always = no
+	}
+
+	# 防御法律：默认丞相府联防。成员遭外敌进攻时，丞相会被召唤参战。
+	laws = {
+		sts_defense_law = sts_mutual_defense_policy
+	}
+	# 丞相代表整个相府应战，普通藩镇不自动卷入
+	only_leader_country_joins_defensive_wars = yes
+
+	# 天子不可攻：任何成员都不能对宋宣战
+	can_declare_war = {
+		custom_tooltip = {
+			text = sts_cannot_attack_emperor_tt
+			NOT = {
+				scope:defender = { tag = CSO }
+			}
+		}
+	}
+
+	can_join_trigger = {
+		at_war = no
+		is_subject = no
+		OR = {
+			tag = CSO
+			NOT = { country_rank = country_rank:rank_empire }
+		}
+	}
+
+	# 丞相的收益
+	leader_modifier = {
+		monthly_political_influence = 1
+		monthly_prestige = 0.5
+	}
+
+	# 诸侯没有什么特殊加成
+	non_leader_modifier = {
+	}
+}

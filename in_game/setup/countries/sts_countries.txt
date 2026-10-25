@@ -1,0 +1,1579 @@
+﻿# 万邦之秋：自动生成国家定义，禁止撞用原版其他国家 tag。
+PAJ = { # 蒲州
+	color = rgb { 180 120 80 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = jin_culture
+	religion_definition = mahayana
+}
+
+JAO = { # 绛州
+	color = rgb { 160 130 90 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = jin_culture
+	religion_definition = mahayana
+}
+
+XIE = { # 解州
+	color = rgb { 140 140 100 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = jin_culture
+	religion_definition = mahayana
+}
+
+
+CIZ = { # 磁州
+	color = rgb { 67 81 63 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = jin_culture
+	religion_definition = sanjiao
+}
+
+DAB = { # 大名
+	color = rgb { 74 92 76 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+GUA = { # 广平
+	color = rgb { 81 103 89 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = jin_culture
+	religion_definition = sanjiao
+}
+
+HAE = { # 怀庆
+	color = rgb { 88 114 102 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = jin_culture
+	religion_definition = sanjiao
+}
+
+KAA = { # 开州
+	color = rgb { 95 125 115 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+WAA = { # 卫辉
+	color = rgb { 102 136 128 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = jin_culture
+	religion_definition = sanjiao
+}
+
+ZHA = { # 彰德
+	color = rgb { 109 147 141 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = jin_culture
+	religion_definition = sanjiao
+}
+
+CAC = { # 陈州
+	color = rgb { 116 158 154 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+DAC = { # 邓州
+	color = rgb { 123 169 167 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+GAA = { # 光州
+	color = rgb { 130 180 180 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+GUI = { # 归德
+	color = rgb { 137 191 193 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+HAF = { # 河南
+	color = rgb { 144 202 206 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+KFE = { # 梁
+	color = rgb { 180 35 40 }
+	color2 = rgb { 235 195 80 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+NAN = { # 南阳
+	color = rgb { 158 74 72 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+RUN = { # 汝宁
+	color = rgb { 165 85 85 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+RUZ = { # 汝州
+	color = rgb { 172 96 98 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+SAC = { # 陕州
+	color = rgb { 179 107 111 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+SAD = { # 嵩州
+	color = rgb { 186 118 124 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+SAE = { # 睢州
+	color = rgb { 193 129 137 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+XAA = { # 信阳
+	color = rgb { 200 140 150 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+YUZ = { # 裕州
+	color = rgb { 207 151 163 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+DAD = { # 莱
+	color = rgb { 145 70 165 }
+	color2 = rgb { 230 200 90 }
+	culture_definition = jiaodong_culture
+	religion_definition = sanjiao
+}
+
+JUZ = { # 莒州
+	color = rgb { 221 173 189 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = jiaodong_culture
+	religion_definition = sanjiao
+}
+
+MIZ = { # 密州
+	color = rgb { 228 184 202 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+QIN = { # 青州
+	color = rgb { 235 195 55 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = jiaodong_culture
+	religion_definition = sanjiao
+}
+
+CAO = { # 曹州
+	color = rgb { 62 206 68 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+DAE = { # 东平
+	color = rgb { 69 217 81 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+JIN = { # 齐
+	color = rgb { 35 85 170 }
+	color2 = rgb { 220 225 235 }
+	culture_definition = jilu_culture
+	religion_definition = sanjiao
+}
+
+JAA = { # 济宁
+	color = rgb { 83 89 107 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+PUZ = { # 濮州
+	color = rgb { 90 100 120 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+SAF = { # 单州
+	color = rgb { 97 111 133 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+TAB = { # 泰安
+	color = rgb { 104 122 146 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = jilu_culture
+	religion_definition = sanjiao
+}
+
+TAC = { # 滕州
+	color = rgb { 111 133 159 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+YAA = { # 兖州
+	color = rgb { 118 144 172 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+YIZ = { # 沂州
+	color = rgb { 125 155 185 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+FAA = { # 凤州
+	color = rgb { 132 166 198 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+SAH = { # 商州
+	color = rgb { 139 177 51 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = qin_culture
+	religion_definition = sanjiao
+}
+
+XIA = { # 秦
+	color = rgb { 45 45 50 }
+	color2 = rgb { 120 35 35 }
+	culture_definition = qin_culture
+	religion_definition = sanjiao
+}
+
+XAB = { # 汉
+	color = rgb { 130 40 55 }
+	color2 = rgb { 210 175 80 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+CAF = { # 昌州
+	color = rgb { 160 210 90 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+CAH = { # 重庆
+	color = rgb { 167 71 103 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+DAZ = { # 达州
+	color = rgb { 174 82 116 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+FUZ = { # 涪州
+	color = rgb { 181 93 129 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+HAK = { # 合州
+	color = rgb { 188 104 142 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+KAC = { # 夔州
+	color = rgb { 195 115 155 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+LUZ = { # 泸州
+	color = rgb { 202 126 168 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+YOU = { # 酉阳
+	color = rgb { 209 137 181 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = tujia_culture
+	religion_definition = sanjiao
+}
+
+ZHO = { # 忠州
+	color = rgb { 216 148 194 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+BAF = { # 柏兴
+	color = rgb { 223 159 207 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = yi_culture
+	religion_definition = sanjiao
+}
+
+CAI = { # 长宁
+	color = rgb { 230 170 60 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+DAF = { # 德昌
+	color = rgb { 237 181 73 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+DAG = { # 东川
+	color = rgb { 64 192 86 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+JAB = { # 嘉定
+	color = rgb { 71 203 99 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+LIZ = { # 黎州
+	color = rgb { 78 214 112 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+MAF = { # 马湖
+	color = rgb { 85 75 125 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+MAP = { # 眉州
+	color = rgb { 92 86 138 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+QIO = { # 邛州
+	color = rgb { 99 97 151 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+SAI = { # 四川
+	color = rgb { 106 108 164 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+WUS = { # 乌撒
+	color = rgb { 113 119 177 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = hmong_culture
+	religion_definition = sanjiao
+}
+
+WUM = { # 乌蒙
+	color = rgb { 120 130 190 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+XAC = { # 叙州
+	color = rgb { 127 141 203 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+YAZ = { # 雅州
+	color = rgb { 134 152 56 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+YON = { # 永宁
+	color = rgb { 141 163 69 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = hmong_culture
+	religion_definition = sanjiao
+}
+
+BAO = { # 保宁
+	color = rgb { 148 174 82 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+BAZ = { # 巴州
+	color = rgb { 155 185 95 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+CAJ = { # 蜀
+	color = rgb { 210 145 30 }
+	color2 = rgb { 45 85 50 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+GAB = { # 广安
+	color = rgb { 169 207 121 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+GAC = { # 广元
+	color = rgb { 176 218 134 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+SHU = { # 顺庆
+	color = rgb { 183 79 147 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+SAP = { # 松潘
+	color = rgb { 190 90 160 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = rma_culture
+	religion_definition = sanjiao
+}
+
+GAD = { # 高邮
+	color = rgb { 197 101 173 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = jianghuai_culture
+	religion_definition = sanjiao
+}
+
+HAP = { # 海州
+	color = rgb { 204 112 186 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = huaihai_culture
+	religion_definition = sanjiao
+}
+
+HAQ = { # 淮安
+	color = rgb { 211 123 199 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = jianghuai_culture
+	religion_definition = sanjiao
+}
+
+PIZ = { # 邳州
+	color = rgb { 218 134 52 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = huaihai_culture
+	religion_definition = sanjiao
+}
+
+TAG = { # 泰州
+	color = rgb { 225 145 65 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = tongtai_culture
+	religion_definition = sanjiao
+}
+
+TAH = { # 通州
+	color = rgb { 232 156 78 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = tongtai_culture
+	religion_definition = sanjiao
+}
+
+XAD = { # 徐州
+	color = rgb { 239 167 91 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = huaihai_culture
+	religion_definition = sanjiao
+}
+
+YAE = { # 扬州
+	color = rgb { 66 178 104 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = jianghuai_culture
+	religion_definition = sanjiao
+}
+
+ANQ = { # 安庆
+	color = rgb { 73 189 117 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = gan_culture
+	religion_definition = sanjiao
+}
+
+BOZ = { # 亳州
+	color = rgb { 80 200 130 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+CHU = { # 滁州
+	color = rgb { 87 211 143 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = jianghuai_culture
+	religion_definition = sanjiao
+}
+
+FAC = { # 凤阳
+	color = rgb { 94 72 156 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+HEP = { # 和州
+	color = rgb { 101 83 169 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = jianghuai_culture
+	religion_definition = sanjiao
+}
+
+LUA = { # 六安
+	color = rgb { 108 94 182 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = jianghuai_culture
+	religion_definition = sanjiao
+}
+
+LAD = { # 泸州
+	color = rgb { 115 105 195 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = jianghuai_culture
+	religion_definition = sanjiao
+}
+
+SAQ = { # 寿州
+	color = rgb { 122 116 208 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+SAS = { # 泗州
+	color = rgb { 129 127 61 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+SUZ = { # 宿州
+	color = rgb { 136 138 74 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+YIN = { # 颍州
+	color = rgb { 143 149 87 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+CAL = { # 池州
+	color = rgb { 150 160 100 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = xuanzhou_culture
+	religion_definition = sanjiao
+}
+
+HAR = { # 徽州
+	color = rgb { 157 171 113 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = jixi_culture
+	religion_definition = sanjiao
+}
+
+NAB = { # 宁国
+	color = rgb { 164 182 126 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = xuanzhou_culture
+	religion_definition = sanjiao
+}
+
+SAZ = { # 苏州
+	color = rgb { 171 193 139 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = wu_culture
+	religion_definition = sanjiao
+}
+
+YAF = { # 吴
+	color = rgb { 55 150 205 }
+	color2 = rgb { 25 60 120 }
+	culture_definition = wu_culture
+	religion_definition = sanjiao
+}
+
+CAP = { # 处州
+	color = rgb { 185 215 165 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = chuzhou_culture
+	religion_definition = sanjiao
+}
+
+HAS = { # 越
+	color = rgb { 25 130 110 }
+	color2 = rgb { 220 195 90 }
+	culture_definition = wu_culture
+	religion_definition = sanjiao
+}
+
+HUZ = { # 湖州
+	color = rgb { 199 87 191 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = wu_culture
+	religion_definition = sanjiao
+}
+
+JAG = { # 金华
+	color = rgb { 206 98 204 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = wuzhou_culture
+	religion_definition = sanjiao
+}
+
+QAA = { # 衢州
+	color = rgb { 213 109 57 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = quzhou_culture
+	religion_definition = sanjiao
+}
+
+TAP = { # 台州
+	color = rgb { 220 120 70 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = wu_culture
+	religion_definition = sanjiao
+}
+
+WEN = { # 温州
+	color = rgb { 227 131 83 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = ouhai_culture
+	religion_definition = sanjiao
+}
+
+YAG = { # 严州
+	color = rgb { 234 142 96 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = tunxi_culture
+	religion_definition = sanjiao
+}
+
+DIN = { # 定南
+	color = rgb { 61 153 109 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = kejia_culture
+	religion_definition = sanjiao
+}
+
+FAD = { # 抚州
+	color = rgb { 68 164 122 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = gan_culture
+	religion_definition = sanjiao
+}
+
+GAN = { # 赣州
+	color = rgb { 75 175 135 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = kejia_culture
+	religion_definition = sanjiao
+}
+
+GAF = { # 广信
+	color = rgb { 82 186 148 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = jiangshan_culture
+	religion_definition = sanjiao
+}
+
+JAH = { # 吉安
+	color = rgb { 89 197 161 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = gan_culture
+	religion_definition = sanjiao
+}
+
+JAI = { # 建昌
+	color = rgb { 96 208 174 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = gan_culture
+	religion_definition = sanjiao
+}
+
+JIU = { # 九江
+	color = rgb { 103 219 187 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = jianghuai_culture
+	religion_definition = sanjiao
+}
+
+LAE = { # 临江
+	color = rgb { 110 80 200 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = gan_culture
+	religion_definition = sanjiao
+}
+
+NAD = { # 南安
+	color = rgb { 117 91 53 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = kejia_culture
+	religion_definition = sanjiao
+}
+
+NAE = { # 南昌
+	color = rgb { 124 102 66 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = gan_culture
+	religion_definition = sanjiao
+}
+
+NAF = { # 南康
+	color = rgb { 131 113 79 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = gan_culture
+	religion_definition = sanjiao
+}
+
+NAH = { # 宁都
+	color = rgb { 138 124 92 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = kejia_culture
+	religion_definition = sanjiao
+}
+
+NAJ = { # 宁州
+	color = rgb { 145 135 105 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = gan_culture
+	religion_definition = sanjiao
+}
+
+TAQ = { # 太和
+	color = rgb { 152 146 118 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = gan_culture
+	religion_definition = sanjiao
+}
+
+RAO = { # 饶州
+	color = rgb { 159 157 131 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = gan_culture
+	religion_definition = sanjiao
+}
+
+RUI = { # 瑞州
+	color = rgb { 166 168 144 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = gan_culture
+	religion_definition = sanjiao
+}
+
+YAI = { # 袁州
+	color = rgb { 173 179 157 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = gan_culture
+	religion_definition = sanjiao
+}
+
+FUN = { # 福宁
+	color = rgb { 180 190 170 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = funing_culture
+	religion_definition = sanjiao
+}
+
+FAF = { # 福州
+	color = rgb { 187 201 183 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+JAJ = { # 建宁
+	color = rgb { 194 212 196 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = jianning_culture
+	religion_definition = sanjiao
+}
+
+QAB = { # 泉州
+	color = rgb { 45 170 180 }
+	color2 = rgb { 230 240 245 }
+	culture_definition = minnan_culture
+	religion_definition = sanjiao
+}
+
+SBC = { # 邵武
+	color = rgb { 208 84 62 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = gan_culture
+	religion_definition = sanjiao
+}
+
+TIN = { # 汀州
+	color = rgb { 215 95 75 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = kejia_culture
+	religion_definition = sanjiao
+}
+
+XAE = { # 兴化
+	color = rgb { 222 106 88 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+YAJ = { # 延平
+	color = rgb { 229 117 101 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+ZAD = { # 漳州
+	color = rgb { 236 128 114 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+DEA = { # 德安
+	color = rgb { 63 139 127 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = jianghuai_culture
+	religion_definition = sanjiao
+}
+
+GAG = { # 归州
+	color = rgb { 70 150 140 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+HAV = { # 汉阳
+	color = rgb { 77 161 153 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = chu_culture
+	religion_definition = sanjiao
+}
+
+HAX = { # 黄州
+	color = rgb { 84 172 166 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = jianghuai_culture
+	religion_definition = sanjiao
+}
+
+JAM = { # 荆州
+	color = rgb { 91 183 179 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = chu_culture
+	religion_definition = sanjiao
+}
+
+MIA = { # 沔阳
+	color = rgb { 98 194 192 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = chu_culture
+	religion_definition = sanjiao
+}
+
+WUC = { # 武昌
+	color = rgb { 105 205 205 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = chu_culture
+	religion_definition = sanjiao
+}
+
+XAF = { # 楚
+	color = rgb { 210 95 30 }
+	color2 = rgb { 80 35 20 }
+	culture_definition = chu_culture
+	religion_definition = sanjiao
+}
+
+XAG = { # 兴国
+	color = rgb { 119 77 71 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = gan_culture
+	religion_definition = sanjiao
+}
+
+YIL = { # 夷陵
+	color = rgb { 126 88 84 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+BAJ = { # 宝庆
+	color = rgb { 133 99 97 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+CAQ = { # 长沙
+	color = rgb { 65 150 75 }
+	color2 = rgb { 230 210 120 }
+	culture_definition = xinxiang_culture
+	religion_definition = sanjiao
+}
+
+CAW = { # 辰州
+	color = rgb { 147 121 123 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = yongzhou_culture
+	religion_definition = sanjiao
+}
+
+DAO = { # 道州
+	color = rgb { 154 132 136 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = yao_china_culture
+	religion_definition = sanjiao
+}
+
+GAH = { # 桂阳
+	color = rgb { 161 143 149 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = yongzhou_culture
+	religion_definition = sanjiao
+}
+
+HAY = { # 衡州
+	color = rgb { 168 154 162 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = hengzhou_culture
+	religion_definition = sanjiao
+}
+
+WUG = { # 武冈
+	color = rgb { 175 165 175 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = laoxiang_culture
+	religion_definition = sanjiao
+}
+
+XAH = { # 湘乡
+	color = rgb { 182 176 188 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+YAV = { # 永州
+	color = rgb { 189 187 201 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = yongzhou_culture
+	religion_definition = sanjiao
+}
+
+YAX = { # 攸州
+	color = rgb { 196 198 54 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = gan_culture
+	religion_definition = sanjiao
+}
+
+YUE = { # 岳州
+	color = rgb { 203 209 67 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = gan_culture
+	religion_definition = sanjiao
+}
+
+CAY = { # 常德
+	color = rgb { 210 70 80 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+CAZ = { # 郴州
+	color = rgb { 217 81 93 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = waxiang_culture
+	religion_definition = sanjiao
+}
+
+JAN = { # 靖州
+	color = rgb { 224 92 106 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = kam_culture
+	religion_definition = sanjiao
+}
+
+LAF = { # 澧州
+	color = rgb { 231 103 119 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = changde_culture
+	religion_definition = sanjiao
+}
+
+SBE = { # 施州
+	color = rgb { 238 114 132 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+YAY = { # 永顺
+	color = rgb { 65 125 145 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = tujia_culture
+	religion_definition = sanjiao
+}
+
+YBA = { # 沅州
+	color = rgb { 72 136 158 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = kam_culture
+	religion_definition = sanjiao
+}
+
+CBB = { # 潮州
+	color = rgb { 79 147 171 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = chaozhou_culture
+	religion_definition = sanjiao
+}
+
+DEQ = { # 德庆
+	color = rgb { 86 158 184 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = yuehai_culture
+	religion_definition = sanjiao
+}
+
+DAK = { # 东莞
+	color = rgb { 93 169 197 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+GAI = { # 广州
+	color = rgb { 180 60 80 }
+	color2 = rgb { 90 25 35 }
+	culture_definition = yuehai_culture
+	religion_definition = sanjiao
+}
+
+HEY = { # 河源
+	color = rgb { 107 191 63 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = dongjiang_culture
+	religion_definition = sanjiao
+}
+
+HAZ = { # 惠州
+	color = rgb { 114 202 76 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = huizhou_hakka_culture
+	religion_definition = sanjiao
+}
+
+LIA = { # 连州
+	color = rgb { 121 213 89 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = yao_china_culture
+	religion_definition = sanjiao
+}
+
+NAK = { # 南恩
+	color = rgb { 128 74 102 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = yangjiang_culture
+	religion_definition = sanjiao
+}
+
+NAO = { # 南雄
+	color = rgb { 135 85 115 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = kejia_culture
+	religion_definition = sanjiao
+}
+
+PAB = { # 番禺
+	color = rgb { 142 96 128 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = yuehai_culture
+	religion_definition = sanjiao
+}
+
+SBF = { # 邵州
+	color = rgb { 149 107 141 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = kejia_culture
+	religion_definition = sanjiao
+}
+
+XAI = { # 新会
+	color = rgb { 156 118 154 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+XUN = { # 循州
+	color = rgb { 163 129 167 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = dongjiang_culture
+	religion_definition = sanjiao
+}
+
+YBB = { # 英德
+	color = rgb { 170 140 180 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = yuehai_culture
+	religion_definition = sanjiao
+}
+
+ZAE = { # 肇庆
+	color = rgb { 177 151 193 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = yuehai_culture
+	religion_definition = sanjiao
+}
+
+GAJ = { # 桂林
+	color = rgb { 184 162 206 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = yao_china_culture
+	religion_definition = sanjiao
+}
+
+HBA = { # 贺州
+	color = rgb { 191 173 59 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = yao_china_culture
+	religion_definition = sanjiao
+}
+
+LIU = { # 柳州
+	color = rgb { 198 184 72 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhuang_culture
+	religion_definition = sanjiao
+}
+
+LUO = { # 洛容
+	color = rgb { 205 195 85 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhuang_culture
+	religion_definition = sanjiao
+}
+
+PAE = { # 平乐
+	color = rgb { 212 206 98 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = yao_china_culture
+	religion_definition = sanjiao
+}
+
+QAC = { # 全州
+	color = rgb { 219 217 111 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = xinxiang_culture
+	religion_definition = sanjiao
+}
+
+RON = { # 融州
+	color = rgb { 226 78 124 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = hmong_culture
+	religion_definition = sanjiao
+}
+
+RAA = { # 容州
+	color = rgb { 233 89 137 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = yulin_culture
+	religion_definition = sanjiao
+}
+
+TAU = { # 藤州
+	color = rgb { 60 100 150 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = guangxin_culture
+	religion_definition = sanjiao
+}
+
+WUZ = { # 梧州
+	color = rgb { 67 111 163 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = guangxin_culture
+	religion_definition = sanjiao
+}
+
+XAJ = { # 浔州
+	color = rgb { 74 122 176 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = tubai_culture
+	religion_definition = sanjiao
+}
+
+YUL = { # 郁林
+	color = rgb { 81 133 189 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = yulin_culture
+	religion_definition = sanjiao
+}
+
+GAK = { # 高州
+	color = rgb { 88 144 202 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = gaozhou_culture
+	religion_definition = sanjiao
+}
+
+HBB = { # 化州
+	color = rgb { 95 155 55 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = huazhou_culture
+	religion_definition = sanjiao
+}
+
+LAG = { # 雷州
+	color = rgb { 102 166 68 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = leizhou_culture
+	religion_definition = sanjiao
+}
+
+LAH = { # 廉州
+	color = rgb { 109 177 81 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = malao_culture
+	religion_definition = sanjiao
+}
+
+NAQ = { # 南宁军
+	color = rgb { 116 188 94 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = hlai_culture
+	religion_definition = sanjiao
+}
+
+QAD = { # 琼州
+	color = rgb { 123 199 107 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = qiong_culture
+	religion_definition = sanjiao
+}
+
+WAB = { # 万安军
+	color = rgb { 130 210 120 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = qiong_culture
+	religion_definition = sanjiao
+}
+
+BAL = { # 白山
+	color = rgb { 137 71 133 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhuang_culture
+	religion_definition = sanjiao
+}
+
+BAP = { # 宾州
+	color = rgb { 144 82 146 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = guinan_culture
+	religion_definition = sanjiao
+}
+
+GAP = { # 归顺州
+	color = rgb { 151 93 159 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhuang_culture
+	religion_definition = sanjiao
+}
+
+HBC = { # 横州
+	color = rgb { 158 104 172 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = guinan_culture
+	religion_definition = sanjiao
+}
+
+NAR = { # 南丹
+	color = rgb { 165 115 185 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhuang_culture
+	religion_definition = sanjiao
+}
+
+NAT = { # 南宁
+	color = rgb { 172 126 198 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = guinan_culture
+	religion_definition = sanjiao
+}
+
+QAE = { # 庆远
+	color = rgb { 179 137 51 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhuang_culture
+	religion_definition = sanjiao
+}
+
+SBH = { # 思城
+	color = rgb { 186 148 64 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhuang_culture
+	religion_definition = sanjiao
+}
+
+SIM = { # 思明州
+	color = rgb { 193 159 77 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhuang_culture
+	religion_definition = sanjiao
+}
+
+TAW = { # 太平
+	color = rgb { 200 170 90 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhuang_culture
+	religion_definition = sanjiao
+}
+
+TIA = { # 田州
+	color = rgb { 207 181 103 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhuang_culture
+	religion_definition = sanjiao
+}
+
+XAK = { # 西隆
+	color = rgb { 214 192 116 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = zhongyuan_culture
+	religion_definition = sanjiao
+}
+
+AAB = { # 安南
+	color = rgb { 221 203 129 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = hmong_culture
+	religion_definition = hmongism
+}
+
+AAE = { # 安顺
+	color = rgb { 228 214 142 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = hmong_culture
+	religion_definition = hmongism
+}
+
+BAQ = { # 播州
+	color = rgb { 235 75 155 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = hmong_culture
+	religion_definition = hmongism
+}
+
+DUY = { # 都匀
+	color = rgb { 62 86 168 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = sui_culture
+	religion_definition = sui_religion
+}
+
+GAQ = { # 贵州
+	color = rgb { 69 97 181 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = hmong_culture
+	religion_definition = hmongism
+}
+
+LAJ = { # 黎平
+	color = rgb { 76 108 194 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = kam_culture
+	religion_definition = kam_religion
+}
+
+PAF = { # 平越
+	color = rgb { 83 119 207 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = hmong_culture
+	religion_definition = hmongism
+}
+
+PAG = { # 普安
+	color = rgb { 90 130 60 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = gelao_culture
+	religion_definition = sanjiao
+}
+
+SIN = { # 思南
+	color = rgb { 97 141 73 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = tujia_culture
+	religion_definition = nuo_religion
+}
+
+SBI = { # 思州
+	color = rgb { 104 152 86 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = kam_culture
+	religion_definition = kam_religion
+}
+
+SBJ = { # 顺元
+	color = rgb { 111 163 99 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = hmong_culture
+	religion_definition = hmongism
+}
+
+TAY = { # 铜仁
+	color = rgb { 118 174 112 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = kam_culture
+	religion_definition = kam_religion
+}
+
+XAM = { # 新州
+	color = rgb { 125 185 125 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = hmong_culture
+	religion_definition = hmongism
+}
+
+WAC = { # 乌撒卫
+	color = rgb { 132 196 138 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = gelao_culture
+	religion_definition = sanjiao
+}
+
+ZAF = { # 真安
+	color = rgb { 139 207 151 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = shu_culture
+	religion_definition = sanjiao
+}
+
+LAK = { # 晋
+	color = rgb { 75 55 140 }
+	color2 = rgb { 225 190 90 }
+	culture_definition = jin_culture
+	religion_definition = mahayana
+}
+
+DGS = { # 朵甘思
+	color = rgb { 153 79 177 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = khampa_culture
+	religion_definition = tibetan_buddhism
+}
+
+DSM = { # 朵思麻
+	color = rgb { 160 90 190 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = amdowa_culture
+	religion_definition = tibetan_buddhism
+}
+
+MGS = { # 蒙兀儿斯坦
+	color = rgb { 167 101 203 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = oirat_culture
+	religion_definition = tengri
+}
+
+YUT = { # 于阗
+	color = rgb { 174 112 56 }
+	color2 = rgb { 16 41 202 }
+	culture_definition = khorezmian_culture
+	religion_definition = sunni
+}
+
+
+

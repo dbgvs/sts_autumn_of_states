@@ -1,0 +1,957 @@
+﻿# ============================================================
+# 万邦之秋 / Autumn of Ten Thousand States
+# 脚本效果
+# 路径：in_game/common/scripted_effects/
+# 编码：UTF-8 BOM
+#
+# 宋为静态建筑国家：开局无领土，宋廷固定落座开封，开封归 KFE。
+# 丞相 = 宋廷所在地的主人；天朝领袖开局空置，受禅者接任。
+# ============================================================
+
+# ------------------------------------------------------------
+# 分阶段扩张方向
+# 节度使：area 主 + region 次
+# 称王：region 主 + 全国次
+# 称帝：全国主 + region 次
+# ------------------------------------------------------------
+
+sts_assign_home_area_preference = {
+	if = {
+		limit = { capital.area = area:hebei_area }
+		add_area_preference = sts_conquer_area_hebei_area
+	}
+	else_if = {
+		limit = { capital.area = area:henan_area }
+		add_area_preference = sts_conquer_area_henan_area
+	}
+	else_if = {
+		limit = { capital.area = area:haiyou_area }
+		add_area_preference = sts_conquer_area_haiyou_area
+	}
+	else_if = {
+		limit = { capital.area = area:shandong_area }
+		add_area_preference = sts_conquer_area_shandong_area
+	}
+	else_if = {
+		limit = { capital.area = area:shaanxi_area }
+		add_area_preference = sts_conquer_area_shaanxi_area
+	}
+	else_if = {
+		limit = { capital.area = area:chuandong_area }
+		add_area_preference = sts_conquer_area_chuandong_area
+	}
+	else_if = {
+		limit = { capital.area = area:chuannan_area }
+		add_area_preference = sts_conquer_area_chuannan_area
+	}
+	else_if = {
+		limit = { capital.area = area:chuanxi_area }
+		add_area_preference = sts_conquer_area_chuanxi_area
+	}
+	else_if = {
+		limit = { capital.area = area:huaidong_area }
+		add_area_preference = sts_conquer_area_huaidong_area
+	}
+	else_if = {
+		limit = { capital.area = area:huaixi_area }
+		add_area_preference = sts_conquer_area_huaixi_area
+	}
+	else_if = {
+		limit = { capital.area = area:jiangnan_area }
+		add_area_preference = sts_conquer_area_jiangnan_area
+	}
+	else_if = {
+		limit = { capital.area = area:zhejiang_area }
+		add_area_preference = sts_conquer_area_zhejiang_area
+	}
+	else_if = {
+		limit = { capital.area = area:jiangxi_area }
+		add_area_preference = sts_conquer_area_jiangxi_area
+	}
+	else_if = {
+		limit = { capital.area = area:fujian_area }
+		add_area_preference = sts_conquer_area_fujian_area
+	}
+	else_if = {
+		limit = { capital.area = area:hubei_area }
+		add_area_preference = sts_conquer_area_hubei_area
+	}
+	else_if = {
+		limit = { capital.area = area:hunan_area }
+		add_area_preference = sts_conquer_area_hunan_area
+	}
+	else_if = {
+		limit = { capital.area = area:wuling_area }
+		add_area_preference = sts_conquer_area_wuling_area
+	}
+	else_if = {
+		limit = { capital.area = area:guangdong_area }
+		add_area_preference = sts_conquer_area_guangdong_area
+	}
+	else_if = {
+		limit = { capital.area = area:guangxi_area }
+		add_area_preference = sts_conquer_area_guangxi_area
+	}
+	else_if = {
+		limit = { capital.area = area:haibei_hainan_area }
+		add_area_preference = sts_conquer_area_haibei_hainan_area
+	}
+	else_if = {
+		limit = { capital.area = area:liangjiang_area }
+		add_area_preference = sts_conquer_area_liangjiang_area
+	}
+}
+
+sts_clear_home_area_preferences = {
+	hidden_effect = {
+			remove_area_preference = sts_conquer_area_hebei_area
+			remove_area_preference = sts_conquer_area_henan_area
+			remove_area_preference = sts_conquer_area_haiyou_area
+			remove_area_preference = sts_conquer_area_shandong_area
+			remove_area_preference = sts_conquer_area_shaanxi_area
+			remove_area_preference = sts_conquer_area_chuandong_area
+			remove_area_preference = sts_conquer_area_chuannan_area
+			remove_area_preference = sts_conquer_area_chuanxi_area
+			remove_area_preference = sts_conquer_area_huaidong_area
+			remove_area_preference = sts_conquer_area_huaixi_area
+			remove_area_preference = sts_conquer_area_jiangnan_area
+			remove_area_preference = sts_conquer_area_zhejiang_area
+			remove_area_preference = sts_conquer_area_jiangxi_area
+			remove_area_preference = sts_conquer_area_fujian_area
+			remove_area_preference = sts_conquer_area_hubei_area
+			remove_area_preference = sts_conquer_area_hunan_area
+			remove_area_preference = sts_conquer_area_wuling_area
+			remove_area_preference = sts_conquer_area_guangdong_area
+			remove_area_preference = sts_conquer_area_guangxi_area
+			remove_area_preference = sts_conquer_area_haibei_hainan_area
+			remove_area_preference = sts_conquer_area_liangjiang_area
+	}
+}
+
+sts_grant_china_ambition_medium = {
+	hidden_effect = {
+		sts_clear_home_area_preferences = yes
+		remove_area_preference = sts_conquer_home_region
+		remove_area_preference = sts_conquer_china_low
+
+		if = {
+			limit = { NOT = { has_area_preference = sts_conquer_capital_region_kingdom } }
+			add_area_preference = sts_conquer_capital_region_kingdom
+		}
+		if = {
+			limit = { NOT = { has_area_preference = sts_conquer_china_low } }
+			add_area_preference = sts_conquer_china_low
+		}
+	}
+}
+
+sts_grant_china_ambition_high = {
+	hidden_effect = {
+		sts_clear_home_area_preferences = yes
+		remove_area_preference = sts_conquer_capital_region_kingdom
+		remove_area_preference = sts_conquer_china_low
+
+		if = {
+			limit = { NOT = { has_area_preference = sts_conquer_china_high } }
+			add_area_preference = sts_conquer_china_high
+		}
+		if = {
+			limit = { NOT = { has_area_preference = sts_conquer_home_region } }
+			add_area_preference = sts_conquer_home_region
+		}
+	}
+}
+
+# 群雄割据局势头：当前丞相 + 最强藩镇
+sts_update_warring_header = {
+	# 每轮重建前清除旧引用；候选消失时不能沿用死亡人物或灭亡国家。
+	clear_saved_scope = sts_chancellor_country
+	clear_saved_scope = sts_chancellor_character
+	clear_saved_scope = sts_strongest_fanwang_character
+	situation:sts_warring_states = {
+		remove_variable = sts_chancellor_character
+		remove_variable = sts_strongest_fanwang_country
+		remove_variable = sts_strongest_fanwang_character
+	}
+	# 当前丞相：丞相府领袖国家的统治者
+	if = {
+		limit = {
+			exists = international_organization:sts_chancellery
+			international_organization:sts_chancellery = {
+				international_organization_has_leader = yes
+			}
+		}
+		international_organization:sts_chancellery = {
+			leader_country ?= { save_scope_as = sts_chancellor_country }
+		}
+		if = {
+			limit = { exists = scope:sts_chancellor_country }
+			scope:sts_chancellor_country = {
+				ruler ?= { save_scope_as = sts_chancellor_character }
+			}
+			if = {
+				limit = {
+					exists = scope:sts_chancellor_character
+					scope:sts_chancellor_character = { is_alive = yes }
+				}
+				situation:sts_warring_states = {
+					set_variable = {
+						name = sts_chancellor_character
+						value = scope:sts_chancellor_character
+					}
+				}
+			}
+		}
+	}
+
+	# 最强藩镇：排除丞相本人，按军事、税基、地块综合排序
+	clear_global_variable_list = sts_warring_strength_list
+	every_country = {
+		limit = {
+			sts_is_consolidation_member = yes
+			country_type = location
+			is_subject = no
+			is_rebel_country = no
+			NOT = { is_leader_of_international_organization = international_organization:sts_chancellery }
+		}
+		add_to_global_variable_list = { name = sts_warring_strength_list target = this }
+	}
+
+	ordered_in_global_list = {
+		variable = sts_warring_strength_list
+		order_by = {
+			add = { value = military_strength }
+			add = { value = country_tax_base }
+			add = { value = num_locations }
+		}
+		max = 1
+		check_range_bounds = no
+		situation:sts_warring_states = {
+			set_variable = {
+				name = sts_strongest_fanwang_country
+				value = prev
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			situation:sts_warring_states = { has_variable = sts_strongest_fanwang_country }
+		}
+		situation:sts_warring_states = {
+			var:sts_strongest_fanwang_country = {
+				ruler ?= { save_scope_as = sts_strongest_fanwang_character }
+			}
+			if = {
+				limit = {
+					exists = scope:sts_strongest_fanwang_character
+					scope:sts_strongest_fanwang_character = { is_alive = yes }
+				}
+				set_variable = {
+					name = sts_strongest_fanwang_character
+					value = scope:sts_strongest_fanwang_character
+				}
+			}
+		}
+	}
+}
+
+# ------------------------------------------------------------
+# 开局初始化（幂等，钩子与局势 on_start 都会调）
+# ------------------------------------------------------------
+sts_game_init = {
+	# 给所有中华藩镇/藩王/宋天子补宗族：开局角色没有 dynasty 会显示“出身卑微”
+	every_country = {
+		limit = {
+			OR = {
+				has_variable = sts_warlord
+				is_member_of_international_organization = international_organization:sts_chancellery
+				tag = CSO
+			}
+		}
+		clear_saved_scope = sts_new_dynasty
+		ruler ?= {
+			if = {
+				limit = { has_dynasty = no }
+				found_dynasty = random
+			}
+			dynasty ?= { save_scope_as = sts_new_dynasty }
+		}
+		if = {
+			limit = { exists = scope:sts_new_dynasty }
+			every_character = {
+				limit = {
+					has_dynasty = no
+					OR = {
+						is_female = no
+						father ?= { has_dynasty = yes }
+					}
+				}
+				change_dynasty = scope:sts_new_dynasty
+			}
+		}
+	}
+
+	# 顺序要紧：
+	#   1. 先打藩镇标记
+	#   2. 再让藩镇敬畏天子（宋廷靠「关系良好」立足）
+	#   3. 接天朝（领袖空置）
+	#   4. 丞相府按宋廷所在地定领袖、授身份
+	sts_mark_warlords = yes
+	sts_revere_song_court = yes
+
+	# AI 扩张方向：移除原版的“全中国 +25”，改为优先首都所在 region
+	every_country = {
+		limit = { has_variable = sts_warlord }
+		remove_area_preference = china_chinese_unification
+		add_area_preference = sts_conquer_home_region
+		sts_assign_home_area_preference = yes
+	}
+
+	# 八国：国家增益 + 默认法律政策（旧档兜底）
+	if = {
+		limit = { country_exists = c:KFE }
+		c:KFE = {
+			if = { limit = { NOT = { has_advance = sts_kfe_chancellery_advance } }
+				research_advance = advance_type:sts_kfe_chancellery_advance }
+			if = { limit = { NOT = { has_policy = sts_song_honor_court } }
+				add_policy = policy:sts_song_honor_court }
+		}
+	}
+	if = {
+		limit = { country_exists = c:XIA }
+		c:XIA = {
+			if = { limit = { NOT = { has_advance = sts_xia_qin_armor_advance } }
+				research_advance = advance_type:sts_xia_qin_armor_advance }
+			if = { limit = { NOT = { has_policy = sts_qin_sharp_armor } }
+				add_policy = policy:sts_qin_sharp_armor }
+		}
+	}
+	if = {
+		limit = { country_exists = c:JIN }
+		c:JIN = {
+			if = { limit = { NOT = { has_advance = sts_qi_maritime_advance } }
+				research_advance = advance_type:sts_qi_maritime_advance }
+			if = { limit = { NOT = { has_policy = sts_qi_navy } }
+				add_policy = policy:sts_qi_navy }
+		}
+	}
+	if = {
+		limit = { country_exists = c:DAD }
+		c:DAD = {
+			if = { limit = { NOT = { has_advance = sts_lai_sea_trade_advance } }
+				research_advance = advance_type:sts_lai_sea_trade_advance }
+			if = { limit = { NOT = { has_policy = sts_lai_shipping } }
+				add_policy = policy:sts_lai_shipping }
+		}
+	}
+	if = {
+		limit = { country_exists = c:CAJ }
+		c:CAJ = {
+			if = { limit = { NOT = { has_advance = sts_shu_salt_iron_advance } }
+				research_advance = advance_type:sts_shu_salt_iron_advance }
+			if = { limit = { NOT = { has_policy = sts_shu_state_monopoly } }
+				add_policy = policy:sts_shu_state_monopoly }
+		}
+	}
+	if = {
+		limit = { country_exists = c:LAK }
+		c:LAK = {
+			if = { limit = { NOT = { has_advance = sts_jin_taihang_advance } }
+				research_advance = advance_type:sts_jin_taihang_advance }
+			if = { limit = { NOT = { has_policy = sts_jin_fortress } }
+				add_policy = policy:sts_jin_fortress }
+		}
+	}
+	if = {
+		limit = { country_exists = c:YAF }
+		c:YAF = {
+			if = { limit = { NOT = { has_advance = sts_wu_jiangzuo_advance } }
+				research_advance = advance_type:sts_wu_jiangzuo_advance }
+			if = { limit = { NOT = { has_policy = sts_wu_orthodox } }
+				add_policy = policy:sts_wu_orthodox }
+		}
+	}
+	if = {
+		limit = { country_exists = c:XAF }
+		c:XAF = {
+			if = { limit = { NOT = { has_advance = sts_chu_xianghan_advance } }
+				research_advance = advance_type:sts_chu_xianghan_advance }
+			if = { limit = { NOT = { has_policy = sts_chu_fortress } }
+				add_policy = policy:sts_chu_fortress }
+		}
+	}
+	if = {
+		limit = { country_exists = c:XAB }
+		c:XAB = {
+			if = { limit = { NOT = { has_advance = sts_han_qinling_advance } }
+				research_advance = advance_type:sts_han_qinling_advance }
+			if = { limit = { NOT = { has_policy = sts_han_fortress } }
+				add_policy = policy:sts_han_fortress }
+		}
+	}
+	if = {
+		limit = { country_exists = c:HAS }
+		c:HAS = {
+			if = { limit = { NOT = { has_advance = sts_yue_maritime_advance } }
+				research_advance = advance_type:sts_yue_maritime_advance }
+			if = { limit = { NOT = { has_policy = sts_yue_shipping } }
+				add_policy = policy:sts_yue_shipping }
+		}
+	}
+
+	# 内库启动金：只给一次，避免 on_action 与 on_start 双触发重复加钱
+	if = {
+		limit = {
+			country_exists = c:CSO
+			NOT = { c:CSO = { has_variable = sts_song_seeded } }
+		}
+		c:CSO = {
+			add_gold = 100
+			set_variable = { name = sts_song_seeded value = yes }
+		}
+	}
+
+	sts_take_over_middle_kingdom = yes
+
+	# ---- 丞相府：丞相为宋廷所在地的主人；开局是 KFE ----
+	international_organization:sts_chancellery ?= {
+		clear_saved_scope = sts_court_host
+		sts_find_song_court = yes
+		if = {
+			limit = { exists = scope:sts_court_location }
+			scope:sts_court_location.owner = { save_scope_as = sts_court_host }
+		}
+		if = {
+			limit = { exists = scope:sts_court_host }
+			set_leader_country = scope:sts_court_host
+		}
+		if = {
+			limit = { international_organization_has_leader = yes }
+			leader_country ?= { sts_count_mk_range_control = yes }
+		}
+
+		# 天子：宋
+		international_organization_add_special_status = {
+			type = special_status:sts_son_of_heaven
+			country = c:CSO
+		}
+
+		# 相府成员：未称王者入「藩镇」，已称王者入「藩王」；宋为天子
+		# 只给有地、首都自属、非叛军的成员，避免把建筑/无地国家塞进藩王栏
+		every_country = {
+			limit = {
+				is_member_of_international_organization = international_organization:sts_chancellery
+				NOT = { tag = CSO }
+			}
+			save_scope_as = sts_warlord_tmp
+			international_organization:sts_chancellery = {
+				if = {
+					limit = {
+						scope:sts_warlord_tmp = {
+							country_type = location
+							capital ?= { owner = prev }
+							NOT = { is_rebel_country = yes }
+							has_variable = sts_warlord
+							country_rank = country_rank:rank_kingdom
+						}
+					}
+					international_organization_add_special_status = {
+						type = special_status:sts_fanwang_state
+						country = scope:sts_warlord_tmp
+					}
+				}
+				else_if = {
+					limit = {
+						scope:sts_warlord_tmp = {
+							country_type = location
+							capital ?= { owner = prev }
+							NOT = { is_rebel_country = yes }
+							NOT = { country_rank = country_rank:rank_kingdom }
+							NOT = { country_rank = country_rank:rank_empire }
+						}
+					}
+					international_organization_add_special_status = {
+						type = special_status:sts_warlord_state
+						country = scope:sts_warlord_tmp
+					}
+				}
+			}
+		}
+
+		# 清理旧存档里已经落在无地/建筑/叛军身上的「藩王」
+		every_country = {
+			limit = {
+				has_special_status_in_international_organization = {
+					type = special_status:sts_fanwang_state
+					international_organization = international_organization:sts_chancellery
+				}
+				NOT = {
+					country_type = location
+					capital ?= { owner = prev }
+					NOT = { is_rebel_country = yes }
+					has_variable = sts_warlord
+					country_rank = country_rank:rank_kingdom
+				}
+			}
+			save_scope_as = sts_bad_fanwang
+			international_organization:sts_chancellery = {
+				international_organization_remove_special_status = {
+					type = special_status:sts_fanwang_state
+					country = scope:sts_bad_fanwang
+				}
+			}
+		}
+	}
+
+	# 强制在开局第一天启动局势，不必等月度结算
+	if = {
+		limit = {
+			NOT = { is_situation_active = situation:sts_warring_states }
+		}
+		activate_situation = situation:sts_warring_states
+	}
+}
+
+
+# ------------------------------------------------------------
+# 藩镇对天子心存敬畏：宋廷所在地主人对宋的好感必须够高
+# ------------------------------------------------------------
+sts_revere_song_court = {
+	if = {
+		limit = { country_exists = c:CSO }
+		every_country = {
+			limit = { has_variable = sts_warlord }
+			add_opinion = { modifier = sts_revere_son_of_heaven target = c:CSO }
+		}
+	}
+}
+
+# ------------------------------------------------------------
+# 定位宋廷：产出 scope:sts_court_location
+# 先看宋首都（O(1)），失败再全图扫描；每次先清空旧作用域。
+# ------------------------------------------------------------
+sts_find_song_court = {
+	clear_saved_scope = sts_court_location
+	if = {
+		limit = {
+			country_exists = c:CSO
+			c:CSO = { exists = capital }
+			c:CSO = {
+				capital ?= {
+					any_foreign_buildings_in_location = {
+						building_type = building_type:sts_song_court
+						owner = c:CSO
+					}
+				}
+			}
+		}
+		c:CSO = { capital = { save_scope_as = sts_court_location } }
+	}
+	else = {
+		every_country = {
+			every_owned_location = {
+				limit = {
+					any_foreign_buildings_in_location = {
+						building_type = building_type:sts_song_court
+						owner = c:CSO
+					}
+				}
+				save_scope_as = sts_court_location
+			}
+		}
+	}
+}
+
+# ------------------------------------------------------------
+# 统计我方 + 附庸（含附庸的附庸）在天朝范围内的 owner 地块
+# 结果写入 var:sts_mk_range_controlled，供受禅 allow 读取
+# ------------------------------------------------------------
+sts_count_mk_range_control = {
+	save_scope_as = sts_mk_actor
+	set_variable = { name = sts_mk_range_controlled value = 0 }
+
+	every_owned_location = {
+		if = {
+			limit = { sts_in_middle_kingdom_range = yes }
+			scope:sts_mk_actor = {
+				change_variable = { name = sts_mk_range_controlled add = 1 }
+			}
+		}
+	}
+
+	every_subject_or_below = {
+		every_owned_location = {
+			if = {
+				limit = { sts_in_middle_kingdom_range = yes }
+				scope:sts_mk_actor = {
+					change_variable = { name = sts_mk_range_controlled add = 1 }
+				}
+			}
+		}
+	}
+}
+
+# ------------------------------------------------------------
+# 迁移天子：把宋廷从旧都迁到丞相首都
+# 顺序：找旧廷 → 新都建廷 → 迁宋都 → 拆旧廷 → 转移挟天子 → 成本/好感
+# ------------------------------------------------------------
+sts_move_song_court_effect = {
+	$ACTOR$ = { save_scope_as = sts_move_chancellor }
+	$ACTOR$ = { capital = { save_scope_as = sts_move_new_capital } }
+	c:CSO = { save_scope_as = sts_move_song_owner }
+
+	clear_saved_scope = sts_move_old_capital
+	clear_saved_scope = sts_move_old_host
+	sts_find_song_court = yes
+	if = {
+		limit = { exists = scope:sts_court_location }
+		scope:sts_court_location = { save_scope_as = sts_move_old_capital }
+		scope:sts_court_location.owner = { save_scope_as = sts_move_old_host }
+	}
+
+	# 1) 新都落座：先建，避免宋出现「无建筑」的中间态
+	scope:sts_move_new_capital = {
+		change_building_level_in_location = {
+			building = building_type:sts_song_court
+			value = 1
+			owner = c:CSO
+		}
+	}
+
+	# 2) 宋都随迁
+	c:CSO = { set_capital = scope:sts_move_new_capital }
+
+	# 3) 拆旧廷
+	if = {
+		limit = {
+			exists = scope:sts_move_old_capital
+			NOT = { scope:sts_move_old_capital = scope:sts_move_new_capital }
+		}
+		scope:sts_move_old_capital = {
+			destroy_building_forcefully = "building(building_type:sts_song_court|scope:sts_move_song_owner)"
+		}
+	}
+
+	# 4) 挟天子状态：旧主移除，新主立即获得；月度维护兜底
+	if = {
+		limit = {
+			exists = scope:sts_move_old_host
+			NOT = { scope:sts_move_old_host = scope:sts_move_chancellor }
+		}
+		scope:sts_move_old_host = {
+			if = { limit = { has_country_modifier = sts_holding_emperor } remove_country_modifier = sts_holding_emperor }
+			if = { limit = { has_variable = sts_emperor_months } remove_variable = sts_emperor_months }
+			if = { limit = { has_variable = sts_emperor_tier }   remove_variable = sts_emperor_tier }
+		}
+	}
+
+	# 5) 成本、十年阶级税 buff、相府离心
+	scope:sts_move_chancellor = {
+		if = { limit = { NOT = { has_country_modifier = sts_holding_emperor } }
+			add_country_modifier = { modifier = sts_holding_emperor } }
+		add_country_modifier = { modifier = sts_relocated_court years = 10 }
+		add_political_influence = -50
+		add_gold = -1000
+		add_prestige = -50
+		add_legitimacy = -50
+		add_stability = -20
+	}
+	international_organization:sts_chancellery ?= {
+		every_international_organization_member = {
+			limit = {
+				NOT = { this = scope:sts_move_chancellor }
+				NOT = { tag = CSO }
+			}
+			add_opinion = { modifier = sts_court_relocated target = scope:sts_move_chancellor }
+		}
+	}
+}
+
+# ------------------------------------------------------------
+# 接天朝：移除元，所有藩镇入会；领袖保持空置
+# ------------------------------------------------------------
+sts_take_over_middle_kingdom = {
+	international_organization:middle_kingdom ?= {
+		# 元作为帝国，本就不该在中华体系内
+		if = {
+			limit = {
+				c:CHI ?= {
+					is_member_of_international_organization = international_organization:middle_kingdom
+				}
+			}
+			remove_country_from_international_organization = c:CHI
+		}
+		# 宋只留丞相府，不再是天朝成员
+		if = {
+			limit = {
+				country_exists = c:CSO
+				c:CSO = {
+					is_member_of_international_organization = international_organization:middle_kingdom
+				}
+			}
+			remove_country_from_international_organization = c:CSO
+		}
+		# 天下无主，天命衰微
+		set_variable = { name = celestial_authority value = 18 }
+
+		# 所有藩镇都算中华体系内的成员；宋不入天朝
+		every_country = {
+			limit = {
+				OR = {
+					has_variable = sts_warlord
+					AND = {
+						is_member_of_international_organization = international_organization:sts_chancellery
+						NOT = { tag = CSO }
+					}
+				}
+				NOT = {
+					is_member_of_international_organization = international_organization:middle_kingdom
+				}
+			}
+			save_scope_as = sts_joiner_tmp
+			international_organization:middle_kingdom = {
+				add_country_to_international_organization = scope:sts_joiner_tmp
+			}
+		}
+	}
+}
+
+# ------------------------------------------------------------
+# 标记藩镇
+# ------------------------------------------------------------
+sts_mark_warlords = {
+	every_country = {
+		limit = { sts_is_chinese_warlord_tag = yes }
+		set_variable = { name = sts_warlord value = yes }
+	}
+	# 晋王：山西南诸侯出身，但需作为藩王参与相府序列
+	every_country = {
+		limit = { tag = LAK }
+		set_variable = { name = sts_warlord value = yes }
+	}
+}
+
+# ------------------------------------------------------------
+# 称王后：由「藩镇」升为「藩王」，在相府面板中换栏
+# ------------------------------------------------------------
+sts_promote_to_fanwang = {
+	international_organization:sts_chancellery ?= {
+		if = {
+			limit = {
+				scope:actor = {
+					country_type = location
+					has_variable = sts_warlord
+				}
+			}
+			international_organization_add_special_status = {
+				type = special_status:sts_fanwang_state
+				country = scope:actor
+			}
+			international_organization_remove_special_status = {
+				type = special_status:sts_warlord_state
+				country = scope:actor
+			}
+		}
+	}
+}
+
+# ------------------------------------------------------------
+# 按可用国号池决定国号并改名
+# 现有藩王：梁、秦、齐、莱、蜀、晋、吴、楚、汉、越，不进入候选池。
+# 候选名一旦被任一国家用 sts_realm_* 变量占用，就跳过，避免重名。
+# ------------------------------------------------------------
+sts_choose_realm_name = {
+	if = {
+		limit = { tag = KFE }
+		set_variable = { name = sts_realm_liang value = yes }
+		change_country_name = sts_realm_liang
+	}
+	else_if = {
+		limit = { NOT = { any_country = { has_variable = sts_realm_wei } } }
+		set_variable = { name = sts_realm_wei value = yes }
+		change_country_name = sts_realm_wei
+	}
+	else_if = {
+		limit = { NOT = { any_country = { has_variable = sts_realm_yan } } }
+		set_variable = { name = sts_realm_yan value = yes }
+		change_country_name = sts_realm_yan
+	}
+	else_if = {
+		limit = { NOT = { any_country = { has_variable = sts_realm_han } } }
+		set_variable = { name = sts_realm_han value = yes }
+		change_country_name = sts_realm_han
+	}
+	else_if = {
+		limit = { NOT = { any_country = { has_variable = sts_realm_zhao } } }
+		set_variable = { name = sts_realm_zhao value = yes }
+		change_country_name = sts_realm_zhao
+	}
+	else_if = {
+		limit = { NOT = { any_country = { has_variable = sts_realm_tang } } }
+		set_variable = { name = sts_realm_tang value = yes }
+		change_country_name = sts_realm_tang
+	}
+	else_if = {
+		limit = { NOT = { any_country = { has_variable = sts_realm_zhou } } }
+		set_variable = { name = sts_realm_zhou value = yes }
+		change_country_name = sts_realm_zhou
+	}
+	else_if = {
+		limit = { NOT = { any_country = { has_variable = sts_realm_chen } } }
+		set_variable = { name = sts_realm_chen value = yes }
+		change_country_name = sts_realm_chen
+	}
+	else_if = {
+		limit = { NOT = { any_country = { has_variable = sts_realm_zheng } } }
+		set_variable = { name = sts_realm_zheng value = yes }
+		change_country_name = sts_realm_zheng
+	}
+	else_if = {
+		limit = { NOT = { any_country = { has_variable = sts_realm_lu } } }
+		set_variable = { name = sts_realm_lu value = yes }
+		change_country_name = sts_realm_lu
+	}
+	else_if = {
+		limit = { NOT = { any_country = { has_variable = sts_realm_wei_gong } } }
+		set_variable = { name = sts_realm_wei_gong value = yes }
+		change_country_name = sts_realm_wei_gong
+	}
+	else_if = {
+		limit = { NOT = { any_country = { has_variable = sts_realm_liangzhou } } }
+		set_variable = { name = sts_realm_liangzhou value = yes }
+		change_country_name = sts_realm_liangzhou
+	}
+	else_if = {
+		limit = { NOT = { any_country = { has_variable = sts_realm_xia } } }
+		set_variable = { name = sts_realm_xia value = yes }
+		change_country_name = sts_realm_xia
+	}
+	else_if = {
+		limit = { NOT = { any_country = { has_variable = sts_realm_shang } } }
+		set_variable = { name = sts_realm_shang value = yes }
+		change_country_name = sts_realm_shang
+	}
+	else_if = {
+		limit = { NOT = { any_country = { has_variable = sts_realm_deng } } }
+		set_variable = { name = sts_realm_deng value = yes }
+		change_country_name = sts_realm_deng
+	}
+}
+
+# ------------------------------------------------------------
+# 挟天子状态：每月维护，按宋廷所在地判定
+# ------------------------------------------------------------
+sts_update_emperor_state = {
+	sts_find_song_court = yes
+	if = {
+		limit = {
+			exists = scope:sts_court_location
+			scope:sts_court_location = {
+				any_foreign_buildings_in_location = {
+					building_type = building_type:sts_song_court
+					owner = c:CSO
+				}
+			}
+		}
+		scope:sts_court_location.owner = {
+			if = {
+				limit = { has_variable = sts_warlord }
+				if = {
+					limit = { NOT = { has_country_modifier = sts_holding_emperor } }
+					add_country_modifier = { modifier = sts_holding_emperor }
+				}
+				if = {
+					limit = { NOT = { has_variable = sts_emperor_months } }
+					set_variable = { name = sts_emperor_months value = 0 }
+				}
+				change_variable = { name = sts_emperor_months add = 1 }
+
+				if = {
+					limit = { var:sts_emperor_months >= 12 }
+					change_variable = { name = sts_emperor_months subtract = 12 }
+					if = {
+						limit = { NOT = { has_variable = sts_emperor_tier } }
+						set_variable = { name = sts_emperor_tier value = 0 }
+					}
+					if = {
+						limit = { var:sts_emperor_tier < 10 }
+						change_variable = { name = sts_emperor_tier add = 1 }
+						sts_spread_emperor_hate = yes
+					}
+				}
+			}
+		}
+	}
+
+	every_country = {
+		limit = { has_country_modifier = sts_holding_emperor }
+		if = {
+			limit = { NOT = { exists = scope:sts_court_location } }
+			remove_country_modifier = sts_holding_emperor
+			if = { limit = { has_variable = sts_emperor_months }  remove_variable = sts_emperor_months }
+			if = { limit = { has_variable = sts_emperor_tier }    remove_variable = sts_emperor_tier }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					scope:sts_court_location = {
+						any_foreign_buildings_in_location = {
+							building_type = building_type:sts_song_court
+							owner = c:CSO
+						}
+					}
+				}
+			}
+			remove_country_modifier = sts_holding_emperor
+			if = { limit = { has_variable = sts_emperor_months }  remove_variable = sts_emperor_months }
+			if = { limit = { has_variable = sts_emperor_tier }    remove_variable = sts_emperor_tier }
+		}
+		else_if = {
+			limit = { NOT = { this = scope:sts_court_location.owner } }
+			remove_country_modifier = sts_holding_emperor
+			if = { limit = { has_variable = sts_emperor_months }  remove_variable = sts_emperor_months }
+			if = { limit = { has_variable = sts_emperor_tier }    remove_variable = sts_emperor_tier }
+		}
+	}
+
+	# 受禅所需：相府领袖（丞相）实控 + 附庸 owner 的天朝范围地块数
+	international_organization:sts_chancellery ?= {
+		if = {
+			limit = { international_organization_has_leader = yes }
+			leader_country ?= { sts_count_mk_range_control = yes }
+		}
+	}
+
+	# 群雄割据结束判定：天朝领袖实控 + 附庸 owner 的天朝范围地块数
+	international_organization:middle_kingdom ?= {
+		if = {
+			limit = { international_organization_has_leader = yes }
+			leader_country ?= { sts_count_mk_range_control = yes }
+		}
+	}
+}
+
+# ------------------------------------------------------------
+# 把累积的敌意铺到其他藩镇身上（在挟天子者作用域内调用）
+# ------------------------------------------------------------
+sts_spread_emperor_hate = {
+	# 调用时 this 是挟天子国，root 可能仍是局势；显式保存国家目标。
+	save_scope_as = sts_emperor_host
+	every_country = {
+		limit = {
+			has_variable = sts_warlord
+			NOT = { this = scope:sts_emperor_host }
+		}
+		if = { limit = { scope:sts_emperor_host = { var:sts_emperor_tier >= 1 } }  add_opinion = { modifier = sts_emperor_hate_1  target = scope:sts_emperor_host } }
+		if = { limit = { scope:sts_emperor_host = { var:sts_emperor_tier >= 2 } }  add_opinion = { modifier = sts_emperor_hate_2  target = scope:sts_emperor_host } }
+		if = { limit = { scope:sts_emperor_host = { var:sts_emperor_tier >= 3 } }  add_opinion = { modifier = sts_emperor_hate_3  target = scope:sts_emperor_host } }
+		if = { limit = { scope:sts_emperor_host = { var:sts_emperor_tier >= 4 } }  add_opinion = { modifier = sts_emperor_hate_4  target = scope:sts_emperor_host } }
+		if = { limit = { scope:sts_emperor_host = { var:sts_emperor_tier >= 5 } }  add_opinion = { modifier = sts_emperor_hate_5  target = scope:sts_emperor_host } }
+		if = { limit = { scope:sts_emperor_host = { var:sts_emperor_tier >= 6 } }  add_opinion = { modifier = sts_emperor_hate_6  target = scope:sts_emperor_host } }
+		if = { limit = { scope:sts_emperor_host = { var:sts_emperor_tier >= 7 } }  add_opinion = { modifier = sts_emperor_hate_7  target = scope:sts_emperor_host } }
+		if = { limit = { scope:sts_emperor_host = { var:sts_emperor_tier >= 8 } }  add_opinion = { modifier = sts_emperor_hate_8  target = scope:sts_emperor_host } }
+		if = { limit = { scope:sts_emperor_host = { var:sts_emperor_tier >= 9 } }  add_opinion = { modifier = sts_emperor_hate_9  target = scope:sts_emperor_host } }
+		if = { limit = { scope:sts_emperor_host = { var:sts_emperor_tier >= 10 } } add_opinion = { modifier = sts_emperor_hate_10 target = scope:sts_emperor_host } }
+	}
+}

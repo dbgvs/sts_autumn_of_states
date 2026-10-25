@@ -1,0 +1,97 @@
+﻿# ============================================================
+# 万邦之秋 / Autumn of Ten Thousand States
+# 丞相府法律：防御义务
+# 路径：in_game/common/laws/
+#
+# 对应原版「共同防御」法，但适用范围限于本模组的丞相府。
+# 丞相代表相府应战：成员遭外敌进攻时，丞相会收到参战召集，
+# 可选择履行义务或拒绝；拒绝的惩罚在 on_rejected_call_to_arms 中结算。
+# ============================================================
+
+sts_defense_law = {
+	type = international_organization
+	law_category = military
+	custom_tags = { forbids_no_policy }
+
+	potential = {
+		international_organization_type = international_organization_type:sts_chancellery
+	}
+
+	allow = {
+		always = yes
+	}
+
+	locked = {
+	}
+
+	# 不承担防御义务：丞相府不介入成员的对外战争
+	sts_no_defense_policy = {
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = 20
+			}
+		}
+		wants_keep_policy = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = 20
+			}
+		}
+	}
+
+	# 丞相府联防：成员遭外敌进攻时，丞相可被召唤加入防御战争
+	sts_mutual_defense_policy = {
+		join_defensive_wars_auto_call = {
+			custom_tooltip = {
+				text = JOIN_WARS_DEFAULT_REASON
+				scope:target ?= {
+					NOT = {
+						is_member_of_international_organization = root
+					}
+				}
+			}
+		}
+
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = -20
+			}
+			add = {
+				desc = "OPINION_OF_OTHER_MEMBERS"
+				value = io_members_and_potential_members_opinion_value
+				min = -100
+				max = 100
+			}
+		}
+		wants_keep_policy = {
+			add = {
+				desc = "POLICY_BASE_REASON_KEEP_POLICY"
+				value = 40
+			}
+		}
+		wants_propose_policy = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = 10
+			}
+		}
+	}
+
+	# 藩屏勤王法：成员遭外敌进攻时，丞相与所有藩王都会收到求援事件
+	sts_fanwang_levy_policy = {
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = 5
+			}
+		}
+		wants_keep_policy = {
+			add = {
+				desc = "POLICY_BASE_REASON_KEEP_POLICY"
+				value = 10
+			}
+		}
+	}
+}

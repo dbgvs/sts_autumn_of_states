@@ -1,0 +1,29 @@
+situation_panel = {
+
+	##################################### TOP HEADER #####################################
+
+	# 左：这是什么局势
+	blockoverride "situation_header_left" {
+		icon = {
+			size = { 32 32 }
+			texture = "gfx/interface/icons/map_subdivisons/location.dds"
+		}
+
+		vbox = {
+			layoutpolicy_horizontal = expanding
+
+			text_single = {
+				layoutpolicy_horizontal = expanding
+				text = "STS_HDR_GREENTURBAN"
+				default_format = "#subtle_name"
+			}
+
+			text_single = {
+				layoutpolicy_horizontal = expanding
+				fontsize = 13
+				text = "STS_HDR_GREENTURBAN_SUB"
+			}
+		}
+		expand = {}
+	}
+}

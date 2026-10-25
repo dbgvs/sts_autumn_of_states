@@ -1,0 +1,343 @@
+types CountryHeaders {
+	type country_header = widget {
+		scissor = yes
+		layoutpolicy_horizontal = expanding
+		block "country_header_size" {
+			size = { -1 220 }
+		}
+
+		hbox = {
+			visible = "[Country.GetGovernment.HasRulerOrRegent]"
+			block "country_header_background" {
+				icon = {
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+					texture = "gfx/interface/illustrations/government/throne_rooms/throne_room_asian_middle_kingdom.dds"
+				}
+			}
+		}
+
+		hbox = {
+			visible = "[Not(Country.GetGovernment.HasRulerOrRegent)]"
+			icon =  {
+				layoutpolicy_horizontal = expanding
+				size = {-1 220}
+				texture = "gfx/interface/illustrations/government/throne_room_test/empty.dds"
+				mirror = horizontal
+			}
+		}
+		
+		block "io_decoration_behind_character" {}
+
+		container = {
+			block "country_header_character_visible" {
+				visible = "[Country.GetGovernment.HasRulerOrRegent]"
+			}
+			allow_outside = yes
+
+			block "character_portait_extra" {}
+
+			block "character_portrait_anchor" {
+				parentanchor = bottom
+			}
+
+			block "character_widget" {
+
+				widget = {
+					position = { 0 -20 }
+					allow_outside = yes
+					block "portrait_io_widget" {
+						size = { 250 200 }
+					}
+					
+					block "character_portrait_anchor" {
+						parentanchor = bottom
+					}
+	
+					portrait_standard_full_body_center_button = {
+						block "character_right_visible" {
+							visible = yes
+						}
+						# block "character_portrait_inner_anchor" {
+							parentanchor = bottom
+						# }
+		
+						size = { 250 200 }
+						block "country_header_character_context" {
+							datacontext = "[Country.GetGovernment.GetRulerOrRegent]"
+						}
+					}
+		
+					# portrait_standard_full_body_left_button = {
+					# 	block "character_left_visible" {
+					# 		visible = no
+					# 	}
+					# 	block "character_portrait_inner_anchor" {
+					# 		parentanchor = bottom
+					# 	}
+		
+					# 	size = { 250 200 }
+					# 	datacontext = "[Country.GetGovernment.GetRulerOrRegent]"
+					# }
+				}
+			}
+		}
+		
+
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+
+			### RULER TITLE, COAT, SKILLS
+			datacontext = "[Country.GetGovernment]"
+			country_government_character = {}
+			# block "country_header_extra_properties" {}
+		}
+
+		block "country_header_extra" {}
+
+		using = bg_age_event_frame
+	}
+
+	type two_countries_header = widget {
+		layoutpolicy_horizontal = expanding
+		size = { -1 220 }
+
+		using = two_countries_header_template
+
+		blockoverride "first_country_character_frame" {
+			portrait_standard_full_body_right_button = {
+				block "first_character_portrait_anchor" {
+					parentanchor = bottom
+				}
+
+				position = { 0 0 }
+				size = { 250 220 }
+				datacontext = "[Country.GetGovernment.GetRulerOrRegent]"
+			}
+		}
+
+		blockoverride "second_country_character_frame" {
+			portrait_standard_full_body_left_button = {
+				block "second_character_portrait_anchor" {
+					parentanchor = bottom
+				}
+
+				position = { 0 0 }
+				size = { 250 220 }
+				datacontext = "[Country.GetGovernment.GetRulerOrRegent]"
+			}
+		}
+	}
+}
+
+template one_country_header_template  {
+	
+	blockoverride "country_header_names_visible" { visible = no }
+	block "one_country_header_background" {
+		background = {
+			texture = "[GetSituationIllustration(SituationView.GetActiveSituation.GetSituation)]"
+			modify_texture = {
+				texture = "gfx/interface/component_masks/mask_fade_horizontal_middle.dds"
+				texture_density = 2
+				spriteType = stretched
+				spriteborder = { 250 250 }
+				blend_mode = alphamultiply
+				alpha = 0.4
+			}
+		}
+	}
+
+	using = scene_fade_vertical_up
+
+	container = {
+		scissor=yes
+		block "CountryContext" {}
+		block "one_country_character_visible" {
+			visible = "[Country.GetGovernment.HasRulerOrRegent]"
+		}
+		block "character_portrait_anchor" {
+			parentanchor = bottom
+		}
+
+		character_frame_medium_with_labels = {
+			block "character_right_visible" {
+				visible = yes
+			}
+			parentanchor = bottom
+			size = { 250 220 }
+			blockoverride "portrait_datacontext" {
+				block "one_country_header_character" {
+					datacontext = "[Country.GetGovernment.GetRulerOrRegent]"
+				}
+			}
+		}
+	}
+	hbox = {
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = expanding
+		block "one_country_ruler_title_visible" {}
+		
+		### RULER TITLE, COAT, SKILLS
+		block "CountryContext" {}
+		block "country_container_visible" {}
+		datacontext = "[Country.GetGovernment]"
+		country_government_character = {
+			blockoverride "character_name_maximumsize" {
+				maximumsize = { 200 -1 }
+			}
+			blockoverride "character_name_text"{
+				raw_text = "[Character.GetShortNameWithNoTooltip]"
+			}
+		}
+	}
+
+	using = bg_age_event_frame
+
+	block "country_header_extra" {}
+	blockoverride "abilities_widget" {}
+}
+
+template two_countries_header_template  {
+
+	blockoverride "country_header_names_visible" { visible = no }
+	block "two_countries_header_image" {
+		background = {
+			texture = "[GetSituationIllustration(SituationView.GetActiveSituation.GetSituation)]"
+			texture_density = 2
+			spriteType = stretched
+			spriteborder = { 0 0 }
+		}
+	}
+
+	using = scene_fade_vertical_up
+
+	container = {
+		block "FirstCountryVisible" {}
+		block "first_character_portrait_anchor" {
+			parentanchor = bottom
+		}
+		container = {
+			block "FirstCountryContext" {}
+
+			visible = "[Country.GetGovernment.HasRulerOrRegent]"
+
+			block "first_character_portrait_anchor" {
+				parentanchor = bottom
+			}
+
+			block "first_country_character_frame" {
+				character_frame_medium_with_labels = {
+					block "character_right_visible" {
+						visible = yes
+					}
+					parentanchor = bottom
+					size = { 250 220 }
+					blockoverride "portrait_datacontext" {
+						datacontext = "[Country.GetGovernment.GetRulerOrRegent]"
+					}
+				}
+			}
+
+			# block "two_countries_header_extra_portrait" {}
+		}
+	}
+
+	container = {
+		block "SecondCountryVisible" {}
+		block "second_character_portrait_anchor" {
+			parentanchor = bottom
+		}
+		container = {
+			block "SecondCountryContext" {}
+			
+			visible = "[Country.GetGovernment.HasRulerOrRegent]"
+
+			block "second_character_portrait_anchor" {
+				parentanchor = bottom
+			}
+
+			block "second_country_character_frame" {
+				character_frame_medium_with_labels = {
+					block "character_right_visible" {
+						visible = yes
+					}
+					parentanchor = bottom
+
+					blockoverride "portrait_datacontext" {
+						datacontext = "[Country.GetGovernment.GetRulerOrRegent]"
+					}
+					size = { 250 220 }
+				}
+			}
+		}
+	}
+
+	hbox = {
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = expanding
+
+		
+
+		### RULER TITLE, COAT, SKILLS
+		block "FirstCountryVisible" {}
+		hbox = {
+			using = layoutpolicy_expanding
+			block "FirstCountryContext" {}
+			datacontext = "[Country.GetGovernment]"
+			country_government_character = {
+				block "FirstCountryContext" {}
+				blockoverride "character_name_maximumsize" {
+					maximumsize = { 200 -1 }
+				}
+
+				blockoverride "character_name_text"{
+					raw_text = "[Character.GetShortNameWithNoTooltip]"
+				}
+			}
+
+			blockoverride "bg_name_banner_flip" {}
+			blockoverride "bg_name_banner_margin" {
+				margin_left = 20
+				margin_right = 0
+				margin_top = 2
+				margin_bottom = 7
+			}
+		}
+	}
+
+	hbox = {
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = expanding
+
+		### RULER TITLE, COAT, SKILLS
+		block "SecondCountryVisible" {}
+		hbox = {
+			using = layoutpolicy_expanding
+			block "SecondCountryContext" {}
+			datacontext = "[Country.GetGovernment]"
+			country_government_character = {
+				block "SecondCountryContext" {}
+				blockoverride "country_header_orientation" {
+					righttoleft = yes
+				}
+
+				blockoverride "country_government_character_labels_align" {
+					align = right|nobaseline
+				}
+
+				blockoverride "character_name_maximumsize" {
+					maximumsize = { 200 -1 }
+				}
+
+				blockoverride "character_name_text"{
+					raw_text = "[Character.GetShortNameWithNoTooltip]"
+				}
+			}
+		}
+	}
+	using = bg_age_event_frame
+
+	block "country_header_extra" {}
+	blockoverride "abilities_widget" {}
+}

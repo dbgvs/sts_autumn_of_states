@@ -1,0 +1,119 @@
+﻿# ============================================================
+# 万邦之秋 / Autumn of Ten Thousand States
+# 丞相府的特殊地位：天子 / 藩王 / 藩镇
+# 路径：in_game/common/international_organization_special_statuses/
+#
+# 组织面板按特殊地位分组显示，priority 越高越靠前。
+# 称王后由「藩镇」升为「藩王」，受禅称帝后不再属于相府序列。
+# ============================================================
+
+# 天子：宋室，唯一
+sts_son_of_heaven = {
+	priority = 20
+
+	can_bestow_trigger = {
+		OR = {
+			tag = CSO
+			has_variable = sts_mandate_received
+		}
+	}
+
+	auto_bestowal_trigger = {
+		OR = {
+			tag = CSO
+			has_variable = sts_mandate_received
+		}
+		is_member_of_international_organization = scope:recipient
+	}
+
+	auto_rescind_trigger = {
+		OR = {
+			AND = {
+				NOT = { tag = CSO }
+				NOT = { has_variable = sts_mandate_received }
+			}
+			NOT = { is_member_of_international_organization = scope:recipient }
+		}
+	}
+
+	modifier = {
+		monthly_prestige = 1
+		monthly_legitimacy = 0.5
+	}
+}
+
+# 藩王：已称王的藩镇
+sts_fanwang_state = {
+	priority = 15
+
+	can_bestow_trigger = {
+		is_member_of_international_organization = scope:recipient
+		NOT = { tag = CSO }
+		country_type = location
+		capital ?= { owner = root }
+		NOT = { is_rebel_country = yes }
+		has_variable = sts_warlord
+		country_rank = country_rank:rank_kingdom
+	}
+
+	# 只由称王行动显式授予，避免被自动规则发给无地/建筑国家
+	auto_bestowal_trigger = {
+		always = no
+	}
+
+	auto_rescind_trigger = {
+		OR = {
+			NOT = { is_member_of_international_organization = scope:recipient }
+			tag = CSO
+			NOT = { country_type = location }
+			NOT = { capital ?= { owner = root } }
+			is_rebel_country = yes
+			NOT = { has_variable = sts_warlord }
+			country_rank = country_rank:rank_empire
+		}
+	}
+
+	modifier = {
+		monthly_prestige = 0.5
+	}
+}
+
+# 藩镇：相府内未称王的成员（含汉地藩镇与贵州土司）
+sts_warlord_state = {
+	priority = 10
+
+	can_bestow_trigger = {
+		is_member_of_international_organization = scope:recipient
+		NOT = { tag = CSO }
+		country_type = location
+		capital ?= { owner = root }
+		NOT = { is_rebel_country = yes }
+		NOT = { country_rank = country_rank:rank_kingdom }
+		NOT = { country_rank = country_rank:rank_empire }
+	}
+
+	auto_bestowal_trigger = {
+		is_member_of_international_organization = scope:recipient
+		NOT = { tag = CSO }
+		country_type = location
+		capital ?= { owner = root }
+		NOT = { is_rebel_country = yes }
+		NOT = { country_rank = country_rank:rank_kingdom }
+		NOT = { country_rank = country_rank:rank_empire }
+	}
+
+	auto_rescind_trigger = {
+		OR = {
+			NOT = { is_member_of_international_organization = scope:recipient }
+			tag = CSO
+			NOT = { country_type = location }
+			NOT = { capital ?= { owner = root } }
+			is_rebel_country = yes
+			country_rank = country_rank:rank_kingdom
+			country_rank = country_rank:rank_empire
+		}
+	}
+
+	modifier = {
+	}
+}

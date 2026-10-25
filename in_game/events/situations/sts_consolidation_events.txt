@@ -1,0 +1,16 @@
+﻿namespace = sts_consolidation
+
+# 局势 on_start 向全部领土型藩镇/藩王各发一次，包括附庸。
+# 纯开场叙事，不额外授予宣战理由、增益或改变外交关系。
+sts_consolidation.1 = {
+	type = country_event
+	category = situation_event
+	title = sts_consolidation.1.title
+	desc = sts_consolidation.1.desc
+	outcome = neutral
+
+	option = {
+		name = sts_consolidation.1.a
+		ai_chance = { base = 1 }
+	}
+}

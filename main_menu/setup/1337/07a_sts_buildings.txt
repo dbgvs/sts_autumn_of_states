@@ -1,0 +1,5 @@
+building_manager = {
+	sts_song_court = { tag = CSO level = 1 location = kaifeng }
+	sts_chancellery_palace = { tag = KFE level = 1 location = kaifeng }
+	sts_imperial_guard_camp = { tag = KFE level = 1 location = kaifeng }
+}

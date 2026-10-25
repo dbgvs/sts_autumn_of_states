@@ -1,0 +1,33 @@
+# Python caches and local virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Local editor state and assistant workspace data
+.idea/
+.vscode/
+.workbuddy/
+
+# Private local configuration
+.env
+.env.*
+!.env.example
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Generated logs, backups and archives
+logs/
+outputs/
+backups/
+*.log
+*.tmp
+*.bak
+*.zip
+*.7z
+
+# Keep .metadata/: EU5 requires its metadata and thumbnail.

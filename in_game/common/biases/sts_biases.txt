@@ -1,0 +1,53 @@
+﻿# ============================================================
+# 万邦之秋 / Autumn of Ten Thousand States
+# 好感修正：挟天子招致的敌意
+# 路径：in_game/common/opinions/
+#
+# 十档，每档 -20，逐年叠加，满十年即 -200。
+# 用十个不同类型而不是同一条重复施加，否则会被覆盖而非叠加。
+# ============================================================
+
+sts_emperor_hate_1 = { value = -20 }
+sts_emperor_hate_2 = { value = -20 }
+sts_emperor_hate_3 = { value = -20 }
+sts_emperor_hate_4 = { value = -20 }
+sts_emperor_hate_5 = { value = -20 }
+sts_emperor_hate_6 = { value = -20 }
+sts_emperor_hate_7 = { value = -20 }
+sts_emperor_hate_8 = { value = -20 }
+sts_emperor_hate_9 = { value = -20 }
+sts_emperor_hate_10 = { value = -20 }
+
+io_opinion_sts_chancellery = {
+	value = 0
+}
+
+# 藩镇对天子的敬畏：保证开封地主对宋的好感足以让宋廷存续
+sts_revere_son_of_heaven = {
+	value = 120
+}
+
+# 下讨贼诏：天下藩镇侧目
+sts_edict_backlash = {
+	value = -30
+}
+
+# 丞相拒绝履行防御义务：相府诸镇对其失望
+sts_chancellery_abandoned = {
+	value = -30
+}
+
+# 大政奉还后拒绝臣服宋室：宋对其极度不满
+sts_song_traitor = {
+	value = -200
+}
+
+# 相府同袍出兵相救：受援者心怀感激
+sts_chancellery_support = {
+	value = 15
+}
+
+# 丞相迁走天子：相府诸镇认为其专擅
+sts_court_relocated = {
+	value = -100
+}

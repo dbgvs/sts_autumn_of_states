@@ -1,0 +1,77 @@
+﻿namespace = sts_mandate
+
+# 受禅后：旧相府成员选择臣服或讨贼
+sts_mandate.1 = {
+	type = country_event
+	category = situation_event
+	title = sts_mandate.1.title
+	desc = sts_mandate.1.desc
+	outcome = neutral
+
+	option = {
+		name = sts_mandate.1.a
+		trigger = { exists = scope:sts_new_emperor }
+		make_subject_of = { target = scope:sts_new_emperor type = subject_type:vassal }
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 3
+				num_locations < 50
+			}
+		}
+	}
+
+	option = {
+		name = sts_mandate.1.b
+		add_country_modifier = { modifier = sts_resist_new_emperor years = -1 }
+		add_prestige = 10
+		add_legitimacy = 5
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 3
+				num_locations >= 50
+			}
+		}
+	}
+}
+
+
+# 大政奉还后：旧相府成员选择臣服宋室或保持独立
+sts_mandate.2 = {
+	type = country_event
+	category = situation_event
+	title = sts_mandate.2.title
+	desc = sts_mandate.2.desc
+	outcome = neutral
+
+	option = {
+		name = sts_mandate.2.a
+		trigger = { c:CSO = { exists = yes } }
+		make_subject_of = { target = c:CSO type = subject_type:vassal }
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 3
+				num_locations < 50
+			}
+		}
+	}
+
+	option = {
+		name = sts_mandate.2.b
+		add_country_modifier = { modifier = sts_resist_song_restoration years = -1 }
+		c:CSO ?= {
+			add_opinion = { target = root modifier = sts_song_traitor }
+		}
+		add_prestige = 10
+		add_legitimacy = 5
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 3
+				num_locations >= 50
+			}
+		}
+	}
+}

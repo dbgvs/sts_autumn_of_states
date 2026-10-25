@@ -1,0 +1,555 @@
+﻿# 万邦之秋：八国藩王法律（由 tools/gen_prince_content.py 生成）
+
+sts_song_court_law = {
+	unique = yes
+	law_category = administrative
+	law_gov_group = monarchy
+	law_country_group = KFE
+	potential = { has_or_had_tag = KFE }
+	allow = { always = yes }
+
+	sts_song_honor_court = {
+		country_modifier = {
+			monthly_legitimacy = 0.5
+			diplomatic_reputation = 1
+			subject_loyalty = 0.05
+			tax_income_efficiency = -0.05
+		}
+		estate_preferences = { nobles_estate clergy_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = 20
+			}
+		}
+		years = 2
+	}
+	sts_song_chancellery_rule = {
+		country_modifier = {
+			monthly_political_influence = 1
+			tax_income_efficiency = 0.1
+			monthly_legitimacy = -0.5
+			diplomatic_reputation = -1
+		}
+		estate_preferences = { burghers_estate nobles_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = -10
+			}
+		}
+		years = 2
+	}
+	sts_song_usurpation = {
+		country_modifier = {
+			discipline = 0.05
+			monthly_war_exhaustion = -0.02
+			monthly_legitimacy = -1
+			diplomatic_reputation = -2
+		}
+		estate_preferences = { nobles_estate peasants_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = -10
+			}
+		}
+		years = 2
+	}
+}
+
+sts_qin_law = {
+	unique = yes
+	law_category = military
+	law_gov_group = monarchy
+	law_country_group = XIA
+	potential = { has_or_had_tag = XIA }
+	allow = { always = yes }
+
+	sts_qin_sharp_armor = {
+		country_modifier = {
+			discipline = 0.05
+			army_heavy_infantry_power = 0.05
+			global_manpower_modifier = -0.05
+		}
+		estate_preferences = { nobles_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = 20
+			}
+		}
+		years = 2
+	}
+	sts_qin_militia = {
+		country_modifier = {
+			global_manpower_modifier = 0.1
+			land_morale = -0.03
+			tax_income_efficiency = -0.05
+		}
+		estate_preferences = { peasants_estate nobles_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = -10
+			}
+		}
+		years = 2
+	}
+	sts_qin_farm_colonies = {
+		country_modifier = {
+			tax_income_efficiency = 0.1
+			global_supply_limit_modifier = 0.1
+			discipline = -0.03
+		}
+		estate_preferences = { peasants_estate burghers_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = -10
+			}
+		}
+		years = 2
+	}
+}
+
+sts_qi_law = {
+	unique = yes
+	law_category = military
+	law_gov_group = monarchy
+	law_country_group = JIN
+	potential = { has_or_had_tag = JIN }
+	allow = { always = yes }
+
+	sts_qi_navy = {
+		country_modifier = {
+			navy_galley_power = 0.1
+			global_navy_levy_size_modifier = 0.1
+			discipline = -0.03
+		}
+		estate_preferences = { burghers_estate nobles_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = 20
+			}
+		}
+		years = 2
+	}
+	sts_qi_infantry = {
+		country_modifier = {
+			discipline = 0.05
+			global_manpower_modifier = 0.05
+			trade_income = -0.05
+		}
+		estate_preferences = { nobles_estate peasants_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = -10
+			}
+		}
+		years = 2
+	}
+	sts_qi_salt = {
+		country_modifier = {
+			trade_income = 0.1
+			tax_income_efficiency = 0.05
+			global_manpower_modifier = -0.05
+		}
+		estate_preferences = { burghers_estate peasants_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = -10
+			}
+		}
+		years = 2
+	}
+}
+
+sts_lai_law = {
+	unique = yes
+	law_category = socioeconomic
+	law_gov_group = monarchy
+	law_country_group = DAD
+	potential = { has_or_had_tag = DAD }
+	allow = { always = yes }
+
+	sts_lai_shipping = {
+		country_modifier = {
+			trade_income = 0.1
+			trade_sea_efficiency = 0.1
+			global_manpower_modifier = -0.05
+		}
+		estate_preferences = { burghers_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = 20
+			}
+		}
+		years = 2
+	}
+	sts_lai_coast_guard = {
+		country_modifier = {
+			navy_light_ship_power = 0.1
+			max_sailors = 5
+			trade_income = -0.05
+		}
+		estate_preferences = { nobles_estate burghers_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = -10
+			}
+		}
+		years = 2
+	}
+	sts_lai_tribute = {
+		country_modifier = {
+			diplomatic_reputation = 1
+			trade_income = 0.05
+			monthly_legitimacy = -0.25
+		}
+		estate_preferences = { clergy_estate nobles_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = -10
+			}
+		}
+		years = 2
+	}
+}
+
+sts_shu_law = {
+	unique = yes
+	law_category = socioeconomic
+	law_gov_group = monarchy
+	law_country_group = CAJ
+	potential = { has_or_had_tag = CAJ }
+	allow = { always = yes }
+
+	sts_shu_state_monopoly = {
+		country_modifier = {
+			global_salt_output_modifier = 0.1
+			global_iron_output_modifier = 0.1
+			global_production_efficiency = 0.05
+			tax_income_efficiency = -0.05
+		}
+		estate_preferences = { burghers_estate peasants_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = 20
+			}
+		}
+		years = 2
+	}
+	sts_shu_agriculture = {
+		country_modifier = {
+			tax_income_efficiency = 0.1
+			global_supply_limit_modifier = 0.1
+			global_production_efficiency = -0.03
+		}
+		estate_preferences = { peasants_estate clergy_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = -10
+			}
+		}
+		years = 2
+	}
+	sts_shu_silk_road = {
+		country_modifier = {
+			trade_income = 0.1
+			global_production_efficiency = 0.05
+			discipline = -0.03
+		}
+		estate_preferences = { burghers_estate nobles_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = -10
+			}
+		}
+		years = 2
+	}
+}
+
+sts_jin_law = {
+	unique = yes
+	law_category = military
+	law_gov_group = monarchy
+	law_country_group = LAK
+	potential = { has_or_had_tag = LAK }
+	allow = { always = yes }
+
+	sts_jin_fortress = {
+		country_modifier = {
+			global_defensive = 0.1
+			fort_maintenance_efficiency = 0.1
+			army_movement_speed = -0.05
+		}
+		estate_preferences = { nobles_estate peasants_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = 20
+			}
+		}
+		years = 2
+	}
+	sts_jin_north = {
+		country_modifier = {
+			global_manpower_modifier = 0.1
+			discipline = 0.05
+			tax_income_efficiency = -0.05
+		}
+		estate_preferences = { nobles_estate peasants_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = -10
+			}
+		}
+		years = 2
+	}
+	sts_jin_south = {
+		country_modifier = {
+			land_morale = 0.05
+			monthly_war_exhaustion = -0.02
+			global_defensive = -0.05
+		}
+		estate_preferences = { nobles_estate clergy_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = -10
+			}
+		}
+		years = 2
+	}
+}
+
+sts_wu_law = {
+	unique = yes
+	law_category = administrative
+	law_gov_group = monarchy
+	law_country_group = YAF
+	potential = { has_or_had_tag = YAF }
+	allow = { always = yes }
+
+	sts_wu_orthodox = {
+		country_modifier = {
+			monthly_legitimacy = 0.5
+			diplomatic_reputation = 1
+			tax_income_efficiency = -0.05
+		}
+		estate_preferences = { nobles_estate clergy_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = 20
+			}
+		}
+		years = 2
+	}
+	sts_wu_navy = {
+		country_modifier = {
+			navy_heavy_ship_power = 0.1
+			max_sailors = 5
+			discipline = -0.03
+		}
+		estate_preferences = { burghers_estate nobles_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = -10
+			}
+		}
+		years = 2
+	}
+	sts_wu_commerce = {
+		country_modifier = {
+			trade_income = 0.1
+			tax_income_efficiency = 0.05
+			monthly_legitimacy = -0.25
+		}
+		estate_preferences = { burghers_estate peasants_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = -10
+			}
+		}
+		years = 2
+	}
+}
+
+sts_chu_law = {
+	unique = yes
+	law_category = military
+	law_gov_group = monarchy
+	law_country_group = XAF
+	potential = { has_or_had_tag = XAF }
+	allow = { always = yes }
+
+	sts_chu_fortress = {
+		country_modifier = {
+			global_defensive = 0.1
+			fort_maintenance_efficiency = 0.15
+			army_movement_speed = -0.05
+		}
+		estate_preferences = { nobles_estate peasants_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = 20
+			}
+		}
+		years = 2
+	}
+	sts_chu_navy = {
+		country_modifier = {
+			navy_galley_power = 0.1
+			global_navy_levy_size_modifier = 0.1
+			land_morale = -0.03
+		}
+		estate_preferences = { burghers_estate nobles_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = -10
+			}
+		}
+		years = 2
+	}
+	sts_chu_north = {
+		country_modifier = {
+			discipline = 0.05
+			monthly_war_exhaustion = -0.02
+			global_defensive = -0.05
+		}
+		estate_preferences = { nobles_estate clergy_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = -10
+			}
+		}
+		years = 2
+	}
+}
+
+sts_han_law = {
+	unique = yes
+	law_category = military
+	law_gov_group = monarchy
+	law_country_group = XAB
+	potential = { has_or_had_tag = XAB }
+	allow = { always = yes }
+
+	sts_han_fortress = {
+		country_modifier = {
+			global_defensive = 0.1
+			fort_maintenance_efficiency = 0.15
+			army_movement_speed = -0.05
+		}
+		estate_preferences = { nobles_estate peasants_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = 20
+			}
+		}
+		years = 2
+	}
+	sts_han_zhi = {
+		country_modifier = {
+			discipline = 0.05
+			land_morale = 0.05
+			global_defensive = -0.05
+		}
+		estate_preferences = { nobles_estate clergy_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = -10
+			}
+		}
+		years = 2
+	}
+	sts_han_autonomy = {
+		country_modifier = {
+			tax_income_efficiency = 0.1
+			trade_income = 0.05
+			diplomatic_reputation = -1
+		}
+		estate_preferences = { burghers_estate peasants_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = -10
+			}
+		}
+		years = 2
+	}
+}
+
+sts_yue_law = {
+	unique = yes
+	law_category = socioeconomic
+	law_gov_group = monarchy
+	law_country_group = HAS
+	potential = { has_or_had_tag = HAS }
+	allow = { always = yes }
+
+	sts_yue_shipping = {
+		country_modifier = {
+			trade_income = 0.1
+			trade_sea_efficiency = 0.1
+			global_manpower_modifier = -0.05
+		}
+		estate_preferences = { burghers_estate nobles_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = 20
+			}
+		}
+		years = 2
+	}
+	sts_yue_navy = {
+		country_modifier = {
+			navy_heavy_ship_power = 0.1
+			max_sailors = 5
+			discipline = -0.03
+		}
+		estate_preferences = { burghers_estate nobles_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = -10
+			}
+		}
+		years = 2
+	}
+	sts_yue_guard = {
+		country_modifier = {
+			tax_income_efficiency = 0.1
+			global_defensive = 0.05
+			diplomatic_reputation = -1
+		}
+		estate_preferences = { peasants_estate clergy_estate }
+		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = -10
+			}
+		}
+		years = 2
+	}
+}

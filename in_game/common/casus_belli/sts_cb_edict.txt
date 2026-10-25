@@ -1,0 +1,30 @@
+﻿# ============================================================
+# 万邦之秋 / Autumn of Ten Thousand States
+# 讨贼诏书专用宣战借口
+# 路径：in_game/common/casus_belli/
+#
+# 只在目标被"下诏讨伐"（带着 sts_condemned 标记）时出现，
+# 使用低割地成本的 sts_edict_wargoal。
+# ============================================================
+
+cb_sts_edict = {
+	create_visible = {
+		scope:target ?= {
+			has_country_modifier = sts_condemned
+		}
+	}
+
+	create_enabled = {
+		scope:target ?= {
+			has_country_modifier = sts_condemned
+		}
+	}
+
+	war_goal_type = sts_edict_wargoal
+
+	# 诏书在手，不必伪造
+	speed = 24
+	years = 5
+
+	additional_war_enthusiasm = 20
+}

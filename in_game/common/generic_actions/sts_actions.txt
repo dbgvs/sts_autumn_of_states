@@ -1,0 +1,1399 @@
+﻿# ============================================================
+# 万邦之秋 / Autumn of Ten Thousand States
+# 局势行动：称王与受禅
+# 路径：in_game/common/generic_actions/
+#
+# 两类行动分开放：
+#   type = situation              → 局势面板「主要行动」（称王 A/C、受禅）
+#   type = internationalorganization → 组织面板「主要行动」（讨贼诏、定贼臣、自领丞相、迁移天子）
+# 判据是「这件事属于天下，还是属于相府」。
+#
+# 称王按「宋廷在谁手里」分成两种互斥情形：在我处 / 不在我处。
+# 旧情形 B「天子无主仍据开封」已废弃。
+# ============================================================
+
+# ------------------------------------------------------------
+# 升任节度使：伯爵级刺史直接控制超过 10 个地块，可升为公爵级藩镇
+# ------------------------------------------------------------
+sts_promote_to_jiedushi = {
+	type = situation
+
+	potential = {
+		exists = situation:sts_warring_states
+		situation:sts_warring_states = { situation_is_active = yes }
+		scope:actor = {
+			has_variable = sts_warlord
+			country_rank = country_rank:rank_county
+		}
+	}
+
+	allow = {
+		scope:actor = {
+			num_locations > 10
+			gold >= 10
+			political_influence >= 10
+		}
+	}
+
+	ai_tick = monthly
+	ai_tick_frequency = 6
+
+	ai_will_do = {
+		value = 100
+	}
+
+	select_trigger = {
+		looking_for_a = situation
+		target_flag = recipient
+		name = "choose_situation"
+		column = { data = name }
+		visible = {
+			situation:sts_warring_states = this
+			situation_is_active = yes
+		}
+	}
+
+	effect = {
+		scope:actor = {
+			set_country_rank = country_rank:rank_duchy
+			add_gold = -10
+			add_political_influence = -10
+			add_prestige = 20
+			add_legitimacy = 10
+		}
+	}
+}
+
+# ------------------------------------------------------------
+# 情形一：天子在自己手里 —— 迫其下诏，名正言顺
+# ------------------------------------------------------------
+sts_declare_kingdom_a = {
+	type = situation
+
+	potential = {
+		exists = situation:sts_warring_states
+		situation:sts_warring_states = { situation_is_active = yes }
+		scope:actor = {
+			has_variable = sts_warlord
+			country_rank = country_rank:rank_duchy
+			sts_hosts_song_court = yes
+		}
+	}
+
+	allow = {
+		scope:actor = {
+			num_locations >= 1
+			gold >= 300
+			political_influence >= 50
+			ruler ?= { is_adult = yes }
+		}
+	}
+
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = never
+	automation_tick_frequency = 12
+	ai_will_do = {
+		value = 20
+		if = {
+			limit = { scope:actor = { num_locations >= 31 } }
+			add = 20
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = situation
+		target_flag = recipient
+		name = "choose_situation"
+		column = { data = name }
+		visible = {
+			situation:sts_warring_states = this
+			situation_is_active = yes
+		}
+	}
+
+	effect = {
+		scope:actor = {
+			set_country_rank = country_rank:rank_kingdom
+			sts_choose_realm_name = yes
+			sts_promote_to_fanwang = yes
+			sts_grant_china_ambition_medium = yes
+			add_gold = -300
+			add_political_influence = -50
+			add_prestige = 40
+			add_legitimacy = 15
+		}
+	}
+}
+
+# ------------------------------------------------------------
+# 情形二：天子无主仍据开封 —— 已废弃
+# 宋为静态建筑国家，不存在「宋自守开封」的状态。
+# ------------------------------------------------------------
+
+# ------------------------------------------------------------
+# 情形三：天子被他人挟持 —— 唯以兵威自立
+# 条件：完整控制山东 / 河北 / 燕南三者之一（含附属国）
+# ------------------------------------------------------------
+sts_declare_kingdom_c = {
+	type = situation
+
+	potential = {
+		exists = situation:sts_warring_states
+		situation:sts_warring_states = { situation_is_active = yes }
+		country_exists = c:CSO
+		# 宋廷确实存在于某处
+		c:CSO = {
+			any_owned_foreign_building_location = {
+				any_foreign_buildings_in_location = {
+					building_type = building_type:sts_song_court
+					owner = c:CSO
+				}
+			}
+		}
+		scope:actor = {
+			has_variable = sts_warlord
+			country_rank = country_rank:rank_duchy
+			NOT = { sts_hosts_song_court = yes }
+		}
+	}
+
+	allow = {
+		scope:actor = {
+			gold >= 50
+			political_influence >= 10
+			ruler ?= { is_adult = yes }
+			# 本国直接拥有的地块达到 30（不含附庸）
+			num_locations >= 30
+		}
+	}
+
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = never
+	automation_tick_frequency = 12
+	ai_will_do = {
+		value = 1000
+	}
+
+	select_trigger = {
+		looking_for_a = situation
+		target_flag = recipient
+		name = "choose_situation"
+		column = { data = name }
+		visible = {
+			situation:sts_warring_states = this
+			situation_is_active = yes
+		}
+	}
+
+	effect = {
+		scope:actor = {
+			set_country_rank = country_rank:rank_kingdom
+			sts_choose_realm_name = yes
+			sts_promote_to_fanwang = yes
+			sts_grant_china_ambition_medium = yes
+			add_gold = -50
+			add_political_influence = -10
+			add_prestige = 15
+			add_legitimacy = -5
+		}
+	}
+}
+
+# ------------------------------------------------------------
+# 受禅称帝：据开封，代宋而立
+# ------------------------------------------------------------
+sts_receive_mandate = {
+	type = situation
+
+	potential = {
+		exists = situation:sts_warring_states
+		situation:sts_warring_states = { situation_is_active = yes }
+		scope:actor = {
+			has_variable = sts_warlord
+			country_rank = country_rank:rank_kingdom
+			sts_hosts_song_court = yes
+			is_leader_of_international_organization = international_organization:sts_chancellery
+		}
+	}
+
+	allow = {
+		scope:actor = {
+			political_influence >= 100
+			legitimacy >= 50
+			sts_controls_third_of_mk_range = yes
+		}
+	}
+
+	ai_tick = monthly
+	ai_tick_frequency = 6
+	automation_tick = never
+	automation_tick_frequency = 12
+	ai_will_do = {
+		value = 100
+	}
+
+	select_trigger = {
+		looking_for_a = situation
+		target_flag = recipient
+		name = "choose_situation"
+		column = { data = name }
+		visible = {
+			situation:sts_warring_states = this
+			situation_is_active = yes
+		}
+	}
+
+	effect = {
+		scope:actor = {
+			set_country_rank = country_rank:rank_empire
+			set_variable = { name = sts_mandate_received value = yes }
+			sts_grant_china_ambition_high = yes
+			save_scope_as = sts_new_emperor
+
+			international_organization:middle_kingdom ?= {
+				if = {
+					limit = {
+						country_exists = c:CSO
+						c:CSO = {
+							is_member_of_international_organization = international_organization:middle_kingdom
+						}
+					}
+					remove_country_from_international_organization = c:CSO
+				}
+				if = {
+					limit = {
+						scope:actor = {
+							NOT = {
+								is_member_of_international_organization = international_organization:middle_kingdom
+							}
+						}
+					}
+					add_country_to_international_organization = scope:actor
+				}
+				set_leader_country = scope:actor
+				international_organization_add_special_status = {
+					type = special_status:sts_son_of_heaven
+					country = scope:sts_new_emperor
+				}
+			}
+
+			# 先让旧相府成员选择臣服/讨贼，再解散相府。
+			international_organization:sts_chancellery ?= {
+				every_country = {
+					limit = {
+						is_member_of_international_organization = international_organization:sts_chancellery
+						NOT = { this = scope:sts_new_emperor }
+						NOT = { tag = CSO }
+					}
+					trigger_event_non_silently = sts_mandate.1
+				}
+			}
+			destroy_international_organization = {
+				target = international_organization:sts_chancellery
+			}
+
+			add_political_influence = -100
+			add_prestige = 100
+			add_legitimacy = 25
+		}
+	}
+}
+
+# ------------------------------------------------------------
+# 大政奉还：丞相把领地交还宋天子
+# ------------------------------------------------------------
+sts_return_government = {
+	type = situation
+
+	potential = {
+		exists = situation:sts_warring_states
+		situation:sts_warring_states = { situation_is_active = yes }
+		scope:actor = {
+			has_variable = sts_warlord
+			country_rank = country_rank:rank_kingdom
+			sts_hosts_song_court = yes
+			is_leader_of_international_organization = international_organization:sts_chancellery
+		}
+	}
+
+	allow = {
+		scope:actor = {
+			political_influence >= 50
+			legitimacy >= 50
+			sts_controls_third_of_mk_range = yes
+		}
+	}
+
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = never
+	automation_tick_frequency = 12
+	ai_will_do = {
+		value = -1000
+		if = {
+			limit = { scope:actor = { has_variable = sts_ai_restore_song } }
+			add = 1100
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = situation
+		target_flag = recipient
+		name = "choose_situation"
+		column = { data = name }
+		visible = {
+			situation:sts_warring_states = this
+			situation_is_active = yes
+		}
+	}
+
+	effect = {
+		# 费用在执行国仍存续时支付；后续奖励与组织交接由宋执行。
+		scope:actor = {
+			save_scope_as = sts_old_chancellor
+			c:CSO = { save_scope_as = sts_song_emperor }
+			add_political_influence = -50
+
+			capital = {
+				save_scope_as = sts_return_capital
+				change_location_owner = c:CSO
+			}
+			c:CSO = {
+				set_capital = scope:sts_return_capital
+				change_country_type = location
+				set_country_rank = country_rank:rank_empire
+			}
+			if = {
+				limit = { is_human = yes }
+				change_player = c:CSO
+			}
+		}
+
+		# 离开旧 actor 块后再吞并，避免在灭亡国家上继续结算。
+		c:CSO = {
+			annex_country = { country = scope:sts_old_chancellor }
+			international_organization:middle_kingdom ?= {
+				if = {
+					limit = {
+						NOT = {
+							c:CSO = {
+								is_member_of_international_organization = international_organization:middle_kingdom
+							}
+						}
+					}
+					add_country_to_international_organization = c:CSO
+				}
+				set_leader_country = c:CSO
+				international_organization_add_special_status = {
+					type = special_status:sts_son_of_heaven
+					country = c:CSO
+				}
+			}
+
+			international_organization:sts_chancellery ?= {
+				every_country = {
+					limit = {
+						is_member_of_international_organization = international_organization:sts_chancellery
+						NOT = { tag = CSO }
+						NOT = { this = scope:sts_old_chancellor }
+					}
+					trigger_event_non_silently = sts_mandate.2
+				}
+			}
+			destroy_international_organization_no_instigator = {
+				target = international_organization:sts_chancellery
+			}
+			add_prestige = 150
+			add_legitimacy = 30
+		}
+		sts_update_warring_header = yes
+	}
+}
+
+# ------------------------------------------------------------
+# 藩王称帝：旧藩王在群雄割据中另立帝号
+# ------------------------------------------------------------
+sts_declare_empire = {
+	type = situation
+
+	potential = {
+		exists = situation:sts_warring_states
+		situation:sts_warring_states = { situation_is_active = yes }
+		international_organization:middle_kingdom ?= {
+			international_organization_has_leader = yes
+			leader_country ?= { has_variable = sts_mandate_received }
+		}
+		scope:actor = {
+			is_subject = no
+			has_variable = sts_warlord
+			country_rank = country_rank:rank_kingdom
+		}
+	}
+
+	allow = {
+		scope:actor = {
+			political_influence >= 50
+			num_locations_owned_or_owned_by_subjects_or_below >= 100
+		}
+	}
+
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = never
+	automation_tick_frequency = 12
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { scope:actor = { num_locations_owned_or_owned_by_subjects_or_below >= 150 } }
+			add = 20
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = situation
+		target_flag = recipient
+		name = "choose_situation"
+		column = { data = name }
+		visible = {
+			situation:sts_warring_states = this
+			situation_is_active = yes
+		}
+	}
+
+	effect = {
+		scope:actor = {
+			set_country_rank = country_rank:rank_empire
+			set_variable = { name = sts_emperor_claimant value = yes }
+			sts_grant_china_ambition_high = yes
+			add_political_influence = -50
+			add_prestige = 100
+			add_legitimacy = 25
+			international_organization:middle_kingdom ?= {
+				remove_country_from_international_organization = scope:actor
+			}
+		}
+	}
+}
+
+# ------------------------------------------------------------
+# 海内整合：20 年消化期的五个行动
+# ------------------------------------------------------------
+
+# 核心化州县：把本国已拥有但未核心化的州县纳入核心
+sts_core_province = {
+	type = situation
+
+	potential = {
+		exists = situation:sts_consolidation
+		situation:sts_consolidation = { situation_is_active = yes }
+		scope:actor = { sts_is_consolidation_member = yes }
+	}
+
+	allow = {
+		scope:actor = {
+			gold >= 100
+			political_influence >= 20
+			legitimacy >= 5
+		}
+	}
+
+	ai_tick = monthly
+	ai_tick_frequency = 6
+	automation_tick = never
+	automation_tick_frequency = 12
+
+	cooldown = {
+		type = sts_core_province_cooldown
+		years = 2
+	}
+
+	select_trigger = {
+		looking_for_a = situation
+		target_flag = recipient
+		name = "choose_situation"
+		column = { data = name }
+		visible = {
+			situation:sts_consolidation = this
+			situation_is_active = yes
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = province
+		target_flag = target
+		name = "choose_province"
+		column = { data = name }
+		visible = {
+			any_location_in_province = {
+				owner = scope:actor
+				NOT = { is_core_of = scope:actor }
+			}
+			any_location_in_province = {
+				is_neighbor_of = scope:actor
+			}
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { exists = scope:target }
+			scope:target = {
+				every_location_in_province = {
+					limit = {
+						owner = scope:actor
+						NOT = { is_core_of = scope:actor }
+					}
+					add_core = scope:actor
+				}
+			}
+			scope:actor = {
+				add_gold = -100
+				add_political_influence = -20
+				add_legitimacy = -5
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 30
+		if = {
+			limit = {
+				scope:actor = {
+					any_owned_location = {
+						NOT = { is_core_of = scope:actor }
+					}
+				}
+			}
+			add = 20
+		}
+	}
+}
+
+# ------------------------------------------------------------
+# 整合附庸：选择一个藩王以下的直属附庸，吞并并获得其核心
+# ------------------------------------------------------------
+sts_annex_subordinate_lords = {
+	type = situation
+
+	potential = {
+		exists = situation:sts_consolidation
+		situation:sts_consolidation = { situation_is_active = yes }
+
+		scope:actor = {
+			sts_is_consolidation_member = yes
+			any_subject = {
+				country_type = location
+				NOT = { country_rank = country_rank:rank_kingdom }
+				NOT = { country_rank = country_rank:rank_empire }
+				NOT = {
+					has_special_status_in_international_organization = {
+						type = special_status:sts_fanwang_state
+						international_organization = international_organization:sts_chancellery
+					}
+				}
+			}
+		}
+	}
+
+	allow = {
+		scope:actor = {
+			gold >= 30
+			political_influence >= 15
+		}
+	}
+
+	ai_tick = monthly
+	ai_tick_frequency = 1
+	automation_tick = never
+	automation_tick_frequency = 12
+
+	cooldown = {
+		type = sts_annex_subordinate_lords_cooldown
+		years = 5
+	}
+
+	ai_will_do = {
+		value = 1000
+
+		if = {
+			limit = {
+				scope:target = {
+					relative_strength = {
+						target = scope:actor
+						value <= 0.5
+					}
+				}
+			}
+			add = 50
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = situation
+		target_flag = recipient
+		name = "choose_situation"
+		column = { data = name }
+		visible = {
+			situation:sts_consolidation = this
+			situation_is_active = yes
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = country
+		target_flag = target
+		name = "sts_select_annex_vassal"
+		column = { data = name }
+		visible = {
+			is_subject_of = scope:actor
+			country_type = location
+
+			NOT = { country_rank = country_rank:rank_kingdom }
+			NOT = { country_rank = country_rank:rank_empire }
+
+			NOT = {
+				has_special_status_in_international_organization = {
+					type = special_status:sts_fanwang_state
+					international_organization = international_organization:sts_chancellery
+				}
+			}
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { exists = scope:target }
+
+			# 先获得所选附庸全部领地的核心
+			scope:target = {
+				every_owned_location = {
+					add_core = scope:actor
+				}
+			}
+
+			# 再吞并该附庸
+			scope:actor = {
+				annex_country = { country = scope:target }
+				add_gold = -30
+				add_political_influence = -15
+			}
+		}
+	}
+}
+
+# 索取宣称：选一个相邻省份，获得针对该省的征服CB（仿鄂图曼局势行动）
+sts_claim_cb = {
+	type = situation
+	show_message = no
+
+	potential = {
+		exists = situation:sts_consolidation
+		situation:sts_consolidation = { situation_is_active = yes }
+		scope:actor = {
+			sts_is_consolidation_member = yes
+			is_subject = no
+			is_rebel_country = no
+		}
+	}
+
+	allow = {
+		scope:actor = {
+			is_subject = no
+			is_rebel_country = no
+		}
+	}
+
+	# AI 前置检查发生在命名作用域创建之前；此处 this/root 就是执行国家。
+	# 不可使用 scope:actor，否则会在选目标和 ai_will_do 之前被挡住。
+	ai_prerequisite = {
+		is_subject = no
+		is_rebel_country = no
+	}
+
+	automation_tick = never
+	automation_tick_frequency = 12
+	ai_tick = monthly
+	ai_tick_frequency = 3
+
+	price = price:rto_press_claims_price
+
+	cooldown = {
+		type = press_claims_cooldown_key
+		years = 2
+	}
+
+	# 只挂到“海内整合”局势，不要出现在群雄割据面板
+	select_trigger = {
+		looking_for_a = situation
+		interaction_source_list = {
+			situation:sts_consolidation = {
+				add_to_list = source
+			}
+		}
+		target_flag = recipient
+		name = "choose_situation"
+		column = { data = name }
+		visible = {
+			situation:sts_consolidation = this
+			situation_is_active = yes
+		}
+	}
+
+	# 鄂图曼“索取宣称”式目标选择：省份，而不是直接选国家
+	select_trigger = {
+		looking_for_a = province
+		target_flag = target
+		name = "choose_province"
+		none_available_msg_key = "no_provinces_available"
+		column = { data = owner_flag }
+		column = { data = name }
+		column = { data = population }
+
+		visible = {
+			# 只允许对首都所在地“地区”（area）内、且与本国相邻的省份索取宣称
+			area = scope:actor.capital.area
+			any_location_in_province = {
+				is_neighbor_of = scope:actor
+			}
+			NOT = {
+				owner = {
+					OR = {
+						this = scope:actor
+						overlord ?= scope:actor
+						overlord ?= { is_subject_of = scope:actor }
+						has_mutual_scripted_relation = {
+							type = relation_type:alliance
+							target = scope:actor
+						}
+						has_truce_with = scope:actor
+						is_at_war_with = scope:actor
+					}
+				}
+			}
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { exists = scope:target }
+			scope:actor = {
+				add_casus_belli = {
+					target = scope:target.owner
+					type = casus_belli:cb_sts_consolidation_claim
+					province = scope:target
+				}
+			}
+		}
+	}
+
+	ai_will_do = {
+		add = 100
+
+		if = {
+			limit = { exists = scope:target }
+
+			if = {
+				limit = {
+					scope:target.owner = {
+						is_subject = yes
+						top_overlord ?= scope:actor
+					}
+				}
+				add = { value = -1000 desc = "our subject" }
+			}
+			if = {
+				limit = { scope:actor = { is_during_bankruptcy = yes } }
+				subtract = { desc = "[bankruptcy|e]" value = 1000 }
+			}
+			if = {
+				limit = { scope:actor = { num_loans > 0 } }
+				subtract = { desc = "loans" value = 1000 }
+			}
+			if = {
+				limit = { scope:actor = { stability < 0 } }
+				subtract = { desc = "low stability" value = 1000 }
+			}
+			if = {
+				limit = { scope:actor = { has_any_active_disaster = yes } }
+				subtract = { desc = "ongoing disaster" value = 1000 }
+			}
+			if = {
+				limit = { scope:actor = { has_truce_with = scope:target.owner } }
+				add = { value = -1000 desc = "truce" }
+			}
+			if = {
+				limit = { scope:actor = { wants_to_subjugate = scope:target.owner } }
+				add = { value = -1000 desc = "wants to subjugate" }
+			}
+			if = {
+				limit = { scope:actor = { has_casus_belli_on = scope:target.owner } }
+				add = { value = -10000 desc = "We already have a cb on them" }
+			}
+			if = {
+				limit = { scope:actor = { is_allied_with = { target = scope:target.owner } } }
+				add = { value = -1000 desc = "Our ally" }
+			}
+			add = {
+				desc = "RELATIVE_STRENGTH"
+				value = "scope:actor.relative_defensive_alliance_strength(scope:target.owner)"
+				multiply = 150
+				subtract = 60
+			}
+			add = {
+				desc = "we want their land"
+				value = "scope:actor.conquer_desire(scope:target.owner)"
+				divide = 5
+			}
+			if = {
+				limit = { scope:actor = { wants_to_attack = scope:target.owner } }
+				add = { value = 150 desc = "We want to attack them" }
+			}
+			if = {
+				limit = { scope:target.owner = { num_locations < 5 } }
+				add = { value = 100 desc = "very small enemy" }
+			}
+		}
+		else = {
+			add = { value = 25 desc = BASE_VALUE }
+		}
+	}
+}
+
+
+
+# 整军经武：十年军事建设
+sts_consolidation_army = {
+	type = situation
+
+	potential = {
+		exists = situation:sts_consolidation
+		situation:sts_consolidation = { situation_is_active = yes }
+		scope:actor = {
+			sts_is_consolidation_member = yes
+			NOT = { has_country_modifier = sts_consolidation_army_modifier }
+		}
+	}
+
+	allow = {
+		scope:actor = { gold >= 100 }
+	}
+
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = never
+	automation_tick_frequency = 12
+
+	select_trigger = {
+		looking_for_a = situation
+		target_flag = recipient
+		name = "choose_situation"
+		column = { data = name }
+		visible = {
+			situation:sts_consolidation = this
+			situation_is_active = yes
+		}
+	}
+
+	effect = {
+		scope:actor = {
+			add_country_modifier = {
+				modifier = sts_consolidation_army_modifier
+				years = 10
+			}
+			add_gold = -100
+		}
+	}
+
+	ai_will_do = {
+		value = 20
+	}
+}
+
+# 尊王：借宋室名分稳固内部
+sts_revere_song = {
+	type = situation
+
+	potential = {
+		exists = situation:sts_consolidation
+		situation:sts_consolidation = { situation_is_active = yes }
+		scope:actor = { sts_is_consolidation_member = yes }
+	}
+
+	allow = {
+		scope:actor = { gold >= 50 }
+	}
+
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = never
+	automation_tick_frequency = 12
+
+	cooldown = {
+		type = sts_revere_song_cooldown
+		years = 5
+	}
+
+	select_trigger = {
+		looking_for_a = situation
+		target_flag = recipient
+		name = "choose_situation"
+		column = { data = name }
+		visible = {
+			situation:sts_consolidation = this
+			situation_is_active = yes
+		}
+	}
+
+	effect = {
+		scope:actor = {
+			add_political_influence = 10
+			add_stability = 10
+			add_legitimacy = 10
+			add_prestige = 10
+			add_gold = -50
+		}
+	}
+
+	ai_will_do = {
+		value = 10
+	}
+}
+
+# ------------------------------------------------------------
+# 以下三个行动挂在「丞相府」组织面板上（type = internationalorganization）
+# 与局势面板的称王、受禅分开：那两件是天下大事，这三件是相府日常。
+# ------------------------------------------------------------
+
+# 讨贼诏书：挟天子者对某个藩镇下诏，取得低割地成本的宣战借口
+sts_edict_of_punishment = {
+	type = internationalorganization
+
+	allow = {
+		scope:actor = {
+			has_country_modifier = sts_holding_emperor
+			political_influence >= 50
+		}
+	}
+
+	ai_tick = monthly
+	ai_tick_frequency = 6
+	automation_tick = never
+	automation_tick_frequency = 12
+
+	cooldown = {
+		type = sts_edict_of_punishment_cooldown
+		years = 3
+	}
+
+	# 前置阶段只有执行国；接壤限制放在下方 country 目标筛选。
+	ai_prerequisite = {
+		has_country_modifier = sts_holding_emperor
+		political_influence >= 50
+	}
+
+	ai_will_do = {
+		value = 10
+
+		# 接壤：更容易下诏
+		if = {
+			limit = {
+				scope:target = {
+					is_neighbor_of = scope:actor
+				}
+			}
+			add = 100
+		}
+
+		# 目标明显弱于自己：更愿意
+		if = {
+			limit = {
+				scope:target = {
+					relative_strength = {
+						target = scope:actor
+						value <= 0.65
+					}
+				}
+			}
+			add = 100
+		}
+
+		# 目标明显强于自己：避免送死
+		if = {
+			limit = {
+				scope:target = {
+					relative_strength = {
+						target = scope:actor
+						value >= 1.2
+					}
+				}
+			}
+			add = -100
+		}
+
+		# 目标对我好感很差：更愿意讨伐
+		if = {
+			limit = {
+				scope:target = {
+					opinion = {
+						target = scope:actor
+						value < -50
+					}
+				}
+			}
+			add = 80
+		}
+
+		# 目标对我好感很好：不愿意打
+		if = {
+			limit = {
+				scope:target = {
+					opinion = {
+						target = scope:actor
+						value > 50
+					}
+				}
+			}
+			add = -60
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = international_organization
+		source = actor
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = { data = name }
+		visible = {
+			international_organization_type = international_organization_type:sts_chancellery
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = country
+		target_flag = target
+		name = "sts_edict_target"
+		column = { data = name }
+		visible = {
+			has_variable = sts_warlord
+			NOT = { this = scope:actor }
+			NOT = { is_subject_of = scope:actor }
+			# 玩家仍可选非邻国；AI 到此阶段才有 actor/target 上下文。
+			OR = {
+				scope:actor = { is_human = yes }
+				is_neighbor_of = scope:actor
+			}
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { exists = scope:target }
+			# 先坐实「奉诏讨伐」名分，再出师；否则该 CB 尚未对目标生效
+			scope:target = {
+				add_country_modifier = {
+					modifier = sts_condemned
+					years = 5
+				}
+			}
+			scope:actor = {
+				add_political_influence = -50
+				# 下诏即与全体藩镇结怨
+				every_country = {
+					limit = {
+						has_variable = sts_warlord
+						NOT = { this = scope:actor }
+					}
+					add_opinion = {
+						modifier = sts_edict_backlash
+						target = scope:actor
+					}
+				}
+				# 三年外交声誉余波
+				add_country_modifier = {
+					modifier = sts_edict_diplo_penalty
+					years = 3
+				}
+				# 讨贼诏保留专用 CB：目标已被标记为贼臣
+				declare_war_with_cb = {
+					target = scope:target
+					type = casus_belli:cb_sts_edict
+				}
+			}
+		}
+	}
+}
+
+# 定贼臣名分：给某个藩镇扣上"贼臣"名分，五年内削弱其威望、正统与治安
+sts_declare_traitor_action = {
+	type = internationalorganization
+
+	allow = {
+		scope:actor = {
+			has_country_modifier = sts_holding_emperor
+			political_influence >= 30
+		}
+	}
+
+	ai_tick = monthly
+	ai_tick_frequency = 6
+	automation_tick = never
+	automation_tick_frequency = 12
+	ai_will_do = {
+		value = 10
+	}
+
+	select_trigger = {
+		looking_for_a = international_organization
+		source = actor
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = { data = name }
+		visible = {
+			international_organization_type = international_organization_type:sts_chancellery
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = country
+		target_flag = target
+		name = "sts_traitor_target"
+		column = { data = name }
+		visible = {
+			has_variable = sts_warlord
+			NOT = { this = scope:actor }
+			NOT = { is_subject_of = scope:actor }
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { exists = scope:target }
+			scope:actor = {
+				add_political_influence = -30
+			}
+			scope:target = {
+				add_country_modifier = {
+					modifier = sts_declared_traitor
+					years = 5
+				}
+			}
+		}
+	}
+}
+
+# 自领丞相：据开封者自称丞相，接管相府
+# 对应幕府的「宣称守护之职」
+sts_claim_chancellorship = {
+	type = internationalorganization
+
+	allow = {
+		scope:actor = {
+			has_variable = sts_warlord
+			sts_hosts_song_court = yes
+			political_influence >= 100
+			legitimacy >= 30
+			NOT = { is_leader_of_international_organization = international_organization:sts_chancellery }
+		}
+	}
+
+	ai_tick = monthly
+	ai_tick_frequency = 6
+	automation_tick = never
+	automation_tick_frequency = 12
+	ai_will_do = {
+		value = 30
+	}
+
+	select_trigger = {
+		looking_for_a = international_organization
+		source = actor
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = { data = name }
+		visible = {
+			international_organization_type = international_organization_type:sts_chancellery
+		}
+	}
+
+	effect = {
+		scope:actor = {
+			add_political_influence = -100
+			add_prestige = 50
+			add_legitimacy = 10
+			international_organization:sts_chancellery ?= {
+				set_leader_country = scope:actor
+			}
+		}
+	}
+}
+
+# ------------------------------------------------------------
+# 请求相府支援：藩镇遭外敌进攻时，花影响力与金钱请另一藩镇出兵
+# 可请求对象：相府成员、未处于战争、对我方好感为正
+# ------------------------------------------------------------
+sts_request_support = {
+	type = internationalorganization
+
+	potential = {
+		scope:actor = {
+			is_member_of_international_organization = international_organization:sts_chancellery
+		}
+	}
+
+	allow = {
+		scope:actor = {
+			political_influence >= 20
+			gold >= 100
+			# 只有遭外部势力进攻、正在防守时才可求援
+			any_war = {
+				is_a_defender = scope:actor
+				attacker_leader = {
+					NOT = {
+						is_member_of_international_organization = international_organization:sts_chancellery
+					}
+				}
+			}
+			any_country = {
+				is_member_of_international_organization = international_organization:sts_chancellery
+				NOT = { this = scope:actor }
+				at_war = no
+				opinion = { target = scope:actor value > 0 }
+			}
+		}
+	}
+
+	ai_tick = monthly
+	ai_tick_frequency = 6
+	automation_tick = never
+	automation_tick_frequency = 12
+	ai_will_do = {
+		# 默认不主动求援；只有面对明显更强的外部敌人时才愿意开口
+		value = -50
+
+		if = {
+			limit = {
+				scope:actor = {
+					any_war = {
+						is_a_defender = scope:actor
+						attacker_leader = {
+							relative_strength = {
+								target = scope:actor
+								value >= 1.5
+							}
+						}
+					}
+				}
+			}
+			add = 150
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = international_organization
+		source = actor
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = { data = name }
+		visible = {
+			international_organization_type = international_organization_type:sts_chancellery
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = country
+		target_flag = target
+		name = "sts_support_target"
+		column = { data = name }
+		visible = {
+			is_member_of_international_organization = international_organization:sts_chancellery
+			NOT = { this = scope:actor }
+			at_war = no
+			opinion = { target = scope:actor value > 0 }
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { exists = scope:target }
+			scope:actor = {
+				add_political_influence = -20
+				add_gold = -100
+				# 找到我方正在防守、且进攻方来自相府之外的那场战争
+				every_war = {
+					limit = {
+						is_a_defender = scope:actor
+						attacker_leader = {
+							NOT = {
+								is_member_of_international_organization = international_organization:sts_chancellery
+							}
+						}
+					}
+					scope:target = {
+						join_war_as_defender = { war = prev }
+					}
+				}
+			}
+			scope:target = {
+				add_opinion = {
+					modifier = sts_chancellery_support
+					target = scope:actor
+				}
+			}
+		}
+	}
+}
+
+# ------------------------------------------------------------
+# 迁移天子：丞相把宋廷从旧都迁到自己的首都
+# 必须是丞相、宋廷已在自家领地；重成本，换十年阶级税 buff
+# ------------------------------------------------------------
+sts_move_song_court = {
+	type = internationalorganization
+
+	allow = {
+		scope:actor = {
+			is_leader_of_international_organization = international_organization:sts_chancellery
+			sts_hosts_song_court = yes
+			gold >= 1000
+			political_influence >= 50
+			prestige >= 50
+			legitimacy >= 50
+			stability >= 20
+			capital ?= { dominant_culture = { has_culture_group = culture_group:chinese_group } }
+			NOT = {
+				capital = {
+					any_foreign_buildings_in_location = {
+						building_type = building_type:sts_song_court
+						owner = c:CSO
+					}
+				}
+			}
+		}
+	}
+
+	ai_tick = monthly
+	ai_tick_frequency = 120
+	automation_tick = never
+	automation_tick_frequency = 120
+	ai_will_do = {
+		value = 5
+	}
+
+	select_trigger = {
+		looking_for_a = international_organization
+		source = actor
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = { data = name }
+		visible = {
+			international_organization_type = international_organization_type:sts_chancellery
+		}
+	}
+
+	effect = {
+		sts_move_song_court_effect = { ACTOR = scope:actor }
+	}
+}
+

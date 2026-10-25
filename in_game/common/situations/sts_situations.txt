@@ -1,0 +1,350 @@
+﻿# ============================================================
+# 万邦之秋 / Autumn of Ten Thousand States
+# 双局势：群雄割据（中原）+ 绿巾军起义（元境）
+# 路径：in_game/common/situations/
+# 编码：UTF-8 BOM
+# 适配版本：1.4.2
+#
+# 注意：1.4 已移除 can_end，全部改为 outcome 块。
+# 原版 23 个局势文件均为 outcome，无一使用 can_end。
+# ============================================================
+
+# ------------------------------------------------------------
+# 群雄割据：1337 开局即存在，藩镇互吞、称王、挟天子、受禅
+# P1 只负责：开局接管中华 IO、标记藩镇、在地图上做出区分
+# ------------------------------------------------------------
+sts_warring_states = {
+	monthly_spawn_chance = 1
+
+	can_start = {
+		current_year >= 1337
+	}
+
+	visible = {
+		OR = {
+			# 只在中原范围内的势力可见，日本、朝鲜、东南亚都不该看到
+			capital ?= {
+				OR = {
+					region = region:north_china_region
+					region = region:south_china_region
+					region = region:east_china_region
+					region = region:west_china_region
+				}
+			}
+			has_variable = sts_warlord
+			is_member_of_international_organization = international_organization:middle_kingdom
+		}
+	}
+
+	on_start = {
+		sts_game_init = yes
+		sts_update_warring_header = yes
+	}
+
+	on_monthly = {
+		# 挟天子状态维护：谁拥有宋廷，谁就吃这个状态
+		sts_update_emperor_state = yes
+		sts_update_warring_header = yes
+	}
+
+	# 结局：天朝有领袖，且该领袖实控+附庸控制天朝范围 2/3 以上陆地
+	outcome = {
+		name = "sts_warring_states_unified"
+		desc = "sts_warring_states_unified_desc"
+		trigger = {
+			exists = international_organization:middle_kingdom
+			international_organization:middle_kingdom = {
+				international_organization_has_leader = yes
+			}
+			custom_tooltip = {
+				text = "sts_mk_range_two_thirds_outcome_tt"
+				any_country = {
+					is_leader_of_international_organization = international_organization:middle_kingdom
+					var:sts_mk_range_controlled >= 1258
+				}
+			}
+		}
+		immediate = {
+		}
+	}
+
+	map_color = {
+		if = {
+			limit = {
+				has_owner = yes
+				owner ?= { sts_is_consolidation_member = yes }
+			}
+			value = rgb { 168 62 42 }
+		}
+		if = {
+			limit = {
+				has_owner = yes
+				owner ?= { tag = CSO }
+			}
+			value = rgb { 214 178 74 }
+		}
+	}
+
+	legend_key = {
+		color = rgb { 168 62 42 }
+		require_color_on_map = yes
+		desc = "sts_legend_warlord"
+	}
+
+	legend_key = {
+		color = rgb { 214 178 74 }
+		require_color_on_map = yes
+		desc = "sts_legend_song_court"
+	}
+}
+
+# ------------------------------------------------------------
+# 海内整合：自局势开始起三年的整合期，不与群雄割据互斥
+# ------------------------------------------------------------
+sts_consolidation = {
+	monthly_spawn_chance = {
+		value = 0
+		if = {
+			limit = { current_date >= 1337.4.4 }
+			value = 1
+		}
+	}
+
+	can_start = {
+		current_date >= 1337.4.4
+	}
+
+	visible = {
+		sts_is_consolidation_member = yes
+	}
+
+	on_start = {
+		# 开场告知全部领土型成员；附庸藩镇同样收到，建筑宋廷不在此列。
+		every_country = {
+			limit = {
+				sts_is_consolidation_member = yes
+				country_type = location
+				NOT = { has_variable = sts_consolidation_intro_seen }
+			}
+			set_variable = { name = sts_consolidation_intro_seen value = yes }
+			trigger_event_non_silently = sts_consolidation.1
+		}
+		clear_global_variable_list = sts_consolidation_list
+		every_country = {
+			limit = {
+				sts_is_consolidation_member = yes
+				country_type = location
+				is_subject = no
+			}
+			add_to_global_variable_list = { name = sts_consolidation_list target = this }
+		}
+	}
+
+	on_monthly = {
+		clear_global_variable_list = sts_consolidation_list
+		every_country = {
+			limit = {
+				sts_is_consolidation_member = yes
+				country_type = location
+				is_subject = no
+			}
+			add_to_global_variable_list = { name = sts_consolidation_list target = this }
+		}
+	}
+
+	# 霸主崛起：任一独立藩镇/藩王直接拥有至少 100 地点，可提前结束局势
+	outcome = {
+		name = "sts_consolidation_hegemon"
+		desc = "sts_consolidation_hegemon_desc"
+		trigger = {
+			any_country = {
+				sts_is_consolidation_member = yes
+				is_subject = no
+				num_locations >= 100
+			}
+		}
+		immediate = {
+			# 第二阶段（区域主/全国次）由称王行动触发，这里不再加全国偏好
+		}
+	}
+
+	# 诸夏覆灭：所有藩镇/藩王都已被吞并
+	outcome = {
+		name = "sts_consolidation_annihilated"
+		desc = "sts_consolidation_annihilated_desc"
+		trigger = {
+			NOT = {
+				any_country = {
+					sts_is_consolidation_member = yes
+				}
+			}
+		}
+		immediate = {}
+	}
+
+	# 争霸继续：从实际开始起满三年，前三名获得修正
+	outcome = {
+		name = "sts_consolidation_continue"
+		desc = "sts_consolidation_continue_desc"
+		trigger = {
+			situation:sts_consolidation = { years_since_situation_start >= 3 }
+		}
+		immediate = {
+			ordered_in_global_list = {
+				variable = sts_consolidation_list
+				limit = {
+					country_exists = this
+					is_subject = no
+				}
+				order_by = {
+					add = { value = military_strength }
+					add = { value = country_tax_base }
+					add = { value = num_locations }
+				}
+				max = 3
+				add_country_modifier = {
+					modifier = sts_hegemon_top3
+					years = -1
+				}
+			}
+
+			# 第二阶段（区域主/全国次）由称王行动触发
+		}
+	}
+
+	map_color = {
+		if = {
+			limit = {
+				has_owner = yes
+				owner ?= { sts_is_consolidation_member = yes }
+			}
+			value = rgb { 168 62 42 }
+		}
+	}
+
+	legend_key = {
+		color = rgb { 168 62 42 }
+		require_color_on_map = yes
+		desc = "sts_legend_warlord"
+	}
+}
+
+# ------------------------------------------------------------
+# 绿巾军起义：1343 年起在元境爆发，范围限于元与其汉地
+# 结局三分支：
+#   元室中兴 —— 二十年后仍据华北且政局稳定
+#   元帝北狩 —— 二十年后丢掉全部汉地，转为北元（YUA）
+#   僵持     —— 其余情况，局势继续
+# ------------------------------------------------------------
+sts_green_turban = {
+	monthly_spawn_chance = {
+		value = 0
+		if = {
+			limit = { current_year >= 1343 }
+			value = 1
+		}
+	}
+
+	can_start = {
+		current_year >= 1343
+		country_exists = c:CHI
+		c:CHI = {
+			any_owned_location = { region = region:north_china_region }
+		}
+	}
+
+	visible = {
+		OR = {
+			tag = CHI
+			capital ?= {
+				OR = {
+					region = region:north_china_region
+					region = region:south_china_region
+					region = region:east_china_region
+					region = region:west_china_region
+				}
+			}
+			has_variable = sts_warlord
+		}
+	}
+
+	on_start = {
+		c:CHI ?= {
+			set_variable = { name = sts_green_turban_burning value = yes }
+		}
+	}
+
+	on_monthly = {
+		# P2 在此处接入：绿巾军爆出、女真独立、元权威流失
+	}
+
+	# ---------- 结局一：元室中兴 ----------
+	outcome = {
+		name = "sts_green_turban_yuan_restored"
+		desc = "sts_green_turban_yuan_restored_desc"
+		trigger = {
+			situation:sts_green_turban = { years_since_situation_start > 20 }
+			any_country = {
+				tag = CHI
+				stability >= 30
+				legitimacy >= 90
+				any_owned_location = { region = region:north_china_region }
+			}
+		}
+		immediate = {
+			# P2：给元加永久修正「元室中兴」
+		}
+	}
+
+	# ---------- 结局二：元帝北狩 ----------
+	outcome = {
+		name = "sts_green_turban_yuan_retreats"
+		desc = "sts_green_turban_yuan_retreats_desc"
+		trigger = {
+			situation:sts_green_turban = { years_since_situation_start > 20 }
+			country_exists = c:CHI
+			# 只有丢掉大都（汉地统治崩盘）才北狩；仍据大都则不算失败
+			NOT = { location:dadu = { owner = c:CHI } }
+			# 退守上都才有立足之地
+			location:shangdu = { owner = c:CHI }
+		}
+		immediate = {
+			# 元室退往上都，改称北元，转为蒙古
+			c:CHI = {
+				set_capital = location:shangdu
+				remove_variable = sts_green_turban_burning
+				form_country = formable_country:YUA_f
+				change_culture = culture:mongolian_culture
+			}
+		}
+	}
+
+	map_color = {
+		if = {
+			limit = {
+				has_owner = yes
+				owner ?= { tag = CHI }
+			}
+			value = rgb { 44 62 96 }
+		}
+		if = {
+			limit = {
+				has_owner = yes
+				owner ?= { has_variable = sts_green_turban_burning }
+			}
+			value = rgb { 62 128 74 }
+		}
+	}
+
+	legend_key = {
+		color = rgb { 44 62 96 }
+		require_color_on_map = yes
+		desc = "sts_legend_yuan"
+	}
+
+	legend_key = {
+		color = rgb { 62 128 74 }
+		require_color_on_map = yes
+		desc = "sts_legend_green_turban"
+	}
+}

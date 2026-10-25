@@ -1,0 +1,108 @@
+﻿# ============================================================
+# 万邦之秋 / Autumn of Ten Thousand States
+# 静态修正
+# 路径：in_game/common/static_modifiers/
+# ============================================================
+
+# 挟天子：占据开封、把持朝廷的藩镇
+sts_holding_emperor = {
+	game_data = { category = country }
+	monthly_political_influence = 2
+	monthly_prestige = 1
+
+	# 各阶级税收增强
+	nobles_estate_max_tax = 0.1
+	clergy_estate_max_tax = 0.1
+	burghers_estate_max_tax = 0.1
+	peasants_estate_max_tax = 0.1
+
+	# 代价：天下侧目
+	diplomatic_reputation = -2
+}
+
+# 迁移天子：十年阶级税收加成，与挟天子叠加
+sts_relocated_court = {
+	game_data = { category = country }
+	nobles_estate_max_tax = 0.1
+	clergy_estate_max_tax = 0.1
+	burghers_estate_max_tax = 0.1
+	peasants_estate_max_tax = 0.1
+}
+
+# 下讨贼诏的余波：三年外交声誉 debuff
+sts_edict_diplo_penalty = {
+	game_data = { category = country }
+	diplomatic_reputation = -2
+}
+
+# 被下诏讨伐：五年内声名受损，同时是讨贼 CB 的判定标记
+sts_condemned = {
+	game_data = { category = country }
+	monthly_prestige = -0.5
+}
+
+# 被定为贼臣：威望、正统、治安三线削弱
+sts_declared_traitor = {
+	game_data = { category = country }
+	monthly_prestige = -1
+	monthly_legitimacy = -1
+}
+
+# 清君侧：短期动员，强化淮军与战争承受力
+sts_liang_qingjunce = {
+	game_data = { category = country }
+	discipline = 0.05
+	land_morale = 0.05
+	monthly_war_exhaustion = -0.02
+}
+
+# 通漕江淮：十年漕运红利
+sts_liang_canal = {
+	game_data = { category = country }
+	tax_income_efficiency = 0.1
+	trade_income = 0.1
+	global_supply_limit_modifier = 0.1
+}
+
+# 整编禁军：永久禁军体系
+sts_liang_imperial_guard = {
+	game_data = { category = country }
+	discipline = 0.05
+	army_maintenance_efficiency = 0.1
+	global_manpower_modifier = 0.1
+}
+
+# 坚决讨贼：旧相府成员拒绝臣服新天子
+sts_resist_new_emperor = {
+	game_data = { category = country }
+	global_estate_max_tax = 0.1
+	country_cabinet_efficiency = 0.1
+	global_manpower_modifier = 0.1
+}
+
+# 大政奉还后拒绝臣服宋室：独立但内外交困
+sts_resist_song_restoration = {
+	game_data = { category = country }
+	global_estate_target_satisfaction = -0.1
+	country_cabinet_efficiency = -0.1
+	global_estate_max_tax = -0.1
+	monthly_legitimacy = -0.5
+	stability_decay = 0.05
+}
+
+# 海内整合：整军经武
+sts_consolidation_army_modifier = {
+	game_data = { category = country }
+	global_manpower_modifier = 0.1
+	discipline = 0.05
+	global_supply_limit_modifier = 0.1
+}
+
+# 海内整合：20 年到期时的前三名
+sts_hegemon_top3 = {
+	game_data = { category = country }
+	monthly_prestige = 0.5
+	monthly_legitimacy = 0.25
+	global_estate_max_tax = 0.05
+	global_manpower_modifier = 0.05
+}

@@ -1,0 +1,78 @@
+﻿# ============================================================
+# 万邦之秋 / Autumn of Ten Thousand States
+# 脚本化触发器
+# 路径：in_game/common/scripted_triggers/
+# ============================================================
+
+# 是否完整控制某个地区（含本国附属国）
+# 用法：sts_controls_entire_area = { AREA = area:shandong_area }
+sts_controls_entire_area = {
+	$AREA$ = {
+			NOT = {
+				any_location_in_area = {
+					NOT = {
+						OR = {
+							owner = scope:actor
+							owner = { is_subject_of = scope:actor }
+						}
+					}
+				}
+			}
+	}
+}
+
+# 宋廷是否在我的领地内（country 作用域调用）
+sts_hosts_song_court = {
+	any_owned_location = {
+		any_foreign_buildings_in_location = {
+			building_type = building_type:sts_song_court
+			owner = c:CSO
+		}
+	}
+}
+
+# 地点是否在天朝范围内：3 region + 华东 9 area（与 15_international_organizations 一致）
+sts_in_middle_kingdom_range = {
+	OR = {
+		region = region:north_china_region
+		region = region:south_china_region
+		region = region:west_china_region
+		area = area:fujian_area
+		area = area:hubei_area
+		area = area:hunan_area
+		area = area:wuling_area
+		area = area:jiangxi_area
+		area = area:huaixi_area
+		area = area:jiangnan_area
+		area = area:huaidong_area
+		area = area:zhejiang_area
+	}
+}
+
+# 是否属于群雄/整合局势的中华势力
+# 普通藩镇带 sts_warlord；山西南、贵州等只有相府成员身份，也要算入。
+sts_is_consolidation_member = {
+	OR = {
+		has_variable = sts_warlord
+		is_member_of_international_organization = international_organization:sts_chancellery
+	}
+}
+
+# 实控（owner）+ 附庸 owner 是否达到天朝范围陆地的 1/3
+# 1886 = 三个 region + 华东九 area 的陆地地点，已排除海区与 changshan_islands_wastelands
+# 1/3 = 628.67，向上取整为 629
+sts_controls_third_of_mk_range = {
+	custom_tooltip = {
+		text = "sts_mk_range_third_tt"
+		var:sts_mk_range_controlled >= 629
+	}
+}
+
+# 实控（owner）+ 附庸 owner 是否达到天朝范围陆地的 2/3
+# 1886 × 2/3 = 1257.33，向上取整为 1258
+sts_controls_two_thirds_of_mk_range = {
+	custom_tooltip = {
+		text = "sts_mk_range_two_thirds_tt"
+		var:sts_mk_range_controlled >= 1258
+	}
+}

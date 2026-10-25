@@ -1,0 +1,94 @@
+﻿# ============================================================
+# 万邦之秋 / 梁：霸府决策
+# 路径：in_game/common/decisions/
+# ============================================================
+
+sts_liang_clear_throne = {
+	decision_category = country_specific_decisions
+	tags = { KFE }
+
+	potential = {
+		tag = KFE
+		has_country_modifier = sts_holding_emperor
+		NOT = { has_country_modifier = sts_liang_qingjunce }
+	}
+
+	allow = {
+		political_influence >= 50
+	}
+
+	ai_will_do = { value = 100 }
+
+	option = {
+		name = sts_liang_clear_throne.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_political_influence = -50
+			add_prestige = 20
+			add_country_modifier = {
+				modifier = sts_liang_qingjunce
+				years = 10
+			}
+		}
+	}
+}
+
+sts_liang_open_canal = {
+	decision_category = country_specific_decisions
+	tags = { KFE }
+
+	potential = {
+		tag = KFE
+		has_country_modifier = sts_holding_emperor
+		NOT = { has_country_modifier = sts_liang_canal }
+	}
+
+	allow = {
+		gold >= 200
+	}
+
+	ai_will_do = { value = 80 }
+
+	option = {
+		name = sts_liang_open_canal.a
+		ai_chance = { value = 80 }
+		effect = {
+			add_gold = -200
+			add_prestige = 10
+			add_country_modifier = {
+				modifier = sts_liang_canal
+				years = 10
+			}
+		}
+	}
+}
+
+sts_liang_reform_guard = {
+	decision_category = country_specific_decisions
+	tags = { KFE }
+
+	potential = {
+		tag = KFE
+		has_advance = sts_kfe_chancellery_advance
+		NOT = { has_country_modifier = sts_liang_imperial_guard }
+	}
+
+	allow = {
+		gold >= 300
+	}
+
+	ai_will_do = { value = 90 }
+
+	option = {
+		name = sts_liang_reform_guard.a
+		ai_chance = { value = 90 }
+		effect = {
+			add_gold = -300
+			add_country_modifier = {
+				modifier = sts_liang_imperial_guard
+				years = -1
+				mode = add
+			}
+		}
+	}
+}

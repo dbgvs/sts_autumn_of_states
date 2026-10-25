@@ -1,0 +1,50 @@
+﻿# ============================================================
+# 万邦之秋 / Autumn of Ten Thousand States
+# 战争目标：讨贼
+# 路径：in_game/common/wargoals/
+#
+# 讨贼诏书的目的是"名正言顺地吞并"，所以割地成本远低于常规战争，
+# 但恶名仍要承担，避免完全无代价。
+# ============================================================
+
+sts_edict_wargoal = {
+	type = superiority
+
+	attacker = {
+		conquer_cost = 0.3
+		subjugate_cost = 0.5
+		antagonism = 0.15
+	}
+
+	defender = {
+	}
+
+	ticking_war_score = 0.5
+}
+
+# 海内整合索取宣称：沿用原版征服省份成本与累计分，独立限制和谈割地。
+# winner 是实际受让国；双方均按受让国当前首都所在 area 检查。
+sts_consolidation_claim_wargoal = {
+	type = take_province
+
+	attacker = {
+		conquer_cost = 0.75
+		subjugate_cost = 0.75
+		allowed_locations = {
+			custom_tooltip = {
+				text = sts_claim_peace_capital_area_tt
+				scope:location.area = scope:winner.capital.area
+			}
+		}
+	}
+	defender = {
+		allowed_locations = {
+			custom_tooltip = {
+				text = sts_claim_peace_capital_area_tt
+				scope:location.area = scope:winner.capital.area
+			}
+		}
+	}
+	ticking_war_score = 0.5
+}
+

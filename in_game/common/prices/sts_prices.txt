@@ -1,0 +1,2 @@
+﻿# 旧 sts_claim_cb_price 已废弃；索取宣称使用原版 price:rto_press_claims_price。
+# 不保留无引用的固定 30 金价格，避免引擎注册无配套成本修正的价格类型。

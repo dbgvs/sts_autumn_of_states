@@ -1,0 +1,8857 @@
+# 万邦之秋：男性统治者；与国家表同次生成。
+character_db = {
+	sts_ciz_ruler = {
+		first_name = { name = sts_name_ciz }
+		culture = jin_culture
+		religion = sanjiao
+		adm = 30
+		dip = 30
+		mil = 28
+		female = no
+		birth_date = 1290.1.1
+		birth = fuyang
+		tag = CIZ
+		spouse = sts_ciz_wife
+	}
+	sts_ciz_wife = {
+		first_name = { name = sts_name_ciz_wife }
+		culture = jin_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1300.1.1
+		birth = fuyang
+		tag = CIZ
+		spouse = sts_ciz_ruler
+	}
+	sts_ciz_son = {
+		first_name = { name = sts_name_ciz_son }
+		culture = jin_culture
+		religion = sanjiao
+		adm = 40
+		dip = 40
+		mil = 38
+		female = no
+		birth_date = 1318.1.1
+		birth = fuyang
+		tag = CIZ
+		father = sts_ciz_ruler
+		mother = sts_ciz_wife
+	}
+	sts_dab_ruler = {
+		first_name = { name = sts_name_dab }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 31
+		dip = 31
+		mil = 29
+		female = no
+		birth_date = 1291.2.2
+		birth = yuancheng
+		tag = DAB
+		spouse = sts_dab_wife
+	}
+	sts_dab_wife = {
+		first_name = { name = sts_name_dab_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1301.2.2
+		birth = yuancheng
+		tag = DAB
+		spouse = sts_dab_ruler
+	}
+	sts_dab_son = {
+		first_name = { name = sts_name_dab_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 41
+		dip = 41
+		mil = 39
+		female = no
+		birth_date = 1319.2.2
+		birth = yuancheng
+		tag = DAB
+		father = sts_dab_ruler
+		mother = sts_dab_wife
+	}
+	sts_gua_ruler = {
+		first_name = { name = sts_name_gua }
+		culture = jin_culture
+		religion = sanjiao
+		adm = 32
+		dip = 32
+		mil = 30
+		female = no
+		birth_date = 1292.3.3
+		birth = guangping
+		tag = GUA
+		spouse = sts_gua_wife
+	}
+	sts_gua_wife = {
+		first_name = { name = sts_name_gua_wife }
+		culture = jin_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1302.3.3
+		birth = guangping
+		tag = GUA
+		spouse = sts_gua_ruler
+	}
+	sts_gua_son = {
+		first_name = { name = sts_name_gua_son }
+		culture = jin_culture
+		religion = sanjiao
+		adm = 42
+		dip = 42
+		mil = 40
+		female = no
+		birth_date = 1320.3.3
+		birth = guangping
+		tag = GUA
+		father = sts_gua_ruler
+		mother = sts_gua_wife
+	}
+	sts_hae_ruler = {
+		first_name = { name = sts_name_hae }
+		culture = jin_culture
+		religion = sanjiao
+		adm = 33
+		dip = 33
+		mil = 31
+		female = no
+		birth_date = 1293.4.4
+		birth = henei
+		tag = HAE
+		spouse = sts_hae_wife
+	}
+	sts_hae_wife = {
+		first_name = { name = sts_name_hae_wife }
+		culture = jin_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1303.4.4
+		birth = henei
+		tag = HAE
+		spouse = sts_hae_ruler
+	}
+	sts_hae_son = {
+		first_name = { name = sts_name_hae_son }
+		culture = jin_culture
+		religion = sanjiao
+		adm = 43
+		dip = 43
+		mil = 41
+		female = no
+		birth_date = 1321.4.4
+		birth = henei
+		tag = HAE
+		father = sts_hae_ruler
+		mother = sts_hae_wife
+	}
+	sts_kaa_ruler = {
+		first_name = { name = sts_name_kaa }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 34
+		dip = 34
+		mil = 32
+		female = no
+		birth_date = 1294.5.5
+		birth = puyang
+		tag = KAA
+		spouse = sts_kaa_wife
+	}
+	sts_kaa_wife = {
+		first_name = { name = sts_name_kaa_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1304.5.5
+		birth = puyang
+		tag = KAA
+		spouse = sts_kaa_ruler
+	}
+	sts_kaa_son = {
+		first_name = { name = sts_name_kaa_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 44
+		dip = 44
+		mil = 42
+		female = no
+		birth_date = 1322.5.5
+		birth = puyang
+		tag = KAA
+		father = sts_kaa_ruler
+		mother = sts_kaa_wife
+	}
+	sts_waa_ruler = {
+		first_name = { name = sts_name_waa }
+		culture = jin_culture
+		religion = sanjiao
+		adm = 35
+		dip = 35
+		mil = 33
+		female = no
+		birth_date = 1295.6.6
+		birth = jixian
+		tag = WAA
+		spouse = sts_waa_wife
+	}
+	sts_waa_wife = {
+		first_name = { name = sts_name_waa_wife }
+		culture = jin_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1305.6.6
+		birth = jixian
+		tag = WAA
+		spouse = sts_waa_ruler
+	}
+	sts_waa_son = {
+		first_name = { name = sts_name_waa_son }
+		culture = jin_culture
+		religion = sanjiao
+		adm = 45
+		dip = 45
+		mil = 43
+		female = no
+		birth_date = 1323.6.6
+		birth = jixian
+		tag = WAA
+		father = sts_waa_ruler
+		mother = sts_waa_wife
+	}
+	sts_zha_ruler = {
+		first_name = { name = sts_name_zha }
+		culture = jin_culture
+		religion = sanjiao
+		adm = 36
+		dip = 36
+		mil = 34
+		female = no
+		birth_date = 1296.7.7
+		birth = anyang
+		tag = ZHA
+		spouse = sts_zha_wife
+	}
+	sts_zha_wife = {
+		first_name = { name = sts_name_zha_wife }
+		culture = jin_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1306.7.7
+		birth = anyang
+		tag = ZHA
+		spouse = sts_zha_ruler
+	}
+	sts_zha_son = {
+		first_name = { name = sts_name_zha_son }
+		culture = jin_culture
+		religion = sanjiao
+		adm = 46
+		dip = 46
+		mil = 44
+		female = no
+		birth_date = 1324.7.7
+		birth = anyang
+		tag = ZHA
+		father = sts_zha_ruler
+		mother = sts_zha_wife
+	}
+	sts_cac_ruler = {
+		first_name = { name = sts_name_cac }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 37
+		dip = 37
+		mil = 35
+		female = no
+		birth_date = 1297.8.8
+		birth = wanqiu
+		tag = CAC
+		spouse = sts_cac_wife
+	}
+	sts_cac_wife = {
+		first_name = { name = sts_name_cac_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1307.8.8
+		birth = wanqiu
+		tag = CAC
+		spouse = sts_cac_ruler
+	}
+	sts_cac_son = {
+		first_name = { name = sts_name_cac_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 47
+		dip = 47
+		mil = 45
+		female = no
+		birth_date = 1325.8.8
+		birth = wanqiu
+		tag = CAC
+		father = sts_cac_ruler
+		mother = sts_cac_wife
+	}
+	sts_dac_ruler = {
+		first_name = { name = sts_name_dac }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 38
+		dip = 38
+		mil = 36
+		female = no
+		birth_date = 1298.9.9
+		birth = rangxian
+		tag = DAC
+		spouse = sts_dac_wife
+	}
+	sts_dac_wife = {
+		first_name = { name = sts_name_dac_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1308.9.9
+		birth = rangxian
+		tag = DAC
+		spouse = sts_dac_ruler
+	}
+	sts_dac_son = {
+		first_name = { name = sts_name_dac_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 48
+		dip = 48
+		mil = 46
+		female = no
+		birth_date = 1318.9.9
+		birth = rangxian
+		tag = DAC
+		father = sts_dac_ruler
+		mother = sts_dac_wife
+	}
+	sts_gaa_ruler = {
+		first_name = { name = sts_name_gaa }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 39
+		dip = 39
+		mil = 37
+		female = no
+		birth_date = 1299.10.10
+		birth = dingcheng
+		tag = GAA
+		spouse = sts_gaa_wife
+	}
+	sts_gaa_wife = {
+		first_name = { name = sts_name_gaa_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1309.10.10
+		birth = dingcheng
+		tag = GAA
+		spouse = sts_gaa_ruler
+	}
+	sts_gaa_son = {
+		first_name = { name = sts_name_gaa_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 49
+		dip = 49
+		mil = 47
+		female = no
+		birth_date = 1319.10.10
+		birth = dingcheng
+		tag = GAA
+		father = sts_gaa_ruler
+		mother = sts_gaa_wife
+	}
+	sts_gui_ruler = {
+		first_name = { name = sts_name_gui }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 40
+		dip = 40
+		mil = 38
+		female = no
+		birth_date = 1300.11.11
+		birth = suiyang_guide
+		tag = GUI
+		spouse = sts_gui_wife
+	}
+	sts_gui_wife = {
+		first_name = { name = sts_name_gui_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1300.11.11
+		birth = suiyang_guide
+		tag = GUI
+		spouse = sts_gui_ruler
+	}
+	sts_gui_son = {
+		first_name = { name = sts_name_gui_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 48
+		female = no
+		birth_date = 1320.11.11
+		birth = suiyang_guide
+		tag = GUI
+		father = sts_gui_ruler
+		mother = sts_gui_wife
+	}
+	sts_haf_ruler = {
+		first_name = { name = sts_name_haf }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 41
+		dip = 41
+		mil = 39
+		female = no
+		birth_date = 1301.12.12
+		birth = luoyang
+		tag = HAF
+		spouse = sts_haf_wife
+	}
+	sts_haf_wife = {
+		first_name = { name = sts_name_haf_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1301.12.12
+		birth = luoyang
+		tag = HAF
+		spouse = sts_haf_ruler
+	}
+	sts_haf_son = {
+		first_name = { name = sts_name_haf_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 51
+		dip = 51
+		mil = 49
+		female = no
+		birth_date = 1321.12.12
+		birth = luoyang
+		tag = HAF
+		father = sts_haf_ruler
+		mother = sts_haf_wife
+	}
+	sts_kfe_ruler = {
+		first_name = { name = sts_name_zhang_song }
+		dynasty = sts_zhang_dynasty
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 80
+		dip = 70
+		mil = 70
+		female = no
+		birth_date = 1299.3.15
+		birth = kaifeng
+		tag = KFE
+		spouse = sts_kfe_wife
+	}
+	sts_kfe_wife = {
+		first_name = { name = sts_name_zhang_li_shi }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1302.6.1
+		birth = kaifeng
+		tag = KFE
+		spouse = sts_kfe_ruler
+	}
+	sts_kfe_son1 = {
+		first_name = { name = sts_name_zhang_chengzong }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 52
+		dip = 52
+		mil = 50
+		female = no
+		birth_date = 1318.5.1
+		birth = kaifeng
+		tag = KFE
+		father = sts_kfe_ruler
+		mother = sts_kfe_wife
+	}
+	sts_kfe_son2 = {
+		first_name = { name = sts_name_zhang_chengsi }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 52
+		dip = 52
+		mil = 50
+		female = no
+		birth_date = 1322.8.1
+		birth = kaifeng
+		tag = KFE
+		father = sts_kfe_ruler
+		mother = sts_kfe_wife
+	}
+	sts_nan_ruler = {
+		first_name = { name = sts_name_nan }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 43
+		dip = 43
+		mil = 41
+		female = no
+		birth_date = 1303.2.14
+		birth = nanyang
+		tag = NAN
+		spouse = sts_nan_wife
+	}
+	sts_nan_wife = {
+		first_name = { name = sts_name_nan_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1303.2.14
+		birth = nanyang
+		tag = NAN
+		spouse = sts_nan_ruler
+	}
+	sts_nan_son = {
+		first_name = { name = sts_name_nan_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 53
+		dip = 53
+		mil = 51
+		female = no
+		birth_date = 1323.2.14
+		birth = nanyang
+		tag = NAN
+		father = sts_nan_ruler
+		mother = sts_nan_wife
+	}
+	sts_run_ruler = {
+		first_name = { name = sts_name_run }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 44
+		dip = 44
+		mil = 42
+		female = no
+		birth_date = 1304.3.15
+		birth = ruyang
+		tag = RUN
+		spouse = sts_run_wife
+	}
+	sts_run_wife = {
+		first_name = { name = sts_name_run_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1304.3.15
+		birth = ruyang
+		tag = RUN
+		spouse = sts_run_ruler
+	}
+	sts_run_son = {
+		first_name = { name = sts_name_run_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 54
+		dip = 54
+		mil = 52
+		female = no
+		birth_date = 1324.3.15
+		birth = ruyang
+		tag = RUN
+		father = sts_run_ruler
+		mother = sts_run_wife
+	}
+	sts_ruz_ruler = {
+		first_name = { name = sts_name_ruz }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 45
+		dip = 45
+		mil = 43
+		female = no
+		birth_date = 1305.4.16
+		birth = liangxian_ruzhou
+		tag = RUZ
+		spouse = sts_ruz_wife
+	}
+	sts_ruz_wife = {
+		first_name = { name = sts_name_ruz_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1305.4.16
+		birth = liangxian_ruzhou
+		tag = RUZ
+		spouse = sts_ruz_ruler
+	}
+	sts_ruz_son = {
+		first_name = { name = sts_name_ruz_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 55
+		dip = 55
+		mil = 53
+		female = no
+		birth_date = 1325.4.16
+		birth = liangxian_ruzhou
+		tag = RUZ
+		father = sts_ruz_ruler
+		mother = sts_ruz_wife
+	}
+	sts_sac_ruler = {
+		first_name = { name = sts_name_sac }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 46
+		dip = 46
+		mil = 44
+		female = no
+		birth_date = 1306.5.17
+		birth = shanxian
+		tag = SAC
+		spouse = sts_sac_wife
+	}
+	sts_sac_wife = {
+		first_name = { name = sts_name_sac_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1306.5.17
+		birth = shanxian
+		tag = SAC
+		spouse = sts_sac_ruler
+	}
+	sts_sac_son = {
+		first_name = { name = sts_name_sac_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 56
+		dip = 56
+		mil = 54
+		female = no
+		birth_date = 1318.5.17
+		birth = shanxian
+		tag = SAC
+		father = sts_sac_ruler
+		mother = sts_sac_wife
+	}
+	sts_sad_ruler = {
+		first_name = { name = sts_name_sad }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 47
+		dip = 47
+		mil = 45
+		female = no
+		birth_date = 1307.6.18
+		birth = songzhou_songzhou
+		tag = SAD
+		spouse = sts_sad_wife
+	}
+	sts_sad_wife = {
+		first_name = { name = sts_name_sad_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1307.6.18
+		birth = songzhou_songzhou
+		tag = SAD
+		spouse = sts_sad_ruler
+	}
+	sts_sad_son = {
+		first_name = { name = sts_name_sad_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 57
+		dip = 57
+		mil = 55
+		female = no
+		birth_date = 1319.6.18
+		birth = songzhou_songzhou
+		tag = SAD
+		father = sts_sad_ruler
+		mother = sts_sad_wife
+	}
+	sts_sae_ruler = {
+		first_name = { name = sts_name_sae }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 48
+		dip = 48
+		mil = 46
+		female = no
+		birth_date = 1308.7.19
+		birth = xiangyi
+		tag = SAE
+		spouse = sts_sae_wife
+	}
+	sts_sae_wife = {
+		first_name = { name = sts_name_sae_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1308.7.19
+		birth = xiangyi
+		tag = SAE
+		spouse = sts_sae_ruler
+	}
+	sts_sae_son = {
+		first_name = { name = sts_name_sae_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 58
+		dip = 40
+		mil = 56
+		female = no
+		birth_date = 1320.7.19
+		birth = xiangyi
+		tag = SAE
+		father = sts_sae_ruler
+		mother = sts_sae_wife
+	}
+	sts_xaa_ruler = {
+		first_name = { name = sts_name_xaa }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 49
+		dip = 49
+		mil = 47
+		female = no
+		birth_date = 1309.8.20
+		birth = luoshan
+		tag = XAA
+		spouse = sts_xaa_wife
+	}
+	sts_xaa_wife = {
+		first_name = { name = sts_name_xaa_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1309.8.20
+		birth = luoshan
+		tag = XAA
+		spouse = sts_xaa_ruler
+	}
+	sts_xaa_son = {
+		first_name = { name = sts_name_xaa_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 59
+		dip = 41
+		mil = 57
+		female = no
+		birth_date = 1321.8.20
+		birth = luoshan
+		tag = XAA
+		father = sts_xaa_ruler
+		mother = sts_xaa_wife
+	}
+	sts_yuz_ruler = {
+		first_name = { name = sts_name_yuz }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 48
+		female = no
+		birth_date = 1310.9.21
+		birth = fangcheng
+		tag = YUZ
+		spouse = sts_yuz_wife
+	}
+	sts_yuz_wife = {
+		first_name = { name = sts_name_yuz_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1300.9.21
+		birth = fangcheng
+		tag = YUZ
+		spouse = sts_yuz_ruler
+	}
+	sts_yuz_son = {
+		first_name = { name = sts_name_yuz_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 40
+		dip = 42
+		mil = 58
+		female = no
+		birth_date = 1322.9.21
+		birth = fangcheng
+		tag = YUZ
+		father = sts_yuz_ruler
+		mother = sts_yuz_wife
+	}
+	sts_dad_ruler = {
+		first_name = { name = sts_name_zhao_hu }
+		dynasty = sts_zhao_lai_dynasty
+		culture = jiaodong_culture
+		religion = sanjiao
+		adm = 70
+		dip = 75
+		mil = 60
+		female = no
+		birth_date = 1282.4.1
+		birth = penglai
+		tag = DAD
+		spouse = sts_dad_wife
+	}
+	sts_dad_wife = {
+		first_name = { name = sts_name_zhao_sun_shi }
+		culture = jiaodong_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1286.6.1
+		birth = penglai
+		tag = DAD
+		spouse = sts_dad_ruler
+	}
+	sts_dad_son1 = {
+		first_name = { name = sts_name_zhao_chengzong }
+		culture = jiaodong_culture
+		religion = sanjiao
+		adm = 41
+		dip = 43
+		mil = 59
+		female = no
+		birth_date = 1310.3.8
+		birth = penglai
+		tag = DAD
+		father = sts_dad_ruler
+		mother = sts_dad_wife
+	}
+	sts_dad_son2 = {
+		first_name = { name = sts_name_zhao_chengye }
+		culture = jiaodong_culture
+		religion = sanjiao
+		adm = 41
+		dip = 43
+		mil = 59
+		female = no
+		birth_date = 1314.7.15
+		birth = penglai
+		tag = DAD
+		father = sts_dad_ruler
+		mother = sts_dad_wife
+	}
+	sts_dad_daughter1 = {
+		first_name = { name = sts_name_zhao_qingyuan }
+		culture = jiaodong_culture
+		religion = sanjiao
+		adm = 41
+		dip = 43
+		mil = 59
+		female = yes
+		birth_date = 1318.2.21
+		birth = penglai
+		tag = DAD
+		father = sts_dad_ruler
+		mother = sts_dad_wife
+	}
+	sts_dad_daughter2 = {
+		first_name = { name = sts_name_zhao_qingshu }
+		culture = jiaodong_culture
+		religion = sanjiao
+		adm = 41
+		dip = 43
+		mil = 59
+		female = yes
+		birth_date = 1322.9.10
+		birth = penglai
+		tag = DAD
+		father = sts_dad_ruler
+		mother = sts_dad_wife
+	}
+	sts_juz_ruler = {
+		first_name = { name = sts_name_juz }
+		culture = jiaodong_culture
+		religion = sanjiao
+		adm = 52
+		dip = 52
+		mil = 50
+		female = no
+		birth_date = 1312.11.23
+		birth = juxian
+		tag = JUZ
+		spouse = sts_juz_wife
+	}
+	sts_juz_wife = {
+		first_name = { name = sts_name_juz_wife }
+		culture = jiaodong_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1302.11.23
+		birth = juxian
+		tag = JUZ
+		spouse = sts_juz_ruler
+	}
+	sts_juz_son = {
+		first_name = { name = sts_name_juz_son }
+		culture = jiaodong_culture
+		religion = sanjiao
+		adm = 42
+		dip = 44
+		mil = 38
+		female = no
+		birth_date = 1324.11.23
+		birth = juxian
+		tag = JUZ
+		father = sts_juz_ruler
+		mother = sts_juz_wife
+	}
+	sts_miz_ruler = {
+		first_name = { name = sts_name_miz }
+		culture = jiaodong_culture
+		religion = sanjiao
+		adm = 53
+		dip = 30
+		mil = 51
+		female = no
+		birth_date = 1313.12.24
+		birth = zhucheng
+		tag = MIZ
+		spouse = sts_miz_wife
+	}
+	sts_miz_wife = {
+		first_name = { name = sts_name_miz_wife }
+		culture = jiaodong_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1303.12.24
+		birth = zhucheng
+		tag = MIZ
+		spouse = sts_miz_ruler
+	}
+	sts_miz_son = {
+		first_name = { name = sts_name_miz_son }
+		culture = jiaodong_culture
+		religion = sanjiao
+		adm = 43
+		dip = 45
+		mil = 39
+		female = no
+		birth_date = 1325.12.24
+		birth = zhucheng
+		tag = MIZ
+		father = sts_miz_ruler
+		mother = sts_miz_wife
+	}
+	sts_qin_ruler = {
+		first_name = { name = sts_name_qin }
+		culture = jiaodong_culture
+		religion = sanjiao
+		adm = 54
+		dip = 31
+		mil = 52
+		female = no
+		birth_date = 1314.1.25
+		birth = yidu_qingzhou
+		tag = QIN
+		spouse = sts_qin_wife
+	}
+	sts_qin_wife = {
+		first_name = { name = sts_name_qin_wife }
+		culture = jiaodong_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1304.1.25
+		birth = yidu_qingzhou
+		tag = QIN
+		spouse = sts_qin_ruler
+	}
+	sts_qin_son = {
+		first_name = { name = sts_name_qin_son }
+		culture = jiaodong_culture
+		religion = sanjiao
+		adm = 44
+		dip = 46
+		mil = 40
+		female = no
+		birth_date = 1318.1.25
+		birth = yidu_qingzhou
+		tag = QIN
+		father = sts_qin_ruler
+		mother = sts_qin_wife
+	}
+	sts_cao_ruler = {
+		first_name = { name = sts_name_cao }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 30
+		dip = 32
+		mil = 53
+		female = no
+		birth_date = 1315.2.26
+		birth = chuqiu
+		tag = CAO
+		spouse = sts_cao_wife
+	}
+	sts_cao_wife = {
+		first_name = { name = sts_name_cao_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1305.2.26
+		birth = chuqiu
+		tag = CAO
+		spouse = sts_cao_ruler
+	}
+	sts_cao_son = {
+		first_name = { name = sts_name_cao_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 45
+		dip = 47
+		mil = 41
+		female = no
+		birth_date = 1319.2.26
+		birth = chuqiu
+		tag = CAO
+		father = sts_cao_ruler
+		mother = sts_cao_wife
+	}
+	sts_dae_ruler = {
+		first_name = { name = sts_name_dae }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 31
+		dip = 33
+		mil = 54
+		female = no
+		birth_date = 1316.3.27
+		birth = xucheng
+		tag = DAE
+		spouse = sts_dae_wife
+	}
+	sts_dae_wife = {
+		first_name = { name = sts_name_dae_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1306.3.27
+		birth = xucheng
+		tag = DAE
+		spouse = sts_dae_ruler
+	}
+	sts_dae_son = {
+		first_name = { name = sts_name_dae_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 46
+		dip = 48
+		mil = 42
+		female = no
+		birth_date = 1320.3.27
+		birth = xucheng
+		tag = DAE
+		father = sts_dae_ruler
+		mother = sts_dae_wife
+	}
+	sts_jin_ruler = {
+		first_name = { name = sts_name_han_chenglie }
+		dynasty = sts_han_dynasty
+		culture = jilu_culture
+		religion = sanjiao
+		adm = 70
+		dip = 50
+		mil = 80
+		female = no
+		birth_date = 1309.4.1
+		birth = licheng
+		tag = JIN
+		spouse = sts_jin_wife
+	}
+	sts_jin_wife = {
+		first_name = { name = sts_name_han_zhao_shi }
+		culture = jilu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1313.6.1
+		birth = licheng
+		tag = JIN
+		spouse = sts_jin_ruler
+	}
+	sts_jin_son1 = {
+		first_name = { name = sts_name_han_chengye }
+		culture = jilu_culture
+		religion = sanjiao
+		adm = 47
+		dip = 49
+		mil = 43
+		female = no
+		birth_date = 1329.5.1
+		birth = licheng
+		tag = JIN
+		father = sts_jin_ruler
+		mother = sts_jin_wife
+	}
+	sts_jaa_ruler = {
+		first_name = { name = sts_name_jaa }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 33
+		dip = 35
+		mil = 29
+		female = no
+		birth_date = 1318.5.2
+		birth = rencheng
+		tag = JAA
+		spouse = sts_jaa_wife
+	}
+	sts_jaa_wife = {
+		first_name = { name = sts_name_jaa_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1308.5.2
+		birth = rencheng
+		tag = JAA
+		spouse = sts_jaa_ruler
+	}
+	sts_jaa_son = {
+		first_name = { name = sts_name_jaa_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 48
+		dip = 50
+		mil = 44
+		female = no
+		birth_date = 1322.5.2
+		birth = rencheng
+		tag = JAA
+		father = sts_jaa_ruler
+		mother = sts_jaa_wife
+	}
+	sts_puz_ruler = {
+		first_name = { name = sts_name_puz }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 34
+		dip = 36
+		mil = 30
+		female = no
+		birth_date = 1319.6.3
+		birth = juancheng
+		tag = PUZ
+		spouse = sts_puz_wife
+	}
+	sts_puz_wife = {
+		first_name = { name = sts_name_puz_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1309.6.3
+		birth = juancheng
+		tag = PUZ
+		spouse = sts_puz_ruler
+	}
+	sts_puz_son = {
+		first_name = { name = sts_name_puz_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 49
+		dip = 51
+		mil = 45
+		female = no
+		birth_date = 1323.6.3
+		birth = juancheng
+		tag = PUZ
+		father = sts_puz_ruler
+		mother = sts_puz_wife
+	}
+	sts_saf_ruler = {
+		first_name = { name = sts_name_saf }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 35
+		dip = 37
+		mil = 31
+		female = no
+		birth_date = 1290.7.4
+		birth = shansu
+		tag = SAF
+		spouse = sts_saf_wife
+	}
+	sts_saf_wife = {
+		first_name = { name = sts_name_saf_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1300.7.4
+		birth = shansu
+		tag = SAF
+		spouse = sts_saf_ruler
+	}
+	sts_saf_son = {
+		first_name = { name = sts_name_saf_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 52
+		mil = 46
+		female = no
+		birth_date = 1324.7.4
+		birth = shansu
+		tag = SAF
+		father = sts_saf_ruler
+		mother = sts_saf_wife
+	}
+	sts_tab_ruler = {
+		first_name = { name = sts_name_tab }
+		culture = jilu_culture
+		religion = sanjiao
+		adm = 36
+		dip = 38
+		mil = 32
+		female = no
+		birth_date = 1291.8.5
+		birth = fengfu
+		tag = TAB
+		spouse = sts_tab_wife
+	}
+	sts_tab_wife = {
+		first_name = { name = sts_name_tab_wife }
+		culture = jilu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1301.8.5
+		birth = fengfu
+		tag = TAB
+		spouse = sts_tab_ruler
+	}
+	sts_tab_son = {
+		first_name = { name = sts_name_tab_son }
+		culture = jilu_culture
+		religion = sanjiao
+		adm = 51
+		dip = 53
+		mil = 47
+		female = no
+		birth_date = 1325.8.5
+		birth = fengfu
+		tag = TAB
+		father = sts_tab_ruler
+		mother = sts_tab_wife
+	}
+	sts_tac_ruler = {
+		first_name = { name = sts_name_tac }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 37
+		dip = 39
+		mil = 33
+		female = no
+		birth_date = 1292.9.6
+		birth = tengxian
+		tag = TAC
+		spouse = sts_tac_wife
+	}
+	sts_tac_wife = {
+		first_name = { name = sts_name_tac_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1302.9.6
+		birth = tengxian
+		tag = TAC
+		spouse = sts_tac_ruler
+	}
+	sts_tac_son = {
+		first_name = { name = sts_name_tac_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 52
+		dip = 54
+		mil = 48
+		female = no
+		birth_date = 1318.9.6
+		birth = tengxian
+		tag = TAC
+		father = sts_tac_ruler
+		mother = sts_tac_wife
+	}
+	sts_yaa_ruler = {
+		first_name = { name = sts_name_yaa }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 38
+		dip = 40
+		mil = 34
+		female = no
+		birth_date = 1293.10.7
+		birth = ziyang
+		tag = YAA
+		spouse = sts_yaa_wife
+	}
+	sts_yaa_wife = {
+		first_name = { name = sts_name_yaa_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1303.10.7
+		birth = ziyang
+		tag = YAA
+		spouse = sts_yaa_ruler
+	}
+	sts_yaa_son = {
+		first_name = { name = sts_name_yaa_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 53
+		dip = 55
+		mil = 49
+		female = no
+		birth_date = 1319.10.7
+		birth = ziyang
+		tag = YAA
+		father = sts_yaa_ruler
+		mother = sts_yaa_wife
+	}
+	sts_yiz_ruler = {
+		first_name = { name = sts_name_yiz }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 39
+		dip = 41
+		mil = 35
+		female = no
+		birth_date = 1294.11.8
+		birth = linyi
+		tag = YIZ
+		spouse = sts_yiz_wife
+	}
+	sts_yiz_wife = {
+		first_name = { name = sts_name_yiz_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1304.11.8
+		birth = linyi
+		tag = YIZ
+		spouse = sts_yiz_ruler
+	}
+	sts_yiz_son = {
+		first_name = { name = sts_name_yiz_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 54
+		dip = 56
+		mil = 50
+		female = no
+		birth_date = 1320.11.8
+		birth = linyi
+		tag = YIZ
+		father = sts_yiz_ruler
+		mother = sts_yiz_wife
+	}
+	sts_faa_ruler = {
+		first_name = { name = sts_name_faa }
+		culture = qin_culture
+		religion = sanjiao
+		adm = 40
+		dip = 42
+		mil = 36
+		female = no
+		birth_date = 1295.12.9
+		birth = liuba
+		tag = FAA
+		spouse = sts_faa_wife
+	}
+	sts_faa_wife = {
+		first_name = { name = sts_name_faa_wife }
+		culture = qin_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1305.12.9
+		birth = liuba
+		tag = FAA
+		spouse = sts_faa_ruler
+	}
+	sts_faa_son = {
+		first_name = { name = sts_name_faa_son }
+		culture = qin_culture
+		religion = sanjiao
+		adm = 55
+		dip = 57
+		mil = 51
+		female = no
+		birth_date = 1321.12.9
+		birth = liuba
+		tag = FAA
+		father = sts_faa_ruler
+		mother = sts_faa_wife
+	}
+	sts_sah_ruler = {
+		first_name = { name = sts_name_sah }
+		culture = qin_culture
+		religion = sanjiao
+		adm = 41
+		dip = 43
+		mil = 37
+		female = no
+		birth_date = 1296.1.10
+		birth = shangzhou
+		tag = SAH
+		spouse = sts_sah_wife
+	}
+	sts_sah_wife = {
+		first_name = { name = sts_name_sah_wife }
+		culture = qin_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1306.1.10
+		birth = shangzhou
+		tag = SAH
+		spouse = sts_sah_ruler
+	}
+	sts_sah_son = {
+		first_name = { name = sts_name_sah_son }
+		culture = qin_culture
+		religion = sanjiao
+		adm = 56
+		dip = 40
+		mil = 52
+		female = no
+		birth_date = 1322.1.10
+		birth = shangzhou
+		tag = SAH
+		father = sts_sah_ruler
+		mother = sts_sah_wife
+	}
+	sts_xia_ruler = {
+		first_name = { name = sts_name_yue_heng }
+		dynasty = sts_yue_dynasty
+		culture = qin_culture
+		religion = sanjiao
+		adm = 70
+		dip = 60
+		mil = 85
+		female = no
+		birth_date = 1289.4.1
+		birth = jingzhao
+		tag = XIA
+		spouse = sts_xia_wife
+	}
+	sts_xia_wife = {
+		first_name = { name = sts_name_yue_wang_shi }
+		culture = qin_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1293.6.1
+		birth = jingzhao
+		tag = XIA
+		spouse = sts_xia_ruler
+	}
+	sts_xia_son1 = {
+		first_name = { name = sts_name_yue_chengzong }
+		culture = qin_culture
+		religion = sanjiao
+		adm = 57
+		dip = 41
+		mil = 53
+		female = no
+		birth_date = 1315.3.12
+		birth = jingzhao
+		tag = XIA
+		father = sts_xia_ruler
+		mother = sts_xia_wife
+	}
+	sts_xia_son2 = {
+		first_name = { name = sts_name_yue_chengsi }
+		culture = qin_culture
+		religion = sanjiao
+		adm = 57
+		dip = 41
+		mil = 53
+		female = no
+		birth_date = 1319.7.8
+		birth = jingzhao
+		tag = XIA
+		father = sts_xia_ruler
+		mother = sts_xia_wife
+	}
+	sts_xia_son3 = {
+		first_name = { name = sts_name_yue_chengye }
+		culture = qin_culture
+		religion = sanjiao
+		adm = 57
+		dip = 41
+		mil = 53
+		female = no
+		birth_date = 1323.11.2
+		birth = jingzhao
+		tag = XIA
+		father = sts_xia_ruler
+		mother = sts_xia_wife
+	}
+	sts_xia_daughter1 = {
+		first_name = { name = sts_name_yue_qingwan }
+		culture = qin_culture
+		religion = sanjiao
+		adm = 57
+		dip = 41
+		mil = 53
+		female = yes
+		birth_date = 1326.2.18
+		birth = jingzhao
+		tag = XIA
+		father = sts_xia_ruler
+		mother = sts_xia_wife
+	}
+	sts_xia_daughter2 = {
+		first_name = { name = sts_name_yue_qingyan }
+		culture = qin_culture
+		religion = sanjiao
+		adm = 57
+		dip = 41
+		mil = 53
+		female = yes
+		birth_date = 1329.9.5
+		birth = jingzhao
+		tag = XIA
+		father = sts_xia_ruler
+		mother = sts_xia_wife
+	}
+	sts_xab_ruler = {
+		first_name = { name = sts_name_wu_jixun }
+		dynasty = sts_wu_dynasty
+		culture = shu_culture
+		religion = sanjiao
+		adm = 64
+		dip = 70
+		mil = 80
+		female = no
+		birth_date = 1304.4.1
+		birth = xicheng
+		tag = XAB
+		spouse = sts_xab_wife
+	}
+	sts_xab_wife = {
+		first_name = { name = sts_name_wu_li_shi }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1308.6.1
+		birth = xicheng
+		tag = XAB
+		spouse = sts_xab_ruler
+	}
+	sts_xab_son1 = {
+		first_name = { name = sts_name_wu_chengzong }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 58
+		dip = 42
+		mil = 54
+		female = no
+		birth_date = 1328.3.7
+		birth = xicheng
+		tag = XAB
+		father = sts_xab_ruler
+		mother = sts_xab_wife
+	}
+	sts_xab_daughter1 = {
+		first_name = { name = sts_name_wu_qingwan }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 58
+		dip = 42
+		mil = 54
+		female = yes
+		birth_date = 1332.9.12
+		birth = xicheng
+		tag = XAB
+		father = sts_xab_ruler
+		mother = sts_xab_wife
+	}
+	sts_caf_ruler = {
+		first_name = { name = sts_name_caf }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 44
+		dip = 46
+		mil = 40
+		female = no
+		birth_date = 1299.4.13
+		birth = dazu
+		tag = CAF
+		spouse = sts_caf_wife
+	}
+	sts_caf_wife = {
+		first_name = { name = sts_name_caf_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1309.4.13
+		birth = dazu
+		tag = CAF
+		spouse = sts_caf_ruler
+	}
+	sts_caf_son = {
+		first_name = { name = sts_name_caf_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 59
+		dip = 43
+		mil = 55
+		female = no
+		birth_date = 1325.4.13
+		birth = dazu
+		tag = CAF
+		father = sts_caf_ruler
+		mother = sts_caf_wife
+	}
+	sts_cah_ruler = {
+		first_name = { name = sts_name_cah }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 45
+		dip = 47
+		mil = 41
+		female = no
+		birth_date = 1300.5.14
+		birth = baxian
+		tag = CAH
+		spouse = sts_cah_wife
+	}
+	sts_cah_wife = {
+		first_name = { name = sts_name_cah_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1300.5.14
+		birth = baxian
+		tag = CAH
+		spouse = sts_cah_ruler
+	}
+	sts_cah_son = {
+		first_name = { name = sts_name_cah_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 40
+		dip = 44
+		mil = 56
+		female = no
+		birth_date = 1318.5.14
+		birth = baxian
+		tag = CAH
+		father = sts_cah_ruler
+		mother = sts_cah_wife
+	}
+	sts_daz_ruler = {
+		first_name = { name = sts_name_daz }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 46
+		dip = 48
+		mil = 42
+		female = no
+		birth_date = 1301.6.15
+		birth = tongchuan_dazhou
+		tag = DAZ
+		spouse = sts_daz_wife
+	}
+	sts_daz_wife = {
+		first_name = { name = sts_name_daz_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1301.6.15
+		birth = tongchuan_dazhou
+		tag = DAZ
+		spouse = sts_daz_ruler
+	}
+	sts_daz_son = {
+		first_name = { name = sts_name_daz_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 41
+		dip = 45
+		mil = 57
+		female = no
+		birth_date = 1319.6.15
+		birth = tongchuan_dazhou
+		tag = DAZ
+		father = sts_daz_ruler
+		mother = sts_daz_wife
+	}
+	sts_fuz_ruler = {
+		first_name = { name = sts_name_fuz }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 47
+		dip = 49
+		mil = 43
+		female = no
+		birth_date = 1302.7.16
+		birth = fuzhou_sichuan
+		tag = FUZ
+		spouse = sts_fuz_wife
+	}
+	sts_fuz_wife = {
+		first_name = { name = sts_name_fuz_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1302.7.16
+		birth = fuzhou_sichuan
+		tag = FUZ
+		spouse = sts_fuz_ruler
+	}
+	sts_fuz_son = {
+		first_name = { name = sts_name_fuz_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 42
+		dip = 46
+		mil = 58
+		female = no
+		birth_date = 1320.7.16
+		birth = fuzhou_sichuan
+		tag = FUZ
+		father = sts_fuz_ruler
+		mother = sts_fuz_wife
+	}
+	sts_hak_ruler = {
+		first_name = { name = sts_name_hak }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 48
+		dip = 50
+		mil = 44
+		female = no
+		birth_date = 1303.8.17
+		birth = shizhao
+		tag = HAK
+		spouse = sts_hak_wife
+	}
+	sts_hak_wife = {
+		first_name = { name = sts_name_hak_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1303.8.17
+		birth = shizhao
+		tag = HAK
+		spouse = sts_hak_ruler
+	}
+	sts_hak_son = {
+		first_name = { name = sts_name_hak_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 43
+		dip = 47
+		mil = 59
+		female = no
+		birth_date = 1321.8.17
+		birth = shizhao
+		tag = HAK
+		father = sts_hak_ruler
+		mother = sts_hak_wife
+	}
+	sts_kac_ruler = {
+		first_name = { name = sts_name_kac }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 49
+		dip = 51
+		mil = 45
+		female = no
+		birth_date = 1304.9.18
+		birth = fengjie
+		tag = KAC
+		spouse = sts_kac_wife
+	}
+	sts_kac_wife = {
+		first_name = { name = sts_name_kac_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1304.9.18
+		birth = fengjie
+		tag = KAC
+		spouse = sts_kac_ruler
+	}
+	sts_kac_son = {
+		first_name = { name = sts_name_kac_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 44
+		dip = 48
+		mil = 38
+		female = no
+		birth_date = 1322.9.18
+		birth = fengjie
+		tag = KAC
+		father = sts_kac_ruler
+		mother = sts_kac_wife
+	}
+	sts_luz_ruler = {
+		first_name = { name = sts_name_luz }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 52
+		mil = 46
+		female = no
+		birth_date = 1305.10.19
+		birth = luzhou
+		tag = LUZ
+		spouse = sts_luz_wife
+	}
+	sts_luz_wife = {
+		first_name = { name = sts_name_luz_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1305.10.19
+		birth = luzhou
+		tag = LUZ
+		spouse = sts_luz_ruler
+	}
+	sts_luz_son = {
+		first_name = { name = sts_name_luz_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 45
+		dip = 49
+		mil = 39
+		female = no
+		birth_date = 1323.10.19
+		birth = luzhou
+		tag = LUZ
+		father = sts_luz_ruler
+		mother = sts_luz_wife
+	}
+	sts_you_ruler = {
+		first_name = { name = sts_name_you }
+		culture = tujia_culture
+		religion = sanjiao
+		adm = 51
+		dip = 30
+		mil = 47
+		female = no
+		birth_date = 1306.11.20
+		birth = youyang
+		tag = YOU
+		spouse = sts_you_wife
+	}
+	sts_you_wife = {
+		first_name = { name = sts_name_you_wife }
+		culture = tujia_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1306.11.20
+		birth = youyang
+		tag = YOU
+		spouse = sts_you_ruler
+	}
+	sts_you_son = {
+		first_name = { name = sts_name_you_son }
+		culture = tujia_culture
+		religion = sanjiao
+		adm = 46
+		dip = 50
+		mil = 40
+		female = no
+		birth_date = 1324.11.20
+		birth = youyang
+		tag = YOU
+		father = sts_you_ruler
+		mother = sts_you_wife
+	}
+	sts_zho_ruler = {
+		first_name = { name = sts_name_zho }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 52
+		dip = 31
+		mil = 48
+		female = no
+		birth_date = 1307.12.21
+		birth = linjiang
+		tag = ZHO
+		spouse = sts_zho_wife
+	}
+	sts_zho_wife = {
+		first_name = { name = sts_name_zho_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1307.12.21
+		birth = linjiang
+		tag = ZHO
+		spouse = sts_zho_ruler
+	}
+	sts_zho_son = {
+		first_name = { name = sts_name_zho_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 47
+		dip = 51
+		mil = 41
+		female = no
+		birth_date = 1325.12.21
+		birth = linjiang
+		tag = ZHO
+		father = sts_zho_ruler
+		mother = sts_zho_wife
+	}
+	sts_baf_ruler = {
+		first_name = { name = sts_name_baf }
+		culture = yi_culture
+		religion = sanjiao
+		adm = 53
+		dip = 32
+		mil = 49
+		female = no
+		birth_date = 1308.1.22
+		birth = runyan
+		tag = BAF
+		spouse = sts_baf_wife
+	}
+	sts_baf_wife = {
+		first_name = { name = sts_name_baf_wife }
+		culture = yi_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1308.1.22
+		birth = runyan
+		tag = BAF
+		spouse = sts_baf_ruler
+	}
+	sts_baf_son = {
+		first_name = { name = sts_name_baf_son }
+		culture = yi_culture
+		religion = sanjiao
+		adm = 48
+		dip = 52
+		mil = 42
+		female = no
+		birth_date = 1318.1.22
+		birth = runyan
+		tag = BAF
+		father = sts_baf_ruler
+		mother = sts_baf_wife
+	}
+	sts_cai_ruler = {
+		first_name = { name = sts_name_cai }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 54
+		dip = 33
+		mil = 50
+		female = no
+		birth_date = 1309.2.23
+		birth = changning_changning
+		tag = CAI
+		spouse = sts_cai_wife
+	}
+	sts_cai_wife = {
+		first_name = { name = sts_name_cai_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1309.2.23
+		birth = changning_changning
+		tag = CAI
+		spouse = sts_cai_ruler
+	}
+	sts_cai_son = {
+		first_name = { name = sts_name_cai_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 49
+		dip = 53
+		mil = 43
+		female = no
+		birth_date = 1319.2.23
+		birth = changning_changning
+		tag = CAI
+		father = sts_cai_ruler
+		mother = sts_cai_wife
+	}
+	sts_daf_ruler = {
+		first_name = { name = sts_name_daf }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 30
+		dip = 34
+		mil = 51
+		female = no
+		birth_date = 1310.3.24
+		birth = dechang
+		tag = DAF
+		spouse = sts_daf_wife
+	}
+	sts_daf_wife = {
+		first_name = { name = sts_name_daf_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1300.3.24
+		birth = dechang
+		tag = DAF
+		spouse = sts_daf_ruler
+	}
+	sts_daf_son = {
+		first_name = { name = sts_name_daf_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 54
+		mil = 44
+		female = no
+		birth_date = 1320.3.24
+		birth = dechang
+		tag = DAF
+		father = sts_daf_ruler
+		mother = sts_daf_wife
+	}
+	sts_dag_ruler = {
+		first_name = { name = sts_name_dag }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 31
+		dip = 35
+		mil = 52
+		female = no
+		birth_date = 1311.4.25
+		birth = dongchuan
+		tag = DAG
+		spouse = sts_dag_wife
+	}
+	sts_dag_wife = {
+		first_name = { name = sts_name_dag_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1301.4.25
+		birth = dongchuan
+		tag = DAG
+		spouse = sts_dag_ruler
+	}
+	sts_dag_son = {
+		first_name = { name = sts_name_dag_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 51
+		dip = 55
+		mil = 45
+		female = no
+		birth_date = 1321.4.25
+		birth = dongchuan
+		tag = DAG
+		father = sts_dag_ruler
+		mother = sts_dag_wife
+	}
+	sts_jab_ruler = {
+		first_name = { name = sts_name_jab }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 32
+		dip = 36
+		mil = 53
+		female = no
+		birth_date = 1312.5.26
+		birth = longyou_jiading
+		tag = JAB
+		spouse = sts_jab_wife
+	}
+	sts_jab_wife = {
+		first_name = { name = sts_name_jab_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1302.5.26
+		birth = longyou_jiading
+		tag = JAB
+		spouse = sts_jab_ruler
+	}
+	sts_jab_son = {
+		first_name = { name = sts_name_jab_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 52
+		dip = 56
+		mil = 46
+		female = no
+		birth_date = 1322.5.26
+		birth = longyou_jiading
+		tag = JAB
+		father = sts_jab_ruler
+		mother = sts_jab_wife
+	}
+	sts_liz_ruler = {
+		first_name = { name = sts_name_liz }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 33
+		dip = 37
+		mil = 54
+		female = no
+		birth_date = 1313.6.27
+		birth = hanyuan
+		tag = LIZ
+		spouse = sts_liz_wife
+	}
+	sts_liz_wife = {
+		first_name = { name = sts_name_liz_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1303.6.27
+		birth = hanyuan
+		tag = LIZ
+		spouse = sts_liz_ruler
+	}
+	sts_liz_son = {
+		first_name = { name = sts_name_liz_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 53
+		dip = 57
+		mil = 47
+		female = no
+		birth_date = 1323.6.27
+		birth = hanyuan
+		tag = LIZ
+		father = sts_liz_ruler
+		mother = sts_liz_wife
+	}
+	sts_maf_ruler = {
+		first_name = { name = sts_name_maf }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 34
+		dip = 38
+		mil = 28
+		female = no
+		birth_date = 1314.7.1
+		birth = mahu
+		tag = MAF
+		spouse = sts_maf_wife
+	}
+	sts_maf_wife = {
+		first_name = { name = sts_name_maf_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1304.7.1
+		birth = mahu
+		tag = MAF
+		spouse = sts_maf_ruler
+	}
+	sts_maf_son = {
+		first_name = { name = sts_name_maf_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 54
+		dip = 40
+		mil = 48
+		female = no
+		birth_date = 1324.7.1
+		birth = mahu
+		tag = MAF
+		father = sts_maf_ruler
+		mother = sts_maf_wife
+	}
+	sts_map_ruler = {
+		first_name = { name = sts_name_map }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 35
+		dip = 39
+		mil = 29
+		female = no
+		birth_date = 1315.8.2
+		birth = meizhou
+		tag = MAP
+		spouse = sts_map_wife
+	}
+	sts_map_wife = {
+		first_name = { name = sts_name_map_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1305.8.2
+		birth = meizhou
+		tag = MAP
+		spouse = sts_map_ruler
+	}
+	sts_map_son = {
+		first_name = { name = sts_name_map_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 55
+		dip = 41
+		mil = 49
+		female = no
+		birth_date = 1325.8.2
+		birth = meizhou
+		tag = MAP
+		father = sts_map_ruler
+		mother = sts_map_wife
+	}
+	sts_qio_ruler = {
+		first_name = { name = sts_name_qio }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 36
+		dip = 40
+		mil = 30
+		female = no
+		birth_date = 1316.9.3
+		birth = qiongzhou
+		tag = QIO
+		spouse = sts_qio_wife
+	}
+	sts_qio_wife = {
+		first_name = { name = sts_name_qio_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1306.9.3
+		birth = qiongzhou
+		tag = QIO
+		spouse = sts_qio_ruler
+	}
+	sts_qio_son = {
+		first_name = { name = sts_name_qio_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 56
+		dip = 42
+		mil = 50
+		female = no
+		birth_date = 1318.9.3
+		birth = qiongzhou
+		tag = QIO
+		father = sts_qio_ruler
+		mother = sts_qio_wife
+	}
+	sts_sai_ruler = {
+		first_name = { name = sts_name_sai }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 37
+		dip = 41
+		mil = 31
+		female = no
+		birth_date = 1317.10.4
+		birth = jianchang_sichuan
+		tag = SAI
+		spouse = sts_sai_wife
+	}
+	sts_sai_wife = {
+		first_name = { name = sts_name_sai_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1307.10.4
+		birth = jianchang_sichuan
+		tag = SAI
+		spouse = sts_sai_ruler
+	}
+	sts_sai_son = {
+		first_name = { name = sts_name_sai_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 57
+		dip = 43
+		mil = 51
+		female = no
+		birth_date = 1319.10.4
+		birth = jianchang_sichuan
+		tag = SAI
+		father = sts_sai_ruler
+		mother = sts_sai_wife
+	}
+	sts_wus_ruler = {
+		first_name = { name = sts_name_wus }
+		culture = hmong_culture
+		religion = sanjiao
+		adm = 38
+		dip = 42
+		mil = 32
+		female = no
+		birth_date = 1318.11.5
+		birth = wusa
+		tag = WUS
+		spouse = sts_wus_wife
+	}
+	sts_wus_wife = {
+		first_name = { name = sts_name_wus_wife }
+		culture = hmong_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1308.11.5
+		birth = wusa
+		tag = WUS
+		spouse = sts_wus_ruler
+	}
+	sts_wus_son = {
+		first_name = { name = sts_name_wus_son }
+		culture = hmong_culture
+		religion = sanjiao
+		adm = 58
+		dip = 44
+		mil = 52
+		female = no
+		birth_date = 1320.11.5
+		birth = wusa
+		tag = WUS
+		father = sts_wus_ruler
+		mother = sts_wus_wife
+	}
+	sts_wum_ruler = {
+		first_name = { name = sts_name_wum }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 39
+		dip = 43
+		mil = 33
+		female = no
+		birth_date = 1319.12.6
+		birth = wumeng
+		tag = WUM
+		spouse = sts_wum_wife
+	}
+	sts_wum_wife = {
+		first_name = { name = sts_name_wum_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1309.12.6
+		birth = wumeng
+		tag = WUM
+		spouse = sts_wum_ruler
+	}
+	sts_wum_son = {
+		first_name = { name = sts_name_wum_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 59
+		dip = 45
+		mil = 53
+		female = no
+		birth_date = 1321.12.6
+		birth = wumeng
+		tag = WUM
+		father = sts_wum_ruler
+		mother = sts_wum_wife
+	}
+	sts_xac_ruler = {
+		first_name = { name = sts_name_xac }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 40
+		dip = 44
+		mil = 34
+		female = no
+		birth_date = 1290.1.7
+		birth = yibin
+		tag = XAC
+		spouse = sts_xac_wife
+	}
+	sts_xac_wife = {
+		first_name = { name = sts_name_xac_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1300.1.7
+		birth = yibin
+		tag = XAC
+		spouse = sts_xac_ruler
+	}
+	sts_xac_son = {
+		first_name = { name = sts_name_xac_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 40
+		dip = 46
+		mil = 54
+		female = no
+		birth_date = 1322.1.7
+		birth = yibin
+		tag = XAC
+		father = sts_xac_ruler
+		mother = sts_xac_wife
+	}
+	sts_yaz_ruler = {
+		first_name = { name = sts_name_yaz }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 41
+		dip = 45
+		mil = 35
+		female = no
+		birth_date = 1291.2.8
+		birth = yandao
+		tag = YAZ
+		spouse = sts_yaz_wife
+	}
+	sts_yaz_wife = {
+		first_name = { name = sts_name_yaz_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1301.2.8
+		birth = yandao
+		tag = YAZ
+		spouse = sts_yaz_ruler
+	}
+	sts_yaz_son = {
+		first_name = { name = sts_name_yaz_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 41
+		dip = 47
+		mil = 55
+		female = no
+		birth_date = 1323.2.8
+		birth = yandao
+		tag = YAZ
+		father = sts_yaz_ruler
+		mother = sts_yaz_wife
+	}
+	sts_yon_ruler = {
+		first_name = { name = sts_name_yon }
+		culture = hmong_culture
+		religion = sanjiao
+		adm = 42
+		dip = 46
+		mil = 36
+		female = no
+		birth_date = 1292.3.9
+		birth = yongning
+		tag = YON
+		spouse = sts_yon_wife
+	}
+	sts_yon_wife = {
+		first_name = { name = sts_name_yon_wife }
+		culture = hmong_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1302.3.9
+		birth = yongning
+		tag = YON
+		spouse = sts_yon_ruler
+	}
+	sts_yon_son = {
+		first_name = { name = sts_name_yon_son }
+		culture = hmong_culture
+		religion = sanjiao
+		adm = 42
+		dip = 48
+		mil = 56
+		female = no
+		birth_date = 1324.3.9
+		birth = yongning
+		tag = YON
+		father = sts_yon_ruler
+		mother = sts_yon_wife
+	}
+	sts_bao_ruler = {
+		first_name = { name = sts_name_bao }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 43
+		dip = 47
+		mil = 37
+		female = no
+		birth_date = 1293.4.10
+		birth = langzhong
+		tag = BAO
+		spouse = sts_bao_wife
+	}
+	sts_bao_wife = {
+		first_name = { name = sts_name_bao_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1303.4.10
+		birth = langzhong
+		tag = BAO
+		spouse = sts_bao_ruler
+	}
+	sts_bao_son = {
+		first_name = { name = sts_name_bao_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 43
+		dip = 49
+		mil = 57
+		female = no
+		birth_date = 1325.4.10
+		birth = langzhong
+		tag = BAO
+		father = sts_bao_ruler
+		mother = sts_bao_wife
+	}
+	sts_baz_ruler = {
+		first_name = { name = sts_name_baz }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 44
+		dip = 48
+		mil = 38
+		female = no
+		birth_date = 1294.5.11
+		birth = huacheng
+		tag = BAZ
+		spouse = sts_baz_wife
+	}
+	sts_baz_wife = {
+		first_name = { name = sts_name_baz_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1304.5.11
+		birth = huacheng
+		tag = BAZ
+		spouse = sts_baz_ruler
+	}
+	sts_baz_son = {
+		first_name = { name = sts_name_baz_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 44
+		dip = 50
+		mil = 58
+		female = no
+		birth_date = 1318.5.11
+		birth = huacheng
+		tag = BAZ
+		father = sts_baz_ruler
+		mother = sts_baz_wife
+	}
+	sts_caj_ruler = {
+		first_name = { name = sts_name_zhao_xun }
+		dynasty = sts_zhao_shu_dynasty
+		culture = shu_culture
+		religion = sanjiao
+		adm = 65
+		dip = 60
+		mil = 55
+		female = no
+		birth_date = 1293.4.1
+		birth = chengdu
+		tag = CAJ
+		spouse = sts_caj_wife
+	}
+	sts_caj_wife = {
+		first_name = { name = sts_name_zhao_li_shi }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1297.6.1
+		birth = chengdu
+		tag = CAJ
+		spouse = sts_caj_ruler
+	}
+	sts_caj_son1 = {
+		first_name = { name = sts_name_zhao_chengzu }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 45
+		dip = 51
+		mil = 59
+		female = no
+		birth_date = 1316.3.5
+		birth = chengdu
+		tag = CAJ
+		father = sts_caj_ruler
+		mother = sts_caj_wife
+	}
+	sts_caj_son2 = {
+		first_name = { name = sts_name_zhao_chengji }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 45
+		dip = 51
+		mil = 59
+		female = no
+		birth_date = 1320.8.12
+		birth = chengdu
+		tag = CAJ
+		father = sts_caj_ruler
+		mother = sts_caj_wife
+	}
+	sts_caj_daughter1 = {
+		first_name = { name = sts_name_zhao_qingyao }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 45
+		dip = 51
+		mil = 59
+		female = yes
+		birth_date = 1324.11.20
+		birth = chengdu
+		tag = CAJ
+		father = sts_caj_ruler
+		mother = sts_caj_wife
+	}
+	sts_gab_ruler = {
+		first_name = { name = sts_name_gab }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 46
+		dip = 50
+		mil = 40
+		female = no
+		birth_date = 1296.7.13
+		birth = liujiang
+		tag = GAB
+		spouse = sts_gab_wife
+	}
+	sts_gab_wife = {
+		first_name = { name = sts_name_gab_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1306.7.13
+		birth = liujiang
+		tag = GAB
+		spouse = sts_gab_ruler
+	}
+	sts_gab_son = {
+		first_name = { name = sts_name_gab_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 46
+		dip = 52
+		mil = 38
+		female = no
+		birth_date = 1320.7.13
+		birth = liujiang
+		tag = GAB
+		father = sts_gab_ruler
+		mother = sts_gab_wife
+	}
+	sts_gac_ruler = {
+		first_name = { name = sts_name_gac }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 47
+		dip = 51
+		mil = 41
+		female = no
+		birth_date = 1297.8.14
+		birth = miangu
+		tag = GAC
+		spouse = sts_gac_wife
+	}
+	sts_gac_wife = {
+		first_name = { name = sts_name_gac_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1307.8.14
+		birth = miangu
+		tag = GAC
+		spouse = sts_gac_ruler
+	}
+	sts_gac_son = {
+		first_name = { name = sts_name_gac_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 47
+		dip = 53
+		mil = 39
+		female = no
+		birth_date = 1321.8.14
+		birth = miangu
+		tag = GAC
+		father = sts_gac_ruler
+		mother = sts_gac_wife
+	}
+	sts_shu_ruler = {
+		first_name = { name = sts_name_shu }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 48
+		dip = 52
+		mil = 42
+		female = no
+		birth_date = 1298.9.15
+		birth = nanchong
+		tag = SHU
+		spouse = sts_shu_wife
+	}
+	sts_shu_wife = {
+		first_name = { name = sts_name_shu_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1308.9.15
+		birth = nanchong
+		tag = SHU
+		spouse = sts_shu_ruler
+	}
+	sts_shu_son = {
+		first_name = { name = sts_name_shu_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 48
+		dip = 54
+		mil = 40
+		female = no
+		birth_date = 1322.9.15
+		birth = nanchong
+		tag = SHU
+		father = sts_shu_ruler
+		mother = sts_shu_wife
+	}
+	sts_sap_ruler = {
+		first_name = { name = sts_name_sap }
+		culture = rma_culture
+		religion = sanjiao
+		adm = 49
+		dip = 30
+		mil = 43
+		female = no
+		birth_date = 1299.10.16
+		birth = songzhou_songpan
+		tag = SAP
+		spouse = sts_sap_wife
+	}
+	sts_sap_wife = {
+		first_name = { name = sts_name_sap_wife }
+		culture = rma_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1309.10.16
+		birth = songzhou_songpan
+		tag = SAP
+		spouse = sts_sap_ruler
+	}
+	sts_sap_son = {
+		first_name = { name = sts_name_sap_son }
+		culture = rma_culture
+		religion = sanjiao
+		adm = 49
+		dip = 55
+		mil = 41
+		female = no
+		birth_date = 1323.10.16
+		birth = songzhou_songpan
+		tag = SAP
+		father = sts_sap_ruler
+		mother = sts_sap_wife
+	}
+	sts_gad_ruler = {
+		first_name = { name = sts_name_gad }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 31
+		mil = 44
+		female = no
+		birth_date = 1300.11.17
+		birth = gaoyou
+		tag = GAD
+		spouse = sts_gad_wife
+	}
+	sts_gad_wife = {
+		first_name = { name = sts_name_gad_wife }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1300.11.17
+		birth = gaoyou
+		tag = GAD
+		spouse = sts_gad_ruler
+	}
+	sts_gad_son = {
+		first_name = { name = sts_name_gad_son }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 56
+		mil = 42
+		female = no
+		birth_date = 1324.11.17
+		birth = gaoyou
+		tag = GAD
+		father = sts_gad_ruler
+		mother = sts_gad_wife
+	}
+	sts_hap_ruler = {
+		first_name = { name = sts_name_hap }
+		culture = huaihai_culture
+		religion = sanjiao
+		adm = 51
+		dip = 32
+		mil = 45
+		female = no
+		birth_date = 1301.12.18
+		birth = qushan
+		tag = HAP
+		spouse = sts_hap_wife
+	}
+	sts_hap_wife = {
+		first_name = { name = sts_name_hap_wife }
+		culture = huaihai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1301.12.18
+		birth = qushan
+		tag = HAP
+		spouse = sts_hap_ruler
+	}
+	sts_hap_son = {
+		first_name = { name = sts_name_hap_son }
+		culture = huaihai_culture
+		religion = sanjiao
+		adm = 51
+		dip = 57
+		mil = 43
+		female = no
+		birth_date = 1325.12.18
+		birth = qushan
+		tag = HAP
+		father = sts_hap_ruler
+		mother = sts_hap_wife
+	}
+	sts_haq_ruler = {
+		first_name = { name = sts_name_haq }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 52
+		dip = 33
+		mil = 46
+		female = no
+		birth_date = 1302.1.19
+		birth = shanyang_huaian
+		tag = HAQ
+		spouse = sts_haq_wife
+	}
+	sts_haq_wife = {
+		first_name = { name = sts_name_haq_wife }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1302.1.19
+		birth = shanyang_huaian
+		tag = HAQ
+		spouse = sts_haq_ruler
+	}
+	sts_haq_son = {
+		first_name = { name = sts_name_haq_son }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 52
+		dip = 40
+		mil = 44
+		female = no
+		birth_date = 1318.1.19
+		birth = shanyang_huaian
+		tag = HAQ
+		father = sts_haq_ruler
+		mother = sts_haq_wife
+	}
+	sts_piz_ruler = {
+		first_name = { name = sts_name_piz }
+		culture = huaihai_culture
+		religion = sanjiao
+		adm = 53
+		dip = 34
+		mil = 47
+		female = no
+		birth_date = 1303.2.20
+		birth = xiapi
+		tag = PIZ
+		spouse = sts_piz_wife
+	}
+	sts_piz_wife = {
+		first_name = { name = sts_name_piz_wife }
+		culture = huaihai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1303.2.20
+		birth = xiapi
+		tag = PIZ
+		spouse = sts_piz_ruler
+	}
+	sts_piz_son = {
+		first_name = { name = sts_name_piz_son }
+		culture = huaihai_culture
+		religion = sanjiao
+		adm = 53
+		dip = 41
+		mil = 45
+		female = no
+		birth_date = 1319.2.20
+		birth = xiapi
+		tag = PIZ
+		father = sts_piz_ruler
+		mother = sts_piz_wife
+	}
+	sts_tag_ruler = {
+		first_name = { name = sts_name_tag }
+		culture = tongtai_culture
+		religion = sanjiao
+		adm = 54
+		dip = 35
+		mil = 48
+		female = no
+		birth_date = 1304.3.21
+		birth = hailing
+		tag = TAG
+		spouse = sts_tag_wife
+	}
+	sts_tag_wife = {
+		first_name = { name = sts_name_tag_wife }
+		culture = tongtai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1304.3.21
+		birth = hailing
+		tag = TAG
+		spouse = sts_tag_ruler
+	}
+	sts_tag_son = {
+		first_name = { name = sts_name_tag_son }
+		culture = tongtai_culture
+		religion = sanjiao
+		adm = 54
+		dip = 42
+		mil = 46
+		female = no
+		birth_date = 1320.3.21
+		birth = hailing
+		tag = TAG
+		father = sts_tag_ruler
+		mother = sts_tag_wife
+	}
+	sts_tah_ruler = {
+		first_name = { name = sts_name_tah }
+		culture = tongtai_culture
+		religion = sanjiao
+		adm = 30
+		dip = 36
+		mil = 49
+		female = no
+		birth_date = 1305.4.22
+		birth = jinghai_tongzhou
+		tag = TAH
+		spouse = sts_tah_wife
+	}
+	sts_tah_wife = {
+		first_name = { name = sts_name_tah_wife }
+		culture = tongtai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1305.4.22
+		birth = jinghai_tongzhou
+		tag = TAH
+		spouse = sts_tah_ruler
+	}
+	sts_tah_son = {
+		first_name = { name = sts_name_tah_son }
+		culture = tongtai_culture
+		religion = sanjiao
+		adm = 55
+		dip = 43
+		mil = 47
+		female = no
+		birth_date = 1321.4.22
+		birth = jinghai_tongzhou
+		tag = TAH
+		father = sts_tah_ruler
+		mother = sts_tah_wife
+	}
+	sts_xad_ruler = {
+		first_name = { name = sts_name_xad }
+		culture = huaihai_culture
+		religion = sanjiao
+		adm = 31
+		dip = 37
+		mil = 50
+		female = no
+		birth_date = 1306.5.23
+		birth = xuzhou
+		tag = XAD
+		spouse = sts_xad_wife
+	}
+	sts_xad_wife = {
+		first_name = { name = sts_name_xad_wife }
+		culture = huaihai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1306.5.23
+		birth = xuzhou
+		tag = XAD
+		spouse = sts_xad_ruler
+	}
+	sts_xad_son = {
+		first_name = { name = sts_name_xad_son }
+		culture = huaihai_culture
+		religion = sanjiao
+		adm = 56
+		dip = 44
+		mil = 48
+		female = no
+		birth_date = 1322.5.23
+		birth = xuzhou
+		tag = XAD
+		father = sts_xad_ruler
+		mother = sts_xad_wife
+	}
+	sts_yae_ruler = {
+		first_name = { name = sts_name_yae }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 32
+		dip = 38
+		mil = 51
+		female = no
+		birth_date = 1307.6.24
+		birth = jiangdu
+		tag = YAE
+		spouse = sts_yae_wife
+	}
+	sts_yae_wife = {
+		first_name = { name = sts_name_yae_wife }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1307.6.24
+		birth = jiangdu
+		tag = YAE
+		spouse = sts_yae_ruler
+	}
+	sts_yae_son = {
+		first_name = { name = sts_name_yae_son }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 57
+		dip = 45
+		mil = 49
+		female = no
+		birth_date = 1323.6.24
+		birth = jiangdu
+		tag = YAE
+		father = sts_yae_ruler
+		mother = sts_yae_wife
+	}
+	sts_anq_ruler = {
+		first_name = { name = sts_name_anq }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 33
+		dip = 39
+		mil = 52
+		female = no
+		birth_date = 1308.7.25
+		birth = huaining
+		tag = ANQ
+		spouse = sts_anq_wife
+	}
+	sts_anq_wife = {
+		first_name = { name = sts_name_anq_wife }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1308.7.25
+		birth = huaining
+		tag = ANQ
+		spouse = sts_anq_ruler
+	}
+	sts_anq_son = {
+		first_name = { name = sts_name_anq_son }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 58
+		dip = 46
+		mil = 50
+		female = no
+		birth_date = 1324.7.25
+		birth = huaining
+		tag = ANQ
+		father = sts_anq_ruler
+		mother = sts_anq_wife
+	}
+	sts_boz_ruler = {
+		first_name = { name = sts_name_boz }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 34
+		dip = 40
+		mil = 53
+		female = no
+		birth_date = 1309.8.26
+		birth = qiaoxian
+		tag = BOZ
+		spouse = sts_boz_wife
+	}
+	sts_boz_wife = {
+		first_name = { name = sts_name_boz_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1309.8.26
+		birth = qiaoxian
+		tag = BOZ
+		spouse = sts_boz_ruler
+	}
+	sts_boz_son = {
+		first_name = { name = sts_name_boz_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 59
+		dip = 47
+		mil = 51
+		female = no
+		birth_date = 1325.8.26
+		birth = qiaoxian
+		tag = BOZ
+		father = sts_boz_ruler
+		mother = sts_boz_wife
+	}
+	sts_chu_ruler = {
+		first_name = { name = sts_name_chu }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 35
+		dip = 41
+		mil = 54
+		female = no
+		birth_date = 1310.9.27
+		birth = qingliu_chuzhou
+		tag = CHU
+		spouse = sts_chu_wife
+	}
+	sts_chu_wife = {
+		first_name = { name = sts_name_chu_wife }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1300.9.27
+		birth = qingliu_chuzhou
+		tag = CHU
+		spouse = sts_chu_ruler
+	}
+	sts_chu_son = {
+		first_name = { name = sts_name_chu_son }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 40
+		dip = 48
+		mil = 52
+		female = no
+		birth_date = 1318.9.27
+		birth = qingliu_chuzhou
+		tag = CHU
+		father = sts_chu_ruler
+		mother = sts_chu_wife
+	}
+	sts_fac_ruler = {
+		first_name = { name = sts_name_fac }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 36
+		dip = 42
+		mil = 28
+		female = no
+		birth_date = 1311.10.1
+		birth = zhongli
+		tag = FAC
+		spouse = sts_fac_wife
+	}
+	sts_fac_wife = {
+		first_name = { name = sts_name_fac_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1301.10.1
+		birth = zhongli
+		tag = FAC
+		spouse = sts_fac_ruler
+	}
+	sts_fac_son = {
+		first_name = { name = sts_name_fac_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 41
+		dip = 49
+		mil = 53
+		female = no
+		birth_date = 1319.10.1
+		birth = zhongli
+		tag = FAC
+		father = sts_fac_ruler
+		mother = sts_fac_wife
+	}
+	sts_hep_ruler = {
+		first_name = { name = sts_name_hep }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 37
+		dip = 43
+		mil = 29
+		female = no
+		birth_date = 1312.11.2
+		birth = hezhou_he
+		tag = HEP
+		spouse = sts_hep_wife
+	}
+	sts_hep_wife = {
+		first_name = { name = sts_name_hep_wife }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1302.11.2
+		birth = hezhou_he
+		tag = HEP
+		spouse = sts_hep_ruler
+	}
+	sts_hep_son = {
+		first_name = { name = sts_name_hep_son }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 42
+		dip = 50
+		mil = 54
+		female = no
+		birth_date = 1320.11.2
+		birth = hezhou_he
+		tag = HEP
+		father = sts_hep_ruler
+		mother = sts_hep_wife
+	}
+	sts_lua_ruler = {
+		first_name = { name = sts_name_lua }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 38
+		dip = 44
+		mil = 30
+		female = no
+		birth_date = 1313.12.3
+		birth = luan
+		tag = LUA
+		spouse = sts_lua_wife
+	}
+	sts_lua_wife = {
+		first_name = { name = sts_name_lua_wife }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1303.12.3
+		birth = luan
+		tag = LUA
+		spouse = sts_lua_ruler
+	}
+	sts_lua_son = {
+		first_name = { name = sts_name_lua_son }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 43
+		dip = 51
+		mil = 55
+		female = no
+		birth_date = 1321.12.3
+		birth = luan
+		tag = LUA
+		father = sts_lua_ruler
+		mother = sts_lua_wife
+	}
+	sts_lad_ruler = {
+		first_name = { name = sts_name_lad }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 39
+		dip = 45
+		mil = 31
+		female = no
+		birth_date = 1314.1.4
+		birth = hefei
+		tag = LAD
+		spouse = sts_lad_wife
+	}
+	sts_lad_wife = {
+		first_name = { name = sts_name_lad_wife }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1304.1.4
+		birth = hefei
+		tag = LAD
+		spouse = sts_lad_ruler
+	}
+	sts_lad_son = {
+		first_name = { name = sts_name_lad_son }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 44
+		dip = 52
+		mil = 56
+		female = no
+		birth_date = 1322.1.4
+		birth = hefei
+		tag = LAD
+		father = sts_lad_ruler
+		mother = sts_lad_wife
+	}
+	sts_saq_ruler = {
+		first_name = { name = sts_name_saq }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 40
+		dip = 46
+		mil = 32
+		female = no
+		birth_date = 1315.2.5
+		birth = shouchun
+		tag = SAQ
+		spouse = sts_saq_wife
+	}
+	sts_saq_wife = {
+		first_name = { name = sts_name_saq_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1305.2.5
+		birth = shouchun
+		tag = SAQ
+		spouse = sts_saq_ruler
+	}
+	sts_saq_son = {
+		first_name = { name = sts_name_saq_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 45
+		dip = 53
+		mil = 57
+		female = no
+		birth_date = 1323.2.5
+		birth = shouchun
+		tag = SAQ
+		father = sts_saq_ruler
+		mother = sts_saq_wife
+	}
+	sts_sas_ruler = {
+		first_name = { name = sts_name_sas }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 41
+		dip = 47
+		mil = 33
+		female = no
+		birth_date = 1316.3.6
+		birth = hongxian
+		tag = SAS
+		spouse = sts_sas_wife
+	}
+	sts_sas_wife = {
+		first_name = { name = sts_name_sas_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1306.3.6
+		birth = hongxian
+		tag = SAS
+		spouse = sts_sas_ruler
+	}
+	sts_sas_son = {
+		first_name = { name = sts_name_sas_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 46
+		dip = 54
+		mil = 58
+		female = no
+		birth_date = 1324.3.6
+		birth = hongxian
+		tag = SAS
+		father = sts_sas_ruler
+		mother = sts_sas_wife
+	}
+	sts_suz_ruler = {
+		first_name = { name = sts_name_suz }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 42
+		dip = 48
+		mil = 34
+		female = no
+		birth_date = 1317.4.7
+		birth = suzhou_fengyang
+		tag = SUZ
+		spouse = sts_suz_wife
+	}
+	sts_suz_wife = {
+		first_name = { name = sts_name_suz_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1307.4.7
+		birth = suzhou_fengyang
+		tag = SUZ
+		spouse = sts_suz_ruler
+	}
+	sts_suz_son = {
+		first_name = { name = sts_name_suz_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 47
+		dip = 55
+		mil = 59
+		female = no
+		birth_date = 1325.4.7
+		birth = suzhou_fengyang
+		tag = SUZ
+		father = sts_suz_ruler
+		mother = sts_suz_wife
+	}
+	sts_yin_ruler = {
+		first_name = { name = sts_name_yin }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 43
+		dip = 49
+		mil = 35
+		female = no
+		birth_date = 1318.5.8
+		birth = yingzhou
+		tag = YIN
+		spouse = sts_yin_wife
+	}
+	sts_yin_wife = {
+		first_name = { name = sts_name_yin_wife }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1308.5.8
+		birth = yingzhou
+		tag = YIN
+		spouse = sts_yin_ruler
+	}
+	sts_yin_son = {
+		first_name = { name = sts_name_yin_son }
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 48
+		dip = 56
+		mil = 38
+		female = no
+		birth_date = 1318.5.8
+		birth = yingzhou
+		tag = YIN
+		father = sts_yin_ruler
+		mother = sts_yin_wife
+	}
+	sts_cal_ruler = {
+		first_name = { name = sts_name_cal }
+		culture = xuanzhou_culture
+		religion = sanjiao
+		adm = 44
+		dip = 50
+		mil = 36
+		female = no
+		birth_date = 1319.6.9
+		birth = guichi
+		tag = CAL
+		spouse = sts_cal_wife
+	}
+	sts_cal_wife = {
+		first_name = { name = sts_name_cal_wife }
+		culture = xuanzhou_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1309.6.9
+		birth = guichi
+		tag = CAL
+		spouse = sts_cal_ruler
+	}
+	sts_cal_son = {
+		first_name = { name = sts_name_cal_son }
+		culture = xuanzhou_culture
+		religion = sanjiao
+		adm = 49
+		dip = 57
+		mil = 39
+		female = no
+		birth_date = 1319.6.9
+		birth = guichi
+		tag = CAL
+		father = sts_cal_ruler
+		mother = sts_cal_wife
+	}
+	sts_har_ruler = {
+		first_name = { name = sts_name_har }
+		culture = jixi_culture
+		religion = sanjiao
+		adm = 45
+		dip = 51
+		mil = 37
+		female = no
+		birth_date = 1290.7.10
+		birth = shexian
+		tag = HAR
+		spouse = sts_har_wife
+	}
+	sts_har_wife = {
+		first_name = { name = sts_name_har_wife }
+		culture = jixi_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1300.7.10
+		birth = shexian
+		tag = HAR
+		spouse = sts_har_ruler
+	}
+	sts_har_son = {
+		first_name = { name = sts_name_har_son }
+		culture = jixi_culture
+		religion = sanjiao
+		adm = 50
+		dip = 40
+		mil = 40
+		female = no
+		birth_date = 1320.7.10
+		birth = shexian
+		tag = HAR
+		father = sts_har_ruler
+		mother = sts_har_wife
+	}
+	sts_nab_ruler = {
+		first_name = { name = sts_name_nab }
+		culture = xuanzhou_culture
+		religion = sanjiao
+		adm = 46
+		dip = 52
+		mil = 38
+		female = no
+		birth_date = 1291.8.11
+		birth = ningguo
+		tag = NAB
+		spouse = sts_nab_wife
+	}
+	sts_nab_wife = {
+		first_name = { name = sts_name_nab_wife }
+		culture = xuanzhou_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1301.8.11
+		birth = ningguo
+		tag = NAB
+		spouse = sts_nab_ruler
+	}
+	sts_nab_son = {
+		first_name = { name = sts_name_nab_son }
+		culture = xuanzhou_culture
+		religion = sanjiao
+		adm = 51
+		dip = 41
+		mil = 41
+		female = no
+		birth_date = 1321.8.11
+		birth = ningguo
+		tag = NAB
+		father = sts_nab_ruler
+		mother = sts_nab_wife
+	}
+	sts_saz_ruler = {
+		first_name = { name = sts_name_saz }
+		culture = wu_culture
+		religion = sanjiao
+		adm = 47
+		dip = 30
+		mil = 39
+		female = no
+		birth_date = 1292.9.12
+		birth = wuxian
+		tag = SAZ
+		spouse = sts_saz_wife
+	}
+	sts_saz_wife = {
+		first_name = { name = sts_name_saz_wife }
+		culture = wu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1302.9.12
+		birth = wuxian
+		tag = SAZ
+		spouse = sts_saz_ruler
+	}
+	sts_saz_son = {
+		first_name = { name = sts_name_saz_son }
+		culture = wu_culture
+		religion = sanjiao
+		adm = 52
+		dip = 42
+		mil = 42
+		female = no
+		birth_date = 1322.9.12
+		birth = wuxian
+		tag = SAZ
+		father = sts_saz_ruler
+		mother = sts_saz_wife
+	}
+	sts_yaf_ruler = {
+		first_name = { name = sts_name_zhao_chongxu }
+		dynasty = sts_zhao_wu_dynasty
+		culture = wu_culture
+		religion = sanjiao
+		adm = 60
+		dip = 65
+		mil = 60
+		female = no
+		birth_date = 1278.4.1
+		birth = jiangning
+		tag = YAF
+		spouse = sts_yaf_wife
+	}
+	sts_yaf_wife = {
+		first_name = { name = sts_name_zhao_sun_shi_wu }
+		culture = wu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1282.6.1
+		birth = jiangning
+		tag = YAF
+		spouse = sts_yaf_ruler
+	}
+	sts_yaf_son1 = {
+		first_name = { name = sts_name_zhao_chengqing }
+		culture = wu_culture
+		religion = sanjiao
+		adm = 53
+		dip = 43
+		mil = 43
+		female = no
+		birth_date = 1308.3.6
+		birth = jiangning
+		tag = YAF
+		father = sts_yaf_ruler
+		mother = sts_yaf_wife
+	}
+	sts_yaf_son2 = {
+		first_name = { name = sts_name_zhao_chengxi }
+		culture = wu_culture
+		religion = sanjiao
+		adm = 53
+		dip = 43
+		mil = 43
+		female = no
+		birth_date = 1312.7.14
+		birth = jiangning
+		tag = YAF
+		father = sts_yaf_ruler
+		mother = sts_yaf_wife
+	}
+	sts_yaf_son3 = {
+		first_name = { name = sts_name_zhao_chengzuo }
+		culture = wu_culture
+		religion = sanjiao
+		adm = 53
+		dip = 43
+		mil = 43
+		female = no
+		birth_date = 1316.9.2
+		birth = jiangning
+		tag = YAF
+		father = sts_yaf_ruler
+		mother = sts_yaf_wife
+	}
+	sts_yaf_daughter1 = {
+		first_name = { name = sts_name_zhao_qingyi }
+		culture = wu_culture
+		religion = sanjiao
+		adm = 53
+		dip = 43
+		mil = 43
+		female = yes
+		birth_date = 1320.5.18
+		birth = jiangning
+		tag = YAF
+		father = sts_yaf_ruler
+		mother = sts_yaf_wife
+	}
+	sts_yaf_daughter2 = {
+		first_name = { name = sts_name_zhao_qinglan }
+		culture = wu_culture
+		religion = sanjiao
+		adm = 53
+		dip = 43
+		mil = 43
+		female = yes
+		birth_date = 1324.11.7
+		birth = jiangning
+		tag = YAF
+		father = sts_yaf_ruler
+		mother = sts_yaf_wife
+	}
+	sts_cap_ruler = {
+		first_name = { name = sts_name_cap }
+		culture = chuzhou_culture
+		religion = sanjiao
+		adm = 49
+		dip = 32
+		mil = 41
+		female = no
+		birth_date = 1294.11.14
+		birth = lishui
+		tag = CAP
+		spouse = sts_cap_wife
+	}
+	sts_cap_wife = {
+		first_name = { name = sts_name_cap_wife }
+		culture = chuzhou_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1304.11.14
+		birth = lishui
+		tag = CAP
+		spouse = sts_cap_ruler
+	}
+	sts_cap_son = {
+		first_name = { name = sts_name_cap_son }
+		culture = chuzhou_culture
+		religion = sanjiao
+		adm = 54
+		dip = 44
+		mil = 44
+		female = no
+		birth_date = 1324.11.14
+		birth = lishui
+		tag = CAP
+		father = sts_cap_ruler
+		mother = sts_cap_wife
+	}
+	sts_has_ruler = {
+		first_name = { name = sts_name_zong_liangzuo }
+		dynasty = sts_zong_dynasty
+		culture = wu_culture
+		religion = sanjiao
+		adm = 75
+		dip = 70
+		mil = 65
+		female = no
+		birth_date = 1298.4.1
+		birth = hangzhou
+		tag = HAS
+		spouse = sts_has_wife
+	}
+	sts_has_wife = {
+		first_name = { name = sts_name_zong_wang_shi }
+		culture = wu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1302.6.1
+		birth = hangzhou
+		tag = HAS
+		spouse = sts_has_ruler
+	}
+	sts_has_son1 = {
+		first_name = { name = sts_name_zong_chengzu }
+		culture = wu_culture
+		religion = sanjiao
+		adm = 55
+		dip = 45
+		mil = 45
+		female = no
+		birth_date = 1320.3.8
+		birth = hangzhou
+		tag = HAS
+		father = sts_has_ruler
+		mother = sts_has_wife
+	}
+	sts_has_son2 = {
+		first_name = { name = sts_name_zong_chengye }
+		culture = wu_culture
+		religion = sanjiao
+		adm = 55
+		dip = 45
+		mil = 45
+		female = no
+		birth_date = 1325.7.16
+		birth = hangzhou
+		tag = HAS
+		father = sts_has_ruler
+		mother = sts_has_wife
+	}
+	sts_has_daughter1 = {
+		first_name = { name = sts_name_zong_qingyi }
+		culture = wu_culture
+		religion = sanjiao
+		adm = 55
+		dip = 45
+		mil = 45
+		female = yes
+		birth_date = 1329.9.3
+		birth = hangzhou
+		tag = HAS
+		father = sts_has_ruler
+		mother = sts_has_wife
+	}
+	sts_huz_ruler = {
+		first_name = { name = sts_name_huz }
+		culture = wu_culture
+		religion = sanjiao
+		adm = 51
+		dip = 34
+		mil = 43
+		female = no
+		birth_date = 1296.1.16
+		birth = wuxing
+		tag = HUZ
+		spouse = sts_huz_wife
+	}
+	sts_huz_wife = {
+		first_name = { name = sts_name_huz_wife }
+		culture = wu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1306.1.16
+		birth = wuxing
+		tag = HUZ
+		spouse = sts_huz_ruler
+	}
+	sts_huz_son = {
+		first_name = { name = sts_name_huz_son }
+		culture = wu_culture
+		religion = sanjiao
+		adm = 56
+		dip = 46
+		mil = 46
+		female = no
+		birth_date = 1318.1.16
+		birth = wuxing
+		tag = HUZ
+		father = sts_huz_ruler
+		mother = sts_huz_wife
+	}
+	sts_jag_ruler = {
+		first_name = { name = sts_name_jag }
+		culture = wuzhou_culture
+		religion = sanjiao
+		adm = 52
+		dip = 35
+		mil = 44
+		female = no
+		birth_date = 1297.2.17
+		birth = jinhua
+		tag = JAG
+		spouse = sts_jag_wife
+	}
+	sts_jag_wife = {
+		first_name = { name = sts_name_jag_wife }
+		culture = wuzhou_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1307.2.17
+		birth = jinhua
+		tag = JAG
+		spouse = sts_jag_ruler
+	}
+	sts_jag_son = {
+		first_name = { name = sts_name_jag_son }
+		culture = wuzhou_culture
+		religion = sanjiao
+		adm = 57
+		dip = 47
+		mil = 47
+		female = no
+		birth_date = 1319.2.17
+		birth = jinhua
+		tag = JAG
+		father = sts_jag_ruler
+		mother = sts_jag_wife
+	}
+	sts_qaa_ruler = {
+		first_name = { name = sts_name_qaa }
+		culture = quzhou_culture
+		religion = sanjiao
+		adm = 53
+		dip = 36
+		mil = 45
+		female = no
+		birth_date = 1298.3.18
+		birth = xian_quzhou
+		tag = QAA
+		spouse = sts_qaa_wife
+	}
+	sts_qaa_wife = {
+		first_name = { name = sts_name_qaa_wife }
+		culture = quzhou_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1308.3.18
+		birth = xian_quzhou
+		tag = QAA
+		spouse = sts_qaa_ruler
+	}
+	sts_qaa_son = {
+		first_name = { name = sts_name_qaa_son }
+		culture = quzhou_culture
+		religion = sanjiao
+		adm = 58
+		dip = 48
+		mil = 48
+		female = no
+		birth_date = 1320.3.18
+		birth = xian_quzhou
+		tag = QAA
+		father = sts_qaa_ruler
+		mother = sts_qaa_wife
+	}
+	sts_tap_ruler = {
+		first_name = { name = sts_name_tap }
+		culture = wu_culture
+		religion = sanjiao
+		adm = 54
+		dip = 37
+		mil = 46
+		female = no
+		birth_date = 1299.4.19
+		birth = linhai
+		tag = TAP
+		spouse = sts_tap_wife
+	}
+	sts_tap_wife = {
+		first_name = { name = sts_name_tap_wife }
+		culture = wu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1309.4.19
+		birth = linhai
+		tag = TAP
+		spouse = sts_tap_ruler
+	}
+	sts_tap_son = {
+		first_name = { name = sts_name_tap_son }
+		culture = wu_culture
+		religion = sanjiao
+		adm = 59
+		dip = 49
+		mil = 49
+		female = no
+		birth_date = 1321.4.19
+		birth = linhai
+		tag = TAP
+		father = sts_tap_ruler
+		mother = sts_tap_wife
+	}
+	sts_wen_ruler = {
+		first_name = { name = sts_name_wen }
+		culture = ouhai_culture
+		religion = sanjiao
+		adm = 30
+		dip = 38
+		mil = 47
+		female = no
+		birth_date = 1300.5.20
+		birth = yongjia
+		tag = WEN
+		spouse = sts_wen_wife
+	}
+	sts_wen_wife = {
+		first_name = { name = sts_name_wen_wife }
+		culture = ouhai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1300.5.20
+		birth = yongjia
+		tag = WEN
+		spouse = sts_wen_ruler
+	}
+	sts_wen_son = {
+		first_name = { name = sts_name_wen_son }
+		culture = ouhai_culture
+		religion = sanjiao
+		adm = 40
+		dip = 50
+		mil = 50
+		female = no
+		birth_date = 1322.5.20
+		birth = yongjia
+		tag = WEN
+		father = sts_wen_ruler
+		mother = sts_wen_wife
+	}
+	sts_yag_ruler = {
+		first_name = { name = sts_name_yag }
+		culture = tunxi_culture
+		religion = sanjiao
+		adm = 31
+		dip = 39
+		mil = 48
+		female = no
+		birth_date = 1301.6.21
+		birth = jiande
+		tag = YAG
+		spouse = sts_yag_wife
+	}
+	sts_yag_wife = {
+		first_name = { name = sts_name_yag_wife }
+		culture = tunxi_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1301.6.21
+		birth = jiande
+		tag = YAG
+		spouse = sts_yag_ruler
+	}
+	sts_yag_son = {
+		first_name = { name = sts_name_yag_son }
+		culture = tunxi_culture
+		religion = sanjiao
+		adm = 41
+		dip = 51
+		mil = 51
+		female = no
+		birth_date = 1323.6.21
+		birth = jiande
+		tag = YAG
+		father = sts_yag_ruler
+		mother = sts_yag_wife
+	}
+	sts_din_ruler = {
+		first_name = { name = sts_name_din }
+		culture = kejia_culture
+		religion = sanjiao
+		adm = 32
+		dip = 40
+		mil = 49
+		female = no
+		birth_date = 1302.7.22
+		birth = dingnan
+		tag = DIN
+		spouse = sts_din_wife
+	}
+	sts_din_wife = {
+		first_name = { name = sts_name_din_wife }
+		culture = kejia_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1302.7.22
+		birth = dingnan
+		tag = DIN
+		spouse = sts_din_ruler
+	}
+	sts_din_son = {
+		first_name = { name = sts_name_din_son }
+		culture = kejia_culture
+		religion = sanjiao
+		adm = 42
+		dip = 52
+		mil = 52
+		female = no
+		birth_date = 1324.7.22
+		birth = dingnan
+		tag = DIN
+		father = sts_din_ruler
+		mother = sts_din_wife
+	}
+	sts_fad_ruler = {
+		first_name = { name = sts_name_fad }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 33
+		dip = 41
+		mil = 50
+		female = no
+		birth_date = 1303.8.23
+		birth = linchuan
+		tag = FAD
+		spouse = sts_fad_wife
+	}
+	sts_fad_wife = {
+		first_name = { name = sts_name_fad_wife }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1303.8.23
+		birth = linchuan
+		tag = FAD
+		spouse = sts_fad_ruler
+	}
+	sts_fad_son = {
+		first_name = { name = sts_name_fad_son }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 43
+		dip = 53
+		mil = 53
+		female = no
+		birth_date = 1325.8.23
+		birth = linchuan
+		tag = FAD
+		father = sts_fad_ruler
+		mother = sts_fad_wife
+	}
+	sts_gan_ruler = {
+		first_name = { name = sts_name_gan }
+		culture = kejia_culture
+		religion = sanjiao
+		adm = 34
+		dip = 42
+		mil = 51
+		female = no
+		birth_date = 1304.9.24
+		birth = ganxian
+		tag = GAN
+		spouse = sts_gan_wife
+	}
+	sts_gan_wife = {
+		first_name = { name = sts_name_gan_wife }
+		culture = kejia_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1304.9.24
+		birth = ganxian
+		tag = GAN
+		spouse = sts_gan_ruler
+	}
+	sts_gan_son = {
+		first_name = { name = sts_name_gan_son }
+		culture = kejia_culture
+		religion = sanjiao
+		adm = 44
+		dip = 54
+		mil = 54
+		female = no
+		birth_date = 1318.9.24
+		birth = ganxian
+		tag = GAN
+		father = sts_gan_ruler
+		mother = sts_gan_wife
+	}
+	sts_gaf_ruler = {
+		first_name = { name = sts_name_gaf }
+		culture = jiangshan_culture
+		religion = sanjiao
+		adm = 35
+		dip = 43
+		mil = 52
+		female = no
+		birth_date = 1305.10.25
+		birth = shangrao
+		tag = GAF
+		spouse = sts_gaf_wife
+	}
+	sts_gaf_wife = {
+		first_name = { name = sts_name_gaf_wife }
+		culture = jiangshan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1305.10.25
+		birth = shangrao
+		tag = GAF
+		spouse = sts_gaf_ruler
+	}
+	sts_gaf_son = {
+		first_name = { name = sts_name_gaf_son }
+		culture = jiangshan_culture
+		religion = sanjiao
+		adm = 45
+		dip = 55
+		mil = 55
+		female = no
+		birth_date = 1319.10.25
+		birth = shangrao
+		tag = GAF
+		father = sts_gaf_ruler
+		mother = sts_gaf_wife
+	}
+	sts_jah_ruler = {
+		first_name = { name = sts_name_jah }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 36
+		dip = 44
+		mil = 53
+		female = no
+		birth_date = 1306.11.26
+		birth = luling
+		tag = JAH
+		spouse = sts_jah_wife
+	}
+	sts_jah_wife = {
+		first_name = { name = sts_name_jah_wife }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1306.11.26
+		birth = luling
+		tag = JAH
+		spouse = sts_jah_ruler
+	}
+	sts_jah_son = {
+		first_name = { name = sts_name_jah_son }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 46
+		dip = 56
+		mil = 56
+		female = no
+		birth_date = 1320.11.26
+		birth = luling
+		tag = JAH
+		father = sts_jah_ruler
+		mother = sts_jah_wife
+	}
+	sts_jai_ruler = {
+		first_name = { name = sts_name_jai }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 37
+		dip = 45
+		mil = 54
+		female = no
+		birth_date = 1307.12.27
+		birth = nancheng
+		tag = JAI
+		spouse = sts_jai_wife
+	}
+	sts_jai_wife = {
+		first_name = { name = sts_name_jai_wife }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1307.12.27
+		birth = nancheng
+		tag = JAI
+		spouse = sts_jai_ruler
+	}
+	sts_jai_son = {
+		first_name = { name = sts_name_jai_son }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 47
+		dip = 57
+		mil = 57
+		female = no
+		birth_date = 1321.12.27
+		birth = nancheng
+		tag = JAI
+		father = sts_jai_ruler
+		mother = sts_jai_wife
+	}
+	sts_jiu_ruler = {
+		first_name = { name = sts_name_jiu }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 38
+		dip = 46
+		mil = 28
+		female = no
+		birth_date = 1308.1.1
+		birth = dehua_jiujiang
+		tag = JIU
+		spouse = sts_jiu_wife
+	}
+	sts_jiu_wife = {
+		first_name = { name = sts_name_jiu_wife }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1308.1.1
+		birth = dehua_jiujiang
+		tag = JIU
+		spouse = sts_jiu_ruler
+	}
+	sts_jiu_son = {
+		first_name = { name = sts_name_jiu_son }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 48
+		dip = 40
+		mil = 58
+		female = no
+		birth_date = 1322.1.1
+		birth = dehua_jiujiang
+		tag = JIU
+		father = sts_jiu_ruler
+		mother = sts_jiu_wife
+	}
+	sts_lae_ruler = {
+		first_name = { name = sts_name_lae }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 39
+		dip = 47
+		mil = 29
+		female = no
+		birth_date = 1309.2.2
+		birth = qingjiang
+		tag = LAE
+		spouse = sts_lae_wife
+	}
+	sts_lae_wife = {
+		first_name = { name = sts_name_lae_wife }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1309.2.2
+		birth = qingjiang
+		tag = LAE
+		spouse = sts_lae_ruler
+	}
+	sts_lae_son = {
+		first_name = { name = sts_name_lae_son }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 49
+		dip = 41
+		mil = 59
+		female = no
+		birth_date = 1323.2.2
+		birth = qingjiang
+		tag = LAE
+		father = sts_lae_ruler
+		mother = sts_lae_wife
+	}
+	sts_nad_ruler = {
+		first_name = { name = sts_name_nad }
+		culture = kejia_culture
+		religion = sanjiao
+		adm = 40
+		dip = 48
+		mil = 30
+		female = no
+		birth_date = 1310.3.3
+		birth = dayu
+		tag = NAD
+		spouse = sts_nad_wife
+	}
+	sts_nad_wife = {
+		first_name = { name = sts_name_nad_wife }
+		culture = kejia_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1300.3.3
+		birth = dayu
+		tag = NAD
+		spouse = sts_nad_ruler
+	}
+	sts_nad_son = {
+		first_name = { name = sts_name_nad_son }
+		culture = kejia_culture
+		religion = sanjiao
+		adm = 50
+		dip = 42
+		mil = 38
+		female = no
+		birth_date = 1324.3.3
+		birth = dayu
+		tag = NAD
+		father = sts_nad_ruler
+		mother = sts_nad_wife
+	}
+	sts_nae_ruler = {
+		first_name = { name = sts_name_nae }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 41
+		dip = 49
+		mil = 31
+		female = no
+		birth_date = 1311.4.4
+		birth = nanchang
+		tag = NAE
+		spouse = sts_nae_wife
+	}
+	sts_nae_wife = {
+		first_name = { name = sts_name_nae_wife }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1301.4.4
+		birth = nanchang
+		tag = NAE
+		spouse = sts_nae_ruler
+	}
+	sts_nae_son = {
+		first_name = { name = sts_name_nae_son }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 51
+		dip = 43
+		mil = 39
+		female = no
+		birth_date = 1325.4.4
+		birth = nanchang
+		tag = NAE
+		father = sts_nae_ruler
+		mother = sts_nae_wife
+	}
+	sts_naf_ruler = {
+		first_name = { name = sts_name_naf }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 42
+		dip = 50
+		mil = 32
+		female = no
+		birth_date = 1312.5.5
+		birth = xingzi
+		tag = NAF
+		spouse = sts_naf_wife
+	}
+	sts_naf_wife = {
+		first_name = { name = sts_name_naf_wife }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1302.5.5
+		birth = xingzi
+		tag = NAF
+		spouse = sts_naf_ruler
+	}
+	sts_naf_son = {
+		first_name = { name = sts_name_naf_son }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 52
+		dip = 44
+		mil = 40
+		female = no
+		birth_date = 1318.5.5
+		birth = xingzi
+		tag = NAF
+		father = sts_naf_ruler
+		mother = sts_naf_wife
+	}
+	sts_nah_ruler = {
+		first_name = { name = sts_name_nah }
+		culture = kejia_culture
+		religion = sanjiao
+		adm = 43
+		dip = 51
+		mil = 33
+		female = no
+		birth_date = 1313.6.6
+		birth = ningdu
+		tag = NAH
+		spouse = sts_nah_wife
+	}
+	sts_nah_wife = {
+		first_name = { name = sts_name_nah_wife }
+		culture = kejia_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1303.6.6
+		birth = ningdu
+		tag = NAH
+		spouse = sts_nah_ruler
+	}
+	sts_nah_son = {
+		first_name = { name = sts_name_nah_son }
+		culture = kejia_culture
+		religion = sanjiao
+		adm = 53
+		dip = 45
+		mil = 41
+		female = no
+		birth_date = 1319.6.6
+		birth = ningdu
+		tag = NAH
+		father = sts_nah_ruler
+		mother = sts_nah_wife
+	}
+	sts_naj_ruler = {
+		first_name = { name = sts_name_naj }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 44
+		dip = 52
+		mil = 34
+		female = no
+		birth_date = 1314.7.7
+		birth = fenning
+		tag = NAJ
+		spouse = sts_naj_wife
+	}
+	sts_naj_wife = {
+		first_name = { name = sts_name_naj_wife }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1304.7.7
+		birth = fenning
+		tag = NAJ
+		spouse = sts_naj_ruler
+	}
+	sts_naj_son = {
+		first_name = { name = sts_name_naj_son }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 54
+		dip = 46
+		mil = 42
+		female = no
+		birth_date = 1320.7.7
+		birth = fenning
+		tag = NAJ
+		father = sts_naj_ruler
+		mother = sts_naj_wife
+	}
+	sts_taq_ruler = {
+		first_name = { name = sts_name_taq }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 45
+		dip = 30
+		mil = 35
+		female = no
+		birth_date = 1315.8.8
+		birth = taihe_taihe
+		tag = TAQ
+		spouse = sts_taq_wife
+	}
+	sts_taq_wife = {
+		first_name = { name = sts_name_taq_wife }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1305.8.8
+		birth = taihe_taihe
+		tag = TAQ
+		spouse = sts_taq_ruler
+	}
+	sts_taq_son = {
+		first_name = { name = sts_name_taq_son }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 55
+		dip = 47
+		mil = 43
+		female = no
+		birth_date = 1321.8.8
+		birth = taihe_taihe
+		tag = TAQ
+		father = sts_taq_ruler
+		mother = sts_taq_wife
+	}
+	sts_rao_ruler = {
+		first_name = { name = sts_name_rao }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 46
+		dip = 31
+		mil = 36
+		female = no
+		birth_date = 1316.9.9
+		birth = poyang
+		tag = RAO
+		spouse = sts_rao_wife
+	}
+	sts_rao_wife = {
+		first_name = { name = sts_name_rao_wife }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1306.9.9
+		birth = poyang
+		tag = RAO
+		spouse = sts_rao_ruler
+	}
+	sts_rao_son = {
+		first_name = { name = sts_name_rao_son }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 56
+		dip = 48
+		mil = 44
+		female = no
+		birth_date = 1322.9.9
+		birth = poyang
+		tag = RAO
+		father = sts_rao_ruler
+		mother = sts_rao_wife
+	}
+	sts_rui_ruler = {
+		first_name = { name = sts_name_rui }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 47
+		dip = 32
+		mil = 37
+		female = no
+		birth_date = 1317.10.10
+		birth = gaoan
+		tag = RUI
+		spouse = sts_rui_wife
+	}
+	sts_rui_wife = {
+		first_name = { name = sts_name_rui_wife }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1307.10.10
+		birth = gaoan
+		tag = RUI
+		spouse = sts_rui_ruler
+	}
+	sts_rui_son = {
+		first_name = { name = sts_name_rui_son }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 57
+		dip = 49
+		mil = 45
+		female = no
+		birth_date = 1323.10.10
+		birth = gaoan
+		tag = RUI
+		father = sts_rui_ruler
+		mother = sts_rui_wife
+	}
+	sts_yai_ruler = {
+		first_name = { name = sts_name_yai }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 48
+		dip = 33
+		mil = 38
+		female = no
+		birth_date = 1318.11.11
+		birth = yichun
+		tag = YAI
+		spouse = sts_yai_wife
+	}
+	sts_yai_wife = {
+		first_name = { name = sts_name_yai_wife }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1308.11.11
+		birth = yichun
+		tag = YAI
+		spouse = sts_yai_ruler
+	}
+	sts_yai_son = {
+		first_name = { name = sts_name_yai_son }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 58
+		dip = 50
+		mil = 46
+		female = no
+		birth_date = 1324.11.11
+		birth = yichun
+		tag = YAI
+		father = sts_yai_ruler
+		mother = sts_yai_wife
+	}
+	sts_fun_ruler = {
+		first_name = { name = sts_name_fun }
+		culture = funing_culture
+		religion = sanjiao
+		adm = 49
+		dip = 34
+		mil = 39
+		female = no
+		birth_date = 1319.12.12
+		birth = ningde
+		tag = FUN
+		spouse = sts_fun_wife
+	}
+	sts_fun_wife = {
+		first_name = { name = sts_name_fun_wife }
+		culture = funing_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1309.12.12
+		birth = ningde
+		tag = FUN
+		spouse = sts_fun_ruler
+	}
+	sts_fun_son = {
+		first_name = { name = sts_name_fun_son }
+		culture = funing_culture
+		religion = sanjiao
+		adm = 59
+		dip = 51
+		mil = 47
+		female = no
+		birth_date = 1325.12.12
+		birth = ningde
+		tag = FUN
+		father = sts_fun_ruler
+		mother = sts_fun_wife
+	}
+	sts_jaj_ruler = {
+		first_name = { name = sts_name_jaj }
+		culture = jianning_culture
+		religion = sanjiao
+		adm = 51
+		dip = 36
+		mil = 41
+		female = no
+		birth_date = 1291.2.14
+		birth = ouning
+		tag = JAJ
+		spouse = sts_jaj_wife
+	}
+	sts_jaj_wife = {
+		first_name = { name = sts_name_jaj_wife }
+		culture = jianning_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1301.2.14
+		birth = ouning
+		tag = JAJ
+		spouse = sts_jaj_ruler
+	}
+	sts_jaj_son = {
+		first_name = { name = sts_name_jaj_son }
+		culture = jianning_culture
+		religion = sanjiao
+		adm = 41
+		dip = 53
+		mil = 49
+		female = no
+		birth_date = 1319.2.14
+		birth = ouning
+		tag = JAJ
+		father = sts_jaj_ruler
+		mother = sts_jaj_wife
+	}
+	sts_qab_ruler = {
+		first_name = { name = sts_name_qab }
+		dynasty = sts_wang_dynasty
+		culture = minnan_culture
+		religion = sanjiao
+		adm = 60
+		dip = 85
+		mil = 65
+		female = no
+		birth_date = 1298.1.1
+		birth = jinjiang
+		tag = QAB
+		spouse = sts_qab_wife
+	}
+	sts_qab_wife = {
+		first_name = { name = sts_name_qab_wife }
+		culture = minnan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1302.3.15
+		birth = jinjiang
+		tag = QAB
+		spouse = sts_qab_ruler
+	}
+	sts_qab_son = {
+		first_name = { name = sts_name_qab_son }
+		culture = minnan_culture
+		religion = sanjiao
+		adm = 42
+		dip = 54
+		mil = 50
+		female = no
+		birth_date = 1320.3.15
+		birth = jinjiang
+		tag = QAB
+		father = sts_qab_ruler
+		mother = sts_qab_wife
+	}
+	sts_qab_son2 = {
+		first_name = { name = sts_name_qab_son2 }
+		culture = minnan_culture
+		religion = sanjiao
+		adm = 45
+		dip = 48
+		mil = 55
+		female = no
+		birth_date = 1322.7.1
+		birth = jinjiang
+		tag = QAB
+		father = sts_qab_ruler
+		mother = sts_qab_wife
+	}
+	sts_qab_daughter = {
+		first_name = { name = sts_name_qab_daughter }
+		culture = minnan_culture
+		religion = sanjiao
+		adm = 45
+		dip = 50
+		mil = 40
+		female = yes
+		birth_date = 1325.9.1
+		birth = jinjiang
+		tag = QAB
+		father = sts_qab_ruler
+		mother = sts_qab_wife
+	}
+	sts_sbc_ruler = {
+		first_name = { name = sts_name_sbc }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 53
+		dip = 38
+		mil = 43
+		female = no
+		birth_date = 1293.4.16
+		birth = shaowu
+		tag = SBC
+		spouse = sts_sbc_wife
+	}
+	sts_sbc_wife = {
+		first_name = { name = sts_name_sbc_wife }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1303.4.16
+		birth = shaowu
+		tag = SBC
+		spouse = sts_sbc_ruler
+	}
+	sts_sbc_son = {
+		first_name = { name = sts_name_sbc_son }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 43
+		dip = 55
+		mil = 51
+		female = no
+		birth_date = 1321.4.16
+		birth = shaowu
+		tag = SBC
+		father = sts_sbc_ruler
+		mother = sts_sbc_wife
+	}
+	sts_tin_ruler = {
+		first_name = { name = sts_name_tin }
+		culture = kejia_culture
+		religion = sanjiao
+		adm = 54
+		dip = 39
+		mil = 44
+		female = no
+		birth_date = 1294.5.17
+		birth = changting
+		tag = TIN
+		spouse = sts_tin_wife
+	}
+	sts_tin_wife = {
+		first_name = { name = sts_name_tin_wife }
+		culture = kejia_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1304.5.17
+		birth = changting
+		tag = TIN
+		spouse = sts_tin_ruler
+	}
+	sts_tin_son = {
+		first_name = { name = sts_name_tin_son }
+		culture = kejia_culture
+		religion = sanjiao
+		adm = 44
+		dip = 56
+		mil = 52
+		female = no
+		birth_date = 1322.5.17
+		birth = changting
+		tag = TIN
+		father = sts_tin_ruler
+		mother = sts_tin_wife
+	}
+	sts_dea_ruler = {
+		first_name = { name = sts_name_dea }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 33
+		dip = 43
+		mil = 48
+		female = no
+		birth_date = 1298.9.21
+		birth = anlu
+		tag = DEA
+		spouse = sts_dea_wife
+	}
+	sts_dea_wife = {
+		first_name = { name = sts_name_dea_wife }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1308.9.21
+		birth = anlu
+		tag = DEA
+		spouse = sts_dea_ruler
+	}
+	sts_dea_son = {
+		first_name = { name = sts_name_dea_son }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 48
+		dip = 42
+		mil = 56
+		female = no
+		birth_date = 1318.9.21
+		birth = anlu
+		tag = DEA
+		father = sts_dea_ruler
+		mother = sts_dea_wife
+	}
+	sts_hav_ruler = {
+		first_name = { name = sts_name_hav }
+		culture = chu_culture
+		religion = sanjiao
+		adm = 35
+		dip = 45
+		mil = 50
+		female = no
+		birth_date = 1300.11.23
+		birth = hanyang
+		tag = HAV
+		spouse = sts_hav_wife
+	}
+	sts_hav_wife = {
+		first_name = { name = sts_name_hav_wife }
+		culture = chu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1300.11.23
+		birth = hanyang
+		tag = HAV
+		spouse = sts_hav_ruler
+	}
+	sts_hav_son = {
+		first_name = { name = sts_name_hav_son }
+		culture = chu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 44
+		mil = 58
+		female = no
+		birth_date = 1320.11.23
+		birth = hanyang
+		tag = HAV
+		father = sts_hav_ruler
+		mother = sts_hav_wife
+	}
+	sts_hax_ruler = {
+		first_name = { name = sts_name_hax }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 36
+		dip = 46
+		mil = 51
+		female = no
+		birth_date = 1301.12.24
+		birth = huanggang
+		tag = HAX
+		spouse = sts_hax_wife
+	}
+	sts_hax_wife = {
+		first_name = { name = sts_name_hax_wife }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1301.12.24
+		birth = huanggang
+		tag = HAX
+		spouse = sts_hax_ruler
+	}
+	sts_hax_son = {
+		first_name = { name = sts_name_hax_son }
+		culture = jianghuai_culture
+		religion = sanjiao
+		adm = 51
+		dip = 45
+		mil = 59
+		female = no
+		birth_date = 1321.12.24
+		birth = huanggang
+		tag = HAX
+		father = sts_hax_ruler
+		mother = sts_hax_wife
+	}
+	sts_jam_ruler = {
+		first_name = { name = sts_name_jam }
+		culture = chu_culture
+		religion = sanjiao
+		adm = 37
+		dip = 47
+		mil = 52
+		female = no
+		birth_date = 1302.1.25
+		birth = jiangling
+		tag = JAM
+		spouse = sts_jam_wife
+	}
+	sts_jam_wife = {
+		first_name = { name = sts_name_jam_wife }
+		culture = chu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1302.1.25
+		birth = jiangling
+		tag = JAM
+		spouse = sts_jam_ruler
+	}
+	sts_jam_son = {
+		first_name = { name = sts_name_jam_son }
+		culture = chu_culture
+		religion = sanjiao
+		adm = 52
+		dip = 46
+		mil = 38
+		female = no
+		birth_date = 1322.1.25
+		birth = jiangling
+		tag = JAM
+		father = sts_jam_ruler
+		mother = sts_jam_wife
+	}
+	sts_mia_ruler = {
+		first_name = { name = sts_name_mia }
+		culture = chu_culture
+		religion = sanjiao
+		adm = 38
+		dip = 48
+		mil = 53
+		female = no
+		birth_date = 1303.2.26
+		birth = yusha
+		tag = MIA
+		spouse = sts_mia_wife
+	}
+	sts_mia_wife = {
+		first_name = { name = sts_name_mia_wife }
+		culture = chu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1303.2.26
+		birth = yusha
+		tag = MIA
+		spouse = sts_mia_ruler
+	}
+	sts_mia_son = {
+		first_name = { name = sts_name_mia_son }
+		culture = chu_culture
+		religion = sanjiao
+		adm = 53
+		dip = 47
+		mil = 39
+		female = no
+		birth_date = 1323.2.26
+		birth = yusha
+		tag = MIA
+		father = sts_mia_ruler
+		mother = sts_mia_wife
+	}
+	sts_wuc_ruler = {
+		first_name = { name = sts_name_wuc }
+		culture = chu_culture
+		religion = sanjiao
+		adm = 39
+		dip = 49
+		mil = 54
+		female = no
+		birth_date = 1304.3.27
+		birth = jiangxia
+		tag = WUC
+		spouse = sts_wuc_wife
+	}
+	sts_wuc_wife = {
+		first_name = { name = sts_name_wuc_wife }
+		culture = chu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1304.3.27
+		birth = jiangxia
+		tag = WUC
+		spouse = sts_wuc_ruler
+	}
+	sts_wuc_son = {
+		first_name = { name = sts_name_wuc_son }
+		culture = chu_culture
+		religion = sanjiao
+		adm = 54
+		dip = 48
+		mil = 40
+		female = no
+		birth_date = 1324.3.27
+		birth = jiangxia
+		tag = WUC
+		father = sts_wuc_ruler
+		mother = sts_wuc_wife
+	}
+	sts_xaf_ruler = {
+		first_name = { name = sts_name_zhao_chonghan }
+		dynasty = sts_zhao_chu_dynasty
+		culture = chu_culture
+		religion = sanjiao
+		adm = 65
+		dip = 65
+		mil = 65
+		female = no
+		birth_date = 1297.4.1
+		birth = xiangyang
+		tag = XAF
+		spouse = sts_xaf_wife
+	}
+	sts_xaf_wife = {
+		first_name = { name = sts_name_zhao_wang_shi_chu }
+		culture = chu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1301.6.1
+		birth = xiangyang
+		tag = XAF
+		spouse = sts_xaf_ruler
+	}
+	sts_xaf_son1 = {
+		first_name = { name = sts_name_zhao_chengze }
+		culture = chu_culture
+		religion = sanjiao
+		adm = 55
+		dip = 49
+		mil = 41
+		female = no
+		birth_date = 1318.3.11
+		birth = xiangyang
+		tag = XAF
+		father = sts_xaf_ruler
+		mother = sts_xaf_wife
+	}
+	sts_xaf_son2 = {
+		first_name = { name = sts_name_zhao_chengxi_chu }
+		culture = chu_culture
+		religion = sanjiao
+		adm = 55
+		dip = 49
+		mil = 41
+		female = no
+		birth_date = 1322.7.19
+		birth = xiangyang
+		tag = XAF
+		father = sts_xaf_ruler
+		mother = sts_xaf_wife
+	}
+	sts_xaf_daughter1 = {
+		first_name = { name = sts_name_zhao_qingyue }
+		culture = chu_culture
+		religion = sanjiao
+		adm = 55
+		dip = 49
+		mil = 41
+		female = yes
+		birth_date = 1326.9.4
+		birth = xiangyang
+		tag = XAF
+		father = sts_xaf_ruler
+		mother = sts_xaf_wife
+	}
+	sts_xag_ruler = {
+		first_name = { name = sts_name_xag }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 41
+		dip = 51
+		mil = 29
+		female = no
+		birth_date = 1306.5.2
+		birth = yongxing_xingguo
+		tag = XAG
+		spouse = sts_xag_wife
+	}
+	sts_xag_wife = {
+		first_name = { name = sts_name_xag_wife }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1306.5.2
+		birth = yongxing_xingguo
+		tag = XAG
+		spouse = sts_xag_ruler
+	}
+	sts_xag_son = {
+		first_name = { name = sts_name_xag_son }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 56
+		dip = 50
+		mil = 42
+		female = no
+		birth_date = 1318.5.2
+		birth = yongxing_xingguo
+		tag = XAG
+		father = sts_xag_ruler
+		mother = sts_xag_wife
+	}
+	sts_caq_ruler = {
+		first_name = { name = sts_name_caq }
+		dynasty = sts_ma_dynasty
+		culture = xinxiang_culture
+		religion = sanjiao
+		adm = 70
+		dip = 75
+		mil = 70
+		female = no
+		birth_date = 1309.1.1
+		birth = changsha
+		tag = CAQ
+		spouse = sts_caq_wife
+	}
+	sts_caq_wife = {
+		first_name = { name = sts_name_caq_wife }
+		culture = xinxiang_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1312.6.1
+		birth = changsha
+		tag = CAQ
+		spouse = sts_caq_ruler
+	}
+	sts_caq_son = {
+		first_name = { name = sts_name_caq_son }
+		culture = xinxiang_culture
+		religion = sanjiao
+		adm = 55
+		dip = 50
+		mil = 48
+		female = no
+		birth_date = 1319.4.1
+		birth = changsha
+		tag = CAQ
+		father = sts_caq_ruler
+		mother = sts_caq_wife
+	}
+	sts_caq_son2 = {
+		first_name = { name = sts_name_caq_son2 }
+		culture = xinxiang_culture
+		religion = sanjiao
+		adm = 48
+		dip = 55
+		mil = 45
+		female = no
+		birth_date = 1322.9.1
+		birth = changsha
+		tag = CAQ
+		father = sts_caq_ruler
+		mother = sts_caq_wife
+	}
+	sts_caw_ruler = {
+		first_name = { name = sts_name_caw }
+		culture = yongzhou_culture
+		religion = sanjiao
+		adm = 45
+		dip = 32
+		mil = 33
+		female = no
+		birth_date = 1310.9.6
+		birth = chenyang
+		tag = CAW
+		spouse = sts_caw_wife
+	}
+	sts_caw_wife = {
+		first_name = { name = sts_name_caw_wife }
+		culture = yongzhou_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1300.9.6
+		birth = chenyang
+		tag = CAW
+		spouse = sts_caw_ruler
+	}
+	sts_caw_son = {
+		first_name = { name = sts_name_caw_son }
+		culture = yongzhou_culture
+		religion = sanjiao
+		adm = 40
+		dip = 54
+		mil = 46
+		female = no
+		birth_date = 1322.9.6
+		birth = chenyang
+		tag = CAW
+		father = sts_caw_ruler
+		mother = sts_caw_wife
+	}
+	sts_dao_ruler = {
+		first_name = { name = sts_name_dao }
+		culture = yao_china_culture
+		religion = sanjiao
+		adm = 46
+		dip = 33
+		mil = 34
+		female = no
+		birth_date = 1311.10.7
+		birth = yingdao
+		tag = DAO
+		spouse = sts_dao_wife
+	}
+	sts_dao_wife = {
+		first_name = { name = sts_name_dao_wife }
+		culture = yao_china_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1301.10.7
+		birth = yingdao
+		tag = DAO
+		spouse = sts_dao_ruler
+	}
+	sts_dao_son = {
+		first_name = { name = sts_name_dao_son }
+		culture = yao_china_culture
+		religion = sanjiao
+		adm = 41
+		dip = 55
+		mil = 47
+		female = no
+		birth_date = 1323.10.7
+		birth = yingdao
+		tag = DAO
+		father = sts_dao_ruler
+		mother = sts_dao_wife
+	}
+	sts_gah_ruler = {
+		first_name = { name = sts_name_gah }
+		culture = yongzhou_culture
+		religion = sanjiao
+		adm = 47
+		dip = 34
+		mil = 35
+		female = no
+		birth_date = 1312.11.8
+		birth = pingyang_guiyang
+		tag = GAH
+		spouse = sts_gah_wife
+	}
+	sts_gah_wife = {
+		first_name = { name = sts_name_gah_wife }
+		culture = yongzhou_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1302.11.8
+		birth = pingyang_guiyang
+		tag = GAH
+		spouse = sts_gah_ruler
+	}
+	sts_gah_son = {
+		first_name = { name = sts_name_gah_son }
+		culture = yongzhou_culture
+		religion = sanjiao
+		adm = 42
+		dip = 56
+		mil = 48
+		female = no
+		birth_date = 1324.11.8
+		birth = pingyang_guiyang
+		tag = GAH
+		father = sts_gah_ruler
+		mother = sts_gah_wife
+	}
+	sts_hay_ruler = {
+		first_name = { name = sts_name_hay }
+		culture = hengzhou_culture
+		religion = sanjiao
+		adm = 48
+		dip = 35
+		mil = 36
+		female = no
+		birth_date = 1313.12.9
+		birth = hengyang
+		tag = HAY
+		spouse = sts_hay_wife
+	}
+	sts_hay_wife = {
+		first_name = { name = sts_name_hay_wife }
+		culture = hengzhou_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1303.12.9
+		birth = hengyang
+		tag = HAY
+		spouse = sts_hay_ruler
+	}
+	sts_hay_son = {
+		first_name = { name = sts_name_hay_son }
+		culture = hengzhou_culture
+		religion = sanjiao
+		adm = 43
+		dip = 57
+		mil = 49
+		female = no
+		birth_date = 1325.12.9
+		birth = hengyang
+		tag = HAY
+		father = sts_hay_ruler
+		mother = sts_hay_wife
+	}
+	sts_wug_ruler = {
+		first_name = { name = sts_name_wug }
+		culture = laoxiang_culture
+		religion = sanjiao
+		adm = 49
+		dip = 36
+		mil = 37
+		female = no
+		birth_date = 1314.1.10
+		birth = wugang
+		tag = WUG
+		spouse = sts_wug_wife
+	}
+	sts_wug_wife = {
+		first_name = { name = sts_name_wug_wife }
+		culture = laoxiang_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1304.1.10
+		birth = wugang
+		tag = WUG
+		spouse = sts_wug_ruler
+	}
+	sts_wug_son = {
+		first_name = { name = sts_name_wug_son }
+		culture = laoxiang_culture
+		religion = sanjiao
+		adm = 44
+		dip = 40
+		mil = 50
+		female = no
+		birth_date = 1318.1.10
+		birth = wugang
+		tag = WUG
+		father = sts_wug_ruler
+		mother = sts_wug_wife
+	}
+	sts_yav_ruler = {
+		first_name = { name = sts_name_yav }
+		culture = yongzhou_culture
+		religion = sanjiao
+		adm = 51
+		dip = 38
+		mil = 39
+		female = no
+		birth_date = 1316.3.12
+		birth = lingling
+		tag = YAV
+		spouse = sts_yav_wife
+	}
+	sts_yav_wife = {
+		first_name = { name = sts_name_yav_wife }
+		culture = yongzhou_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1306.3.12
+		birth = lingling
+		tag = YAV
+		spouse = sts_yav_ruler
+	}
+	sts_yav_son = {
+		first_name = { name = sts_name_yav_son }
+		culture = yongzhou_culture
+		religion = sanjiao
+		adm = 46
+		dip = 42
+		mil = 52
+		female = no
+		birth_date = 1320.3.12
+		birth = lingling
+		tag = YAV
+		father = sts_yav_ruler
+		mother = sts_yav_wife
+	}
+	sts_yax_ruler = {
+		first_name = { name = sts_name_yax }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 52
+		dip = 39
+		mil = 40
+		female = no
+		birth_date = 1317.4.13
+		birth = youzhou
+		tag = YAX
+		spouse = sts_yax_wife
+	}
+	sts_yax_wife = {
+		first_name = { name = sts_name_yax_wife }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1307.4.13
+		birth = youzhou
+		tag = YAX
+		spouse = sts_yax_ruler
+	}
+	sts_yax_son = {
+		first_name = { name = sts_name_yax_son }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 47
+		dip = 43
+		mil = 53
+		female = no
+		birth_date = 1321.4.13
+		birth = youzhou
+		tag = YAX
+		father = sts_yax_ruler
+		mother = sts_yax_wife
+	}
+	sts_yue_ruler = {
+		first_name = { name = sts_name_yue }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 53
+		dip = 40
+		mil = 41
+		female = no
+		birth_date = 1318.5.14
+		birth = baling
+		tag = YUE
+		spouse = sts_yue_wife
+	}
+	sts_yue_wife = {
+		first_name = { name = sts_name_yue_wife }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1308.5.14
+		birth = baling
+		tag = YUE
+		spouse = sts_yue_ruler
+	}
+	sts_yue_son = {
+		first_name = { name = sts_name_yue_son }
+		culture = gan_culture
+		religion = sanjiao
+		adm = 48
+		dip = 44
+		mil = 54
+		female = no
+		birth_date = 1322.5.14
+		birth = baling
+		tag = YUE
+		father = sts_yue_ruler
+		mother = sts_yue_wife
+	}
+	sts_caz_ruler = {
+		first_name = { name = sts_name_caz }
+		culture = waxiang_culture
+		religion = sanjiao
+		adm = 30
+		dip = 42
+		mil = 43
+		female = no
+		birth_date = 1290.7.16
+		birth = yuanling
+		tag = CAZ
+		spouse = sts_caz_wife
+	}
+	sts_caz_wife = {
+		first_name = { name = sts_name_caz_wife }
+		culture = waxiang_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1300.7.16
+		birth = yuanling
+		tag = CAZ
+		spouse = sts_caz_ruler
+	}
+	sts_caz_son = {
+		first_name = { name = sts_name_caz_son }
+		culture = waxiang_culture
+		religion = sanjiao
+		adm = 50
+		dip = 46
+		mil = 56
+		female = no
+		birth_date = 1324.7.16
+		birth = yuanling
+		tag = CAZ
+		father = sts_caz_ruler
+		mother = sts_caz_wife
+	}
+	sts_jan_ruler = {
+		first_name = { name = sts_name_jan }
+		culture = kam_culture
+		religion = sanjiao
+		adm = 31
+		dip = 43
+		mil = 44
+		female = no
+		birth_date = 1291.8.17
+		birth = yongping
+		tag = JAN
+		spouse = sts_jan_wife
+	}
+	sts_jan_wife = {
+		first_name = { name = sts_name_jan_wife }
+		culture = kam_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1301.8.17
+		birth = yongping
+		tag = JAN
+		spouse = sts_jan_ruler
+	}
+	sts_jan_son = {
+		first_name = { name = sts_name_jan_son }
+		culture = kam_culture
+		religion = sanjiao
+		adm = 51
+		dip = 47
+		mil = 57
+		female = no
+		birth_date = 1325.8.17
+		birth = yongping
+		tag = JAN
+		father = sts_jan_ruler
+		mother = sts_jan_wife
+	}
+	sts_laf_ruler = {
+		first_name = { name = sts_name_laf }
+		culture = changde_culture
+		religion = sanjiao
+		adm = 32
+		dip = 44
+		mil = 45
+		female = no
+		birth_date = 1292.9.18
+		birth = liyang_lizhou
+		tag = LAF
+		spouse = sts_laf_wife
+	}
+	sts_laf_wife = {
+		first_name = { name = sts_name_laf_wife }
+		culture = changde_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1302.9.18
+		birth = liyang_lizhou
+		tag = LAF
+		spouse = sts_laf_ruler
+	}
+	sts_laf_son = {
+		first_name = { name = sts_name_laf_son }
+		culture = changde_culture
+		religion = sanjiao
+		adm = 52
+		dip = 48
+		mil = 58
+		female = no
+		birth_date = 1318.9.18
+		birth = liyang_lizhou
+		tag = LAF
+		father = sts_laf_ruler
+		mother = sts_laf_wife
+	}
+	sts_sbe_ruler = {
+		first_name = { name = sts_name_sbe }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 33
+		dip = 45
+		mil = 46
+		female = no
+		birth_date = 1293.10.19
+		birth = shizhou
+		tag = SBE
+		spouse = sts_sbe_wife
+	}
+	sts_sbe_wife = {
+		first_name = { name = sts_name_sbe_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1303.10.19
+		birth = shizhou
+		tag = SBE
+		spouse = sts_sbe_ruler
+	}
+	sts_sbe_son = {
+		first_name = { name = sts_name_sbe_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 53
+		dip = 49
+		mil = 59
+		female = no
+		birth_date = 1319.10.19
+		birth = shizhou
+		tag = SBE
+		father = sts_sbe_ruler
+		mother = sts_sbe_wife
+	}
+	sts_yay_ruler = {
+		first_name = { name = sts_name_yay }
+		culture = tujia_culture
+		religion = sanjiao
+		adm = 34
+		dip = 46
+		mil = 47
+		female = no
+		birth_date = 1294.11.20
+		birth = yongshun_yongshun
+		tag = YAY
+		spouse = sts_yay_wife
+	}
+	sts_yay_wife = {
+		first_name = { name = sts_name_yay_wife }
+		culture = tujia_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1304.11.20
+		birth = yongshun_yongshun
+		tag = YAY
+		spouse = sts_yay_ruler
+	}
+	sts_yay_son = {
+		first_name = { name = sts_name_yay_son }
+		culture = tujia_culture
+		religion = sanjiao
+		adm = 54
+		dip = 50
+		mil = 38
+		female = no
+		birth_date = 1320.11.20
+		birth = yongshun_yongshun
+		tag = YAY
+		father = sts_yay_ruler
+		mother = sts_yay_wife
+	}
+	sts_yba_ruler = {
+		first_name = { name = sts_name_yba }
+		culture = kam_culture
+		religion = sanjiao
+		adm = 35
+		dip = 47
+		mil = 48
+		female = no
+		birth_date = 1295.12.21
+		birth = luyang
+		tag = YBA
+		spouse = sts_yba_wife
+	}
+	sts_yba_wife = {
+		first_name = { name = sts_name_yba_wife }
+		culture = kam_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1305.12.21
+		birth = luyang
+		tag = YBA
+		spouse = sts_yba_ruler
+	}
+	sts_yba_son = {
+		first_name = { name = sts_name_yba_son }
+		culture = kam_culture
+		religion = sanjiao
+		adm = 55
+		dip = 51
+		mil = 39
+		female = no
+		birth_date = 1321.12.21
+		birth = luyang
+		tag = YBA
+		father = sts_yba_ruler
+		mother = sts_yba_wife
+	}
+	sts_cbb_ruler = {
+		first_name = { name = sts_name_cbb }
+		culture = chaozhou_culture
+		religion = sanjiao
+		adm = 36
+		dip = 48
+		mil = 49
+		female = no
+		birth_date = 1296.1.22
+		birth = haiyang
+		tag = CBB
+		spouse = sts_cbb_wife
+	}
+	sts_cbb_wife = {
+		first_name = { name = sts_name_cbb_wife }
+		culture = chaozhou_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1306.1.22
+		birth = haiyang
+		tag = CBB
+		spouse = sts_cbb_ruler
+	}
+	sts_cbb_son = {
+		first_name = { name = sts_name_cbb_son }
+		culture = chaozhou_culture
+		religion = sanjiao
+		adm = 56
+		dip = 52
+		mil = 40
+		female = no
+		birth_date = 1322.1.22
+		birth = haiyang
+		tag = CBB
+		father = sts_cbb_ruler
+		mother = sts_cbb_wife
+	}
+	sts_deq_ruler = {
+		first_name = { name = sts_name_deq }
+		culture = yuehai_culture
+		religion = sanjiao
+		adm = 37
+		dip = 49
+		mil = 50
+		female = no
+		birth_date = 1297.2.23
+		birth = duanxi
+		tag = DEQ
+		spouse = sts_deq_wife
+	}
+	sts_deq_wife = {
+		first_name = { name = sts_name_deq_wife }
+		culture = yuehai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1307.2.23
+		birth = duanxi
+		tag = DEQ
+		spouse = sts_deq_ruler
+	}
+	sts_deq_son = {
+		first_name = { name = sts_name_deq_son }
+		culture = yuehai_culture
+		religion = sanjiao
+		adm = 57
+		dip = 53
+		mil = 41
+		female = no
+		birth_date = 1323.2.23
+		birth = duanxi
+		tag = DEQ
+		father = sts_deq_ruler
+		mother = sts_deq_wife
+	}
+	sts_gai_ruler = {
+		first_name = { name = sts_name_gai }
+		dynasty = sts_liu_dynasty
+		culture = yuehai_culture
+		religion = sanjiao
+		adm = 70
+		dip = 75
+		mil = 65
+		female = no
+		birth_date = 1277.1.1
+		birth = guangzhou
+		tag = GAI
+		spouse = sts_gai_wife
+	}
+	sts_gai_wife = {
+		first_name = { name = sts_name_gai_wife }
+		culture = yuehai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1285.4.1
+		birth = guangzhou
+		tag = GAI
+		spouse = sts_gai_ruler
+	}
+	sts_gai_son = {
+		first_name = { name = sts_name_gai_son }
+		culture = yuehai_culture
+		religion = sanjiao
+		adm = 59
+		dip = 55
+		mil = 43
+		female = no
+		birth_date = 1315.3.1
+		birth = guangzhou
+		tag = GAI
+		father = sts_gai_ruler
+		mother = sts_gai_wife
+	}
+	sts_gai_son2 = {
+		first_name = { name = sts_name_gai_son2 }
+		culture = yuehai_culture
+		religion = sanjiao
+		adm = 48
+		dip = 52
+		mil = 46
+		female = no
+		birth_date = 1319.6.1
+		birth = guangzhou
+		tag = GAI
+		father = sts_gai_ruler
+		mother = sts_gai_wife
+	}
+	sts_gai_daughter = {
+		first_name = { name = sts_name_gai_daughter }
+		culture = yuehai_culture
+		religion = sanjiao
+		adm = 46
+		dip = 51
+		mil = 38
+		female = yes
+		birth_date = 1323.9.1
+		birth = guangzhou
+		tag = GAI
+		father = sts_gai_ruler
+		mother = sts_gai_wife
+	}
+	sts_hey_ruler = {
+		first_name = { name = sts_name_hey }
+		culture = dongjiang_culture
+		religion = sanjiao
+		adm = 40
+		dip = 52
+		mil = 53
+		female = no
+		birth_date = 1300.5.26
+		birth = heyuan
+		tag = HEY
+		spouse = sts_hey_wife
+	}
+	sts_hey_wife = {
+		first_name = { name = sts_name_hey_wife }
+		culture = dongjiang_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1300.5.26
+		birth = heyuan
+		tag = HEY
+		spouse = sts_hey_ruler
+	}
+	sts_hey_son = {
+		first_name = { name = sts_name_hey_son }
+		culture = dongjiang_culture
+		religion = sanjiao
+		adm = 40
+		dip = 56
+		mil = 44
+		female = no
+		birth_date = 1318.5.26
+		birth = heyuan
+		tag = HEY
+		father = sts_hey_ruler
+		mother = sts_hey_wife
+	}
+	sts_haz_ruler = {
+		first_name = { name = sts_name_haz }
+		culture = huizhou_hakka_culture
+		religion = sanjiao
+		adm = 41
+		dip = 30
+		mil = 54
+		female = no
+		birth_date = 1301.6.27
+		birth = guishan
+		tag = HAZ
+		spouse = sts_haz_wife
+	}
+	sts_haz_wife = {
+		first_name = { name = sts_name_haz_wife }
+		culture = huizhou_hakka_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1301.6.27
+		birth = guishan
+		tag = HAZ
+		spouse = sts_haz_ruler
+	}
+	sts_haz_son = {
+		first_name = { name = sts_name_haz_son }
+		culture = huizhou_hakka_culture
+		religion = sanjiao
+		adm = 41
+		dip = 57
+		mil = 45
+		female = no
+		birth_date = 1319.6.27
+		birth = guishan
+		tag = HAZ
+		father = sts_haz_ruler
+		mother = sts_haz_wife
+	}
+	sts_lia_ruler = {
+		first_name = { name = sts_name_lia }
+		culture = yao_china_culture
+		religion = sanjiao
+		adm = 42
+		dip = 31
+		mil = 28
+		female = no
+		birth_date = 1302.7.1
+		birth = liannan
+		tag = LIA
+		spouse = sts_lia_wife
+	}
+	sts_lia_wife = {
+		first_name = { name = sts_name_lia_wife }
+		culture = yao_china_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1302.7.1
+		birth = liannan
+		tag = LIA
+		spouse = sts_lia_ruler
+	}
+	sts_lia_son = {
+		first_name = { name = sts_name_lia_son }
+		culture = yao_china_culture
+		religion = sanjiao
+		adm = 42
+		dip = 40
+		mil = 46
+		female = no
+		birth_date = 1320.7.1
+		birth = liannan
+		tag = LIA
+		father = sts_lia_ruler
+		mother = sts_lia_wife
+	}
+	sts_nak_ruler = {
+		first_name = { name = sts_name_nak }
+		culture = yangjiang_culture
+		religion = sanjiao
+		adm = 43
+		dip = 32
+		mil = 29
+		female = no
+		birth_date = 1303.8.2
+		birth = yangjiang
+		tag = NAK
+		spouse = sts_nak_wife
+	}
+	sts_nak_wife = {
+		first_name = { name = sts_name_nak_wife }
+		culture = yangjiang_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1303.8.2
+		birth = yangjiang
+		tag = NAK
+		spouse = sts_nak_ruler
+	}
+	sts_nak_son = {
+		first_name = { name = sts_name_nak_son }
+		culture = yangjiang_culture
+		religion = sanjiao
+		adm = 43
+		dip = 41
+		mil = 47
+		female = no
+		birth_date = 1321.8.2
+		birth = yangjiang
+		tag = NAK
+		father = sts_nak_ruler
+		mother = sts_nak_wife
+	}
+	sts_nao_ruler = {
+		first_name = { name = sts_name_nao }
+		culture = kejia_culture
+		religion = sanjiao
+		adm = 44
+		dip = 33
+		mil = 30
+		female = no
+		birth_date = 1304.9.3
+		birth = baochang_nanxiong
+		tag = NAO
+		spouse = sts_nao_wife
+	}
+	sts_nao_wife = {
+		first_name = { name = sts_name_nao_wife }
+		culture = kejia_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1304.9.3
+		birth = baochang_nanxiong
+		tag = NAO
+		spouse = sts_nao_ruler
+	}
+	sts_nao_son = {
+		first_name = { name = sts_name_nao_son }
+		culture = kejia_culture
+		religion = sanjiao
+		adm = 44
+		dip = 42
+		mil = 48
+		female = no
+		birth_date = 1322.9.3
+		birth = baochang_nanxiong
+		tag = NAO
+		father = sts_nao_ruler
+		mother = sts_nao_wife
+	}
+	sts_pab_ruler = {
+		first_name = { name = sts_name_pab }
+		culture = yuehai_culture
+		religion = sanjiao
+		adm = 45
+		dip = 34
+		mil = 31
+		female = no
+		birth_date = 1305.10.4
+		birth = conghua
+		tag = PAB
+		spouse = sts_pab_wife
+	}
+	sts_pab_wife = {
+		first_name = { name = sts_name_pab_wife }
+		culture = yuehai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1305.10.4
+		birth = conghua
+		tag = PAB
+		spouse = sts_pab_ruler
+	}
+	sts_pab_son = {
+		first_name = { name = sts_name_pab_son }
+		culture = yuehai_culture
+		religion = sanjiao
+		adm = 45
+		dip = 43
+		mil = 49
+		female = no
+		birth_date = 1323.10.4
+		birth = conghua
+		tag = PAB
+		father = sts_pab_ruler
+		mother = sts_pab_wife
+	}
+	sts_sbf_ruler = {
+		first_name = { name = sts_name_sbf }
+		culture = kejia_culture
+		religion = sanjiao
+		adm = 46
+		dip = 35
+		mil = 32
+		female = no
+		birth_date = 1306.11.5
+		birth = qujiang
+		tag = SBF
+		spouse = sts_sbf_wife
+	}
+	sts_sbf_wife = {
+		first_name = { name = sts_name_sbf_wife }
+		culture = kejia_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1306.11.5
+		birth = qujiang
+		tag = SBF
+		spouse = sts_sbf_ruler
+	}
+	sts_sbf_son = {
+		first_name = { name = sts_name_sbf_son }
+		culture = kejia_culture
+		religion = sanjiao
+		adm = 46
+		dip = 44
+		mil = 50
+		female = no
+		birth_date = 1324.11.5
+		birth = qujiang
+		tag = SBF
+		father = sts_sbf_ruler
+		mother = sts_sbf_wife
+	}
+	sts_xun_ruler = {
+		first_name = { name = sts_name_xun }
+		culture = dongjiang_culture
+		religion = sanjiao
+		adm = 48
+		dip = 37
+		mil = 34
+		female = no
+		birth_date = 1308.1.7
+		birth = longchuan_xunzhou
+		tag = XUN
+		spouse = sts_xun_wife
+	}
+	sts_xun_wife = {
+		first_name = { name = sts_name_xun_wife }
+		culture = dongjiang_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1308.1.7
+		birth = longchuan_xunzhou
+		tag = XUN
+		spouse = sts_xun_ruler
+	}
+	sts_xun_son = {
+		first_name = { name = sts_name_xun_son }
+		culture = dongjiang_culture
+		religion = sanjiao
+		adm = 48
+		dip = 46
+		mil = 52
+		female = no
+		birth_date = 1318.1.7
+		birth = longchuan_xunzhou
+		tag = XUN
+		father = sts_xun_ruler
+		mother = sts_xun_wife
+	}
+	sts_ybb_ruler = {
+		first_name = { name = sts_name_ybb }
+		culture = yuehai_culture
+		religion = sanjiao
+		adm = 49
+		dip = 38
+		mil = 35
+		female = no
+		birth_date = 1309.2.8
+		birth = yingde
+		tag = YBB
+		spouse = sts_ybb_wife
+	}
+	sts_ybb_wife = {
+		first_name = { name = sts_name_ybb_wife }
+		culture = yuehai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1309.2.8
+		birth = yingde
+		tag = YBB
+		spouse = sts_ybb_ruler
+	}
+	sts_ybb_son = {
+		first_name = { name = sts_name_ybb_son }
+		culture = yuehai_culture
+		religion = sanjiao
+		adm = 49
+		dip = 47
+		mil = 53
+		female = no
+		birth_date = 1319.2.8
+		birth = yingde
+		tag = YBB
+		father = sts_ybb_ruler
+		mother = sts_ybb_wife
+	}
+	sts_zae_ruler = {
+		first_name = { name = sts_name_zae }
+		culture = yuehai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 39
+		mil = 36
+		female = no
+		birth_date = 1310.3.9
+		birth = gaoyao
+		tag = ZAE
+		spouse = sts_zae_wife
+	}
+	sts_zae_wife = {
+		first_name = { name = sts_name_zae_wife }
+		culture = yuehai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1300.3.9
+		birth = gaoyao
+		tag = ZAE
+		spouse = sts_zae_ruler
+	}
+	sts_zae_son = {
+		first_name = { name = sts_name_zae_son }
+		culture = yuehai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 48
+		mil = 54
+		female = no
+		birth_date = 1320.3.9
+		birth = gaoyao
+		tag = ZAE
+		father = sts_zae_ruler
+		mother = sts_zae_wife
+	}
+	sts_gaj_ruler = {
+		first_name = { name = sts_name_gaj }
+		culture = yao_china_culture
+		religion = sanjiao
+		adm = 51
+		dip = 40
+		mil = 37
+		female = no
+		birth_date = 1311.4.10
+		birth = lingui
+		tag = GAJ
+		spouse = sts_gaj_wife
+	}
+	sts_gaj_wife = {
+		first_name = { name = sts_name_gaj_wife }
+		culture = yao_china_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1301.4.10
+		birth = lingui
+		tag = GAJ
+		spouse = sts_gaj_ruler
+	}
+	sts_gaj_son = {
+		first_name = { name = sts_name_gaj_son }
+		culture = yao_china_culture
+		religion = sanjiao
+		adm = 51
+		dip = 49
+		mil = 55
+		female = no
+		birth_date = 1321.4.10
+		birth = lingui
+		tag = GAJ
+		father = sts_gaj_ruler
+		mother = sts_gaj_wife
+	}
+	sts_hba_ruler = {
+		first_name = { name = sts_name_hba }
+		culture = yao_china_culture
+		religion = sanjiao
+		adm = 52
+		dip = 41
+		mil = 38
+		female = no
+		birth_date = 1312.5.11
+		birth = linhe
+		tag = HBA
+		spouse = sts_hba_wife
+	}
+	sts_hba_wife = {
+		first_name = { name = sts_name_hba_wife }
+		culture = yao_china_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1302.5.11
+		birth = linhe
+		tag = HBA
+		spouse = sts_hba_ruler
+	}
+	sts_hba_son = {
+		first_name = { name = sts_name_hba_son }
+		culture = yao_china_culture
+		religion = sanjiao
+		adm = 52
+		dip = 50
+		mil = 56
+		female = no
+		birth_date = 1322.5.11
+		birth = linhe
+		tag = HBA
+		father = sts_hba_ruler
+		mother = sts_hba_wife
+	}
+	sts_liu_ruler = {
+		first_name = { name = sts_name_liu }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 53
+		dip = 42
+		mil = 39
+		female = no
+		birth_date = 1313.6.12
+		birth = maping
+		tag = LIU
+		spouse = sts_liu_wife
+	}
+	sts_liu_wife = {
+		first_name = { name = sts_name_liu_wife }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1303.6.12
+		birth = maping
+		tag = LIU
+		spouse = sts_liu_ruler
+	}
+	sts_liu_son = {
+		first_name = { name = sts_name_liu_son }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 53
+		dip = 51
+		mil = 57
+		female = no
+		birth_date = 1323.6.12
+		birth = maping
+		tag = LIU
+		father = sts_liu_ruler
+		mother = sts_liu_wife
+	}
+	sts_luo_ruler = {
+		first_name = { name = sts_name_luo }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 54
+		dip = 43
+		mil = 40
+		female = no
+		birth_date = 1314.7.13
+		birth = luorong
+		tag = LUO
+		spouse = sts_luo_wife
+	}
+	sts_luo_wife = {
+		first_name = { name = sts_name_luo_wife }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1304.7.13
+		birth = luorong
+		tag = LUO
+		spouse = sts_luo_ruler
+	}
+	sts_luo_son = {
+		first_name = { name = sts_name_luo_son }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 54
+		dip = 52
+		mil = 58
+		female = no
+		birth_date = 1324.7.13
+		birth = luorong
+		tag = LUO
+		father = sts_luo_ruler
+		mother = sts_luo_wife
+	}
+	sts_pae_ruler = {
+		first_name = { name = sts_name_pae }
+		culture = yao_china_culture
+		religion = sanjiao
+		adm = 30
+		dip = 44
+		mil = 41
+		female = no
+		birth_date = 1315.8.14
+		birth = pingle
+		tag = PAE
+		spouse = sts_pae_wife
+	}
+	sts_pae_wife = {
+		first_name = { name = sts_name_pae_wife }
+		culture = yao_china_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1305.8.14
+		birth = pingle
+		tag = PAE
+		spouse = sts_pae_ruler
+	}
+	sts_pae_son = {
+		first_name = { name = sts_name_pae_son }
+		culture = yao_china_culture
+		religion = sanjiao
+		adm = 55
+		dip = 53
+		mil = 59
+		female = no
+		birth_date = 1325.8.14
+		birth = pingle
+		tag = PAE
+		father = sts_pae_ruler
+		mother = sts_pae_wife
+	}
+	sts_qac_ruler = {
+		first_name = { name = sts_name_qac }
+		culture = xinxiang_culture
+		religion = sanjiao
+		adm = 31
+		dip = 45
+		mil = 42
+		female = no
+		birth_date = 1316.9.15
+		birth = qingxiang
+		tag = QAC
+		spouse = sts_qac_wife
+	}
+	sts_qac_wife = {
+		first_name = { name = sts_name_qac_wife }
+		culture = xinxiang_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1306.9.15
+		birth = qingxiang
+		tag = QAC
+		spouse = sts_qac_ruler
+	}
+	sts_qac_son = {
+		first_name = { name = sts_name_qac_son }
+		culture = xinxiang_culture
+		religion = sanjiao
+		adm = 56
+		dip = 54
+		mil = 38
+		female = no
+		birth_date = 1318.9.15
+		birth = qingxiang
+		tag = QAC
+		father = sts_qac_ruler
+		mother = sts_qac_wife
+	}
+	sts_ron_ruler = {
+		first_name = { name = sts_name_ron }
+		culture = hmong_culture
+		religion = sanjiao
+		adm = 32
+		dip = 46
+		mil = 43
+		female = no
+		birth_date = 1317.10.16
+		birth = rongshui
+		tag = RON
+		spouse = sts_ron_wife
+	}
+	sts_ron_wife = {
+		first_name = { name = sts_name_ron_wife }
+		culture = hmong_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1307.10.16
+		birth = rongshui
+		tag = RON
+		spouse = sts_ron_ruler
+	}
+	sts_ron_son = {
+		first_name = { name = sts_name_ron_son }
+		culture = hmong_culture
+		religion = sanjiao
+		adm = 57
+		dip = 55
+		mil = 39
+		female = no
+		birth_date = 1319.10.16
+		birth = rongshui
+		tag = RON
+		father = sts_ron_ruler
+		mother = sts_ron_wife
+	}
+	sts_raa_ruler = {
+		first_name = { name = sts_name_raa }
+		culture = yulin_culture
+		religion = sanjiao
+		adm = 33
+		dip = 47
+		mil = 44
+		female = no
+		birth_date = 1318.11.17
+		birth = puning_rongzhou
+		tag = RAA
+		spouse = sts_raa_wife
+	}
+	sts_raa_wife = {
+		first_name = { name = sts_name_raa_wife }
+		culture = yulin_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1308.11.17
+		birth = puning_rongzhou
+		tag = RAA
+		spouse = sts_raa_ruler
+	}
+	sts_raa_son = {
+		first_name = { name = sts_name_raa_son }
+		culture = yulin_culture
+		religion = sanjiao
+		adm = 58
+		dip = 56
+		mil = 40
+		female = no
+		birth_date = 1320.11.17
+		birth = puning_rongzhou
+		tag = RAA
+		father = sts_raa_ruler
+		mother = sts_raa_wife
+	}
+	sts_tau_ruler = {
+		first_name = { name = sts_name_tau }
+		culture = guangxin_culture
+		religion = sanjiao
+		adm = 34
+		dip = 48
+		mil = 45
+		female = no
+		birth_date = 1319.12.18
+		birth = tanjin
+		tag = TAU
+		spouse = sts_tau_wife
+	}
+	sts_tau_wife = {
+		first_name = { name = sts_name_tau_wife }
+		culture = guangxin_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1309.12.18
+		birth = tanjin
+		tag = TAU
+		spouse = sts_tau_ruler
+	}
+	sts_tau_son = {
+		first_name = { name = sts_name_tau_son }
+		culture = guangxin_culture
+		religion = sanjiao
+		adm = 59
+		dip = 57
+		mil = 41
+		female = no
+		birth_date = 1321.12.18
+		birth = tanjin
+		tag = TAU
+		father = sts_tau_ruler
+		mother = sts_tau_wife
+	}
+	sts_wuz_ruler = {
+		first_name = { name = sts_name_wuz }
+		culture = guangxin_culture
+		religion = sanjiao
+		adm = 35
+		dip = 49
+		mil = 46
+		female = no
+		birth_date = 1290.1.19
+		birth = cangwu
+		tag = WUZ
+		spouse = sts_wuz_wife
+	}
+	sts_wuz_wife = {
+		first_name = { name = sts_name_wuz_wife }
+		culture = guangxin_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1300.1.19
+		birth = cangwu
+		tag = WUZ
+		spouse = sts_wuz_ruler
+	}
+	sts_wuz_son = {
+		first_name = { name = sts_name_wuz_son }
+		culture = guangxin_culture
+		religion = sanjiao
+		adm = 40
+		dip = 40
+		mil = 42
+		female = no
+		birth_date = 1322.1.19
+		birth = cangwu
+		tag = WUZ
+		father = sts_wuz_ruler
+		mother = sts_wuz_wife
+	}
+	sts_xaj_ruler = {
+		first_name = { name = sts_name_xaj }
+		culture = tubai_culture
+		religion = sanjiao
+		adm = 36
+		dip = 50
+		mil = 47
+		female = no
+		birth_date = 1291.2.20
+		birth = guiping
+		tag = XAJ
+		spouse = sts_xaj_wife
+	}
+	sts_xaj_wife = {
+		first_name = { name = sts_name_xaj_wife }
+		culture = tubai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1301.2.20
+		birth = guiping
+		tag = XAJ
+		spouse = sts_xaj_ruler
+	}
+	sts_xaj_son = {
+		first_name = { name = sts_name_xaj_son }
+		culture = tubai_culture
+		religion = sanjiao
+		adm = 41
+		dip = 41
+		mil = 43
+		female = no
+		birth_date = 1323.2.20
+		birth = guiping
+		tag = XAJ
+		father = sts_xaj_ruler
+		mother = sts_xaj_wife
+	}
+	sts_yul_ruler = {
+		first_name = { name = sts_name_yul }
+		culture = yulin_culture
+		religion = sanjiao
+		adm = 37
+		dip = 51
+		mil = 48
+		female = no
+		birth_date = 1292.3.21
+		birth = nanliu
+		tag = YUL
+		spouse = sts_yul_wife
+	}
+	sts_yul_wife = {
+		first_name = { name = sts_name_yul_wife }
+		culture = yulin_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1302.3.21
+		birth = nanliu
+		tag = YUL
+		spouse = sts_yul_ruler
+	}
+	sts_yul_son = {
+		first_name = { name = sts_name_yul_son }
+		culture = yulin_culture
+		religion = sanjiao
+		adm = 42
+		dip = 42
+		mil = 44
+		female = no
+		birth_date = 1324.3.21
+		birth = nanliu
+		tag = YUL
+		father = sts_yul_ruler
+		mother = sts_yul_wife
+	}
+	sts_gak_ruler = {
+		first_name = { name = sts_name_gak }
+		culture = gaozhou_culture
+		religion = sanjiao
+		adm = 38
+		dip = 52
+		mil = 49
+		female = no
+		birth_date = 1293.4.22
+		birth = maoming
+		tag = GAK
+		spouse = sts_gak_wife
+	}
+	sts_gak_wife = {
+		first_name = { name = sts_name_gak_wife }
+		culture = gaozhou_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1303.4.22
+		birth = maoming
+		tag = GAK
+		spouse = sts_gak_ruler
+	}
+	sts_gak_son = {
+		first_name = { name = sts_name_gak_son }
+		culture = gaozhou_culture
+		religion = sanjiao
+		adm = 43
+		dip = 43
+		mil = 45
+		female = no
+		birth_date = 1325.4.22
+		birth = maoming
+		tag = GAK
+		father = sts_gak_ruler
+		mother = sts_gak_wife
+	}
+	sts_hbb_ruler = {
+		first_name = { name = sts_name_hbb }
+		culture = huazhou_culture
+		religion = sanjiao
+		adm = 39
+		dip = 30
+		mil = 50
+		female = no
+		birth_date = 1294.5.23
+		birth = shilong
+		tag = HBB
+		spouse = sts_hbb_wife
+	}
+	sts_hbb_wife = {
+		first_name = { name = sts_name_hbb_wife }
+		culture = huazhou_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1304.5.23
+		birth = shilong
+		tag = HBB
+		spouse = sts_hbb_ruler
+	}
+	sts_hbb_son = {
+		first_name = { name = sts_name_hbb_son }
+		culture = huazhou_culture
+		religion = sanjiao
+		adm = 44
+		dip = 44
+		mil = 46
+		female = no
+		birth_date = 1318.5.23
+		birth = shilong
+		tag = HBB
+		father = sts_hbb_ruler
+		mother = sts_hbb_wife
+	}
+	sts_lag_ruler = {
+		first_name = { name = sts_name_lag }
+		culture = leizhou_culture
+		religion = sanjiao
+		adm = 40
+		dip = 31
+		mil = 51
+		female = no
+		birth_date = 1295.6.24
+		birth = haikang
+		tag = LAG
+		spouse = sts_lag_wife
+	}
+	sts_lag_wife = {
+		first_name = { name = sts_name_lag_wife }
+		culture = leizhou_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1305.6.24
+		birth = haikang
+		tag = LAG
+		spouse = sts_lag_ruler
+	}
+	sts_lag_son = {
+		first_name = { name = sts_name_lag_son }
+		culture = leizhou_culture
+		religion = sanjiao
+		adm = 45
+		dip = 45
+		mil = 47
+		female = no
+		birth_date = 1319.6.24
+		birth = haikang
+		tag = LAG
+		father = sts_lag_ruler
+		mother = sts_lag_wife
+	}
+	sts_lah_ruler = {
+		first_name = { name = sts_name_lah }
+		culture = malao_culture
+		religion = sanjiao
+		adm = 41
+		dip = 32
+		mil = 52
+		female = no
+		birth_date = 1296.7.25
+		birth = hepu
+		tag = LAH
+		spouse = sts_lah_wife
+	}
+	sts_lah_wife = {
+		first_name = { name = sts_name_lah_wife }
+		culture = malao_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1306.7.25
+		birth = hepu
+		tag = LAH
+		spouse = sts_lah_ruler
+	}
+	sts_lah_son = {
+		first_name = { name = sts_name_lah_son }
+		culture = malao_culture
+		religion = sanjiao
+		adm = 46
+		dip = 46
+		mil = 48
+		female = no
+		birth_date = 1320.7.25
+		birth = hepu
+		tag = LAH
+		father = sts_lah_ruler
+		mother = sts_lah_wife
+	}
+	sts_naq_ruler = {
+		first_name = { name = sts_name_naq }
+		culture = hlai_culture
+		religion = sanjiao
+		adm = 42
+		dip = 33
+		mil = 53
+		female = no
+		birth_date = 1297.8.26
+		birth = yilun
+		tag = NAQ
+		spouse = sts_naq_wife
+	}
+	sts_naq_wife = {
+		first_name = { name = sts_name_naq_wife }
+		culture = hlai_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1307.8.26
+		birth = yilun
+		tag = NAQ
+		spouse = sts_naq_ruler
+	}
+	sts_naq_son = {
+		first_name = { name = sts_name_naq_son }
+		culture = hlai_culture
+		religion = sanjiao
+		adm = 47
+		dip = 47
+		mil = 49
+		female = no
+		birth_date = 1321.8.26
+		birth = yilun
+		tag = NAQ
+		father = sts_naq_ruler
+		mother = sts_naq_wife
+	}
+	sts_qad_ruler = {
+		first_name = { name = sts_name_qad }
+		culture = qiong_culture
+		religion = sanjiao
+		adm = 43
+		dip = 34
+		mil = 54
+		female = no
+		birth_date = 1298.9.27
+		birth = qiongshan
+		tag = QAD
+		spouse = sts_qad_wife
+	}
+	sts_qad_wife = {
+		first_name = { name = sts_name_qad_wife }
+		culture = qiong_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1308.9.27
+		birth = qiongshan
+		tag = QAD
+		spouse = sts_qad_ruler
+	}
+	sts_qad_son = {
+		first_name = { name = sts_name_qad_son }
+		culture = qiong_culture
+		religion = sanjiao
+		adm = 48
+		dip = 48
+		mil = 50
+		female = no
+		birth_date = 1322.9.27
+		birth = qiongshan
+		tag = QAD
+		father = sts_qad_ruler
+		mother = sts_qad_wife
+	}
+	sts_wab_ruler = {
+		first_name = { name = sts_name_wab }
+		culture = qiong_culture
+		religion = sanjiao
+		adm = 44
+		dip = 35
+		mil = 28
+		female = no
+		birth_date = 1299.10.1
+		birth = wanan_wananjun
+		tag = WAB
+		spouse = sts_wab_wife
+	}
+	sts_wab_wife = {
+		first_name = { name = sts_name_wab_wife }
+		culture = qiong_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1309.10.1
+		birth = wanan_wananjun
+		tag = WAB
+		spouse = sts_wab_ruler
+	}
+	sts_wab_son = {
+		first_name = { name = sts_name_wab_son }
+		culture = qiong_culture
+		religion = sanjiao
+		adm = 49
+		dip = 49
+		mil = 51
+		female = no
+		birth_date = 1323.10.1
+		birth = wanan_wananjun
+		tag = WAB
+		father = sts_wab_ruler
+		mother = sts_wab_wife
+	}
+	sts_bal_ruler = {
+		first_name = { name = sts_name_bal }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 45
+		dip = 36
+		mil = 29
+		female = no
+		birth_date = 1300.11.2
+		birth = baishan
+		tag = BAL
+		spouse = sts_bal_wife
+	}
+	sts_bal_wife = {
+		first_name = { name = sts_name_bal_wife }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1300.11.2
+		birth = baishan
+		tag = BAL
+		spouse = sts_bal_ruler
+	}
+	sts_bal_son = {
+		first_name = { name = sts_name_bal_son }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 52
+		female = no
+		birth_date = 1324.11.2
+		birth = baishan
+		tag = BAL
+		father = sts_bal_ruler
+		mother = sts_bal_wife
+	}
+	sts_bap_ruler = {
+		first_name = { name = sts_name_bap }
+		culture = guinan_culture
+		religion = sanjiao
+		adm = 46
+		dip = 37
+		mil = 30
+		female = no
+		birth_date = 1301.12.3
+		birth = lingfang
+		tag = BAP
+		spouse = sts_bap_wife
+	}
+	sts_bap_wife = {
+		first_name = { name = sts_name_bap_wife }
+		culture = guinan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1301.12.3
+		birth = lingfang
+		tag = BAP
+		spouse = sts_bap_ruler
+	}
+	sts_bap_son = {
+		first_name = { name = sts_name_bap_son }
+		culture = guinan_culture
+		religion = sanjiao
+		adm = 51
+		dip = 51
+		mil = 53
+		female = no
+		birth_date = 1325.12.3
+		birth = lingfang
+		tag = BAP
+		father = sts_bap_ruler
+		mother = sts_bap_wife
+	}
+	sts_gap_ruler = {
+		first_name = { name = sts_name_gap }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 47
+		dip = 38
+		mil = 31
+		female = no
+		birth_date = 1302.1.4
+		birth = guishun
+		tag = GAP
+		spouse = sts_gap_wife
+	}
+	sts_gap_wife = {
+		first_name = { name = sts_name_gap_wife }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1302.1.4
+		birth = guishun
+		tag = GAP
+		spouse = sts_gap_ruler
+	}
+	sts_gap_son = {
+		first_name = { name = sts_name_gap_son }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 52
+		dip = 52
+		mil = 54
+		female = no
+		birth_date = 1318.1.4
+		birth = guishun
+		tag = GAP
+		father = sts_gap_ruler
+		mother = sts_gap_wife
+	}
+	sts_hbc_ruler = {
+		first_name = { name = sts_name_hbc }
+		culture = guinan_culture
+		religion = sanjiao
+		adm = 48
+		dip = 39
+		mil = 32
+		female = no
+		birth_date = 1303.2.5
+		birth = ningpu
+		tag = HBC
+		spouse = sts_hbc_wife
+	}
+	sts_hbc_wife = {
+		first_name = { name = sts_name_hbc_wife }
+		culture = guinan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1303.2.5
+		birth = ningpu
+		tag = HBC
+		spouse = sts_hbc_ruler
+	}
+	sts_hbc_son = {
+		first_name = { name = sts_name_hbc_son }
+		culture = guinan_culture
+		religion = sanjiao
+		adm = 53
+		dip = 53
+		mil = 55
+		female = no
+		birth_date = 1319.2.5
+		birth = ningpu
+		tag = HBC
+		father = sts_hbc_ruler
+		mother = sts_hbc_wife
+	}
+	sts_nar_ruler = {
+		first_name = { name = sts_name_nar }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 49
+		dip = 40
+		mil = 33
+		female = no
+		birth_date = 1304.3.6
+		birth = nandan
+		tag = NAR
+		spouse = sts_nar_wife
+	}
+	sts_nar_wife = {
+		first_name = { name = sts_name_nar_wife }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1304.3.6
+		birth = nandan
+		tag = NAR
+		spouse = sts_nar_ruler
+	}
+	sts_nar_son = {
+		first_name = { name = sts_name_nar_son }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 54
+		dip = 54
+		mil = 56
+		female = no
+		birth_date = 1320.3.6
+		birth = nandan
+		tag = NAR
+		father = sts_nar_ruler
+		mother = sts_nar_wife
+	}
+	sts_nat_ruler = {
+		first_name = { name = sts_name_nat }
+		culture = guinan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 41
+		mil = 34
+		female = no
+		birth_date = 1305.4.7
+		birth = xuanhua_nanning
+		tag = NAT
+		spouse = sts_nat_wife
+	}
+	sts_nat_wife = {
+		first_name = { name = sts_name_nat_wife }
+		culture = guinan_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1305.4.7
+		birth = xuanhua_nanning
+		tag = NAT
+		spouse = sts_nat_ruler
+	}
+	sts_nat_son = {
+		first_name = { name = sts_name_nat_son }
+		culture = guinan_culture
+		religion = sanjiao
+		adm = 55
+		dip = 55
+		mil = 57
+		female = no
+		birth_date = 1321.4.7
+		birth = xuanhua_nanning
+		tag = NAT
+		father = sts_nat_ruler
+		mother = sts_nat_wife
+	}
+	sts_qae_ruler = {
+		first_name = { name = sts_name_qae }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 51
+		dip = 42
+		mil = 35
+		female = no
+		birth_date = 1306.5.8
+		birth = yishan
+		tag = QAE
+		spouse = sts_qae_wife
+	}
+	sts_qae_wife = {
+		first_name = { name = sts_name_qae_wife }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1306.5.8
+		birth = yishan
+		tag = QAE
+		spouse = sts_qae_ruler
+	}
+	sts_qae_son = {
+		first_name = { name = sts_name_qae_son }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 56
+		dip = 56
+		mil = 58
+		female = no
+		birth_date = 1322.5.8
+		birth = yishan
+		tag = QAE
+		father = sts_qae_ruler
+		mother = sts_qae_wife
+	}
+	sts_sbh_ruler = {
+		first_name = { name = sts_name_sbh }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 52
+		dip = 43
+		mil = 36
+		female = no
+		birth_date = 1307.6.9
+		birth = sicheng
+		tag = SBH
+		spouse = sts_sbh_wife
+	}
+	sts_sbh_wife = {
+		first_name = { name = sts_name_sbh_wife }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1307.6.9
+		birth = sicheng
+		tag = SBH
+		spouse = sts_sbh_ruler
+	}
+	sts_sbh_son = {
+		first_name = { name = sts_name_sbh_son }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 57
+		dip = 57
+		mil = 59
+		female = no
+		birth_date = 1323.6.9
+		birth = sicheng
+		tag = SBH
+		father = sts_sbh_ruler
+		mother = sts_sbh_wife
+	}
+	sts_sim_ruler = {
+		first_name = { name = sts_name_sim }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 53
+		dip = 44
+		mil = 37
+		female = no
+		birth_date = 1308.7.10
+		birth = siming
+		tag = SIM
+		spouse = sts_sim_wife
+	}
+	sts_sim_wife = {
+		first_name = { name = sts_name_sim_wife }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1308.7.10
+		birth = siming
+		tag = SIM
+		spouse = sts_sim_ruler
+	}
+	sts_sim_son = {
+		first_name = { name = sts_name_sim_son }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 58
+		dip = 40
+		mil = 38
+		female = no
+		birth_date = 1324.7.10
+		birth = siming
+		tag = SIM
+		father = sts_sim_ruler
+		mother = sts_sim_wife
+	}
+	sts_taw_ruler = {
+		first_name = { name = sts_name_taw }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 54
+		dip = 45
+		mil = 38
+		female = no
+		birth_date = 1309.8.11
+		birth = chongshan
+		tag = TAW
+		spouse = sts_taw_wife
+	}
+	sts_taw_wife = {
+		first_name = { name = sts_name_taw_wife }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1309.8.11
+		birth = chongshan
+		tag = TAW
+		spouse = sts_taw_ruler
+	}
+	sts_taw_son = {
+		first_name = { name = sts_name_taw_son }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 59
+		dip = 41
+		mil = 39
+		female = no
+		birth_date = 1325.8.11
+		birth = chongshan
+		tag = TAW
+		father = sts_taw_ruler
+		mother = sts_taw_wife
+	}
+	sts_tia_ruler = {
+		first_name = { name = sts_name_tia }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 30
+		dip = 46
+		mil = 39
+		female = no
+		birth_date = 1310.9.12
+		birth = laian_tianzhou
+		tag = TIA
+		spouse = sts_tia_wife
+	}
+	sts_tia_wife = {
+		first_name = { name = sts_name_tia_wife }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1300.9.12
+		birth = laian_tianzhou
+		tag = TIA
+		spouse = sts_tia_ruler
+	}
+	sts_tia_son = {
+		first_name = { name = sts_name_tia_son }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 40
+		dip = 42
+		mil = 40
+		female = no
+		birth_date = 1318.9.12
+		birth = laian_tianzhou
+		tag = TIA
+		father = sts_tia_ruler
+		mother = sts_tia_wife
+	}
+	sts_xak_ruler = {
+		first_name = { name = sts_name_xak }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 31
+		dip = 47
+		mil = 40
+		female = no
+		birth_date = 1311.10.13
+		birth = xilong
+		tag = XAK
+		spouse = sts_xak_wife
+	}
+	sts_xak_wife = {
+		first_name = { name = sts_name_xak_wife }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1301.10.13
+		birth = xilong
+		tag = XAK
+		spouse = sts_xak_ruler
+	}
+	sts_xak_son = {
+		first_name = { name = sts_name_xak_son }
+		culture = zhuang_culture
+		religion = sanjiao
+		adm = 41
+		dip = 43
+		mil = 41
+		female = no
+		birth_date = 1319.10.13
+		birth = xilong
+		tag = XAK
+		father = sts_xak_ruler
+		mother = sts_xak_wife
+	}
+	sts_aab_ruler = {
+		first_name = { name = sts_name_aab }
+		culture = hmong_culture
+		religion = hmongism
+		adm = 32
+		dip = 48
+		mil = 41
+		female = no
+		birth_date = 1312.11.14
+		birth = annan
+		tag = AAB
+		spouse = sts_aab_wife
+	}
+	sts_aab_wife = {
+		first_name = { name = sts_name_aab_wife }
+		culture = hmong_culture
+		religion = hmongism
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1302.11.14
+		birth = annan
+		tag = AAB
+		spouse = sts_aab_ruler
+	}
+	sts_aab_son = {
+		first_name = { name = sts_name_aab_son }
+		culture = hmong_culture
+		religion = hmongism
+		adm = 42
+		dip = 44
+		mil = 42
+		female = no
+		birth_date = 1320.11.14
+		birth = annan
+		tag = AAB
+		father = sts_aab_ruler
+		mother = sts_aab_wife
+	}
+	sts_aae_ruler = {
+		first_name = { name = sts_name_aae }
+		culture = hmong_culture
+		religion = hmongism
+		adm = 33
+		dip = 49
+		mil = 42
+		female = no
+		birth_date = 1313.12.15
+		birth = puding
+		tag = AAE
+		spouse = sts_aae_wife
+	}
+	sts_aae_wife = {
+		first_name = { name = sts_name_aae_wife }
+		culture = hmong_culture
+		religion = hmongism
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1303.12.15
+		birth = puding
+		tag = AAE
+		spouse = sts_aae_ruler
+	}
+	sts_aae_son = {
+		first_name = { name = sts_name_aae_son }
+		culture = hmong_culture
+		religion = hmongism
+		adm = 43
+		dip = 45
+		mil = 43
+		female = no
+		birth_date = 1321.12.15
+		birth = puding
+		tag = AAE
+		father = sts_aae_ruler
+		mother = sts_aae_wife
+	}
+	sts_baq_ruler = {
+		first_name = { name = sts_name_baq }
+		culture = hmong_culture
+		religion = hmongism
+		adm = 34
+		dip = 50
+		mil = 43
+		female = no
+		birth_date = 1314.1.16
+		birth = bozhou
+		tag = BAQ
+		spouse = sts_baq_wife
+	}
+	sts_baq_wife = {
+		first_name = { name = sts_name_baq_wife }
+		culture = hmong_culture
+		religion = hmongism
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1304.1.16
+		birth = bozhou
+		tag = BAQ
+		spouse = sts_baq_ruler
+	}
+	sts_baq_son = {
+		first_name = { name = sts_name_baq_son }
+		culture = hmong_culture
+		religion = hmongism
+		adm = 44
+		dip = 46
+		mil = 44
+		female = no
+		birth_date = 1322.1.16
+		birth = bozhou
+		tag = BAQ
+		father = sts_baq_ruler
+		mother = sts_baq_wife
+	}
+	sts_duy_ruler = {
+		first_name = { name = sts_name_duy }
+		culture = sui_culture
+		religion = sui_religion
+		adm = 35
+		dip = 51
+		mil = 44
+		female = no
+		birth_date = 1315.2.17
+		birth = duyun
+		tag = DUY
+		spouse = sts_duy_wife
+	}
+	sts_duy_wife = {
+		first_name = { name = sts_name_duy_wife }
+		culture = sui_culture
+		religion = sui_religion
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1305.2.17
+		birth = duyun
+		tag = DUY
+		spouse = sts_duy_ruler
+	}
+	sts_duy_son = {
+		first_name = { name = sts_name_duy_son }
+		culture = sui_culture
+		religion = sui_religion
+		adm = 45
+		dip = 47
+		mil = 45
+		female = no
+		birth_date = 1323.2.17
+		birth = duyun
+		tag = DUY
+		father = sts_duy_ruler
+		mother = sts_duy_wife
+	}
+	sts_gaq_ruler = {
+		first_name = { name = sts_name_gaq }
+		culture = hmong_culture
+		religion = hmongism
+		adm = 36
+		dip = 52
+		mil = 45
+		female = no
+		birth_date = 1316.3.18
+		birth = guizhou_guizhou
+		tag = GAQ
+		spouse = sts_gaq_wife
+	}
+	sts_gaq_wife = {
+		first_name = { name = sts_name_gaq_wife }
+		culture = hmong_culture
+		religion = hmongism
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1306.3.18
+		birth = guizhou_guizhou
+		tag = GAQ
+		spouse = sts_gaq_ruler
+	}
+	sts_gaq_son = {
+		first_name = { name = sts_name_gaq_son }
+		culture = hmong_culture
+		religion = hmongism
+		adm = 46
+		dip = 48
+		mil = 46
+		female = no
+		birth_date = 1324.3.18
+		birth = guizhou_guizhou
+		tag = GAQ
+		father = sts_gaq_ruler
+		mother = sts_gaq_wife
+	}
+	sts_laj_ruler = {
+		first_name = { name = sts_name_laj }
+		culture = kam_culture
+		religion = kam_religion
+		adm = 37
+		dip = 30
+		mil = 46
+		female = no
+		birth_date = 1317.4.19
+		birth = liping
+		tag = LAJ
+		spouse = sts_laj_wife
+	}
+	sts_laj_wife = {
+		first_name = { name = sts_name_laj_wife }
+		culture = kam_culture
+		religion = kam_religion
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1307.4.19
+		birth = liping
+		tag = LAJ
+		spouse = sts_laj_ruler
+	}
+	sts_laj_son = {
+		first_name = { name = sts_name_laj_son }
+		culture = kam_culture
+		religion = kam_religion
+		adm = 47
+		dip = 49
+		mil = 47
+		female = no
+		birth_date = 1325.4.19
+		birth = liping
+		tag = LAJ
+		father = sts_laj_ruler
+		mother = sts_laj_wife
+	}
+	sts_paf_ruler = {
+		first_name = { name = sts_name_paf }
+		culture = hmong_culture
+		religion = hmongism
+		adm = 38
+		dip = 31
+		mil = 47
+		female = no
+		birth_date = 1318.5.20
+		birth = pingyue
+		tag = PAF
+		spouse = sts_paf_wife
+	}
+	sts_paf_wife = {
+		first_name = { name = sts_name_paf_wife }
+		culture = hmong_culture
+		religion = hmongism
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1308.5.20
+		birth = pingyue
+		tag = PAF
+		spouse = sts_paf_ruler
+	}
+	sts_paf_son = {
+		first_name = { name = sts_name_paf_son }
+		culture = hmong_culture
+		religion = hmongism
+		adm = 48
+		dip = 50
+		mil = 48
+		female = no
+		birth_date = 1318.5.20
+		birth = pingyue
+		tag = PAF
+		father = sts_paf_ruler
+		mother = sts_paf_wife
+	}
+	sts_pag_ruler = {
+		first_name = { name = sts_name_pag }
+		culture = gelao_culture
+		religion = sanjiao
+		adm = 39
+		dip = 32
+		mil = 48
+		female = no
+		birth_date = 1319.6.21
+		birth = puan_puan
+		tag = PAG
+		spouse = sts_pag_wife
+	}
+	sts_pag_wife = {
+		first_name = { name = sts_name_pag_wife }
+		culture = gelao_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1309.6.21
+		birth = puan_puan
+		tag = PAG
+		spouse = sts_pag_ruler
+	}
+	sts_pag_son = {
+		first_name = { name = sts_name_pag_son }
+		culture = gelao_culture
+		religion = sanjiao
+		adm = 49
+		dip = 51
+		mil = 49
+		female = no
+		birth_date = 1319.6.21
+		birth = puan_puan
+		tag = PAG
+		father = sts_pag_ruler
+		mother = sts_pag_wife
+	}
+	sts_sin_ruler = {
+		first_name = { name = sts_name_sin }
+		culture = tujia_culture
+		religion = nuo_religion
+		adm = 40
+		dip = 33
+		mil = 49
+		female = no
+		birth_date = 1290.7.22
+		birth = shuitejiang
+		tag = SIN
+		spouse = sts_sin_wife
+	}
+	sts_sin_wife = {
+		first_name = { name = sts_name_sin_wife }
+		culture = tujia_culture
+		religion = nuo_religion
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1300.7.22
+		birth = shuitejiang
+		tag = SIN
+		spouse = sts_sin_ruler
+	}
+	sts_sin_son = {
+		first_name = { name = sts_name_sin_son }
+		culture = tujia_culture
+		religion = nuo_religion
+		adm = 50
+		dip = 52
+		mil = 50
+		female = no
+		birth_date = 1320.7.22
+		birth = shuitejiang
+		tag = SIN
+		father = sts_sin_ruler
+		mother = sts_sin_wife
+	}
+	sts_sbi_ruler = {
+		first_name = { name = sts_name_sbi }
+		culture = kam_culture
+		religion = kam_religion
+		adm = 41
+		dip = 34
+		mil = 50
+		female = no
+		birth_date = 1291.8.23
+		birth = taipengruodong
+		tag = SBI
+		spouse = sts_sbi_wife
+	}
+	sts_sbi_wife = {
+		first_name = { name = sts_name_sbi_wife }
+		culture = kam_culture
+		religion = kam_religion
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1301.8.23
+		birth = taipengruodong
+		tag = SBI
+		spouse = sts_sbi_ruler
+	}
+	sts_sbi_son = {
+		first_name = { name = sts_name_sbi_son }
+		culture = kam_culture
+		religion = kam_religion
+		adm = 51
+		dip = 53
+		mil = 51
+		female = no
+		birth_date = 1321.8.23
+		birth = taipengruodong
+		tag = SBI
+		father = sts_sbi_ruler
+		mother = sts_sbi_wife
+	}
+	sts_sbj_ruler = {
+		first_name = { name = sts_name_sbj }
+		culture = hmong_culture
+		religion = hmongism
+		adm = 42
+		dip = 35
+		mil = 51
+		female = no
+		birth_date = 1292.9.24
+		birth = dizhai
+		tag = SBJ
+		spouse = sts_sbj_wife
+	}
+	sts_sbj_wife = {
+		first_name = { name = sts_name_sbj_wife }
+		culture = hmong_culture
+		religion = hmongism
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1302.9.24
+		birth = dizhai
+		tag = SBJ
+		spouse = sts_sbj_ruler
+	}
+	sts_sbj_son = {
+		first_name = { name = sts_name_sbj_son }
+		culture = hmong_culture
+		religion = hmongism
+		adm = 52
+		dip = 54
+		mil = 52
+		female = no
+		birth_date = 1322.9.24
+		birth = dizhai
+		tag = SBJ
+		father = sts_sbj_ruler
+		mother = sts_sbj_wife
+	}
+	sts_tay_ruler = {
+		first_name = { name = sts_name_tay }
+		culture = kam_culture
+		religion = kam_religion
+		adm = 43
+		dip = 36
+		mil = 52
+		female = no
+		birth_date = 1293.10.25
+		birth = tongren
+		tag = TAY
+		spouse = sts_tay_wife
+	}
+	sts_tay_wife = {
+		first_name = { name = sts_name_tay_wife }
+		culture = kam_culture
+		religion = kam_religion
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1303.10.25
+		birth = tongren
+		tag = TAY
+		spouse = sts_tay_ruler
+	}
+	sts_tay_son = {
+		first_name = { name = sts_name_tay_son }
+		culture = kam_culture
+		religion = kam_religion
+		adm = 53
+		dip = 55
+		mil = 53
+		female = no
+		birth_date = 1323.10.25
+		birth = tongren
+		tag = TAY
+		father = sts_tay_ruler
+		mother = sts_tay_wife
+	}
+	sts_xam_ruler = {
+		first_name = { name = sts_name_xam }
+		culture = hmong_culture
+		religion = hmongism
+		adm = 44
+		dip = 37
+		mil = 53
+		female = no
+		birth_date = 1294.11.26
+		birth = huangping
+		tag = XAM
+		spouse = sts_xam_wife
+	}
+	sts_xam_wife = {
+		first_name = { name = sts_name_xam_wife }
+		culture = hmong_culture
+		religion = hmongism
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1304.11.26
+		birth = huangping
+		tag = XAM
+		spouse = sts_xam_ruler
+	}
+	sts_xam_son = {
+		first_name = { name = sts_name_xam_son }
+		culture = hmong_culture
+		religion = hmongism
+		adm = 54
+		dip = 56
+		mil = 54
+		female = no
+		birth_date = 1324.11.26
+		birth = huangping
+		tag = XAM
+		father = sts_xam_ruler
+		mother = sts_xam_wife
+	}
+	sts_wac_ruler = {
+		first_name = { name = sts_name_wac }
+		culture = gelao_culture
+		religion = sanjiao
+		adm = 45
+		dip = 38
+		mil = 54
+		female = no
+		birth_date = 1295.12.27
+		birth = shuicheng
+		tag = WAC
+		spouse = sts_wac_wife
+	}
+	sts_wac_wife = {
+		first_name = { name = sts_name_wac_wife }
+		culture = gelao_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1305.12.27
+		birth = shuicheng
+		tag = WAC
+		spouse = sts_wac_ruler
+	}
+	sts_wac_son = {
+		first_name = { name = sts_name_wac_son }
+		culture = gelao_culture
+		religion = sanjiao
+		adm = 55
+		dip = 57
+		mil = 55
+		female = no
+		birth_date = 1325.12.27
+		birth = shuicheng
+		tag = WAC
+		father = sts_wac_ruler
+		mother = sts_wac_wife
+	}
+	sts_zaf_ruler = {
+		first_name = { name = sts_name_zaf }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 46
+		dip = 39
+		mil = 28
+		female = no
+		birth_date = 1296.1.1
+		birth = zhengan
+		tag = ZAF
+		spouse = sts_zaf_wife
+	}
+	sts_zaf_wife = {
+		first_name = { name = sts_name_zaf_wife }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1306.1.1
+		birth = zhengan
+		tag = ZAF
+		spouse = sts_zaf_ruler
+	}
+	sts_zaf_son = {
+		first_name = { name = sts_name_zaf_son }
+		culture = shu_culture
+		religion = sanjiao
+		adm = 56
+		dip = 40
+		mil = 56
+		female = no
+		birth_date = 1318.1.1
+		birth = zhengan
+		tag = ZAF
+		father = sts_zaf_ruler
+		mother = sts_zaf_wife
+	}
+	sts_lak_ruler = {
+		first_name = { name = sts_name_zhao_chongyue }
+		dynasty = sts_zhao_jin_dynasty
+		culture = jin_culture
+		religion = mahayana
+		adm = 70
+		dip = 60
+		mil = 70
+		female = no
+		birth_date = 1301.4.1
+		birth = shangdang
+		tag = LAK
+		spouse = sts_lak_wife
+	}
+	sts_lak_wife = {
+		first_name = { name = sts_name_zhao_wang_shi }
+		culture = jin_culture
+		religion = mahayana
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1305.6.1
+		birth = shangdang
+		tag = LAK
+		spouse = sts_lak_ruler
+	}
+	sts_lak_son1 = {
+		first_name = { name = sts_name_zhao_chengjian }
+		culture = jin_culture
+		religion = mahayana
+		adm = 57
+		dip = 41
+		mil = 57
+		female = no
+		birth_date = 1326.3.9
+		birth = shangdang
+		tag = LAK
+		father = sts_lak_ruler
+		mother = sts_lak_wife
+	}
+	sts_gug_ruler = {
+		first_name = { name = sts_name_gug }
+		culture = utsang_culture
+		religion = tibetan_buddhism
+		adm = 48
+		dip = 41
+		mil = 30
+		female = no
+		birth_date = 1298.3.3
+		birth = toling
+		tag = GUG
+		spouse = sts_gug_wife
+	}
+	sts_gug_wife = {
+		first_name = { name = sts_name_gug_wife }
+		culture = utsang_culture
+		religion = tibetan_buddhism
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1308.3.3
+		birth = toling
+		tag = GUG
+		spouse = sts_gug_ruler
+	}
+	sts_gug_son = {
+		first_name = { name = sts_name_gug_son }
+		culture = utsang_culture
+		religion = tibetan_buddhism
+		adm = 58
+		dip = 42
+		mil = 58
+		female = no
+		birth_date = 1320.3.3
+		birth = toling
+		tag = GUG
+		father = sts_gug_ruler
+		mother = sts_gug_wife
+	}
+	sts_dgs_ruler = {
+		first_name = { name = sts_name_dgs }
+		culture = khampa_culture
+		religion = tibetan_buddhism
+		adm = 49
+		dip = 42
+		mil = 31
+		female = no
+		birth_date = 1299.4.4
+		birth = chamdo
+		tag = DGS
+		spouse = sts_dgs_wife
+	}
+	sts_dgs_wife = {
+		first_name = { name = sts_name_dgs_wife }
+		culture = khampa_culture
+		religion = tibetan_buddhism
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1309.4.4
+		birth = chamdo
+		tag = DGS
+		spouse = sts_dgs_ruler
+	}
+	sts_dgs_son = {
+		first_name = { name = sts_name_dgs_son }
+		culture = khampa_culture
+		religion = tibetan_buddhism
+		adm = 59
+		dip = 43
+		mil = 59
+		female = no
+		birth_date = 1321.4.4
+		birth = chamdo
+		tag = DGS
+		father = sts_dgs_ruler
+		mother = sts_dgs_wife
+	}
+	sts_dsm_ruler = {
+		first_name = { name = sts_name_dsm }
+		culture = amdowa_culture
+		religion = tibetan_buddhism
+		adm = 50
+		dip = 43
+		mil = 32
+		female = no
+		birth_date = 1300.5.5
+		birth = chabcha
+		tag = DSM
+		spouse = sts_dsm_wife
+	}
+	sts_dsm_wife = {
+		first_name = { name = sts_name_dsm_wife }
+		culture = amdowa_culture
+		religion = tibetan_buddhism
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1300.5.5
+		birth = chabcha
+		tag = DSM
+		spouse = sts_dsm_ruler
+	}
+	sts_dsm_son = {
+		first_name = { name = sts_name_dsm_son }
+		culture = amdowa_culture
+		religion = tibetan_buddhism
+		adm = 40
+		dip = 44
+		mil = 38
+		female = no
+		birth_date = 1322.5.5
+		birth = chabcha
+		tag = DSM
+		father = sts_dsm_ruler
+		mother = sts_dsm_wife
+	}
+	sts_mgs_ruler = {
+		first_name = { name = sts_name_mgs }
+		culture = oirat_culture
+		religion = tengri
+		adm = 51
+		dip = 44
+		mil = 33
+		female = no
+		birth_date = 1301.6.6
+		birth = atanuul
+		tag = MGS
+		spouse = sts_mgs_wife
+	}
+	sts_mgs_wife = {
+		first_name = { name = sts_name_mgs_wife }
+		culture = oirat_culture
+		religion = tengri
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1301.6.6
+		birth = atanuul
+		tag = MGS
+		spouse = sts_mgs_ruler
+	}
+	sts_mgs_son = {
+		first_name = { name = sts_name_mgs_son }
+		culture = oirat_culture
+		religion = tengri
+		adm = 41
+		dip = 45
+		mil = 39
+		female = no
+		birth_date = 1323.6.6
+		birth = atanuul
+		tag = MGS
+		father = sts_mgs_ruler
+		mother = sts_mgs_wife
+	}
+	sts_yut_ruler = {
+		first_name = { name = sts_name_yut }
+		culture = khorezmian_culture
+		religion = sunni
+		adm = 52
+		dip = 45
+		mil = 34
+		female = no
+		birth_date = 1302.7.7
+		birth = aksu
+		tag = YUT
+		spouse = sts_yut_wife
+	}
+	sts_yut_wife = {
+		first_name = { name = sts_name_yut_wife }
+		culture = khorezmian_culture
+		religion = sunni
+		adm = 50
+		dip = 50
+		mil = 50
+		female = yes
+		birth_date = 1302.7.7
+		birth = aksu
+		tag = YUT
+		spouse = sts_yut_ruler
+	}
+	sts_yut_son = {
+		first_name = { name = sts_name_yut_son }
+		culture = khorezmian_culture
+		religion = sunni
+		adm = 42
+		dip = 46
+		mil = 40
+		female = no
+		birth_date = 1324.7.7
+		birth = aksu
+		tag = YUT
+		father = sts_yut_ruler
+		mother = sts_yut_wife
+	}
+	sts_song_ruler = {
+		first_name = { name = sts_name_zhao_bing }
+		dynasty = sts_zhao_song_dynasty
+		culture = zhongyuan_culture
+		religion = sanjiao
+		adm = 38
+		dip = 44
+		mil = 33
+		female = no
+		birth_date = 1315.6.1
+		birth = kaifeng
+		tag = CSO
+	}
+	sts_cdl_ruler = {
+		first_name = { name = sts_name_duan_xingzhi }
+		culture = bai_culture
+		religion = mahayana
+		adm = 38
+		dip = 44
+		mil = 33
+		female = no
+		birth_date = 1302.3.12
+		birth = taihe_dali
+		tag = CDL
+	}
+}

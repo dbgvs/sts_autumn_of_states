@@ -1,0 +1,168 @@
+﻿# ============================================================
+# 万邦之秋 / 藩镇 AI 扩张方向
+# 路径：in_game/common/area_preferences/
+# ============================================================
+
+# 第一阶段：首都所在 area +100（地区主目标）
+# 第二阶段：首都所在 region +100（区域主目标）
+# 第三阶段：全中国 +150（全国主目标）
+
+sts_conquer_area_hebei_area = {
+	preference_type = conquest
+	modifier = 100
+	area = hebei_area
+}
+
+sts_conquer_area_henan_area = {
+	preference_type = conquest
+	modifier = 100
+	area = henan_area
+}
+
+sts_conquer_area_haiyou_area = {
+	preference_type = conquest
+	modifier = 100
+	area = haiyou_area
+}
+
+sts_conquer_area_shandong_area = {
+	preference_type = conquest
+	modifier = 100
+	area = shandong_area
+}
+
+sts_conquer_area_shaanxi_area = {
+	preference_type = conquest
+	modifier = 100
+	area = shaanxi_area
+}
+
+sts_conquer_area_chuandong_area = {
+	preference_type = conquest
+	modifier = 100
+	area = chuandong_area
+}
+
+sts_conquer_area_chuannan_area = {
+	preference_type = conquest
+	modifier = 100
+	area = chuannan_area
+}
+
+sts_conquer_area_chuanxi_area = {
+	preference_type = conquest
+	modifier = 100
+	area = chuanxi_area
+}
+
+sts_conquer_area_huaidong_area = {
+	preference_type = conquest
+	modifier = 100
+	area = huaidong_area
+}
+
+sts_conquer_area_huaixi_area = {
+	preference_type = conquest
+	modifier = 100
+	area = huaixi_area
+}
+
+sts_conquer_area_jiangnan_area = {
+	preference_type = conquest
+	modifier = 100
+	area = jiangnan_area
+}
+
+sts_conquer_area_zhejiang_area = {
+	preference_type = conquest
+	modifier = 100
+	area = zhejiang_area
+}
+
+sts_conquer_area_jiangxi_area = {
+	preference_type = conquest
+	modifier = 100
+	area = jiangxi_area
+}
+
+sts_conquer_area_fujian_area = {
+	preference_type = conquest
+	modifier = 100
+	area = fujian_area
+}
+
+sts_conquer_area_hubei_area = {
+	preference_type = conquest
+	modifier = 100
+	area = hubei_area
+}
+
+sts_conquer_area_hunan_area = {
+	preference_type = conquest
+	modifier = 100
+	area = hunan_area
+}
+
+sts_conquer_area_wuling_area = {
+	preference_type = conquest
+	modifier = 100
+	area = wuling_area
+}
+
+sts_conquer_area_guangdong_area = {
+	preference_type = conquest
+	modifier = 100
+	area = guangdong_area
+}
+
+sts_conquer_area_guangxi_area = {
+	preference_type = conquest
+	modifier = 100
+	area = guangxi_area
+}
+
+sts_conquer_area_haibei_hainan_area = {
+	preference_type = conquest
+	modifier = 100
+	area = haibei_hainan_area
+}
+
+sts_conquer_area_liangjiang_area = {
+	preference_type = conquest
+	modifier = 100
+	area = liangjiang_area
+}
+
+sts_conquer_home_region = {
+	preference_type = conquest
+	modifier = 30
+
+	consider_capital_region = yes
+}
+
+sts_conquer_capital_region_kingdom = {
+	preference_type = conquest
+	modifier = 100
+
+	consider_capital_region = yes
+}
+
+sts_conquer_china_low = {
+	preference_type = conquest
+	modifier = 20
+
+	region = west_china_region
+	region = north_china_region
+	region = east_china_region
+	region = south_china_region
+}
+
+sts_conquer_china_high = {
+	preference_type = conquest
+	modifier = 150
+
+	region = west_china_region
+	region = north_china_region
+	region = east_china_region
+	region = south_china_region
+}

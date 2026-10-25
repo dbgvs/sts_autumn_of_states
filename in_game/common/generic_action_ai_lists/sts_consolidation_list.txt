@@ -1,0 +1,10 @@
+﻿# 海内整合行动分组：与原版 rise_of_the_ottomans_list 的国家作用域一致。
+# 未登记的行动仍会进入 global_list；此分组用于减少无关国家的评估开销。
+sts_consolidation_actions_list = {
+	potential = {
+		can_see_situation = situation:sts_consolidation
+	}
+	actions = {
+		sts_claim_cb
+	}
+}

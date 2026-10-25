@@ -1,0 +1,108 @@
+﻿# ============================================================
+# 万邦之秋：开局与丞相府外敌援助
+# 原版钩子仅追加独立 on_action，不再替换原版 effect。
+# ============================================================
+
+on_game_started_after_lobby = {
+	effect = {
+		sts_game_init = yes
+	}
+}
+
+on_rejected_call_to_arms = {
+	on_actions = {
+		sts_on_chancellery_defense_refused
+	}
+}
+
+# scope:actor = 受援成员，scope:recipient = 拒援丞相，scope:war = 战争
+sts_on_chancellery_defense_refused = {
+	effect = {
+		if = {
+			limit = {
+				exists = scope:war
+				exists = international_organization:sts_chancellery
+				international_organization:sts_chancellery = {
+					international_organization_has_leader = yes
+					leader_country ?= scope:recipient
+				}
+				scope:war = {
+					NOT = { is_an_attacker = scope:actor }
+					join_war_reason = {
+						country = scope:recipient
+						reason = InternationalOrganization
+						international_organization = international_organization:sts_chancellery
+					}
+				}
+			}
+			scope:recipient = {
+				add_prestige = -20
+				add_legitimacy = -10
+				add_political_influence = -50
+			}
+			international_organization:sts_chancellery = {
+				every_international_organization_member = {
+					limit = { NOT = { this = scope:recipient } }
+					add_opinion = {
+						modifier = sts_chancellery_abandoned
+						target = scope:recipient
+					}
+				}
+			}
+		}
+	}
+}
+
+on_war_declared = {
+	on_actions = {
+		sts_on_chancellery_member_attacked
+	}
+}
+
+# 仅处理相府成员遭组织外势力进攻；响应者依联防法律出兵，不是勤王。
+sts_on_chancellery_member_attacked = {
+	effect = {
+		if = {
+			limit = {
+				exists = scope:war
+				exists = international_organization:sts_chancellery
+				scope:recipient = {
+					is_member_of_international_organization = international_organization:sts_chancellery
+				}
+				scope:actor = {
+					NOT = {
+						is_member_of_international_organization = international_organization:sts_chancellery
+					}
+				}
+				international_organization:sts_chancellery = {
+					international_organization_has_policy = policy:sts_fanwang_levy_policy
+				}
+			}
+			set_global_variable = { name = sts_defense_war value = scope:war }
+			set_global_variable = { name = sts_defense_attacked value = scope:recipient }
+			international_organization:sts_chancellery = {
+				leader_country ?= {
+					if = {
+						limit = {
+							NOT = { this = scope:recipient }
+							scope:war = { can_join_as_defender = prev }
+						}
+						trigger_event_non_silently = sts_defense_levy.2
+					}
+				}
+				every_international_organization_member = {
+					limit = {
+						NOT = { this = scope:recipient }
+						NOT = { is_leader_of_international_organization = international_organization:sts_chancellery }
+						has_special_status_in_international_organization = {
+							type = special_status:sts_fanwang_state
+							international_organization = international_organization:sts_chancellery
+						}
+						scope:war = { can_join_as_defender = prev }
+					}
+					trigger_event_non_silently = sts_defense_levy.1
+				}
+			}
+		}
+	}
+}
